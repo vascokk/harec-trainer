@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Quarter-wave ground plane antenna with sloping elements X at the base</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<line x1="200" y1="40" x2="200" y2="180" stroke-width="4"/><text x="214" y="100" text-anchor="start" fill="#111" stroke="none" font-size="13" font-weight="normal">radiator</text><line x1="200" y1="184" x2="70" y2="225" stroke-width="3"/><line x1="200" y1="184" x2="330" y2="225" stroke-width="3"/><line x1="200" y1="184" x2="135" y2="250" stroke-width="3"/><line x1="200" y1="184" x2="265" y2="250" stroke-width="3"/><text x="60" y="215" text-anchor="end" fill="#111" stroke="none" font-size="14" font-weight="bold">X</text><text x="340" y="215" text-anchor="start" fill="#111" stroke="none" font-size="14" font-weight="bold">X</text><line x1="200" y1="184" x2="200" y2="280" /><text x="212" y="275" text-anchor="start" fill="#111" stroke="none" font-size="13" font-weight="normal">coax to transmitter</text>
+</g>
+</svg>

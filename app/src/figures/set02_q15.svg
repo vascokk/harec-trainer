@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="235" viewBox="0 0 350 235" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Series LC circuit in series with the signal path</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="40" cy="60" r="4" fill="#fff"/><circle cx="40" cy="180" r="4" fill="#fff"/><circle cx="300" cy="60" r="4" fill="#fff"/><circle cx="300" cy="180" r="4" fill="#fff"/><line x1="44" y1="60" x2="73.0" y2="60" /><path d="M73.0,60 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0"/><line x1="121.0" y1="60" x2="150" y2="60" /><text x="97" y="40" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">L</text><line x1="150" y1="60" x2="219.0" y2="60" /><line x1="219.0" y1="46" x2="219.0" y2="74" /><line x1="227.0" y1="46" x2="227.0" y2="74" /><line x1="227.0" y1="60" x2="296" y2="60" /><text x="223" y="36" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">C</text><line x1="44" y1="180" x2="296" y2="180" /><text x="40" y="215" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">Input</text><text x="300" y="215" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">Output</text>
+</g>
+</svg>

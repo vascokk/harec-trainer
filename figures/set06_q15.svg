@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="270" viewBox="0 0 540 270" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Filter response: flat below fc, falling above fc</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(40,0)"><line x1="60" y1="230" x2="470" y2="230" marker-end="url(#arr)"/><line x1="60" y1="230" x2="60" y2="30" marker-end="url(#arr)"/><text x="470" y="255" text-anchor="end" fill="#111" stroke="none" font-size="14" font-weight="normal">Frequency</text><text x="50" y="130" text-anchor="end" fill="#111" stroke="none" font-size="14" font-weight="normal">Output</text><text x="50" y="146" text-anchor="end" fill="#111" stroke="none" font-size="14" font-weight="normal">level</text><path d="M62,70 L220,70 C262,72 282,200 360,214 L455,218" stroke="#1a5fb4" stroke-width="2.5"/><line x1="250" y1="60" x2="250" y2="230" stroke-dasharray="5,5" stroke="#888" stroke-width="1.2"/><text x="250" y="250" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">fc</text></g>
+</g>
+</svg>

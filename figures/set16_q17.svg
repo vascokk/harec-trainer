@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Spectrum: energy from f0 up to about 2.7 kHz above it, carrier suppressed</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<line x1="40" y1="220" x2="560" y2="220" marker-end="url(#arr)"/><text x="560" y="245" text-anchor="end" fill="#111" stroke="none" font-size="14" font-weight="normal">frequency</text><line x1="60" y1="230" x2="60" y2="30" marker-end="url(#arr)"/><text x="70" y="30" text-anchor="start" fill="#111" stroke="none" font-size="14" font-weight="normal">power</text><line x1="250" y1="40" x2="250" y2="220" stroke-dasharray="6,5" stroke="#888"/><text x="250" y="240" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">f₀ (suppressed carrier)</text><path d="M265,220 L280,80 L430,90 L445,220 Z" fill="#cfe0f5" stroke="#1a5fb4"/><line x1="250" y1="120" x2="445" y2="120" marker-end="url(#arr)" marker-start="url(#arr)" stroke-width="1"/><text x="350" y="112" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">≈ 2.7 kHz</text>
+</g>
+</svg>

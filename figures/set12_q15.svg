@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="370" height="255" viewBox="0 0 370 255" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Series capacitor followed by shunt inductor</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="40" cy="60" r="4" fill="#fff"/><circle cx="40" cy="200" r="4" fill="#fff"/><circle cx="320" cy="60" r="4" fill="#fff"/><circle cx="320" cy="200" r="4" fill="#fff"/><line x1="44" y1="60" x2="118.0" y2="60" /><line x1="118.0" y1="46" x2="118.0" y2="74" /><line x1="126.0" y1="46" x2="126.0" y2="74" /><line x1="126.0" y1="60" x2="200" y2="60" /><text x="122" y="36" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">C</text><circle cx="200" cy="60" r="3.5" fill="#111"/><line x1="200" y1="60" x2="200" y2="106.0" /><path d="M200,106.0 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12"/><line x1="200" y1="154.0" x2="200" y2="200" /><text x="218" y="135" text-anchor="start" fill="#111" stroke="none" font-size="14" font-weight="normal">L</text><line x1="200" y1="60" x2="316" y2="60" /><line x1="44" y1="200" x2="316" y2="200" /><circle cx="200" cy="200" r="3.5" fill="#111"/><text x="40" y="235" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">Input</text><text x="320" y="235" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">Output</text>
+</g>
+</svg>

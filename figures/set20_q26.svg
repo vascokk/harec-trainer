@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Two sky-wave rays: A at a low angle landing far, B at a high angle landing near</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20,300 Q300.0,250 580,300" stroke-width="3"/><path d="M20,95 Q300.0,40 580,95" stroke="#888" stroke-dasharray="10,6"/><text x="570" y="70" text-anchor="end" fill="#111" stroke="none" font-size="13" font-weight="normal">ionosphere</text><text x="300.0" y="300" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Earth</text><line x1="80" y1="288" x2="80" y2="254" /><line x1="80" y1="254" x2="69" y2="238" /><line x1="80" y1="254" x2="91" y2="238" /><line x1="80" y1="254" x2="80" y2="238" /><text x="80" y="232" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">TX</text><line x1="80" y1="286" x2="170" y2="76" stroke="#c01c28"/><line x1="170" y1="76" x2="260" y2="278" marker-end="url(#arr)" stroke="#c01c28"/><text x="150" y="120" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="bold">B</text><line x1="80" y1="286" x2="300" y2="66" stroke="#1a5fb4"/><line x1="300" y1="66" x2="520" y2="286" marker-end="url(#arr)" stroke="#1a5fb4"/><text x="250" y="140" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="bold">A</text>
+</g>
+</svg>
