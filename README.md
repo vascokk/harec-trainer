@@ -9,7 +9,7 @@ Unofficial practice material for the **IRTS HAREC** exam, the Harmonised Amateur
 
 **▶ Try the app online: <https://harec-trainer.pages.dev/>**
 
-> **Disclaimer:** This project is not affiliated with or endorsed by the IRTS or ComReg. The questions are written to the IRTS HAREC Exam Syllabus (Rev 2.0.2) and checked against the IRTS HAREC Study Guide (edition 4.0.3), but they are not official exam questions. Always check against the current official material.
+> **Disclaimer:** This project, its website and its application are unofficial. They are not affiliated with, endorsed by or connected in any way to the IRTS, ComReg or any other governmental or non-governmental organisation or regulatory body. The questions are written to the IRTS HAREC Exam Syllabus (Rev 2.0.2) and checked against the IRTS HAREC Study Guide (edition 4.0.3), but they are not official exam questions, and the content may contain errors. The authors accept no responsibility or liability for any errors or for any consequences of using this material, the website or the application. Always check against the current official material. By using the website or the application, you accept these terms.
 
 ## The exam format
 

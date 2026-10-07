@@ -114,6 +114,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 
 /* ---------- icons ---------- */
 const ICON = {
+  warn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>',
   bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>',
   clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h6M9 19h3"/></svg>',
   book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg>',
@@ -123,6 +124,10 @@ const ICON = {
 
 /* ---------- views ---------- */
 let state = { view: 'home' };
+// The app is usable only once the terms below are accepted. Bump TERMS_VERSION
+// when their wording changes, so everyone has to accept them again.
+const TERMS_VERSION = 1;
+let termsAccepted = store.get('terms', 0) >= TERMS_VERSION;
 let timerHandle = null;
 let cueHandle = null;
 
@@ -141,8 +146,8 @@ function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
     practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
     morse: renderMorse, koch: renderKoch, kochDone: renderKochDone };
-  app.innerHTML = `<div class="fade-in">${views[state.view]()}</div>`;
-  topStatus.textContent = state.view === 'exam' ? ''
+  app.innerHTML = `<div class="fade-in">${termsAccepted ? views[state.view]() : renderTerms()}</div>`;
+  topStatus.textContent = state.view === 'exam' || !termsAccepted ? ''
     : MORSE_VIEWS.includes(state.view) ? `Koch lesson ${koch.unlocked + 1} of ${Morse.LESSONS.length}`
     : `${QUESTIONS.length} questions · ${SET_NUMBERS.length} sets`;
   if (state.view === 'exam') startTimer();
@@ -174,6 +179,7 @@ function renderHome() {
         </div>
       </div>
     </section>
+    ${noticeHtml()}
     ${saved ? `
       <div class="card start-bar" style="margin-bottom:20px">
         <div class="summary"><b>Exam in progress</b> · ${esc(saved.label)} · ${saved.answers.filter(a => a !== null).length}/${saved.items.length} answered${saved.timed ? ` · ${fmtTime(saved.remaining)} left` : ''}</div>
@@ -198,8 +204,8 @@ function renderHome() {
         <span class="go">→</span>
         <div class="icon">${ICON.key}</div>
         <h2>Morse code (CW)</h2>
-        <p>Learn to copy Morse by ear with the Koch method, or hear any text sent in Morse.</p>
-        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li></ul>
+        <p>Learn to copy Morse by ear with the Koch method, practise sending with a key, or hear any text sent in Morse.</p>
+        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li><li>Straight key or iambic paddles, with speed and error marking</li></ul>
       </button>
     </section>
     ${history.length ? `
@@ -216,6 +222,32 @@ function renderHome() {
           </tbody>
         </table>
       </section>` : ''}`;
+}
+
+/* ---------- terms ---------- */
+function noticeHtml(gate = false) {
+  return `
+    <aside class="card notice" role="note">
+      <div class="notice-icon">${ICON.warn}</div>
+      <div>
+        <h3>Unofficial: please read</h3>
+        <p>HAREC Trainer is an independent project. It is <b>not affiliated with, endorsed by or connected in any way to the IRTS, ComReg or any other governmental or non-governmental organisation or regulatory body</b>.</p>
+        <p>The content may contain errors or be out of date, so always check it against the official material. The authors accept no responsibility or liability for any errors, or for any consequences of using this site or application.</p>
+        ${gate ? `
+        <label class="terms-check"><input type="checkbox" data-terms> <span>I have read and accept these terms.</span></label>
+        <div class="btn-row" style="margin-top:16px"><button class="btn btn-primary" data-action="acceptTerms" id="terms-go" disabled>Continue →</button></div>`
+        : '<p><b>By using this site or application, you accept these terms.</b></p>'}
+      </div>
+    </aside>`;
+}
+
+function renderTerms() {
+  return `
+    <div class="terms-gate">
+      <div class="eyebrow">Welcome to HAREC Trainer</div>
+      <h2 style="margin:8px 0 20px">Before you start</h2>
+      ${noticeHtml(true)}
+    </div>`;
 }
 
 /* ---------- practice setup ---------- */
@@ -1202,6 +1234,11 @@ function keyUp(which) {
 
 /* ---------- events ---------- */
 const actions = {
+  acceptTerms() {
+    if (!document.querySelector('[data-terms]')?.checked) return true;
+    termsAccepted = true;
+    store.set('terms', TERMS_VERSION);
+  },
   secToggle(el) {
     const s = el.dataset.sec, list = practiceCfg.sections;
     practiceCfg.sections = list.includes(s) ? list.filter(x => x !== s) : [...list, s];
@@ -1321,6 +1358,10 @@ document.querySelector('.brand').addEventListener('click', () => {
 });
 
 app.addEventListener('change', e => {
+  if ('terms' in e.target.dataset) {
+    document.getElementById('terms-go').disabled = !e.target.checked;
+    return;
+  }
   const key = e.target.dataset.toggle;
   if (!key) return;
   const cfg = state.view === 'examSetup' ? examCfg : state.view === 'morse' ? morseCfg : practiceCfg;
@@ -1410,6 +1451,7 @@ document.addEventListener('keyup', e => {
 }, true);
 
 document.addEventListener('keydown', e => {
+  if (!termsAccepted) return;
   if (modalRoot.innerHTML) {
     if (e.key === 'Escape') modalRoot.innerHTML = '';
     return;
