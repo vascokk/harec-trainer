@@ -7,7 +7,7 @@ Unofficial practice material for the **IRTS HAREC** exam, the Harmonised Amateur
 - **60 diagram questions** covering circuits, block diagrams, radiation patterns and oscilloscope traces. They are drawn as SVG.
 - **HAREC Trainer**, an offline study app that runs in the browser or as a desktop app, with question practice, timed mock exams and a Morse code trainer for receiving and sending.
 
-**▶ Try the app online: <https://harec-trainer.pages.dev/>**
+**▶ Try the app online: <https://harec-trainer.com/>**
 
 > **Disclaimer:** This project, its website and its application are unofficial. They are not affiliated with, endorsed by or connected in any way to the IRTS, ComReg or any other governmental or non-governmental organisation or regulatory body. The questions are written to the IRTS HAREC Exam Syllabus (Rev 2.0.2) and checked against the IRTS HAREC Study Guide (edition 4.0.3), but they are not official exam questions, and the content may contain errors. The authors accept no responsibility or liability for any errors or for any consequences of using this material, the website or the application. Always check against the current official material. By using the website or the application, you accept these terms.
 
@@ -28,7 +28,7 @@ Page numbers in the answer keys are the **printed** page numbers of the Study Gu
 
 ## HAREC Trainer app
 
-A small static web app in `app/src/`. It has no dependencies or build step, and it works offline. A hosted copy is at <https://harec-trainer.pages.dev/>.
+A small static web app in `app/src/`. It has no dependencies or build step, and it works offline. A hosted copy is at <https://harec-trainer.com/>.
 
 - **Question practice:** pick sets and syllabus sections. You can put questions you got wrong first and shuffle the answer order. Each answer shows its explanation and Study Guide page straight away.
 - **Exam practice:** sit any of the 20 sets, or a random paper weighted by syllabus that prefers questions you haven't seen yet or got wrong. You can turn the 2-hour timer on, flag questions to come back to, and get a per-section result with a full review.

@@ -9,7 +9,7 @@ Unofficial practice material for the Irish IRTS HAREC amateur radio licence exam
 1. **Question banks → Markdown exam papers**: Python scripts turn `question_bank/setNN.py` into `HAREC_Practice_Exam_Set_NN.md`. Each paper has 60 questions and an answer key that cites Study Guide page numbers.
 2. **HAREC Trainer app** (`app/`): a static vanilla-JS web app (`app/src/`) wrapped in a Tauri 2 desktop shell (`app/src-tauri/`). The app uses no Tauri APIs, and the same `app/src/` folder is deployed to Cloudflare as a Worker with static assets (`wrangler.jsonc`, custom domain harec-trainer.com). `.wrangler/` is local Wrangler state and is gitignored.
 
-The sources of truth are the IRTS syllabus and the IRTS Study Guide (edition 4.0.3), kept as PDFs in the repo root. They are gitignored (`*.pdf`) because they are IRTS copyright, and they must never be committed. The live app is at https://harec-trainer.pages.dev/.
+The sources of truth are the IRTS syllabus and the IRTS Study Guide (edition 4.0.3), kept as PDFs in the repo root. They are gitignored (`*.pdf`) because they are IRTS copyright, and they must never be committed. The live app is at https://harec-trainer.com/.
 
 ## Commands
 
