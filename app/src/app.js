@@ -1052,16 +1052,63 @@ function renderKochDone() {
 }
 
 /* ---------- Morse sending ---------- */
-const SEND_NAMES = ['JOHN', 'MARY', 'SEAN', 'AOIFE', 'PAT', 'NIAMH', 'TOM', 'ANN'];
-const SEND_QTHS = ['DUBLIN', 'CORK', 'GALWAY', 'LIMERICK', 'SLIGO', 'KERRY', 'DONEGAL'];
+// QSO phrases for sending practice. A {KEY} is filled from SEND_FILL; the same
+// key gets the same value throughout a phrase, so 'QTH {QTH} {QTH}' repeats one town.
 const SEND_PHRASES = [
-  'CQ CQ DE {CALL} K', '{CALL} DE {CALL} KN', 'TNX FER CALL', 'UR RST 599 599', 'UR RST 579',
-  'NAME IS {NAME}', 'OP {NAME}', 'QTH {QTH}', 'QTH {QTH} {QTH}', 'RIG IC7300 ES ANT DIPOLE', 'PWR 100W',
-  'WX HR SUNNY', 'WX CLOUDY ES COLD', 'PSE QRS', 'QRZ?', 'R R TNX', 'GM OM', 'GE ES TNX FER QSO',
-  '73 ES GUD DX', 'HW CPY?', 'FB OM', 'CUL 73', 'QSL VIA BURO', 'AGN PSE', 'TU 73 SK', 'BK',
+  // calling and answering
+  'CQ CQ CQ DE {CALL} {CALL} K', 'CQ DE {CALL} {CALL} PSE K', 'CQ DX CQ DX DE {CALL} K', 'CQ TEST {CALL}',
+  'QRL?', 'QRZ? DE {CALL}', '{CALL2} DE {CALL} K', '{CALL2} DE {CALL} KN', '{CALL2} {CALL2} DE {CALL} {CALL} AR',
+  'GM ES TNX FER CALL', 'GA DR OM TNX FER CALL', 'GE {NAME} TNX FER CALL', 'TNX FER RPRT',
+  // reports
+  'UR RST {RST} {RST}', 'RST {RST} {RST} BK', 'UR SIG {RST} WID QSB', 'UR RST {RST} WID QRM', 'UR SIGS FB',
+  'HW CPY?', 'SOLID CPY', 'ALL OK', 'TU 5NN {SERIAL}', '{CALL} 599 {SERIAL}',
+  // name and location
+  'NAME {NAME} {NAME}', 'OP HR IS {NAME}', 'NAME HR IS {NAME} = QTH {QTH}', 'QTH {QTH} {QTH}', 'QTH NR {QTH}',
+  'QTH IS {QTH} IRELAND', 'OK {NAME} FB',
+  // station
+  'RIG {RIG} ES ANT {ANT}', 'RIG HR {RIG}', 'PWR {PWR}', 'PWR HR {PWR} = ANT {ANT}', 'RIG {RIG} PWR {PWR}',
+  'ANT IS {ANT}', 'QRP 5W ES {ANT}',
+  // weather, time and personal
+  'WX {WX}', 'WX HR {WX} TEMP {TEMP}C', 'WX {WX} ES {TEMP}C', 'TIME {UTC}Z', 'AGE {AGE}', 'AGE HR {AGE} YRS',
+  'LIC {YRS} YRS', 'HAM SINCE {YEAR}', 'RETIRED ENGINEER', 'WORK AS TEACHER', 'NEW TO CW', 'FIRST CW QSO',
+  // operating
+  'PSE QRS', 'PSE QRS QRM', 'PSE RPT', 'PSE RPT NAME', 'PSE RPT QTH', 'AGN PSE', 'QRM HR', 'QSB', 'QSY UP 2',
+  'QSY {BAND}?', 'QRV {BAND}', 'QRX 5 MIN', 'QRT', 'R R TNX', 'R TU', 'BK', 'SRI QRM', 'SRI NIL CPY',
+  'FB OM', 'FB {NAME}', 'BAND {BAND} OPEN', 'CONDX POOR',
+  // QSL cards and closing
+  'QSL VIA BURO', 'QSL VIA LOTW', 'PSE QSL DIRECT', 'WL QSL VIA BURO', 'TNX FER QSO {NAME} 73', 'CUL {NAME} 73',
+  '73 ES GUD DX', 'GL ES 73', 'BEST 73 ES GL', 'GN OM 73', 'HPE CUAGN', 'TU 73 SK', '73 TU {CALL2} DE {CALL} SK',
+  'GE ES TNX FER QSO', 'GM OM', 'TU EE',
 ];
-const callsign = () => 'EI' + Math.floor(Math.random() * 10) + Array.from({ length: 2 + Math.floor(Math.random() * 2) }, () => String.fromCharCode(65 + Math.floor(Math.random() * 26))).join('');
 const pickOne = a => a[Math.floor(Math.random() * a.length)];
+const randInt = (lo, hi) => lo + Math.floor(Math.random() * (hi - lo + 1));
+const letters = n => Array.from({ length: n }, () => String.fromCharCode(65 + randInt(0, 25))).join('');
+const callsign = () => 'EI' + randInt(0, 9) + letters(randInt(2, 3));
+const DX_PREFIXES = ['G', 'M', 'GI', 'GM', 'F', 'DL', 'ON', 'PA', 'EA', 'I', 'OH', 'SM', 'LA', 'OK', 'SP', 'HA', 'W', 'K', 'VE', 'JA', 'VK'];
+const SEND_FILL = {
+  CALL: callsign,
+  CALL2: () => Math.random() < 0.5 ? callsign() : pickOne(DX_PREFIXES) + randInt(0, 9) + letters(randInt(2, 3)),
+  NAME: () => pickOne(['JOHN', 'MARY', 'SEAN', 'AOIFE', 'PAT', 'NIAMH', 'TOM', 'ANN', 'DECLAN', 'CIARA', 'LIAM',
+    'ORLA', 'BRIAN', 'EMMA', 'KEVIN', 'RUTH', 'PETER', 'GRACE', 'MIKE', 'DAVE']),
+  QTH: () => pickOne(['DUBLIN', 'CORK', 'GALWAY', 'LIMERICK', 'SLIGO', 'KERRY', 'DONEGAL', 'WATERFORD', 'KILKENNY',
+    'WEXFORD', 'ATHLONE', 'MAYO', 'CLARE', 'LOUTH', 'MEATH', 'WICKLOW', 'TIPPERARY', 'OFFALY']),
+  RST: () => pickOne(['599', '579', '589', '569', '559', '449', '339', '5NN']),
+  RIG: () => pickOne(['IC7300', 'IC705', 'IC7610', 'FT991A', 'FT710', 'FTDX10', 'FT818', 'TS590', 'K3', 'KX2']),
+  ANT: () => pickOne(['DIPOLE', 'VERTICAL', 'EFHW', '3 EL YAGI', 'G5RV', 'LOOP', 'INV V', 'LONG WIRE']),
+  PWR: () => pickOne(['5W', '10W', '50W', '100W', '400W']),
+  WX: () => pickOne(['SUNNY', 'CLOUDY', 'RAIN', 'WINDY', 'FOGGY', 'COLD', 'WARM', 'SNOW']),
+  TEMP: () => String(randInt(2, 25)),
+  UTC: () => String(randInt(0, 23)).padStart(2, '0') + String(randInt(0, 59)).padStart(2, '0'),
+  AGE: () => String(randInt(18, 80)),
+  YRS: () => String(randInt(1, 50)),
+  YEAR: () => String(randInt(1970, 2025)),
+  BAND: () => pickOne(['80M', '40M', '30M', '20M', '17M', '15M', '10M']),
+  SERIAL: () => String(randInt(1, 250)).padStart(3, '0'),
+};
+const fillPhrase = phrase => {
+  const got = {};
+  return phrase.replace(/\{(\w+)\}/g, (_, k) => got[k] ??= SEND_FILL[k]());
+};
 
 // The keyer lives outside state so re-renders keep it; go() and tab changes dispose of it.
 const sendOpts = {
@@ -1100,8 +1147,7 @@ function newSendTarget() {
     return chunks[sendSt.ownPos++];
   }
   if (src === 'phrases') {
-    return pickOne(SEND_PHRASES).replace(/\{(\w+)\}/g, (_, k) =>
-      k === 'CALL' ? callsign() : pickOne(k === 'NAME' ? SEND_NAMES : SEND_QTHS));
+    return fillPhrase(pickOne(SEND_PHRASES));
   }
   const lesson = kochLesson();
   return Morse.exercise(lesson, lesson ? 'all' : 'new');
