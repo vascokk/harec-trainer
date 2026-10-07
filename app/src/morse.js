@@ -141,6 +141,15 @@ const Morse = (() => {
   const LEVEL = 0.3;
   let ctx = null, run = null;
 
+  // The shared AudioContext, created on first use (inside a user gesture).
+  function audio() {
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if (!Ctx) return null;
+    ctx = ctx || new Ctx();
+    if (ctx.state === 'suspended') ctx.resume();
+    return ctx;
+  }
+
   // Sends text. opts is { wpm, tone, eff?, repeat? }, where eff is the
   // Farnsworth effective speed. It is read again before every repeat, so
   // changes take effect from the next repetition. onChar(index) fires as
@@ -150,10 +159,7 @@ const Morse = (() => {
     stop();
     const toks = parse(text);
     let tl = timeline(toks);
-    const Ctx = window.AudioContext || window.webkitAudioContext;
-    if (!tl.events.length || !Ctx) return false;
-    ctx = ctx || new Ctx();
-    if (ctx.state === 'suspended') ctx.resume();
+    if (!tl.events.length || !audio()) return false;
     const osc = ctx.createOscillator(), gain = ctx.createGain();
     osc.type = 'sine';
     gain.gain.value = 0;
@@ -208,8 +214,142 @@ const Morse = (() => {
     osc.stop(now + RAMP + 0.01);
   }
 
+  /* ---------- sending ---------- */
+  const DECODE = Object.fromEntries(Object.entries(CODE).map(([c, m]) => [m, c]));
+
+  // A practice key with sidetone and decoder. opts ({ mode, wpm, tone }) is read
+  // live. mode 'straight' times each press of one key ('key'); the dit/dah
+  // boundary adapts to the sender's own dit and dah lengths, starting from wpm.
+  // mode 'iambic' is a squeeze keyer (Curtis mode B) on two paddles ('dit',
+  // 'dah') at wpm. A gap over 2.5 units ends a character and one over 5 units
+  // ends a word. Eight or more dits is the error sign and erases the last word.
+  // onChange(text, code) fires with the decoded text and the character in progress.
+  function sender(opts, onChange) {
+    const ac = audio();
+    let osc = null, gain = null;
+    if (ac) {
+      osc = ac.createOscillator();
+      gain = ac.createGain();
+      gain.gain.value = 0;
+      osc.connect(gain).connect(ac.destination);
+      osc.start();
+    }
+    const tone = on => {
+      if (!gain) return;
+      const now = ac.currentTime;
+      if (on) osc.frequency.setValueAtTime(opts.tone, now);
+      gain.gain.cancelScheduledValues(now);
+      gain.gain.setValueAtTime(on ? 0 : LEVEL, now);
+      gain.gain.linearRampToValueAtTime(on ? LEVEL : 0, now + RAMP);
+    };
+    const now = () => performance.now();
+
+    // Decoder.
+    let ditMs = unitMs(opts.wpm), dahMs = 3 * ditMs;
+    const unit = () => opts.mode === 'iambic' ? unitMs(opts.wpm) : (ditMs + dahMs / 3) / 2;
+    let text = '', code = '', space = false, first = null, last = null, gapTimer = null;
+    const emit = () => onChange && onChange(text, code);
+    const commit = () => {
+      if (/^\.{8,}$/.test(code)) {
+        text = text.trimEnd().replace(/\S+$/, '').trimEnd();
+        space = !!text;
+      } else if (code) {
+        text += (space && text ? ' ' : '') + (DECODE[code] || '*');
+        space = false;
+      }
+      code = '';
+      emit();
+    };
+    const markStart = () => {
+      clearTimeout(gapTimer);
+      if (first === null) first = now();
+    };
+    const markEnd = el => {
+      last = now();
+      code += el;
+      emit();
+      clearTimeout(gapTimer);
+      gapTimer = setTimeout(() => {
+        commit();
+        gapTimer = setTimeout(() => { space = true; }, 2.5 * unit());
+      }, 2.5 * unit());
+    };
+
+    // Straight key.
+    let pressed = null;
+    const straightDown = () => {
+      if (pressed !== null) return;
+      markStart();
+      pressed = now();
+      tone(true);
+    };
+    const straightUp = () => {
+      if (pressed === null) return;
+      tone(false);
+      const d = now() - pressed;
+      pressed = null;
+      const el = d < (ditMs + dahMs) / 2 ? '.' : '-';
+      if (el === '.') ditMs = 0.7 * ditMs + 0.3 * d;
+      else dahMs = 0.7 * dahMs + 0.3 * d;
+      const lo = unitMs(40), hi = unitMs(4);
+      ditMs = Math.min(hi, Math.max(lo, ditMs));
+      dahMs = Math.min(5 * ditMs, Math.max(2 * ditMs, dahMs));
+      markEnd(el);
+    };
+
+    // Iambic keyer.
+    const pad = { dit: false, dah: false }, mem = { dit: false, dah: false };
+    let busy = false, cur = null, lastEl = null, keyTimer = null;
+    const name = el => el === '.' ? 'dit' : 'dah';
+    const next = () => {
+      const want = el => pad[name(el)] || mem[name(el)];
+      const opp = lastEl === '.' ? '-' : '.';
+      const el = lastEl && want(opp) ? opp : lastEl && want(lastEl) ? lastEl : want('.') ? '.' : want('-') ? '-' : null;
+      if (!el) { busy = false; lastEl = null; return; }
+      busy = true; cur = el; lastEl = el;
+      mem[name(el)] = false;
+      if (pad.dit && pad.dah) mem[name(el === '.' ? '-' : '.')] = true;
+      markStart();
+      tone(true);
+      const u = unitMs(opts.wpm);
+      keyTimer = setTimeout(() => {
+        tone(false);
+        cur = null;
+        markEnd(el);
+        keyTimer = setTimeout(next, u);
+      }, (el === '.' ? 1 : 3) * u);
+    };
+
+    return {
+      down(which) {
+        if (opts.mode !== 'iambic') return straightDown();
+        if (pad[which]) return;
+        pad[which] = true;
+        if (!busy) next();
+        else if (cur === null || which !== name(cur)) mem[which] = true;
+      },
+      up(which) {
+        if (opts.mode !== 'iambic') return straightUp();
+        pad[which] = false;
+      },
+      // Decodes the character in progress straight away.
+      flush() { clearTimeout(gapTimer); if (code) commit(); },
+      clear() { clearTimeout(gapTimer); text = code = ''; space = false; first = last = null; emit(); },
+      get text() { return text; },
+      stats: () => ({ first, last, wpm: 1200 / unit() }),
+      dispose() {
+        clearTimeout(gapTimer);
+        clearTimeout(keyTimer);
+        if (osc) { tone(false); osc.stop(ac.currentTime + 0.05); }
+      },
+    };
+  }
+
+  // Length of text in units at standard spacing, for working out a sending speed.
+  const units = text => timeline(parse(text)).length;
+
   return {
-    CODE, MIN_WPM, MAX_WPM, KOCH_ORDER, LESSONS, learned, exercise, parse, unitMs, spacing, play, stop,
+    CODE, MIN_WPM, MAX_WPM, KOCH_ORDER, LESSONS, learned, exercise, parse, unitMs, spacing, play, stop, sender, units,
     playing: () => !!run,
   };
 })();

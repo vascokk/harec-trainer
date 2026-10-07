@@ -131,6 +131,7 @@ function go(view, extra = {}) {
   timerHandle = null;
   clearTimeout(cueHandle);
   Morse.stop();
+  dropKeyer();
   state = { ...extra, view };
   render();
   window.scrollTo({ top: 0 });
@@ -695,11 +696,14 @@ function renderResults() {
 /* ---------- Morse code ---------- */
 const MORSE_VIEWS = ['morse', 'koch', 'kochDone'];
 const KOCH_PASS = 90;
-const EFF_MIN = 5, EFF_MAX = 15;   // Farnsworth effective speed, kept below Morse.MIN_WPM
+const EFF_MIN = 5, EFF_MAX = 15;
+const SEND_MIN = 5, SEND_MAX = 30;   // sending speed; beginners key well below copying speed   // Farnsworth effective speed, kept below Morse.MIN_WPM
 const morseCfg = Object.assign({
   tab: 'translate', wpm: 20, tone: 600, repeat: false, text: 'TNX FER QSO 73',
   lesson: null, rounds: 10, includePrev: true, farnsworth: false, effWpm: 8,
+  sendKey: 'straight', sendWpm: 15, sendSrc: 'koch', ownText: '', swapPaddles: false, showCode: true,
 }, store.get('morseCfg', {}));
+morseCfg.sendWpm = Math.min(SEND_MAX, Math.max(SEND_MIN, morseCfg.sendWpm));
 morseCfg.wpm = Math.min(Morse.MAX_WPM, Math.max(Morse.MIN_WPM, morseCfg.wpm));
 morseCfg.effWpm = Math.min(EFF_MAX, Math.max(EFF_MIN, morseCfg.effWpm));
 const saveMorse = () => store.set('morseCfg', morseCfg);
@@ -746,13 +750,15 @@ function renderMorse() {
   return `
     <div class="setup">
       <div class="setup-head">
-        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${tab === 'translate' ? 'Hear any text in Morse' : 'Koch method course'}</h2></div>
+        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${{ translate: 'Hear any text in Morse', koch: 'Koch method course', send: 'Send Morse with a key' }[tab]}</h2></div>
         <button class="btn btn-ghost" data-go="home">← Back</button>
       </div>
       <div><div class="segmented">
         <button class="${tab === 'translate' ? 'on' : ''}" data-action="mTab" data-v="translate">Translator</button>
         <button class="${tab === 'koch' ? 'on' : ''}" data-action="mTab" data-v="koch">Koch course</button>
+        <button class="${tab === 'send' ? 'on' : ''}" data-action="mTab" data-v="send">Sending</button>
       </div></div>
+      ${tab === 'send' ? sendPanel() : `
       <div class="card panel">
         <h3>Sound</h3>
         <p class="hint">Characters are always sent at full speed. Timing follows ITU-R M.1677-1, where the word PARIS defines the speed.</p>
@@ -760,15 +766,18 @@ function renderMorse() {
           <div class="speed"><label for="wpm">Speed</label>
             <input type="range" id="wpm" min="${Morse.MIN_WPM}" max="${Morse.MAX_WPM}" step="1" value="${morseCfg.wpm}" data-cfg="wpm">
             <output id="wpm-val">${morseCfg.wpm} WPM</output></div>
-          <div class="speed"><label>Tone</label><div class="segmented">
-            ${[500, 600, 700, 800].map(v => `<button class="${morseCfg.tone === v ? 'on' : ''}" data-action="mTone" data-v="${v}">${v} Hz</button>`).join('')}
-          </div></div>
+          ${toneHtml()}
         </div>
         <div class="muted timing" id="timing">${timingText()}</div>
       </div>
-      ${tab === 'translate' ? translatorPanel() : kochPanel()}
+      ${tab === 'translate' ? translatorPanel() : kochPanel()}`}
     </div>`;
 }
+
+const toneHtml = () => `
+  <div class="speed"><label>Tone</label><div class="segmented">
+    ${[500, 600, 700, 800].map(v => `<button class="${morseCfg.tone === v ? 'on' : ''}" data-action="mTone" data-v="${v}">${v} Hz</button>`).join('')}
+  </div></div>`;
 
 function translatorPanel() {
   return `
@@ -1010,6 +1019,187 @@ function renderKochDone() {
     </section>`;
 }
 
+/* ---------- Morse sending ---------- */
+const SEND_NAMES = ['JOHN', 'MARY', 'SEAN', 'AOIFE', 'PAT', 'NIAMH', 'TOM', 'ANN'];
+const SEND_QTHS = ['DUBLIN', 'CORK', 'GALWAY', 'LIMERICK', 'SLIGO', 'KERRY', 'DONEGAL'];
+const SEND_PHRASES = [
+  'CQ CQ DE {CALL} K', '{CALL} DE {CALL} KN', 'TNX FER CALL', 'UR RST 599 599', 'UR RST 579',
+  'NAME IS {NAME}', 'OP {NAME}', 'QTH {QTH}', 'QTH {QTH} {QTH}', 'RIG IC7300 ES ANT DIPOLE', 'PWR 100W',
+  'WX HR SUNNY', 'WX CLOUDY ES COLD', 'PSE QRS', 'QRZ?', 'R R TNX', 'GM OM', 'GE ES TNX FER QSO',
+  '73 ES GUD DX', 'HW CPY?', 'FB OM', 'CUL 73', 'QSL VIA BURO', 'AGN PSE', 'TU 73 SK', 'BK',
+];
+const callsign = () => 'EI' + Math.floor(Math.random() * 10) + Array.from({ length: 2 + Math.floor(Math.random() * 2) }, () => String.fromCharCode(65 + Math.floor(Math.random() * 26))).join('');
+const pickOne = a => a[Math.floor(Math.random() * a.length)];
+
+// The keyer lives outside state so re-renders keep it; go() and tab changes dispose of it.
+const sendOpts = {
+  get mode() { return morseCfg.sendKey === 'paddle' ? 'iambic' : 'straight'; },
+  get wpm() { return morseCfg.sendWpm; },
+  get tone() { return morseCfg.tone; },
+};
+let keyer = null;
+let sendSt = { target: null, result: null, ownPos: 0, tally: [] };
+
+function dropKeyer() {
+  keyer?.dispose();
+  keyer = null;
+}
+
+function getKeyer() {
+  Morse.stop();
+  return keyer = keyer || Morse.sender(sendOpts, sendChanged);
+}
+
+// Own text, cleaned to sendable characters and cut into pieces of up to three words.
+function ownChunks() {
+  const words = morseCfg.ownText.toUpperCase().split(/\s+/)
+    .map(w => [...w].filter(c => Morse.CODE[c]).join('')).filter(Boolean);
+  const chunks = [];
+  for (let i = 0; i < words.length; i += 3) chunks.push(words.slice(i, i + 3).join(' '));
+  return chunks;
+}
+
+function newSendTarget() {
+  const src = morseCfg.sendSrc;
+  if (src === 'own') {
+    const chunks = ownChunks();
+    if (!chunks.length) return null;
+    sendSt.ownPos %= chunks.length;
+    return chunks[sendSt.ownPos++];
+  }
+  if (src === 'phrases') {
+    return pickOne(SEND_PHRASES).replace(/\{(\w+)\}/g, (_, k) =>
+      k === 'CALL' ? callsign() : pickOne(k === 'NAME' ? SEND_NAMES : SEND_QTHS));
+  }
+  const lesson = kochLesson();
+  return Morse.exercise(lesson, lesson ? 'all' : 'new');
+}
+
+function sendNext() {
+  keyer?.clear();
+  sendSt.target = newSendTarget();
+  sendSt.result = null;
+}
+
+function sendOutHtml(text, code) {
+  if (!text && !code) return `<span class="muted">${morseCfg.sendKey === 'paddle' ? 'Use the paddles below' : 'Press the key below'} to start sending.</span>`;
+  return `${esc(text)}${code ? `<span class="pending">${codeHtml(code)}</span>` : ''}`;
+}
+
+function sendChanged(text, code) {
+  const out = document.getElementById('send-out');
+  if (out) out.innerHTML = sendOutHtml(text, code);
+  // Finish automatically once as many characters have been sent as the target has.
+  const count = t => t.replace(/\s/g, '').length;
+  if (!code && sendSt.target && !sendSt.result && count(text) >= count(sendSt.target)) sendCheck();
+}
+
+function sendCheck() {
+  if (!keyer || !sendSt.target || sendSt.result) return;
+  keyer.flush();
+  const text = keyer.text;
+  if (!text) return;
+  const res = gradeCopy(sendSt.target, text);
+  const { first, last, wpm } = keyer.stats();
+  const secs = (last - first) / 1000;
+  // Overall speed: PARIS units of what was sent, over the time from first key-down to last key-up.
+  res.wpm = secs > 0 ? Morse.units(text) * 1.2 / secs : 0;
+  res.charWpm = wpm;
+  res.text = text;
+  sendSt.result = res;
+  sendSt.tally.push(res);
+  render();
+}
+
+function sendResultHtml() {
+  const r = sendSt.result;
+  if (!r) return '';
+  const n = sendSt.tally.length;
+  const avg = Math.round(sendSt.tally.reduce((t, x) => t + x.pct, 0) / n);
+  const avgWpm = sendSt.tally.reduce((t, x) => t + x.wpm, 0) / n;
+  return `
+    <div class="send-stats">
+      <div><span class="big ${r.pct >= KOCH_PASS ? 'ok' : 'bad'}">${r.pct}%</span><span class="muted">accuracy · ${r.matched}/${r.of}</span></div>
+      <div><span class="big">${r.wpm.toFixed(1)}</span><span class="muted">WPM overall</span></div>
+      <div><span class="big">${r.charWpm.toFixed(0)}</span><span class="muted">${morseCfg.sendKey === 'paddle' ? 'WPM keyer speed' : 'WPM character speed'}</span></div>
+      ${n > 1 ? `<div><span class="big">${avg}%</span><span class="muted">${n} sent · avg ${avgWpm.toFixed(1)} WPM</span></div>` : ''}
+    </div>
+    ${diffHtml(r)}`;
+}
+
+function sendTargetHtml() {
+  const t = sendSt.target;
+  return t === null ? '<span class="muted">Type some text above to practise with it.</span>'
+    : morseCfg.showCode ? `<div class="morse-out">${morseTokensHtml(t)}</div>` : esc(t);
+}
+
+function sendPanel() {
+  const paddle = morseCfg.sendKey === 'paddle';
+  if (sendSt.target === null) sendSt.target = newSendTarget();
+  const src = morseCfg.sendSrc;
+  const keys = paddle
+    ? (morseCfg.swapPaddles ? ['dah', 'dit'] : ['dit', 'dah']).map((k, side) => `
+        <button class="key-btn" data-key="${k}" aria-label="${k} paddle"><span class="key-sym">${k === 'dit' ? '·' : '–'}</span>${k === 'dit' ? 'Dit' : 'Dah'}<kbd>${side ? '→' : '←'}</kbd></button>`).join('')
+    : `<button class="key-btn" data-key="key" aria-label="Straight key"><span class="key-sym">●</span>Key<kbd>Space</kbd></button>`;
+  return `
+    <div class="card panel">
+      <h3>Key</h3>
+      <div class="segmented" style="margin-bottom:18px">
+        <button class="${paddle ? '' : 'on'}" data-action="sKey" data-v="straight">Straight key</button>
+        <button class="${paddle ? 'on' : ''}" data-action="sKey" data-v="paddle">Iambic paddles</button>
+      </div>
+      <p class="hint">${paddle
+        ? 'Hold the dit paddle for a string of dits and the dah paddle for dahs. Squeeze both to alternate (iambic mode B); the keyer times every element for you. On a keyboard, use ← and → (or left and right Ctrl).'
+        : 'Hold the key down for each dit or dah; the length of each press decides which it is. The decoder adapts to your own rhythm, starting from the speed below. On a keyboard, use the space bar.'}
+        A pause of about 3 dits ends a character and about 7 ends a word. Send 8 dits (the error sign) to erase the last word.</p>
+      <div class="sound-row">
+        <div class="speed"><label for="send-wpm">${paddle ? 'Keyer speed' : 'Starting speed'}</label>
+          <input type="range" id="send-wpm" min="${SEND_MIN}" max="${SEND_MAX}" step="1" value="${morseCfg.sendWpm}" data-cfg="sendWpm">
+          <output id="send-wpm-val">${morseCfg.sendWpm} WPM</output></div>
+        ${toneHtml()}
+      </div>
+      ${paddle ? `<div class="toggle-list" style="margin-top:16px">${toggle('swapPaddles', 'Swap paddles', 'Put dah on the left and dit on the right, for left-handed sending.', morseCfg)}</div>` : ''}
+    </div>
+    <div class="card panel">
+      <h3>Practice text</h3>
+      <div class="segmented" style="margin-bottom:14px">
+        <button class="${src === 'koch' ? 'on' : ''}" data-action="sSrc" data-v="koch">Koch characters</button>
+        <button class="${src === 'phrases' ? 'on' : ''}" data-action="sSrc" data-v="phrases">QSO phrases</button>
+        <button class="${src === 'own' ? 'on' : ''}" data-action="sSrc" data-v="own">My own text</button>
+      </div>
+      <p class="hint">${src === 'koch' ? `Groups, words and callsigns using the ${Morse.learned(kochLesson()).length} characters you have reached in the Koch course: <span class="mono">${esc(Morse.learned(kochLesson()).join(' '))}</span>`
+        : src === 'phrases' ? 'Typical parts of a CW contact: calls, reports, names and abbreviations.'
+        : 'Type or paste any text. It is sent in pieces of up to three words; characters with no Morse code are left out.'}</p>
+      ${src === 'own' ? `<textarea class="text-input" data-own-text rows="3" spellcheck="false" placeholder="Type or paste your own text">${esc(morseCfg.ownText)}</textarea>` : ''}
+      <div class="toggle-list" style="margin-top:14px">${toggle('showCode', 'Show the code', 'Show the dits and dahs under each character of the text to send.', morseCfg)}</div>
+    </div>
+    <div class="card panel send-card">
+      <div class="eyebrow">Send this</div>
+      <div class="send-target" id="send-target">${sendTargetHtml()}</div>
+      <div class="eyebrow" style="margin-top:18px">You sent</div>
+      <div class="send-out" id="send-out">${sendOutHtml(keyer?.text || '', '')}</div>
+      <div class="key-pad ${paddle ? 'paddles' : ''}">${keys}</div>
+      <div class="btn-row" style="margin-top:16px">
+        ${sendSt.result
+          ? `<button class="btn btn-primary" data-action="sNext">New text →</button><button class="btn" data-action="sRetry">Send it again</button>`
+          : `<button class="btn btn-primary" data-action="sCheck">Check</button><button class="btn" data-action="sClear">Clear</button><button class="btn btn-ghost" data-action="sNext">New text</button>`}
+      </div>
+      <div id="send-result">${sendResultHtml()}</div>
+    </div>`;
+}
+
+function keyDown(which) {
+  if (state.view !== 'morse' || morseCfg.tab !== 'send') return;
+  if (sendSt.result) { sendSt.result = null; keyer?.clear(); render(); }
+  getKeyer().down(which);
+  document.querySelector(`[data-key="${which}"]`)?.classList.add('down');
+}
+
+function keyUp(which) {
+  keyer?.up(which);
+  document.querySelector(`[data-key="${which}"]`)?.classList.remove('down');
+}
+
 /* ---------- events ---------- */
 const actions = {
   secToggle(el) {
@@ -1064,7 +1254,13 @@ const actions = {
   rFilter(el) { state.filter = el.dataset.v; },
   retake() { startExam(state.exam.set); return true; },
   newRandom() { startExam('random'); return true; },
-  mTab(el) { Morse.stop(); morseCfg.tab = el.dataset.v; saveMorse(); },
+  mTab(el) { Morse.stop(); dropKeyer(); morseCfg.tab = el.dataset.v; saveMorse(); },
+  sKey(el) { dropKeyer(); morseCfg.sendKey = el.dataset.v; saveMorse(); },
+  sSrc(el) { morseCfg.sendSrc = el.dataset.v; saveMorse(); sendSt.ownPos = 0; sendNext(); },
+  sCheck() { sendCheck(); return true; },
+  sClear() { keyer?.clear(); },
+  sNext() { sendNext(); },
+  sRetry() { keyer?.clear(); sendSt.result = null; },
   mTone(el) { morseCfg.tone = +el.dataset.v; saveMorse(); },
   mPlay() {
     if (Morse.playing()) Morse.stop();
@@ -1157,10 +1353,61 @@ app.addEventListener('input', e => {
     saveMorse();
     if (Morse.playing()) { Morse.stop(); setPlayBtn(); }
     document.getElementById('morse-out').innerHTML = morseTokensHtml(t.value);
+  } else if (t.dataset.cfg === 'sendWpm') {
+    morseCfg.sendWpm = +t.value;
+    saveMorse();
+    document.getElementById('send-wpm-val').textContent = `${morseCfg.sendWpm} WPM`;
+  } else if ('ownText' in t.dataset) {
+    morseCfg.ownText = t.value;
+    saveMorse();
+    sendSt.ownPos = 0;
+    if (!sendSt.result) {
+      sendSt.target = newSendTarget();
+      document.getElementById('send-target').innerHTML = sendTargetHtml();
+    }
   } else if ('kInput' in t.dataset) {
     state.typed = t.value;
   }
 });
+
+// Practice key: pointer events cover mouse, pen and multi-touch (squeezing both paddles).
+app.addEventListener('pointerdown', e => {
+  const b = e.target.closest('[data-key]');
+  if (!b || e.button > 0) return;
+  e.preventDefault();
+  b.setPointerCapture(e.pointerId);
+  keyDown(b.dataset.key);
+});
+for (const type of ['pointerup', 'pointercancel']) {
+  app.addEventListener(type, e => {
+    const b = e.target.closest('[data-key]');
+    if (b) keyUp(b.dataset.key);
+  });
+}
+app.addEventListener('contextmenu', e => { if (e.target.closest('[data-key]')) e.preventDefault(); });
+
+// Keyboard key: space for the straight key; arrows or left/right Ctrl for the paddles.
+function keyFor(e) {
+  if (state.view !== 'morse' || morseCfg.tab !== 'send' || modalRoot.innerHTML) return null;
+  if (e.target.closest('textarea, input, select')) return null;
+  if (morseCfg.sendKey !== 'paddle') return e.code === 'Space' ? 'key' : null;
+  const side = { ArrowLeft: 0, ControlLeft: 0, ArrowRight: 1, ControlRight: 1 }[e.code];
+  if (side === undefined) return null;
+  return (morseCfg.swapPaddles ? ['dah', 'dit'] : ['dit', 'dah'])[side];
+}
+document.addEventListener('keydown', e => {
+  const k = keyFor(e);
+  if (!k) return;
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  if (!e.repeat) keyDown(k);
+}, true);
+document.addEventListener('keyup', e => {
+  const k = keyFor(e);
+  if (!k) return;
+  e.preventDefault();
+  keyUp(k);
+}, true);
 
 document.addEventListener('keydown', e => {
   if (modalRoot.innerHTML) {
@@ -1179,6 +1426,9 @@ document.addEventListener('keydown', e => {
     else if (k === 'arrowright' || k === 'enter') { e.preventDefault(); examMove(ex.index + 1); }
     else if (k === 'arrowleft') examMove(ex.index - 1);
     else if (k === 'f') actions.eFlag(), render();
+  } else if (state.view === 'morse' && morseCfg.tab === 'send' && k === 'enter' && !e.target.closest('textarea, button')) {
+    e.preventDefault();
+    sendSt.result ? (sendNext(), render()) : sendCheck();
   } else if (state.view === 'koch' && k === 'enter') {
     e.preventDefault();
     state.results[state.index] ? kochNext() : kochCheck();
