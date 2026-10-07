@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Unofficial practice material for the Irish IRTS HAREC amateur radio licence exam. It has two parts:
 
 1. **Question banks → Markdown exam papers**: Python scripts turn `question_bank/setNN.py` into `HAREC_Practice_Exam_Set_NN.md`. Each paper has 60 questions and an answer key that cites Study Guide page numbers.
-2. **HAREC Trainer app** (`app/`): a static vanilla-JS web app (`app/src/`) wrapped in a Tauri 2 desktop shell (`app/src-tauri/`). The app uses no Tauri APIs, and the same `app/src/` folder is deployed as a Cloudflare Pages project, `harec-trainer` (see `.wrangler/`).
+2. **HAREC Trainer app** (`app/`): a static vanilla-JS web app (`app/src/`) wrapped in a Tauri 2 desktop shell (`app/src-tauri/`). The app uses no Tauri APIs, and the same `app/src/` folder is deployed to Cloudflare as a Worker with static assets (`wrangler.jsonc`, custom domain harec-trainer.com). `.wrangler/` is local Wrangler state and is gitignored.
 
 The sources of truth are the IRTS syllabus and the IRTS Study Guide (edition 4.0.3), kept as PDFs in the repo root. They are gitignored (`*.pdf`) because they are IRTS copyright, and they must never be committed. The live app is at https://harec-trainer.pages.dev/.
 
@@ -21,6 +21,7 @@ python3 make_figures_batch2.py   # regenerate figures/ for sets 11–20
 python3 export_app_data.py       # regenerate app/src/data/questions.js and copy figures/ to app/src/figures/
 cd app/src-tauri && cargo tauri dev     # run the desktop app
 cd app/src-tauri && cargo tauri build   # build desktop bundles
+npx wrangler deploy                     # deploy app/src to harec-trainer.com (wrangler.jsonc)
 ```
 
 There are no tests and no linters. `make_exams.py` is the validator. If anything fails, it writes nothing and prints the errors: a reference phrase is missing from the guide, a section has the wrong question count, a question doesn't have exactly 4 options or a valid answer, or a figure name doesn't match its position or is missing.

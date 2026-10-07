@@ -1,0 +1,14 @@
+// Cloudflare Workers deployment: serves the static app in app/src at harec-trainer.com and www.harec-trainer.com.
+// Deploy with `npx wrangler deploy` (also what Cloudflare's Git builds run).
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "harec-trainer",
+  "compatibility_date": "2026-10-07",
+  "assets": {
+    "directory": "./app/src"
+  },
+  "routes": [
+    { "pattern": "harec-trainer.com", "custom_domain": true },
+    { "pattern": "www.harec-trainer.com", "custom_domain": true }
+  ]
+}
