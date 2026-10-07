@@ -118,15 +118,19 @@ const ICON = {
   clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h6M9 19h3"/></svg>',
   book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg>',
   flag: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
+  key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M6 19v-3h12v3M9 16l9-7M18 9a1.5 1.5 0 1 0 0-.01"/></svg>',
 };
 
 /* ---------- views ---------- */
 let state = { view: 'home' };
 let timerHandle = null;
+let cueHandle = null;
 
 function go(view, extra = {}) {
   clearInterval(timerHandle);
   timerHandle = null;
+  clearTimeout(cueHandle);
+  Morse.stop();
   state = { ...extra, view };
   render();
   window.scrollTo({ top: 0 });
@@ -134,10 +138,14 @@ function go(view, extra = {}) {
 
 function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
-    practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults };
+    practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
+    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone };
   app.innerHTML = `<div class="fade-in">${views[state.view]()}</div>`;
-  topStatus.textContent = state.view === 'exam' ? '' : `${QUESTIONS.length} questions · ${SET_NUMBERS.length} sets`;
+  topStatus.textContent = state.view === 'exam' ? ''
+    : MORSE_VIEWS.includes(state.view) ? `Koch lesson ${koch.unlocked + 1} of ${Morse.LESSONS.length}`
+    : `${QUESTIONS.length} questions · ${SET_NUMBERS.length} sets`;
   if (state.view === 'exam') startTimer();
+  document.getElementById('k-input')?.focus();
 }
 
 /* ---------- home ---------- */
@@ -184,6 +192,13 @@ function renderHome() {
         <h2>Exam practice</h2>
         <p>A full 60-question paper under exam conditions. You're marked at the end, with every answer reviewed.</p>
         <ul><li>Any of the ${SET_NUMBERS.length} sets, or a random paper built to the syllabus</li><li>2-hour timer, flag questions and come back to them</li><li>Pass mark 60% in each section, as in the real exam</li></ul>
+      </button>
+      <button class="card mode-card" data-go="morse">
+        <span class="go">→</span>
+        <div class="icon">${ICON.key}</div>
+        <h2>Morse code (CW)</h2>
+        <p>Learn to copy Morse by ear with the Koch method, or hear any text sent in Morse.</p>
+        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li></ul>
       </button>
     </section>
     ${history.length ? `
@@ -586,9 +601,9 @@ function submitExam(timeUp) {
 }
 
 /* ---------- results ---------- */
-function ring(pct, label) {
+function ring(pct, label, passAt = 60) {
   const r = 64, c = 2 * Math.PI * r;
-  const color = pct >= 60 ? 'var(--ok)' : 'var(--bad)';
+  const color = pct >= passAt ? 'var(--ok)' : 'var(--bad)';
   return `
     <div class="ring"><svg viewBox="0 0 150 150">
       <circle cx="75" cy="75" r="${r}" fill="none" stroke="var(--border)" stroke-width="12"/>
@@ -677,6 +692,324 @@ function renderResults() {
     </section>`;
 }
 
+/* ---------- Morse code ---------- */
+const MORSE_VIEWS = ['morse', 'koch', 'kochDone'];
+const KOCH_PASS = 90;
+const EFF_MIN = 5, EFF_MAX = 15;   // Farnsworth effective speed, kept below Morse.MIN_WPM
+const morseCfg = Object.assign({
+  tab: 'translate', wpm: 20, tone: 600, repeat: false, text: 'TNX FER QSO 73',
+  lesson: null, rounds: 10, includePrev: true, farnsworth: false, effWpm: 8,
+}, store.get('morseCfg', {}));
+morseCfg.wpm = Math.min(Morse.MAX_WPM, Math.max(Morse.MIN_WPM, morseCfg.wpm));
+morseCfg.effWpm = Math.min(EFF_MAX, Math.max(EFF_MIN, morseCfg.effWpm));
+const saveMorse = () => store.set('morseCfg', morseCfg);
+const koch = Object.assign({ unlocked: 0, best: {} }, store.get('koch', {}));
+const saveKoch = () => store.set('koch', koch);
+const kochLesson = () => Math.min(morseCfg.lesson ?? koch.unlocked, koch.unlocked);
+// Koch lessons only: the translator always sends at standard spacing.
+const sound = () => ({ wpm: morseCfg.wpm, tone: morseCfg.tone, eff: morseCfg.farnsworth ? morseCfg.effWpm : null });
+const speedLabel = () => morseCfg.farnsworth ? `${morseCfg.wpm}/${morseCfg.effWpm} WPM` : `${morseCfg.wpm} WPM`;
+
+const codeHtml = code => `<span class="code">${[...code].map(e => `<i class="${e === '.' ? 'dit' : 'dah'}"></i>`).join('')}</span>`;
+
+function timingText() {
+  const u = Morse.unitMs(morseCfg.wpm);
+  const ms = n => Math.round(n * u) + ' ms';
+  return `At ${morseCfg.wpm} WPM: dit ${ms(1)} · dah ${ms(3)} · gap inside a character ${ms(1)} · between characters ${ms(3)} · between words ${ms(7)}`;
+}
+
+function farnsworthText() {
+  const gap = Morse.spacing(morseCfg.wpm, morseCfg.effWpm);
+  const s = n => (n * Morse.unitMs(morseCfg.wpm) / 1000).toFixed(2) + ' s';
+  return `Characters at ${morseCfg.wpm} WPM, overall ${morseCfg.effWpm} WPM: ${s(gap.char)} between characters, ${s(gap.word)} between words`;
+}
+
+function morseTokensHtml(text) {
+  const toks = Morse.parse(text);
+  if (!toks.length) return '<span class="muted">Type something above to see it in Morse code.</span>';
+  return toks.map((t, i) => t.space ? `<span class="tok gap" id="mt-${i}"></span>`
+    : `<span class="tok ${t.code ? '' : 'bad'}" id="mt-${i}"><span class="ch">${t.prosign ? `<span class="prosign">${esc(t.text)}</span>` : esc(t.text)}</span>${t.code ? codeHtml(t.code) : '<span class="code">no code</span>'}</span>`).join('');
+}
+
+function highlightTok(i) {
+  document.querySelectorAll('.tok.on').forEach(el => el.classList.remove('on'));
+  if (i !== null) document.getElementById('mt-' + i)?.classList.add('on');
+}
+
+function setPlayBtn() {
+  const b = document.getElementById('m-play');
+  if (b) b.textContent = Morse.playing() ? '■ Stop' : '▶ Play';
+}
+
+function renderMorse() {
+  const tab = morseCfg.tab;
+  return `
+    <div class="setup">
+      <div class="setup-head">
+        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${tab === 'translate' ? 'Hear any text in Morse' : 'Koch method course'}</h2></div>
+        <button class="btn btn-ghost" data-go="home">← Back</button>
+      </div>
+      <div><div class="segmented">
+        <button class="${tab === 'translate' ? 'on' : ''}" data-action="mTab" data-v="translate">Translator</button>
+        <button class="${tab === 'koch' ? 'on' : ''}" data-action="mTab" data-v="koch">Koch course</button>
+      </div></div>
+      <div class="card panel">
+        <h3>Sound</h3>
+        <p class="hint">Characters are always sent at full speed. Timing follows ITU-R M.1677-1, where the word PARIS defines the speed.</p>
+        <div class="sound-row">
+          <div class="speed"><label for="wpm">Speed</label>
+            <input type="range" id="wpm" min="${Morse.MIN_WPM}" max="${Morse.MAX_WPM}" step="1" value="${morseCfg.wpm}" data-cfg="wpm">
+            <output id="wpm-val">${morseCfg.wpm} WPM</output></div>
+          <div class="speed"><label>Tone</label><div class="segmented">
+            ${[500, 600, 700, 800].map(v => `<button class="${morseCfg.tone === v ? 'on' : ''}" data-action="mTone" data-v="${v}">${v} Hz</button>`).join('')}
+          </div></div>
+        </div>
+        <div class="muted timing" id="timing">${timingText()}</div>
+      </div>
+      ${tab === 'translate' ? translatorPanel() : kochPanel()}
+    </div>`;
+}
+
+function translatorPanel() {
+  return `
+    <div class="card panel">
+      <h3>Text</h3>
+      <p class="hint">Letters, digits and <span class="mono">. , : ? ' - / ( ) " = + @</span>. Put a prosign in angle brackets, such as <span class="mono">&lt;SK&gt;</span>, to send it as one character.</p>
+      <textarea class="text-input" id="morse-text" data-morse-text rows="2" spellcheck="false" placeholder="Type a letter, word or phrase">${esc(morseCfg.text)}</textarea>
+      <div class="morse-out" id="morse-out">${morseTokensHtml(morseCfg.text)}</div>
+      <div class="btn-row" style="margin-top:20px;gap:24px">
+        <button class="btn btn-primary" id="m-play" data-action="mPlay" style="min-width:110px">${Morse.playing() ? '■ Stop' : '▶ Play'}</button>
+        ${toggle('repeat', 'Repeat continuously', 'Send the text again and again, with a word space in between, until you press Stop. Speed and tone changes apply from the next repeat.', morseCfg)}
+      </div>
+    </div>`;
+}
+
+function kochPanel() {
+  const L = Morse.LESSONS;
+  const sel = kochLesson();
+  const fresh = L[sel];
+  const earlier = Morse.learned(sel - 1);
+  const parts = morseCfg.includePrev && sel ? 2 : 1;
+  return `
+    <div class="card panel">
+      <h3>Lessons</h3>
+      <p class="hint">Each lesson adds two characters in Koch order. Copy at least ${KOCH_PASS}% correctly in a full session to unlock the next lesson. A short session every day works better than a long one now and then.</p>
+      <div class="set-grid lesson-grid">${L.map((chars, i) => {
+        const best = koch.best[i];
+        const locked = i > koch.unlocked;
+        const passed = best >= KOCH_PASS;
+        return `<button class="set-tile ${i === sel ? 'on' : ''} ${locked ? 'locked' : ''} ${passed ? 'passed' : ''}" data-action="mLesson" data-n="${i}">
+          <div class="n">${esc(chars.join(' '))}</div>
+          <div class="s">${locked ? '🔒 ' : passed ? '✓ ' : ''}Lesson ${i + 1}${best !== undefined ? ` · ${best}%` : ''}</div></button>`;
+      }).join('')}</div>
+      <div class="btn-row" style="margin-top:14px">
+        <span class="muted" style="font-size:13px">${Morse.learned(koch.unlocked).length} of ${Morse.KOCH_ORDER.length} characters unlocked</span>
+        <span class="spacer"></span>
+        <button class="btn btn-ghost" data-action="mReset" style="padding:6px 12px;font-size:12.5px">Reset progress</button>
+      </div>
+    </div>
+    <div class="card panel">
+      <h3>Lesson ${sel + 1}: new characters</h3>
+      <p class="hint">Listen to each one a few times. Learn its rhythm as a whole sound; don't count the dits and dahs.</p>
+      <div class="new-chars">${fresh.map(c => `
+        <button class="char-card" data-action="mPlayChar" data-ch="${esc(c)}"><span class="big">${esc(c)}</span>${codeHtml(Morse.CODE[c])}<span class="muted">▶ listen</span></button>`).join('')}
+      </div>
+      ${earlier.length ? `<p class="hint" style="margin:16px 0 0">Learned in earlier lessons: <span class="mono">${esc(earlier.join(' '))}</span></p>` : ''}
+    </div>
+    <div class="card panel">
+      <h3>Session</h3>
+      <p class="hint">Part 1 sends groups made only of this lesson's new characters. Part 2 mixes in every character learned so far, as groups, words and callsigns.</p>
+      <div class="segmented" style="margin-bottom:18px">
+        ${[5, 10, 15, 20].map(v => `<button class="${morseCfg.rounds === v ? 'on' : ''}" data-action="mRounds" data-v="${v}">${v} per part</button>`).join('')}
+      </div>
+      <div class="toggle-list">
+        ${toggle('includePrev', 'Part 2: include earlier characters', sel ? `Add a second part with ${earlier.join(' ')} as well as ${fresh.join(' ')}.` : 'Lesson 1 has no earlier characters, so there is only part 1.', morseCfg)}
+        ${toggle('farnsworth', 'Farnsworth spacing', 'Keep each character at full speed, so it sounds like one rhythm, but stretch the silence between characters and words to a slower effective speed. This gives you time to recognise each character before the next one starts. Sessions with Farnsworth spacing are practice only: they don\'t count towards passing the lesson.', morseCfg)}
+      </div>
+      ${morseCfg.farnsworth ? `
+      <div class="speed" style="margin-top:16px"><label for="eff">Effective speed</label>
+        <input type="range" id="eff" min="${EFF_MIN}" max="${EFF_MAX}" step="1" value="${morseCfg.effWpm}" data-cfg="eff">
+        <output id="eff-val">${morseCfg.effWpm} WPM</output></div>
+      <div class="muted timing" id="eff-timing">${farnsworthText()}</div>` : ''}
+    </div>
+    <div class="card start-bar">
+      <div class="summary"><b>${parts * morseCfg.rounds}</b> transmissions at <b id="speed-label">${speedLabel()}</b>${parts === 2 ? ' in two parts' : ''}. Type what you hear; ${morseCfg.farnsworth ? 'practice only, so this session can\'t pass the lesson.' : `you need ${KOCH_PASS}% to pass.`}</div>
+      <button class="btn btn-primary" data-action="startKoch">Start lesson ${sel + 1} →</button>
+    </div>`;
+}
+
+function startKoch(lesson = kochLesson()) {
+  const parts = [['new', morseCfg.rounds]];
+  if (morseCfg.includePrev && lesson > 0) parts.push(['all', morseCfg.rounds]);
+  const rounds = parts.flatMap(([phase, n]) => Array.from({ length: n }, () => ({ phase, text: Morse.exercise(lesson, phase) })));
+  go('koch', { lesson, rounds, index: 0, typed: '', results: [], spaced: morseCfg.farnsworth });
+  cueRound();
+}
+
+// Lines up what was sent with what was typed (edit-distance alignment). Each
+// op is [sent, typed]; either side is null for a missed or extra character.
+function gradeCopy(sent, typed) {
+  const norm = t => t.toUpperCase().replace(/\s+/g, ' ').trim();
+  const a = norm(sent), b = norm(typed);
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  const ops = [];
+  let i = a.length, j = b.length;
+  while (i || j) {
+    if (i && j && d[i][j] === d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)) ops.push([a[--i], b[--j]]);
+    else if (i && d[i][j] === d[i - 1][j] + 1) ops.push([a[--i], null]);
+    else ops.push([null, b[--j]]);
+  }
+  ops.reverse();
+  const chars = t => t.replace(/ /g, '').length;
+  const matched = ops.filter(([x, y]) => x === y && x !== ' ').length;
+  const of = Math.max(chars(a), chars(b));
+  return { ops, matched, of, pct: of ? Math.floor(100 * matched / of) : 0 };
+}
+
+function kochScore(results) {
+  const matched = results.reduce((n, r) => n + r.matched, 0);
+  const of = results.reduce((n, r) => n + r.of, 0);
+  return { matched, of, pct: of ? Math.floor(100 * matched / of) : 0 };
+}
+
+function diffHtml(res) {
+  const show = c => c === null ? '' : c === ' ' ? '␣' : esc(c);
+  const cols = res.ops.map(([x, y]) => {
+    if (x === ' ' && y === ' ') return '<span class="dcol gap"></span>';
+    const cls = x === y ? 'ok' : x === null ? 'extra' : y === null ? 'miss' : 'bad';
+    return `<span class="dcol ${cls}"><b>${show(x)}</b><span>${show(y)}</span></span>`;
+  }).join('');
+  return `
+    <div class="diff"><div class="diff-labels"><span>Sent</span><span>You</span></div><div class="diff-cols">${cols}</div></div>
+    <div class="diff-legend"><span class="ok">correct</span><span class="bad">wrong</span><span class="miss">missed</span><span class="extra">extra</span></div>`;
+}
+
+function cueRound() {
+  clearTimeout(cueHandle);
+  cueHandle = setTimeout(kochPlay, 400);
+}
+
+function kochPlay() {
+  const answered = () => !!state.results[state.index];
+  const status = text => {
+    const el = document.getElementById('tx-status');
+    if (el && !answered()) el.textContent = text;
+  };
+  status('Transmitting…');
+  Morse.play(state.rounds[state.index].text, sound(), { onEnd: () => status('Type what you heard, then press Enter.') });
+}
+
+function renderKoch() {
+  const { lesson, rounds, index, results, typed } = state;
+  const round = rounds[index];
+  const res = results[index];
+  const last = index === rounds.length - 1;
+  const part = round.phase === 'new' ? `Part 1 · ${Morse.LESSONS[lesson].join(' ')}` : 'Part 2 · all learned characters';
+  const score = kochScore(results);
+  return `
+    <div class="quiz">
+      <div class="card session-bar">
+        <span class="q-num">${index + 1} / ${rounds.length}</span>
+        <div class="progress"><i style="width:${100 * results.length / rounds.length}%"></i></div>
+        <span class="score-chip"><span class="${score.pct >= KOCH_PASS ? 'ok' : 'bad'}">${results.length ? score.pct + '%' : ''}</span></span>
+        <button class="btn btn-ghost" data-action="kEnd" style="padding:7px 14px">End</button>
+      </div>
+      <article class="card q-card">
+        <div class="q-head"><span class="pill accent">Lesson ${lesson + 1}</span><span class="pill">${part}</span><span class="spacer"></span><span class="q-num">${speedLabel()}</span></div>
+        <p class="q-text" id="tx-status">${res ? (res.pct === 100 ? 'Perfect copy!' : `${res.pct}% copied. Here is what was sent:`) : 'Get ready to listen…'}</p>
+        <input class="text-input copy-input" id="k-input" data-k-input autocomplete="off" autocapitalize="characters" spellcheck="false"
+          value="${esc(typed)}" ${res ? 'disabled' : ''} placeholder="Type here as you listen">
+        ${res ? diffHtml(res) : ''}
+        <div class="q-foot">
+          <span class="hint-keys"><span class="kbd">Enter</span> ${res ? 'next' : 'check'}</span>
+          <span class="spacer"></span>
+          <button class="btn" data-action="kReplay">▶ Play again</button>
+          ${res ? `<button class="btn btn-primary" data-action="kNext">${last ? 'See results' : 'Next →'}</button>`
+            : '<button class="btn btn-primary" data-action="kCheck">Check</button>'}
+        </div>
+      </article>
+    </div>`;
+}
+
+function kochCheck() {
+  if (state.results[state.index]) return;
+  Morse.stop();
+  const round = state.rounds[state.index];
+  state.results[state.index] = { ...gradeCopy(round.text, state.typed), phase: round.phase, text: round.text };
+  render();
+}
+
+function kochNext() {
+  if (!state.results[state.index]) return;
+  if (state.index === state.rounds.length - 1) return finishKoch();
+  Morse.stop();
+  state.index++;
+  state.typed = '';
+  render();
+  cueRound();
+}
+
+function finishKoch() {
+  const { lesson, rounds, results, spaced } = state;
+  const complete = results.length === rounds.length;
+  const { pct } = kochScore(results);
+  // Farnsworth sessions are practice only: they never count as a pass or a best score.
+  const pass = complete && !spaced && pct >= KOCH_PASS;
+  let unlocked = false;
+  if (complete && !spaced) {
+    koch.best[lesson] = Math.max(koch.best[lesson] || 0, pct);
+    if (pass && lesson === koch.unlocked && lesson < Morse.LESSONS.length - 1) { koch.unlocked++; unlocked = true; }
+    saveKoch();
+  }
+  go('kochDone', { lesson, results, complete, pass, unlocked, spaced });
+}
+
+function renderKochDone() {
+  const { lesson, results, complete, pass, unlocked, spaced } = state;
+  const total = kochScore(results);
+  const L = Morse.LESSONS;
+  const hasNext = lesson + 1 < L.length && lesson + 1 <= koch.unlocked;
+  const msg = spaced ? `You copied ${total.pct}% of the characters with Farnsworth spacing. This was practice: to pass the lesson, copy ${KOCH_PASS}% with Farnsworth spacing turned off.`
+    : !complete ? 'Only a complete session counts towards unlocking the next lesson.'
+    : pass && lesson === L.length - 1 ? `You copied ${total.pct}%. You have learned all ${Morse.KOCH_ORDER.length} Koch characters!`
+    : pass ? `You copied ${total.pct}% of the characters.${unlocked ? ` Lesson ${lesson + 2} is now unlocked, with ${L[lesson + 1].join(' ')}.` : ''}`
+    : `You copied ${total.pct}% of the characters. You need ${KOCH_PASS}% to move on, so try this lesson again.`;
+  const parts = [['new', `Part 1 · ${L[lesson].join(' ')}`], ['all', 'Part 2 · all learned']]
+    .map(([p, label]) => [label, results.filter(r => r.phase === p)]).filter(([, rs]) => rs.length);
+  return `
+    <div class="card result-hero">
+      ${ring(total.pct, `${total.matched}/${total.of}`, KOCH_PASS)}
+      <div>
+        <div class="eyebrow">Koch lesson ${lesson + 1} · ${speedLabel()}</div>
+        <div class="verdict-big ${pass ? 'pass' : spaced && complete ? '' : 'fail'}" style="margin-top:6px">${pass ? 'Lesson passed!' : !complete ? 'Session ended early' : spaced ? 'Practice complete' : `Not ${KOCH_PASS}% yet`}</div>
+        <p class="muted" style="margin:4px 0 0">${msg}</p>
+        <div class="section-scores">${parts.map(([label, rs]) => {
+          const s = kochScore(rs);
+          return `<div class="section-score"><div class="top"><b>${esc(label)}</b><span class="big">${s.pct}%</span></div>
+            <div class="bar ${s.pct >= KOCH_PASS ? '' : 'fail'}"><i style="width:${s.pct}%"></i></div></div>`;
+        }).join('')}</div>
+        <div class="btn-row" style="margin-top:18px">
+          ${pass && hasNext ? `<button class="btn btn-primary" data-action="kLesson" data-n="${lesson + 1}">Start lesson ${lesson + 2} →</button>` : ''}
+          <button class="btn ${pass && hasNext ? '' : 'btn-primary'}" data-action="kLesson" data-n="${lesson}">Repeat lesson ${lesson + 1}</button>
+          <button class="btn btn-ghost" data-action="kCourse">Back to course</button>
+        </div>
+      </div>
+    </div>
+    <section class="review">
+      <div class="review-head"><h3>Transmissions</h3></div>
+      ${results.map((r, i) => `
+        <article class="card review-item ${r.pct === 100 ? 'ok' : 'bad'}">
+          <div class="q-head"><span class="q-num">#${i + 1}</span><span class="pill ${r.pct === 100 ? 'ok' : r.pct >= KOCH_PASS ? '' : 'bad'}">${r.pct}%</span>
+            <span class="spacer"></span><button class="btn btn-ghost" data-action="kHear" data-i="${i}" style="padding:6px 12px">▶ Play</button></div>
+          ${diffHtml(r)}
+        </article>`).join('')}
+    </section>`;
+}
+
 /* ---------- events ---------- */
 const actions = {
   secToggle(el) {
@@ -731,6 +1064,51 @@ const actions = {
   rFilter(el) { state.filter = el.dataset.v; },
   retake() { startExam(state.exam.set); return true; },
   newRandom() { startExam('random'); return true; },
+  mTab(el) { Morse.stop(); morseCfg.tab = el.dataset.v; saveMorse(); },
+  mTone(el) { morseCfg.tone = +el.dataset.v; saveMorse(); },
+  mPlay() {
+    if (Morse.playing()) Morse.stop();
+    else Morse.play(morseCfg.text, morseCfg, { onChar: highlightTok, onEnd: setPlayBtn });
+    highlightTok(null);
+    setPlayBtn();
+    return true;
+  },
+  mPlayChar(el) { Morse.play(el.dataset.ch, sound()); return true; },
+  mLesson(el) {
+    const n = +el.dataset.n;
+    if (n <= koch.unlocked) { morseCfg.lesson = n; saveMorse(); return; }
+    confirmModal(`Skip to lesson ${n + 1}?`, `This unlocks every lesson up to ${n + 1}. Only skip ahead if you can already copy ${Morse.learned(n - 1).join(' ')} reliably.`, 'Skip ahead', () => {
+      koch.unlocked = n;
+      morseCfg.lesson = n;
+      saveKoch();
+      saveMorse();
+      render();
+    });
+    return true;
+  },
+  mRounds(el) { morseCfg.rounds = +el.dataset.v; saveMorse(); },
+  mReset() {
+    confirmModal('Reset Koch progress?', 'All lessons except the first are locked again and your best scores are deleted.', 'Reset', () => {
+      Object.assign(koch, { unlocked: 0, best: {} });
+      morseCfg.lesson = 0;
+      saveKoch();
+      saveMorse();
+      render();
+    });
+    return true;
+  },
+  startKoch() { startKoch(); return true; },
+  kCheck() { kochCheck(); return true; },
+  kNext() { kochNext(); return true; },
+  kReplay() { kochPlay(); document.getElementById('k-input')?.focus(); return true; },
+  kEnd() {
+    if (!state.results.length) { go('morse'); return true; }
+    finishKoch();
+    return true;
+  },
+  kHear(el) { Morse.play(state.results[+el.dataset.i].text, sound()); return true; },
+  kLesson(el) { morseCfg.lesson = +el.dataset.n; saveMorse(); startKoch(morseCfg.lesson); return true; },
+  kCourse() { morseCfg.tab = 'koch'; go('morse'); return true; },
 };
 
 app.addEventListener('click', e => {
@@ -749,9 +1127,39 @@ document.querySelector('.brand').addEventListener('click', () => {
 app.addEventListener('change', e => {
   const key = e.target.dataset.toggle;
   if (!key) return;
-  const cfg = state.view === 'examSetup' ? examCfg : practiceCfg;
+  const cfg = state.view === 'examSetup' ? examCfg : state.view === 'morse' ? morseCfg : practiceCfg;
   cfg[key] = e.target.checked;
+  if (cfg === morseCfg) saveMorse();
   render();
+});
+
+function updateSpeedLabels() {
+  const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+  set('speed-label', speedLabel());
+  set('eff-timing', farnsworthText());
+}
+
+app.addEventListener('input', e => {
+  const t = e.target;
+  if (t.dataset.cfg === 'wpm') {
+    morseCfg.wpm = +t.value;
+    saveMorse();
+    document.getElementById('wpm-val').textContent = `${morseCfg.wpm} WPM`;
+    document.getElementById('timing').textContent = timingText();
+    updateSpeedLabels();
+  } else if (t.dataset.cfg === 'eff') {
+    morseCfg.effWpm = +t.value;
+    saveMorse();
+    document.getElementById('eff-val').textContent = `${morseCfg.effWpm} WPM`;
+    updateSpeedLabels();
+  } else if ('morseText' in t.dataset) {
+    morseCfg.text = t.value;
+    saveMorse();
+    if (Morse.playing()) { Morse.stop(); setPlayBtn(); }
+    document.getElementById('morse-out').innerHTML = morseTokensHtml(t.value);
+  } else if ('kInput' in t.dataset) {
+    state.typed = t.value;
+  }
 });
 
 document.addEventListener('keydown', e => {
@@ -771,6 +1179,9 @@ document.addEventListener('keydown', e => {
     else if (k === 'arrowright' || k === 'enter') { e.preventDefault(); examMove(ex.index + 1); }
     else if (k === 'arrowleft') examMove(ex.index - 1);
     else if (k === 'f') actions.eFlag(), render();
+  } else if (state.view === 'koch' && k === 'enter') {
+    e.preventDefault();
+    state.results[state.index] ? kochNext() : kochCheck();
   }
 });
 

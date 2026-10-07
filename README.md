@@ -5,7 +5,7 @@ Unofficial practice material for the **IRTS HAREC** exam, the Harmonised Amateur
 - **20 practice papers** with 1,200 questions in total. Each paper follows the official exam layout: 60 multiple-choice questions, split by syllabus section in the official proportions.
 - **Answer keys** with a short explanation for each answer and the Study Guide page that confirms it.
 - **60 diagram questions** covering circuits, block diagrams, radiation patterns and oscilloscope traces. They are drawn as SVG.
-- **HAREC Trainer**, an offline study app that runs in the browser or as a desktop app, with question practice and timed mock exams.
+- **HAREC Trainer**, an offline study app that runs in the browser or as a desktop app, with question practice, timed mock exams and a Morse code trainer.
 
 **▶ Try the app online: <https://harec-trainer.pages.dev/>**
 
@@ -32,6 +32,7 @@ A small static web app in `app/src/`. It has no dependencies or build step, and 
 
 - **Question practice:** pick sets and syllabus sections. You can put questions you got wrong first and shuffle the answer order. Each answer shows its explanation and Study Guide page straight away.
 - **Exam practice:** sit any of the 20 sets, or a random paper weighted by syllabus that prefers questions you haven't seen yet or got wrong. You can turn the 2-hour timer on, flag questions to come back to, and get a per-section result with a full review.
+- **Morse code (CW):** a Koch method course of 21 lessons, each adding two characters in Koch order. Every lesson sends groups of the new characters first, then, if you choose, groups, words and callsigns using everything learned so far. You type what you hear and the trainer marks each mistake. Copying 90% unlocks the next lesson. A translator sends any text you type, once or on repeat. Characters are sent at 18–25 WPM with ITU timing. Lessons can use Farnsworth spacing, which keeps the characters at full speed but lengthens the gaps to an effective speed of 5–15 WPM. These sessions are practice only; a lesson is passed only at full speed.
 - Your progress, exam history and an exam in progress are saved in the browser's local storage. Light and dark themes are available.
 
 ### Run in a browser
