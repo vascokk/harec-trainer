@@ -221,8 +221,9 @@ const Morse = (() => {
   // live. mode 'straight' times each press of one key ('key'); the dit/dah
   // boundary adapts to the sender's own dit and dah lengths, starting from wpm.
   // mode 'iambic' is a squeeze keyer (Curtis mode B) on two paddles ('dit',
-  // 'dah') at wpm. A gap over 2.5 units ends a character and one over 5 units
-  // ends a word. Eight or more dits is the error sign and erases the last word.
+  // 'dah') at wpm. mode 'bug' is a semi-automatic key: holding 'dit' sends a
+  // stream of dits at wpm, and each closure of 'dah' is a hand-made dah.
+  // A gap over 2.5 units ends a character and one over 5 units ends a word. Eight or more dits is the error sign and erases the last word.
   // onChange(text, code) fires with the decoded text and the character in progress.
   function sender(opts, onChange) {
     const ac = audio();
@@ -246,7 +247,7 @@ const Morse = (() => {
 
     // Decoder.
     let ditMs = unitMs(opts.wpm), dahMs = 3 * ditMs;
-    const unit = () => opts.mode === 'iambic' ? unitMs(opts.wpm) : (ditMs + dahMs / 3) / 2;
+    const unit = () => opts.mode !== 'straight' ? unitMs(opts.wpm) : (ditMs + dahMs / 3) / 2;
     let text = '', code = '', space = false, first = null, last = null, gapTimer = null;
     const emit = () => onChange && onChange(text, code);
     const commit = () => {
@@ -320,8 +321,41 @@ const Morse = (() => {
       }, (el === '.' ? 1 : 3) * u);
     };
 
+    // Bug. One lever, so a dah can't start during a dit or a dit during a dah.
+    let bugDit = false, dahAt = null;
+    const bugNext = () => {
+      if (!bugDit || dahAt !== null) { busy = false; return; }
+      busy = true;
+      markStart();
+      tone(true);
+      const u = unitMs(opts.wpm);
+      keyTimer = setTimeout(() => {
+        tone(false);
+        markEnd('.');
+        keyTimer = setTimeout(bugNext, u);
+      }, u);
+    };
+    const bugDown = which => {
+      if (which === 'dit') {
+        bugDit = true;
+        if (!busy && dahAt === null) bugNext();
+      } else if (!busy && dahAt === null) {
+        markStart();
+        dahAt = now();
+        tone(true);
+      }
+    };
+    const bugUp = which => {
+      if (which === 'dit') { bugDit = false; return; }
+      if (dahAt === null) return;
+      tone(false);
+      dahAt = null;
+      markEnd('-');
+    };
+
     return {
       down(which) {
+        if (opts.mode === 'bug') return bugDown(which);
         if (opts.mode !== 'iambic') return straightDown();
         if (pad[which]) return;
         pad[which] = true;
@@ -329,6 +363,7 @@ const Morse = (() => {
         else if (cur === null || which !== name(cur)) mem[which] = true;
       },
       up(which) {
+        if (opts.mode === 'bug') return bugUp(which);
         if (opts.mode !== 'iambic') return straightUp();
         pad[which] = false;
       },

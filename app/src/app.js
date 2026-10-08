@@ -145,13 +145,14 @@ function go(view, extra = {}) {
 function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
     practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
-    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone };
+    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest };
   app.innerHTML = `<div class="fade-in">${termsAccepted ? views[state.view]() : renderTerms()}</div>`;
   topStatus.textContent = state.view === 'exam' || !termsAccepted ? ''
     : MORSE_VIEWS.includes(state.view) ? `Koch lesson ${koch.unlocked + 1} of ${Morse.LESSONS.length}`
     : `${QUESTIONS.length} questions · ${SET_NUMBERS.length} sets`;
   if (state.view === 'exam') startTimer();
   document.getElementById('k-input')?.focus();
+  document.getElementById('t-input')?.focus();
 }
 
 /* ---------- home ---------- */
@@ -205,7 +206,7 @@ function renderHome() {
         <div class="icon">${ICON.key}</div>
         <h2>Morse code (CW)</h2>
         <p>Learn to copy Morse by ear with the Koch method, practise sending with a key, or hear any text sent in Morse.</p>
-        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li><li>Straight key or iambic paddles, with speed and error marking</li></ul>
+        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li><li>Straight key, bug or iambic paddles, with speed and error marking</li><li>Practice for the IRTS Morse test, receiving and sending</li></ul>
       </button>
     </section>
     ${history.length ? `
@@ -726,15 +727,18 @@ function renderResults() {
 }
 
 /* ---------- Morse code ---------- */
-const MORSE_VIEWS = ['morse', 'koch', 'kochDone'];
+const MORSE_VIEWS = ['morse', 'koch', 'kochDone', 'morseTest'];
 const KOCH_PASS = 90;
 const EFF_MIN = 5, EFF_MAX = 15;
+const TEST_MIN = 5, TEST_MAX = 25;   // IRTS test speed is 5 WPM
 const SEND_MIN = 5, SEND_MAX = 30;   // sending speed; beginners key well below copying speed   // Farnsworth effective speed, kept below Morse.MIN_WPM
 const morseCfg = Object.assign({
   tab: 'translate', wpm: 20, tone: 600, repeat: false, text: 'TNX FER QSO 73',
   lesson: null, rounds: 10, includePrev: true, farnsworth: false, effWpm: 8,
   sendKey: 'straight', sendWpm: 15, sendSrc: 'koch', ownText: '', swapPaddles: false, showCode: true,
+  testPart: 'rxText', testWpm: 5, testFarns: false,
 }, store.get('morseCfg', {}));
+morseCfg.testWpm = Math.min(TEST_MAX, Math.max(TEST_MIN, morseCfg.testWpm));
 morseCfg.sendWpm = Math.min(SEND_MAX, Math.max(SEND_MIN, morseCfg.sendWpm));
 morseCfg.wpm = Math.min(Morse.MAX_WPM, Math.max(Morse.MIN_WPM, morseCfg.wpm));
 morseCfg.effWpm = Math.min(EFF_MAX, Math.max(EFF_MIN, morseCfg.effWpm));
@@ -782,15 +786,16 @@ function renderMorse() {
   return `
     <div class="setup">
       <div class="setup-head">
-        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${{ translate: 'Hear any text in Morse', koch: 'Koch method course', send: 'Send Morse with a key' }[tab]}</h2></div>
+        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${{ translate: 'Hear any text in Morse', koch: 'Koch method course', send: 'Send Morse with a key', test: 'IRTS Morse test' }[tab]}</h2></div>
         <button class="btn btn-ghost" data-go="home">← Back</button>
       </div>
       <div><div class="segmented">
         <button class="${tab === 'translate' ? 'on' : ''}" data-action="mTab" data-v="translate">Translator</button>
         <button class="${tab === 'koch' ? 'on' : ''}" data-action="mTab" data-v="koch">Koch course</button>
         <button class="${tab === 'send' ? 'on' : ''}" data-action="mTab" data-v="send">Sending</button>
+        <button class="${tab === 'test' ? 'on' : ''}" data-action="mTab" data-v="test">Morse test</button>
       </div></div>
-      ${tab === 'send' ? sendPanel() : `
+      ${tab === 'send' ? sendPanel() : tab === 'test' ? testPanel() : `
       <div class="card panel">
         <h3>Sound</h3>
         <p class="hint">Characters are always sent at full speed. Timing follows ITU-R M.1677-1, where the word PARIS defines the speed.</p>
@@ -1112,8 +1117,8 @@ const fillPhrase = phrase => {
 
 // The keyer lives outside state so re-renders keep it; go() and tab changes dispose of it.
 const sendOpts = {
-  get mode() { return morseCfg.sendKey === 'paddle' ? 'iambic' : 'straight'; },
-  get wpm() { return morseCfg.sendWpm; },
+  get mode() { return { paddle: 'iambic', bug: 'bug' }[morseCfg.sendKey] || 'straight'; },
+  get wpm() { return state.view === 'morseTest' ? morseCfg.testWpm : morseCfg.sendWpm; },
   get tone() { return morseCfg.tone; },
 };
 let keyer = null;
@@ -1160,13 +1165,14 @@ function sendNext() {
 }
 
 function sendOutHtml(text, code) {
-  if (!text && !code) return `<span class="muted">${morseCfg.sendKey === 'paddle' ? 'Use the paddles below' : 'Press the key below'} to start sending.</span>`;
+  if (!text && !code) return `<span class="muted">${morseCfg.sendKey === 'straight' ? 'Press the key below' : 'Use the paddles below'} to start sending.</span>`;
   return `${esc(text)}${code ? `<span class="pending">${codeHtml(code)}</span>` : ''}`;
 }
 
 function sendChanged(text, code) {
   const out = document.getElementById('send-out');
   if (out) out.innerHTML = sendOutHtml(text, code);
+  if (state.view === 'morseTest') return;
   // Finish automatically once as many characters have been sent as the target has.
   const count = t => t.replace(/\s/g, '').length;
   if (!code && sendSt.target && !sendSt.result && count(text) >= count(sendSt.target)) sendCheck();
@@ -1199,7 +1205,7 @@ function sendResultHtml() {
     <div class="send-stats">
       <div><span class="big ${r.pct >= KOCH_PASS ? 'ok' : 'bad'}">${r.pct}%</span><span class="muted">accuracy · ${r.matched}/${r.of}</span></div>
       <div><span class="big">${r.wpm.toFixed(1)}</span><span class="muted">WPM overall</span></div>
-      <div><span class="big">${r.charWpm.toFixed(0)}</span><span class="muted">${morseCfg.sendKey === 'paddle' ? 'WPM keyer speed' : 'WPM character speed'}</span></div>
+      <div><span class="big">${r.charWpm.toFixed(0)}</span><span class="muted">${keyerSpeedLabel()}</span></div>
       ${n > 1 ? `<div><span class="big">${avg}%</span><span class="muted">${n} sent · avg ${avgWpm.toFixed(1)} WPM</span></div>` : ''}
     </div>
     ${diffHtml(r)}`;
@@ -1211,32 +1217,50 @@ function sendTargetHtml() {
     : morseCfg.showCode ? `<div class="morse-out">${morseTokensHtml(t)}</div>` : esc(t);
 }
 
+const KEY_TYPES = [['straight', 'Straight key'], ['bug', 'Bug'], ['paddle', 'Iambic paddles']];
+const keyerSpeedLabel = () => ({ paddle: 'WPM keyer speed', bug: 'WPM dit speed' }[morseCfg.sendKey] || 'WPM character speed');
+
+// The two-lever keys (bug and paddles) share the paddle layout and keyboard keys.
+function keyPadHtml() {
+  const k = morseCfg.sendKey;
+  if (k === 'straight') return `<div class="key-pad"><button class="key-btn" data-key="key" aria-label="Straight key"><span class="key-sym">●</span>Key<kbd>Space</kbd></button></div>`;
+  const label = { dit: k === 'bug' ? 'Dits (auto)' : 'Dit', dah: 'Dah' };
+  return `<div class="key-pad paddles">${(morseCfg.swapPaddles ? ['dah', 'dit'] : ['dit', 'dah']).map((d, side) => `
+    <button class="key-btn" data-key="${d}" aria-label="${d} paddle"><span class="key-sym">${d === 'dit' ? '·' : '–'}</span>${label[d]}<kbd>${side ? '→' : '←'}</kbd></button>`).join('')}</div>`;
+}
+
+// Key type choice and how to use it.
+function keyChoiceHtml() {
+  const k = morseCfg.sendKey;
+  return `
+      <div class="segmented" style="margin-bottom:18px">
+        ${KEY_TYPES.map(([v, l]) => `<button class="${k === v ? 'on' : ''}" data-action="sKey" data-v="${v}">${l}</button>`).join('')}
+      </div>
+      <p class="hint">${k === 'paddle'
+        ? 'Hold the dit paddle for a string of dits and the dah paddle for dahs. Squeeze both to alternate (iambic mode B); the keyer times every element for you. On a keyboard, use ← and → (or left and right Ctrl).'
+        : k === 'bug'
+        ? 'A semi-automatic key: hold the dit side for a string of evenly timed dits, and press the dah side once for each dah, holding it for as long as a dah lasts. On a keyboard, use ← and → (or left and right Ctrl).'
+        : 'Hold the key down for each dit or dah; the length of each press decides which it is. The decoder adapts to your own rhythm, starting from the speed below. On a keyboard, use the space bar.'}
+        A pause of about 3 dits ends a character and about 7 ends a word. Send 8 dits (the error sign) to erase the last word.</p>`;
+}
+
+const swapHtml = () => morseCfg.sendKey === 'straight' ? ''
+  : `<div class="toggle-list" style="margin-top:16px">${toggle('swapPaddles', 'Swap paddles', 'Put dah on the left and dit on the right, for left-handed sending.', morseCfg)}</div>`;
+
 function sendPanel() {
-  const paddle = morseCfg.sendKey === 'paddle';
   if (sendSt.target === null) sendSt.target = newSendTarget();
   const src = morseCfg.sendSrc;
-  const keys = paddle
-    ? (morseCfg.swapPaddles ? ['dah', 'dit'] : ['dit', 'dah']).map((k, side) => `
-        <button class="key-btn" data-key="${k}" aria-label="${k} paddle"><span class="key-sym">${k === 'dit' ? '·' : '–'}</span>${k === 'dit' ? 'Dit' : 'Dah'}<kbd>${side ? '→' : '←'}</kbd></button>`).join('')
-    : `<button class="key-btn" data-key="key" aria-label="Straight key"><span class="key-sym">●</span>Key<kbd>Space</kbd></button>`;
   return `
     <div class="card panel">
       <h3>Key</h3>
-      <div class="segmented" style="margin-bottom:18px">
-        <button class="${paddle ? '' : 'on'}" data-action="sKey" data-v="straight">Straight key</button>
-        <button class="${paddle ? 'on' : ''}" data-action="sKey" data-v="paddle">Iambic paddles</button>
-      </div>
-      <p class="hint">${paddle
-        ? 'Hold the dit paddle for a string of dits and the dah paddle for dahs. Squeeze both to alternate (iambic mode B); the keyer times every element for you. On a keyboard, use ← and → (or left and right Ctrl).'
-        : 'Hold the key down for each dit or dah; the length of each press decides which it is. The decoder adapts to your own rhythm, starting from the speed below. On a keyboard, use the space bar.'}
-        A pause of about 3 dits ends a character and about 7 ends a word. Send 8 dits (the error sign) to erase the last word.</p>
+      ${keyChoiceHtml()}
       <div class="sound-row">
-        <div class="speed"><label for="send-wpm">${paddle ? 'Keyer speed' : 'Starting speed'}</label>
+        <div class="speed"><label for="send-wpm">${{ paddle: 'Keyer speed', bug: 'Dit speed' }[morseCfg.sendKey] || 'Starting speed'}</label>
           <input type="range" id="send-wpm" min="${SEND_MIN}" max="${SEND_MAX}" step="1" value="${morseCfg.sendWpm}" data-cfg="sendWpm">
           <output id="send-wpm-val">${morseCfg.sendWpm} WPM</output></div>
         ${toneHtml()}
       </div>
-      ${paddle ? `<div class="toggle-list" style="margin-top:16px">${toggle('swapPaddles', 'Swap paddles', 'Put dah on the left and dit on the right, for left-handed sending.', morseCfg)}</div>` : ''}
+      ${swapHtml()}
     </div>
     <div class="card panel">
       <h3>Practice text</h3>
@@ -1256,7 +1280,7 @@ function sendPanel() {
       <div class="send-target" id="send-target">${sendTargetHtml()}</div>
       <div class="eyebrow" style="margin-top:18px">You sent</div>
       <div class="send-out" id="send-out">${sendOutHtml(keyer?.text || '', '')}</div>
-      <div class="key-pad ${paddle ? 'paddles' : ''}">${keys}</div>
+      ${keyPadHtml()}
       <div class="btn-row" style="margin-top:16px">
         ${sendSt.result
           ? `<button class="btn btn-primary" data-action="sNext">New text →</button><button class="btn" data-action="sRetry">Send it again</button>`
@@ -1266,9 +1290,13 @@ function sendPanel() {
     </div>`;
 }
 
+// The key works on the Sending tab and during a sending test that hasn't been marked.
+const keyLive = () => state.view === 'morse' ? morseCfg.tab === 'send'
+  : state.view === 'morseTest' && TEST_PARTS[state.part].send && !state.result;
+
 function keyDown(which) {
-  if (state.view !== 'morse' || morseCfg.tab !== 'send') return;
-  if (sendSt.result) { sendSt.result = null; keyer?.clear(); render(); }
+  if (!keyLive()) return;
+  if (state.view === 'morse' && sendSt.result) { sendSt.result = null; keyer?.clear(); render(); }
   getKeyer().down(which);
   document.querySelector(`[data-key="${which}"]`)?.classList.add('down');
 }
@@ -1276,6 +1304,236 @@ function keyDown(which) {
 function keyUp(which) {
   keyer?.up(which);
   document.querySelector(`[data-key="${which}"]`)?.classList.remove('down');
+}
+
+/* ---------- IRTS Morse test ---------- */
+// The IRTS test (irts.ie, "Morse Test"): at 5 WPM, receive and send 75 characters
+// of plain language with at most 4 errors, and 5 five-figure number groups with
+// at most 3. Sending errors count only if they are left uncorrected.
+const TEST_PARTS = {
+  rxText: { send: false, num: false, max: 4, title: 'Receiving · plain language' },
+  rxNum: { send: false, num: true, max: 3, title: 'Receiving · number groups' },
+  txText: { send: true, num: false, max: 4, title: 'Sending · plain language' },
+  txNum: { send: true, num: true, max: 3, title: 'Sending · number groups' },
+};
+const TEST_CHARS = 75;
+// Punctuation the plain-language part may use, as set out by the IRTS.
+const TEST_MARKS = ['.', ',', '?', '/'];
+const TEST_SIGNS = [['.', 'Full stop'], [',', 'Comma'], ['?', 'Question mark'], ['/', 'Oblique stroke'], ['=', 'Break'],
+  ['<CT>', 'Commence transmission', '-.-.-'], ['<AR>', 'End of message', '.-.-.'], ['error', 'Error', '........']];
+
+// Plain-language sentences in the style of the IRTS sample tests.
+const TEST_SENTENCES = [
+  'How is the weather today?', 'It was nice yesterday, tomorrow should be fine.', 'The forecast is for rain and strong wind.',
+  'The halfwave dipole is a resonant aerial.', 'A dipole does not need a tuning unit if it is cut to length.',
+  'Is a top band dipole too large for most gardens?', 'A vertical of some type is normally used.',
+  'My name is {NAME} and I live near {QTH}.', 'I have been a radio amateur for {YRS} years.',
+  'Thank you for the call, it is good to hear you.', 'Your signal is strong, but there is some fading.',
+  'Conditions on {BAND} are good this evening.', 'I am running {PWR} into a wire dipole.',
+  'Please send a little slower, the band is noisy.', 'What is your name and where are you?',
+  'I will send my card through the bureau.', 'The local club meets every Tuesday night.',
+  'We had a good field day on the hill last summer.', 'Did you hear the beacon on ten metres?',
+  'The antenna came down in the storm last week.', 'An earth rod helps to keep the station safe.',
+  'The new rig works well on all the bands.', 'Is this frequency in use?', 'Good luck with the exam, I hope you pass.',
+  'Morse is still a very useful mode for weak signals.', 'The sun is shining and the sky is clear.',
+  'A low pass filter can reduce harmonics.', 'Feed the aerial with coax cable of the right impedance.',
+  'Best wishes to you and your family.', 'Hope to meet you again on the air soon.',
+  'My station is a {RIG} running {PWR}.', 'I am operating portable as {CALL}/P today.',
+  'Remember to give your callsign at least every fifteen minutes.', 'The repeater is on the hill near the town.',
+  'Are you going to the rally next month?', 'The power supply gives thirteen volts at twenty amps.',
+  'Use a dummy load when you adjust the transmitter.', 'Is the signal report readable, strong and clear?',
+];
+
+const nonSpace = t => t.replace(/\s/g, '').length;
+
+// About TEST_CHARS characters of plain language. Like the IRTS samples, any of the
+// four common punctuation marks the sentences leave out are added at the end.
+function testPlainText() {
+  let best = null;
+  for (let tries = 0; tries < 400; tries++) {
+    const pool = shuffle(TEST_SENTENCES.slice());
+    const parts = [];
+    while (pool.length && nonSpace(parts.join(' ')) < TEST_CHARS - 12) parts.push(fillPhrase(pool.pop()).toUpperCase());
+    const body = parts.join(' ');
+    const text = [body, ...TEST_MARKS.filter(m => !body.includes(m))].join(' ');
+    const off = Math.abs(nonSpace(text) - TEST_CHARS);
+    if (!best || off < best.off) best = { text, off };
+    if (off <= 2) break;
+  }
+  return best.text;
+}
+
+const testNumbers = () => Array.from({ length: 5 }, () => Array.from({ length: 5 }, () => randInt(0, 9)).join('')).join(' ');
+
+// Errors in an aligned copy: every wrong, missed or extra character. Word spacing
+// alone doesn't count.
+const testErrors = ops => ops.filter(([x, y]) => x !== y && !(x === ' ' && y === null) && !(x === null && y === ' ')).length;
+
+const testLog = Object.assign({}, store.get('morseTest', {}));
+
+const testSound = () => {
+  const farns = morseCfg.testFarns && morseCfg.wpm > morseCfg.testWpm;
+  return { wpm: farns ? morseCfg.wpm : morseCfg.testWpm, tone: morseCfg.tone, eff: farns ? morseCfg.testWpm : null };
+};
+const testSpeedLabel = () => {
+  const snd = testSound();
+  return snd.eff ? `${snd.wpm}/${snd.eff} WPM` : `${snd.wpm} WPM`;
+};
+
+function testPanel() {
+  const part = morseCfg.testPart, P = TEST_PARTS[part];
+  const signs = TEST_SIGNS.map(([sym, name, code]) => `
+    <div class="sign-row"><span class="mono sign-sym">${esc(sym)}</span>${codeHtml(code || Morse.CODE[sym])}<span class="muted">${esc(name)}</span></div>`).join('');
+  return `
+    <div class="card panel">
+      <h3>The test</h3>
+      <p class="hint">The IRTS Morse test is held at <b>5 WPM</b> and has four parts. Plain language includes the punctuation below. In the sending parts, a mistake you correct with the error sign doesn't count, and keyboard-generated Morse isn't allowed. Check the current rules with the IRTS before your test.</p>
+      <div class="set-grid test-grid">${Object.entries(TEST_PARTS).map(([k, p]) => {
+        const log = testLog[k];
+        return `<button class="set-tile ${k === part ? 'on' : ''} ${log?.passes ? 'passed' : ''}" data-action="tPart" data-v="${k}">
+          <div class="n">${esc(p.title)}</div>
+          <div class="s">${p.num ? '5 groups of 5 figures' : `${TEST_CHARS} characters`} · at most ${p.max} errors</div>
+          ${log ? `<div class="s">${log.passes ? '✓ ' : ''}${log.passes} of ${log.tries} passed</div>` : ''}</button>`;
+      }).join('')}</div>
+      <details class="signs"><summary>Punctuation and prosigns</summary><div class="sign-grid">${signs}</div>
+        <p class="hint" style="margin:12px 0 0">Write each one with its symbol. A receiving test starts with <span class="mono">&lt;CT&gt;</span> and ends with <span class="mono">&lt;AR&gt;</span>; you don't need to write those down.</p></details>
+    </div>
+    <div class="card panel">
+      <h3>${P.send ? 'Key and speed' : 'Sound'}</h3>
+      ${P.send ? keyChoiceHtml() : ''}
+      <div class="sound-row">
+        <div class="speed"><label for="test-wpm">${P.send ? { paddle: 'Keyer speed', bug: 'Dit speed' }[morseCfg.sendKey] || 'Starting speed' : 'Speed'}</label>
+          <input type="range" id="test-wpm" min="${TEST_MIN}" max="${TEST_MAX}" step="1" value="${morseCfg.testWpm}" data-cfg="testWpm">
+          <output id="test-wpm-val">${morseCfg.testWpm} WPM</output></div>
+        ${toneHtml()}
+      </div>
+      ${P.send ? swapHtml() : `<div class="toggle-list" style="margin-top:16px">${toggle('testFarns', 'Farnsworth spacing',
+        `Send each character at your Koch speed (${morseCfg.wpm} WPM) and stretch the gaps to bring the overall speed down to the test speed. Turn it off to hear the characters at the test speed itself. Has no effect at ${morseCfg.wpm} WPM or above.`, morseCfg)}</div>`}
+    </div>
+    <div class="card start-bar">
+      <div class="summary">${P.send
+        ? `<b>Send</b> ${P.num ? 'five 5-figure groups' : `${TEST_CHARS} characters of plain language`} with ${{ straight: 'a straight key', bug: 'a bug', paddle: 'iambic paddles' }[morseCfg.sendKey]}. Pass with <b>${P.max}</b> uncorrected errors or fewer.`
+        : `<b>Copy</b> ${P.num ? 'five 5-figure groups' : `${TEST_CHARS} characters of plain language`} at <b id="test-speed">${testSpeedLabel()}</b>, sent once. Pass with <b>${P.max}</b> errors or fewer.`}</div>
+      <button class="btn btn-primary" data-action="startTest">Start test →</button>
+    </div>`;
+}
+
+function startTest(part = morseCfg.testPart) {
+  const target = TEST_PARTS[part].num ? testNumbers() : testPlainText();
+  go('morseTest', { part, target, typed: '', result: null, heard: false });
+  if (!TEST_PARTS[part].send) {
+    clearTimeout(cueHandle);
+    cueHandle = setTimeout(testPlay, 1500);
+  }
+}
+
+function testStatus() {
+  if (state.result) return '';
+  if (Morse.playing()) return 'Receiving… write down what you hear.';
+  return state.heard ? 'End of message. Check your copy, then press Mark.' : 'Get ready: the test starts in a moment…';
+}
+
+function testPlay() {
+  const toks = Morse.parse(`<CT> ${state.target} <AR>`);
+  const ui = () => {
+    const st = document.getElementById('tx-status');
+    if (st) st.textContent = testStatus();
+    const b = document.getElementById('t-play');
+    if (b) b.textContent = Morse.playing() ? '■ Stop' : '↺ Start again';
+  };
+  const bar = i => {
+    const el = document.getElementById('tx-prog');
+    if (el && i !== null) el.style.width = `${100 * (i + 1) / toks.length}%`;
+  };
+  Morse.play(`<CT> ${state.target} <AR>`, testSound(), { onChar: bar, onEnd: () => { state.heard = true; ui(); } });
+  ui();
+}
+
+function testMark() {
+  if (state.result) return;
+  const P = TEST_PARTS[state.part];
+  let copy = state.typed;
+  if (P.send) {
+    if (!keyer) return;
+    keyer.flush();
+    copy = keyer.text;
+    if (!copy) return;
+  }
+  Morse.stop();
+  clearTimeout(cueHandle);
+  const res = gradeCopy(state.target, copy);
+  res.errors = testErrors(res.ops);
+  res.pass = res.errors <= P.max;
+  if (P.send) {
+    const { first, last, wpm } = keyer.stats();
+    const secs = (last - first) / 1000;
+    res.wpm = secs > 0 ? Morse.units(copy) * 1.2 / secs : 0;
+    res.charWpm = wpm;
+  }
+  const log = testLog[state.part] ||= { tries: 0, passes: 0 };
+  log.tries++;
+  if (res.pass) log.passes++;
+  store.set('morseTest', testLog);
+  state.result = res;
+  render();
+}
+
+function testResultHtml() {
+  const r = state.result, P = TEST_PARTS[state.part];
+  if (!r) return '';
+  const slow = P.send && r.wpm < 0.8 * morseCfg.testWpm;
+  return `
+    <div class="send-stats">
+      <div><span class="big ${r.pass ? 'ok' : 'bad'}">${r.pass ? 'Pass' : 'Fail'}</span><span class="muted">${r.errors} error${r.errors === 1 ? '' : 's'} · at most ${P.max} allowed</span></div>
+      <div><span class="big">${r.matched}/${nonSpace(state.target)}</span><span class="muted">characters right</span></div>
+      ${P.send ? `
+      <div><span class="big">${r.wpm.toFixed(1)}</span><span class="muted">WPM overall</span></div>
+      <div><span class="big">${r.charWpm.toFixed(0)}</span><span class="muted">${keyerSpeedLabel()}</span></div>` : ''}
+    </div>
+    ${slow ? `<p class="hint">You sent well below the ${morseCfg.testWpm} WPM test speed. In the real test, aim to keep up a steady ${morseCfg.testWpm} WPM.</p>` : ''}
+    ${diffHtml(r)}`;
+}
+
+function renderMorseTest() {
+  const { part, target, typed, result } = state;
+  const P = TEST_PARTS[part];
+  const speed = P.send ? `${morseCfg.testWpm} WPM` : testSpeedLabel();
+  return `
+    <div class="quiz">
+      <div class="card session-bar">
+        <span class="q-num">IRTS Morse test</span>
+        <div class="progress"><i id="tx-prog" style="width:${result ? 100 : 0}%"></i></div>
+        <span class="q-num">${speed}</span>
+        <button class="btn btn-ghost" data-action="tBack" style="padding:7px 14px">${result ? 'Back' : 'End'}</button>
+      </div>
+      <article class="card q-card ${P.send ? 'send-card' : ''}">
+        <div class="q-head"><span class="pill accent">${P.send ? 'Sending' : 'Receiving'}</span><span class="pill">${P.num ? 'Number groups' : 'Plain language'}</span>
+          <span class="spacer"></span><span class="pill">at most ${P.max} errors</span></div>
+        ${P.send ? `
+        <div class="eyebrow">Send this</div>
+        <div class="send-target test-target">${esc(target)}</div>
+        <div class="eyebrow" style="margin-top:18px">You sent</div>
+        <div class="send-out" id="send-out">${sendOutHtml(keyer?.text || '', '')}</div>
+        ${result ? '' : keyPadHtml()}` : `
+        <p class="q-text" id="tx-status">${testStatus()}</p>
+        <textarea class="text-input copy-input" id="t-input" data-t-input rows="3" autocomplete="off" autocapitalize="characters" spellcheck="false"
+          ${result ? 'disabled' : ''} placeholder="Type here as you listen">${esc(typed)}</textarea>`}
+        <div id="test-result" style="margin-top:16px">${testResultHtml()}</div>
+        <div class="q-foot">
+          ${P.send && !result ? '<span class="hint-keys"><span class="kbd">Enter</span> mark</span>' : ''}
+          <span class="spacer"></span>
+          ${result ? `
+            <button class="btn" data-action="tHear">▶ Hear the text</button>
+            <button class="btn btn-primary" data-action="tNew">New test →</button>`
+          : P.send ? `
+            <button class="btn" data-action="sClear">Clear</button>
+            <button class="btn btn-primary" data-action="tMark">Mark</button>`
+          : `
+            <button class="btn" id="t-play" data-action="tPlay">${Morse.playing() ? '■ Stop' : '↺ Start again'}</button>
+            <button class="btn btn-primary" data-action="tMark">Mark</button>`}
+        </div>
+      </article>
+    </div>`;
 }
 
 /* ---------- events ---------- */
@@ -1388,6 +1646,18 @@ const actions = {
   kHear(el) { Morse.play(state.results[+el.dataset.i].text, sound()); return true; },
   kLesson(el) { morseCfg.lesson = +el.dataset.n; saveMorse(); startKoch(morseCfg.lesson); return true; },
   kCourse() { morseCfg.tab = 'koch'; go('morse'); return true; },
+  tPart(el) { morseCfg.testPart = el.dataset.v; saveMorse(); },
+  startTest() { startTest(); return true; },
+  tPlay() {
+    clearTimeout(cueHandle);
+    if (Morse.playing()) { Morse.stop(); state.heard = true; render(); } else testPlay();
+    document.getElementById('t-input')?.focus();
+    return true;
+  },
+  tMark() { testMark(); return true; },
+  tHear() { Morse.play(state.target, testSound()); return true; },
+  tNew() { startTest(state.part); return true; },
+  tBack() { morseCfg.tab = 'test'; saveMorse(); go('morse'); return true; },
 };
 
 app.addEventListener('click', e => {
@@ -1452,8 +1722,14 @@ app.addEventListener('input', e => {
       sendSt.target = newSendTarget();
       document.getElementById('send-target').innerHTML = sendTargetHtml();
     }
-  } else if ('kInput' in t.dataset) {
+  } else if ('kInput' in t.dataset || 'tInput' in t.dataset) {
     state.typed = t.value;
+  } else if (t.dataset.cfg === 'testWpm') {
+    morseCfg.testWpm = +t.value;
+    saveMorse();
+    document.getElementById('test-wpm-val').textContent = `${morseCfg.testWpm} WPM`;
+    const sp = document.getElementById('test-speed');
+    if (sp) sp.textContent = testSpeedLabel();
   }
 });
 
@@ -1475,9 +1751,9 @@ app.addEventListener('contextmenu', e => { if (e.target.closest('[data-key]')) e
 
 // Keyboard key: space for the straight key; arrows or left/right Ctrl for the paddles.
 function keyFor(e) {
-  if (state.view !== 'morse' || morseCfg.tab !== 'send' || modalRoot.innerHTML) return null;
+  if (!keyLive() || modalRoot.innerHTML) return null;
   if (e.target.closest('textarea, input, select')) return null;
-  if (morseCfg.sendKey !== 'paddle') return e.code === 'Space' ? 'key' : null;
+  if (morseCfg.sendKey === 'straight') return e.code === 'Space' ? 'key' : null;
   const side = { ArrowLeft: 0, ControlLeft: 0, ArrowRight: 1, ControlRight: 1 }[e.code];
   if (side === undefined) return null;
   return (morseCfg.swapPaddles ? ['dah', 'dit'] : ['dit', 'dah'])[side];
@@ -1517,6 +1793,9 @@ document.addEventListener('keydown', e => {
   } else if (state.view === 'morse' && morseCfg.tab === 'send' && k === 'enter' && !e.target.closest('textarea, button')) {
     e.preventDefault();
     sendSt.result ? (sendNext(), render()) : sendCheck();
+  } else if (state.view === 'morseTest' && TEST_PARTS[state.part].send && !state.result && k === 'enter' && !e.target.closest('button')) {
+    e.preventDefault();
+    testMark();
   } else if (state.view === 'koch' && k === 'enter') {
     e.preventDefault();
     state.results[state.index] ? kochNext() : kochCheck();

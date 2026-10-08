@@ -522,3 +522,14 @@ h3 { font-size: 16px; font-weight: 700; }
   .start-bar { flex-direction: column; align-items: stretch; }
   .stat-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
+
+/* ---------- IRTS Morse test ---------- */
+.test-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.test-grid .set-tile .n { font-size: 15px; font-variant-numeric: normal; }
+.signs { margin-top: 16px; }
+.signs summary { cursor: pointer; font-weight: 650; font-size: 14px; }
+.sign-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px 20px; margin-top: 12px; }
+.sign-row { display: flex; align-items: center; gap: 12px; font-size: 13.5px; }
+.sign-row .sign-sym { min-width: 44px; font-weight: 700; }
+.sign-row .code { color: var(--accent); }
+.send-target.test-target { font-size: 20px; line-height: 1.5; letter-spacing: .05em; overflow-wrap: anywhere; }
