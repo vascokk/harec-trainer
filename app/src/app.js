@@ -71,6 +71,7 @@ function record(id, ok) {
   s.last = ok ? 1 : 0;
   stats[id] = s;
   store.set('stats', stats);
+  logActivity(1);
 }
 
 /* ---------- exam composition ---------- */
@@ -145,7 +146,8 @@ function go(view, extra = {}) {
 function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
     practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
-    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest };
+    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest, contest: renderContest, contestDone: renderContestDone, qsl: renderQsl };
+  if (termsAccepted && state.view !== 'exam') checkAwards();
   app.innerHTML = `<div class="fade-in">${termsAccepted ? views[state.view]() : renderTerms()}</div>`;
   topStatus.textContent = state.view === 'exam' || !termsAccepted ? ''
     : MORSE_VIEWS.includes(state.view) ? `Koch lesson ${koch.unlocked + 1} of ${Morse.LESSONS.length}`
@@ -153,6 +155,7 @@ function render() {
   if (state.view === 'exam') startTimer();
   document.getElementById('k-input')?.focus();
   document.getElementById('t-input')?.focus();
+  document.getElementById('c-call')?.focus();
 }
 
 /* ---------- home ---------- */
@@ -180,6 +183,8 @@ function renderHome() {
         </div>
       </div>
     </section>
+    ${streakHtml()}
+    ${earnedQslHtml()}
     ${noticeHtml()}
     ${saved ? `
       <div class="card start-bar" style="margin-bottom:20px">
@@ -206,7 +211,7 @@ function renderHome() {
         <div class="icon">${ICON.key}</div>
         <h2>Morse code (CW)</h2>
         <p>Learn to copy Morse by ear with the Koch method, practise sending with a key, or hear any text sent in Morse.</p>
-        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li><li>Straight key, bug or iambic paddles, with speed and error marking</li><li>Practice for the IRTS Morse test, receiving and sending</li></ul>
+        <ul><li>${Morse.LESSONS.length} Koch lessons, two new characters each</li><li>Unlock the next lesson at 90% copy accuracy</li><li>Full-speed characters, ${Morse.MIN_WPM}–${Morse.MAX_WPM} WPM</li><li>Straight key, bug or iambic paddles, with speed and error marking</li><li>Practice for the IRTS Morse test, receiving and sending</li><li>Contest mode: copy callsigns against the clock</li></ul>
       </button>
     </section>
     ${history.length ? `
@@ -727,18 +732,21 @@ function renderResults() {
 }
 
 /* ---------- Morse code ---------- */
-const MORSE_VIEWS = ['morse', 'koch', 'kochDone', 'morseTest'];
+const MORSE_VIEWS = ['morse', 'koch', 'kochDone', 'morseTest', 'contest', 'contestDone'];
 const KOCH_PASS = 90;
 const EFF_MIN = 5, EFF_MAX = 15;
 const TEST_MIN = 5, TEST_MAX = 25;   // IRTS test speed is 5 WPM
+const CONTEST_MIN = 10, CONTEST_MAX = 45;  // contest starting speed, raised and lowered by adaptive speed
 const SEND_MIN = 5, SEND_MAX = 30;   // sending speed; beginners key well below copying speed   // Farnsworth effective speed, kept below Morse.MIN_WPM
 const morseCfg = Object.assign({
   tab: 'translate', wpm: 20, tone: 600, repeat: false, text: 'TNX FER QSO 73',
   lesson: null, rounds: 10, includePrev: true, farnsworth: false, effWpm: 8,
   sendKey: 'straight', sendWpm: 15, sendSrc: 'koch', ownText: '', swapPaddles: false, showCode: true,
   testPart: 'rxText', testWpm: 5, testFarns: false,
+  contestMin: 2, contestWpm: 20, contestAdapt: true, contestCut: false,
 }, store.get('morseCfg', {}));
 morseCfg.testWpm = Math.min(TEST_MAX, Math.max(TEST_MIN, morseCfg.testWpm));
+morseCfg.contestWpm = Math.min(CONTEST_MAX, Math.max(CONTEST_MIN, morseCfg.contestWpm));
 morseCfg.sendWpm = Math.min(SEND_MAX, Math.max(SEND_MIN, morseCfg.sendWpm));
 morseCfg.wpm = Math.min(Morse.MAX_WPM, Math.max(Morse.MIN_WPM, morseCfg.wpm));
 morseCfg.effWpm = Math.min(EFF_MAX, Math.max(EFF_MIN, morseCfg.effWpm));
@@ -786,7 +794,7 @@ function renderMorse() {
   return `
     <div class="setup">
       <div class="setup-head">
-        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${{ translate: 'Hear any text in Morse', koch: 'Koch method course', send: 'Send Morse with a key', test: 'IRTS Morse test' }[tab]}</h2></div>
+        <div><div class="eyebrow">Morse code (CW)</div><h2 style="margin-top:6px">${{ translate: 'Hear any text in Morse', koch: 'Koch method course', send: 'Send Morse with a key', test: 'IRTS Morse test', contest: 'Contest run' }[tab]}</h2></div>
         <button class="btn btn-ghost" data-go="home">← Back</button>
       </div>
       <div><div class="segmented">
@@ -794,8 +802,9 @@ function renderMorse() {
         <button class="${tab === 'koch' ? 'on' : ''}" data-action="mTab" data-v="koch">Koch course</button>
         <button class="${tab === 'send' ? 'on' : ''}" data-action="mTab" data-v="send">Sending</button>
         <button class="${tab === 'test' ? 'on' : ''}" data-action="mTab" data-v="test">Morse test</button>
+        <button class="${tab === 'contest' ? 'on' : ''}" data-action="mTab" data-v="contest">Contest</button>
       </div></div>
-      ${tab === 'send' ? sendPanel() : tab === 'test' ? testPanel() : `
+      ${tab === 'send' ? sendPanel() : tab === 'test' ? testPanel() : tab === 'contest' ? contestPanel() : `
       <div class="card panel">
         <h3>Sound</h3>
         <p class="hint">Characters are always sent at full speed. Timing follows ITU-R M.1677-1, where the word PARIS defines the speed.</p>
@@ -1011,6 +1020,7 @@ function finishKoch() {
     if (pass && lesson === koch.unlocked && lesson < Morse.LESSONS.length - 1) { koch.unlocked++; unlocked = true; }
     saveKoch();
   }
+  if (complete) logActivity(DAY_GOAL);
   go('kochDone', { lesson, results, complete, pass, unlocked, spaced });
 }
 
@@ -1192,6 +1202,7 @@ function sendCheck() {
   res.text = text;
   sendSt.result = res;
   sendSt.tally.push(res);
+  logActivity(4);
   render();
 }
 
@@ -1474,6 +1485,7 @@ function testMark() {
   log.tries++;
   if (res.pass) log.passes++;
   store.set('morseTest', testLog);
+  logActivity(DAY_GOAL);
   state.result = res;
   render();
 }
@@ -1536,7 +1548,346 @@ function renderMorseTest() {
     </div>`;
 }
 
+/* ---------- Morse contest ---------- */
+// A WPX-style contest run against the clock: each station sends its call, 5NN and a
+// serial number. A QSO counts when both the call and the number are copied right;
+// each new prefix (the call up to and including its first digit) is a multiplier.
+const CONTEST_LENGTHS = [1, 2, 5, 10];
+const contestLog = Object.assign({ best: {}, top: 0 }, store.get('contest', {}));
+const contestCall = () => (Math.random() < 0.3 ? 'EI' : pickOne(DX_PREFIXES)) + randInt(0, 9) + letters(randInt(2, 3));
+const contestPrefix = call => call.match(/^[A-Z]+\d/)?.[0] || call;
+// Cut numbers: 0 is sent as T and 9 as N. Copies may use either form.
+const cutNr = nr => nr.replace(/0/g, 'T').replace(/9/g, 'N');
+const uncutNr = s => s.toUpperCase().replace(/[TO]/g, '0').replace(/N/g, '9').replace(/\D/g, '');
+
+function contestQso() {
+  const call = contestCall(), nr = String(randInt(1, 500)).padStart(3, '0');
+  return { call, nr, text: `${call} 5NN ${morseCfg.contestCut ? cutNr(nr) : nr}` };
+}
+
+function contestScore(log) {
+  const good = log.filter(q => q.ok);
+  const mults = new Set(good.map(q => contestPrefix(q.call))).size;
+  return { qsos: good.length, mults, score: good.length * mults, busts: log.length - good.length,
+    top: Math.max(0, ...good.map(q => q.wpm)) };
+}
+
+function contestPanel() {
+  const min = morseCfg.contestMin, best = contestLog.best[min];
+  return `
+    <div class="card panel">
+      <h3>How it works</h3>
+      <p class="hint">Stations call you one after another, each sending its callsign, <span class="mono">5NN</span> and a serial number. Type the call, press <span class="kbd">Space</span>, type the number, then press <span class="kbd">Enter</span> to log the QSO and the next station calls. Press Enter with the call empty to hear the station again. A QSO counts only when both the call and the number are right. Every new prefix, such as EI4 or DL1, is a multiplier, and your score is QSOs × multipliers.</p>
+      <div class="segmented">${CONTEST_LENGTHS.map(m => `<button class="${min === m ? 'on' : ''}" data-action="cLen" data-v="${m}">${m} min</button>`).join('')}</div>
+    </div>
+    <div class="card panel">
+      <h3>Speed</h3>
+      <div class="sound-row">
+        <div class="speed"><label for="contest-wpm">Starting speed</label>
+          <input type="range" id="contest-wpm" min="${CONTEST_MIN}" max="${CONTEST_MAX}" step="1" value="${morseCfg.contestWpm}" data-cfg="contestWpm">
+          <output id="contest-wpm-val">${morseCfg.contestWpm} WPM</output></div>
+        ${toneHtml()}
+      </div>
+      <div class="toggle-list" style="margin-top:16px">
+        ${toggle('contestAdapt', 'Adaptive speed', 'Speed up 1 WPM after each good QSO and slow down 2 WPM after a bust, so you stay at the edge of what you can copy.', morseCfg)}
+        ${toggle('contestCut', 'Cut numbers', 'Send 0 as T and 9 as N in serial numbers, as many contesters do. Type either the digit or the letter.', morseCfg)}
+      </div>
+    </div>
+    <div class="card start-bar">
+      <div class="summary"><b>${min} minute${min === 1 ? '' : 's'}</b> starting at <b id="contest-speed">${morseCfg.contestWpm} WPM</b>. ${best
+        ? `Personal best: <b>${best.score}</b> points (${best.qsos} QSOs × ${best.mults}).` : 'No personal best at this length yet.'}${contestLog.top ? ` Top speed: <b>${contestLog.top} WPM</b>.` : ''}</div>
+      <button class="btn btn-primary" data-action="startContest">Start contest →</button>
+    </div>`;
+}
+
+function startContest() {
+  const secs = morseCfg.contestMin * 60;
+  go('contest', { ends: Date.now() + secs * 1000, secs, wpm: morseCfg.contestWpm, qso: contestQso(), callIn: '', nrIn: '', log: [], last: null });
+  timerHandle = setInterval(contestTick, 250);
+  contestCue(1000);
+}
+
+function contestCue(delay) {
+  clearTimeout(cueHandle);
+  cueHandle = setTimeout(contestPlay, delay);
+}
+
+const contestPlay = () => Morse.play(state.qso.text, { wpm: state.wpm, tone: morseCfg.tone });
+
+function contestTick() {
+  const left = (state.ends - Date.now()) / 1000;
+  if (left <= 0) return finishContest(true);
+  const t = document.getElementById('c-time');
+  if (t) t.textContent = fmtTime(Math.ceil(left));
+  const bar = document.getElementById('c-prog');
+  if (bar) bar.style.width = `${100 * (1 - left / state.secs)}%`;
+}
+
+function contestEnter() {
+  const call = state.callIn.trim().toUpperCase();
+  if (!call) return contestPlay();
+  if (!uncutNr(state.nrIn)) return document.getElementById('c-nr')?.focus();
+  const q = state.qso;
+  const ok = call === q.call && +uncutNr(state.nrIn) === +q.nr;
+  state.log.push({ call: q.call, nr: q.nr, gotCall: call, gotNr: state.nrIn.trim().toUpperCase(), ok, wpm: state.wpm });
+  if (ok) logActivity(2);
+  if (morseCfg.contestAdapt) state.wpm = ok ? Math.min(CONTEST_MAX, state.wpm + 1) : Math.max(CONTEST_MIN, state.wpm - 2);
+  Object.assign(state, { last: state.log.at(-1), qso: contestQso(), callIn: '', nrIn: '' });
+  Morse.stop();
+  render();
+  contestCue(500);
+}
+
+// Only a run that lasts its full length can set a personal best.
+function finishContest(full) {
+  const s = contestScore(state.log), min = state.secs / 60;
+  const prev = contestLog.best[min];
+  const record = full && s.qsos > 0 && (!prev || s.score > prev.score);
+  if (record) contestLog.best[min] = { score: s.score, qsos: s.qsos, mults: s.mults, date: Date.now() };
+  contestLog.top = Math.max(contestLog.top, s.top);
+  store.set('contest', contestLog);
+  go('contestDone', { ...s, log: state.log, min, full, prev, record });
+}
+
+function renderContest() {
+  const { wpm, log, last, callIn, nrIn } = state;
+  const s = contestScore(log);
+  const left = Math.max(0, (state.ends - Date.now()) / 1000);
+  const field = (label, attrs) => `<label><span class="eyebrow">${label}</span><input class="text-input copy-input" autocomplete="off" autocapitalize="characters" spellcheck="false" ${attrs}></label>`;
+  return `
+    <div class="quiz">
+      <div class="card session-bar">
+        <span class="q-num" id="c-time">${fmtTime(Math.ceil(left))}</span>
+        <div class="progress"><i id="c-prog" style="width:${100 * (1 - left / state.secs)}%"></i></div>
+        <span class="q-num">${wpm} WPM</span>
+        <button class="btn btn-ghost" data-action="cEnd" style="padding:7px 14px">End</button>
+      </div>
+      <article class="card q-card">
+        <div class="q-head"><span class="pill accent">Contest</span><span class="pill">Call · 5NN · serial</span><span class="spacer"></span>
+          ${last ? `<span class="pill ${last.ok ? 'ok' : 'bad'}">${last.ok ? 'QSO' : 'Bust'}</span>` : ''}</div>
+        <p class="q-text">${!last ? 'Stations are calling. Copy the first one…'
+          : last.ok ? `${esc(last.call)} ${last.nr} is in the log. Next station…` : `Bust: that was ${esc(last.call)} ${last.nr}. Next station…`}</p>
+        <div class="contest-fields">
+          ${field('Call', `id="c-call" data-c-in="call" value="${esc(callIn)}"`)}
+          ${field('RST', 'value="599" disabled')}
+          ${field('Nr', `id="c-nr" data-c-in="nr" value="${esc(nrIn)}"`)}
+        </div>
+        <div class="send-stats">
+          <div><span class="big">${s.qsos}</span><span class="muted">QSOs</span></div>
+          <div><span class="big">${s.mults}</span><span class="muted">multipliers</span></div>
+          <div><span class="big">${s.score}</span><span class="muted">score</span></div>
+          <div><span class="big ${s.busts ? 'bad' : ''}">${s.busts}</span><span class="muted">busts</span></div>
+        </div>
+        <div class="q-foot">
+          <span class="hint-keys"><span class="kbd">Space</span> next field <span class="kbd">Enter</span> log, or repeat while the call is empty</span>
+          <span class="spacer"></span>
+          <button class="btn" data-action="cRepeat">▶ Again</button>
+          <button class="btn btn-primary" data-action="cLog">Log QSO</button>
+        </div>
+      </article>
+    </div>`;
+}
+
+function renderContestDone() {
+  const { log, min, full, prev, record, qsos, mults, score, busts, top } = state;
+  const msg = !full ? 'You ended the run early, so it can\'t count as a personal best.'
+    : record && prev ? `Your previous best for ${min} minute${min === 1 ? '' : 's'} was ${prev.score} points.`
+    : record ? `Your first score at ${min} minute${min === 1 ? '' : 's'}. Run again to beat it.`
+    : `Your best for ${min} minute${min === 1 ? '' : 's'} is ${prev ? prev.score : 0} points.`;
+  return `
+    <div class="card panel">
+      <div class="eyebrow">Contest · ${min} min${full ? '' : ' · ended early'}</div>
+      <div class="verdict-big ${record ? 'pass' : ''}" style="margin-top:6px">${record ? 'New personal best!' : 'Contest over'}</div>
+      <p class="muted" style="margin:4px 0 0">${msg}</p>
+      <div class="send-stats">
+        <div><span class="big ${record ? 'ok' : ''}">${score}</span><span class="muted">score</span></div>
+        <div><span class="big">${qsos}</span><span class="muted">QSOs</span></div>
+        <div><span class="big">${mults}</span><span class="muted">multipliers</span></div>
+        <div><span class="big ${busts ? 'bad' : ''}">${busts}</span><span class="muted">busts</span></div>
+        <div><span class="big">${top || '—'}</span><span class="muted">top speed (WPM)</span></div>
+      </div>
+      <div class="btn-row" style="margin-top:18px">
+        <button class="btn btn-primary" data-action="startContest">Run again</button>
+        <button class="btn btn-ghost" data-action="cBack">Back to setup</button>
+      </div>
+    </div>
+    ${log.length ? `
+      <section class="card history">
+        <h3>Log</h3>
+        <table>
+          <thead><tr><th>#</th><th>Sent</th><th>You copied</th><th>Speed</th><th></th></tr></thead>
+          <tbody>${log.map((q, i) => `
+            <tr><td class="num muted">${i + 1}</td><td class="mono">${esc(q.call)} ${q.nr}</td>
+              <td class="mono">${esc(q.gotCall)} ${esc(q.gotNr)}</td><td class="num muted">${q.wpm} WPM</td>
+              <td><span class="pill ${q.ok ? 'ok' : 'bad'}">${q.ok ? 'QSO' : 'Bust'}</span></td></tr>`).join('')}
+          </tbody>
+        </table>
+      </section>` : ''}`;
+}
+
 /* ---------- events ---------- */
+/* ---------- streak and QSL cards ---------- */
+// A day counts towards the streak once it reaches DAY_GOAL points: one per question
+// answered, four per sending exercise checked, and a whole day's worth for a complete
+// Koch session or a marked Morse test part.
+const DAY_GOAL = 20;
+const activity = Object.assign({ days: {}, night: false, best: 0 }, store.get('activity', {}));
+const dayKey = (d = new Date()) => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+const todayPoints = () => activity.days[dayKey()] || 0;
+
+function logActivity(points) {
+  const k = dayKey();
+  activity.days[k] = (activity.days[k] || 0) + points;
+  if (new Date().getHours() < 4) activity.night = true;
+  for (const old of Object.keys(activity.days).sort().slice(0, -400)) delete activity.days[old];
+  activity.best = Math.max(activity.best, streak().days);
+  store.set('activity', activity);
+}
+
+// Days in a row that reached the goal, counting back from today (or from yesterday
+// while today is still open). One missed day a week is forgiven when the days either
+// side of it count, so a single lapse doesn't wipe out a long streak.
+function streak() {
+  const met = d => (activity.days[dayKey(d)] || 0) >= DAY_GOAL;
+  const d = new Date();
+  const today = met(d);
+  if (!today) d.setDate(d.getDate() - 1);
+  let days = 0, sinceGrace = Infinity;
+  for (;;) {
+    if (met(d)) { days++; sinceGrace++; }
+    else {
+      const prev = new Date(d);
+      prev.setDate(prev.getDate() - 1);
+      if (!days || sinceGrace < 6 || !met(prev)) break;
+      sinceGrace = 0;
+    }
+    d.setDate(d.getDate() - 1);
+  }
+  return { days, today };
+}
+
+function awardCtx() {
+  const entries = Object.values(stats);
+  const bySec = {}, sets = new Set();
+  for (const [id, s] of Object.entries(stats)) {
+    const q = BY_ID[id];
+    if (!q) continue;
+    const b = bySec[q.section] ||= { c: 0, w: 0 };
+    b.c += s.c;
+    b.w += s.w;
+    sets.add(q.set);
+  }
+  return {
+    answered: entries.reduce((n, s) => n + s.c + s.w, 0), seen: entries.length, bySec, sets,
+    history: store.get('history', []), streak: Math.max(activity.best, streak().days),
+  };
+}
+
+const kochAll = () => (koch.best[Morse.LESSONS.length - 1] || 0) >= KOCH_PASS;
+const testPassed = parts => parts.every(p => testLog[p]?.passes);
+
+// Each award is a QSL card: `code` is the big text on the card.
+const QSL_CARDS = [
+  { id: 'first', code: 'QSO', title: 'First contact', how: 'Answer your first question.', got: c => c.answered > 0 },
+  { id: 'century', code: '100', title: 'Century club', how: 'Answer 100 questions.', got: c => c.answered >= 100 },
+  { id: 'was', code: 'WAS', title: 'Worked all sections', how: 'Reach 80% accuracy in every syllabus section, with at least 10 answers in each.',
+    got: c => SECTIONS.every(s => { const b = c.bySec[s.id]; return b && b.c + b.w >= 10 && b.c >= 0.8 * (b.c + b.w); }) },
+  { id: 'waz', code: 'WAZ', title: 'Worked all zones', how: `Answer questions from all ${SET_NUMBERS.length} sets.`, got: c => c.sets.size >= SET_NUMBERS.length },
+  { id: 'dxcc', code: 'DXCC', title: 'Honour roll', how: `See every one of the ${QUESTIONS.length} questions.`, got: c => c.seen >= QUESTIONS.length },
+  { id: 'pass', code: 'QSL', title: 'Confirmed', how: 'Pass a mock exam.', got: c => c.history.some(h => h.pass) },
+  { id: 'hat', code: '3×QSL', title: 'Hat trick', how: 'Pass three mock exams in a row.', got: c => c.history.length >= 3 && c.history.slice(0, 3).every(h => h.pass) },
+  { id: 'perfect', code: '599', title: 'Full scale', how: 'Score 100% in Section A or Section B of a mock exam.',
+    got: c => c.history.some(h => h.a === h.aOf || h.b === h.bOf) },
+  { id: 'koch1', code: 'CW', title: 'Dit dah', how: 'Pass Koch lesson 1.', got: () => koch.unlocked >= 1 && (koch.best[0] || 0) >= KOCH_PASS },
+  { id: 'kochHalf', code: 'QRV', title: 'Halfway there', how: `Unlock Koch lesson ${Math.ceil(Morse.LESSONS.length / 2) + 1}.`,
+    got: () => koch.unlocked >= Math.ceil(Morse.LESSONS.length / 2) },
+  { id: 'kochAll', code: 'QRQ', title: 'Every character', how: `Pass the last Koch lesson and know all ${Morse.KOCH_ORDER.length} characters.`, got: kochAll },
+  { id: 'rx', code: 'RST', title: 'Solid copy', how: 'Pass both receiving parts of the Morse test.', got: () => testPassed(['rxText', 'rxNum']) },
+  { id: 'tx', code: 'FB', title: 'Fine fist', how: 'Pass both sending parts of the Morse test.', got: () => testPassed(['txText', 'txNum']) },
+  { id: 'cw5', code: `${TEST_MIN}WPM`, title: 'Morse test ready', how: 'Pass all four parts of the Morse test.', got: () => testPassed(Object.keys(TEST_PARTS)) },
+  { id: 'cq', code: 'CQ', title: 'CQ test', how: 'Log 10 good QSOs in a full contest run.', got: () => Object.values(contestLog.best).some(b => b.qsos >= 10) },
+  { id: 'qrq', code: '30+', title: 'Speed merchant', how: 'Log a good contest QSO at 30 WPM or faster.', got: () => contestLog.top >= 30 },
+  { id: 'week', code: '7D', title: 'A week on the air', how: 'Keep a 7-day streak.', got: c => c.streak >= 7 },
+  { id: 'month', code: '30D', title: 'A month on the air', how: 'Keep a 30-day streak.', got: c => c.streak >= 30 },
+  { id: 'night', code: 'GN', title: 'Grey line', how: 'Study between midnight and 4 a.m.', got: () => activity.night },
+];
+const qsl = Object.assign({}, store.get('qsl', {}));
+
+function checkAwards() {
+  const c = awardCtx();
+  const fresh = QSL_CARDS.filter(card => !qsl[card.id] && card.got(c));
+  if (!fresh.length) return;
+  for (const card of fresh) qsl[card.id] = Date.now();
+  store.set('qsl', qsl);
+  toast(fresh);
+}
+
+function toast(cards) {
+  document.querySelector('.toast')?.remove();
+  const el = document.createElement('button');
+  el.className = 'card toast';
+  el.setAttribute('role', 'status');
+  el.innerHTML = `<span class="qsl-code">${esc(cards[0].code)}</span>
+    <span><b>${cards.length === 1 ? `New QSL card: ${esc(cards[0].title)}` : `${cards.length} new QSL cards`}</b>
+    <span class="muted">${cards.length === 1 ? esc(cards[0].how) : cards.map(c => esc(c.title)).join(' · ')}</span></span>`;
+  el.onclick = () => { el.remove(); if (state.view !== 'exam') go('qsl'); };
+  document.body.append(el);
+  setTimeout(() => el.remove(), 7000);
+}
+
+function streakHtml() {
+  const s = streak(), pts = Math.min(todayPoints(), DAY_GOAL);
+  return `
+    <div class="card streak-bar">
+      <div class="streak-n"><b>${s.days}</b><span>day streak${activity.best > s.days ? ` · best ${activity.best}` : ''}</span></div>
+      <div class="streak-today">
+        <div class="top"><b>${s.today ? 'Today is done' : s.days ? 'Keep the streak going' : 'Start a streak today'}</b><span class="muted">${pts}/${DAY_GOAL}</span></div>
+        <div class="bar"><i style="width:${100 * pts / DAY_GOAL}%"></i></div>
+        <span class="muted">${s.today ? 'Come back tomorrow to add another day.' : `Answer ${DAY_GOAL - pts} more question${DAY_GOAL - pts === 1 ? '' : 's'}, or finish a Koch session or a Morse test part.`}</span>
+      </div>
+    </div>`;
+}
+
+// Earned cards, newest first, in one horizontally scrolling row on the home page.
+// Before the first card, the panel says how to earn one.
+function earnedQslHtml() {
+  const got = QSL_CARDS.filter(c => qsl[c.id]).sort((a, b) => qsl[b.id] - qsl[a.id]);
+  return `
+    <section class="card earned-qsl">
+      <div class="btn-row"><h3>Your QSL cards</h3><span class="muted" style="font-size:13px">${got.length} of ${QSL_CARDS.length}</span>
+        <span class="spacer"></span><button class="btn btn-ghost" data-go="qsl" style="padding:6px 12px;font-size:12.5px">All cards →</button></div>
+      ${got.length ? `
+      <div class="qsl-row">${got.map(c => `
+        <button class="card qsl-card got mini" data-go="qsl" title="${esc(c.how)}">
+          <div class="qsl-head"><span>QSL card</span><span>${new Date(qsl[c.id]).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })}</span></div>
+          <div class="qsl-code">${esc(c.code)}</div>
+          <h3>${esc(c.title)}</h3>
+        </button>`).join('')}
+      </div>` : '<p class="hint" style="margin:10px 0 0">Earn QSL cards for milestones such as passing a mock exam, finishing the Koch course or keeping a streak. Answer your first question to get the first one.</p>'}
+    </section>`;
+}
+
+function renderQsl() {
+  const s = streak();
+  const got = QSL_CARDS.filter(c => qsl[c.id]).length;
+  return `
+    <div class="btn-row" style="margin-bottom:18px">
+      <button class="btn btn-ghost" data-go="home">← Back</button>
+    </div>
+    <div class="eyebrow">${got} of ${QSL_CARDS.length} confirmed</div>
+    <h2 style="margin:8px 0 6px">QSL cards</h2>
+    <p class="hint">Earn a card for each milestone: answering questions, passing mock exams, working through the Koch lessons and the Morse test, and keeping up your streak. A day counts towards the streak at ${DAY_GOAL} points: one per question answered, four per sending exercise checked, or a complete Koch session or Morse test part. One missed day a week is forgiven. Current streak: ${s.days} day${s.days === 1 ? '' : 's'}, best ${Math.max(activity.best, s.days)}.</p>
+    <div class="qsl-grid">${QSL_CARDS.map(c => `
+      <article class="card qsl-card ${qsl[c.id] ? 'got' : 'locked'}">
+        <div class="qsl-head"><span>QSL card</span><span>${qsl[c.id] ? new Date(qsl[c.id]).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }) : 'Not yet worked'}</span></div>
+        <div class="qsl-code">${esc(c.code)}</div>
+        <h3>${esc(c.title)}</h3>
+        <p class="muted">${esc(c.how)}</p>
+        <div class="qsl-foot">${qsl[c.id] ? 'TNX QSO · 73' : 'PSE QSL'}</div>
+      </article>`).join('')}
+    </div>`;
+}
+
 const actions = {
   acceptTerms() {
     if (!document.querySelector('[data-terms]')?.checked) return true;
@@ -1658,6 +2009,12 @@ const actions = {
   tHear() { Morse.play(state.target, testSound()); return true; },
   tNew() { startTest(state.part); return true; },
   tBack() { morseCfg.tab = 'test'; saveMorse(); go('morse'); return true; },
+  cLen(el) { morseCfg.contestMin = +el.dataset.v; saveMorse(); },
+  startContest() { startContest(); return true; },
+  cRepeat() { contestPlay(); document.getElementById('c-call')?.focus(); return true; },
+  cLog() { contestEnter(); return true; },
+  cEnd() { finishContest(false); return true; },
+  cBack() { morseCfg.tab = 'contest'; saveMorse(); go('morse'); return true; },
 };
 
 app.addEventListener('click', e => {
@@ -1724,6 +2081,12 @@ app.addEventListener('input', e => {
     }
   } else if ('kInput' in t.dataset || 'tInput' in t.dataset) {
     state.typed = t.value;
+  } else if ('cIn' in t.dataset) {
+    state[t.dataset.cIn === 'call' ? 'callIn' : 'nrIn'] = t.value;
+  } else if (t.dataset.cfg === 'contestWpm') {
+    morseCfg.contestWpm = +t.value;
+    saveMorse();
+    document.getElementById('contest-wpm-val').textContent = document.getElementById('contest-speed').textContent = `${morseCfg.contestWpm} WPM`;
   } else if (t.dataset.cfg === 'testWpm') {
     morseCfg.testWpm = +t.value;
     saveMorse();
@@ -1796,6 +2159,12 @@ document.addEventListener('keydown', e => {
   } else if (state.view === 'morseTest' && TEST_PARTS[state.part].send && !state.result && k === 'enter' && !e.target.closest('button')) {
     e.preventDefault();
     testMark();
+  } else if (state.view === 'contest' && !e.target.closest('button')) {
+    if (k === 'enter') { e.preventDefault(); contestEnter(); }
+    else if (k === ' ' && e.target.dataset.cIn) {
+      e.preventDefault();
+      document.getElementById(e.target.id === 'c-call' ? 'c-nr' : 'c-call').focus();
+    }
   } else if (state.view === 'koch' && k === 'enter') {
     e.preventDefault();
     state.results[state.index] ? kochNext() : kochCheck();

@@ -533,3 +533,49 @@ h3 { font-size: 16px; font-weight: 700; }
 .sign-row .sign-sym { min-width: 44px; font-weight: 700; }
 .sign-row .code { color: var(--accent); }
 .send-target.test-target { font-size: 20px; line-height: 1.5; letter-spacing: .05em; overflow-wrap: anywhere; }
+
+/* streak and QSL cards */
+.streak-bar { display: flex; align-items: center; gap: 22px; padding: 18px 22px; margin-bottom: 20px; }
+.streak-n { display: flex; flex-direction: column; align-items: center; min-width: 92px; }
+.streak-n b { font-size: 34px; font-weight: 800; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.streak-n span { font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px; }
+.streak-today { flex: 1; display: grid; gap: 6px; font-size: 13.5px; }
+.streak-today .top { display: flex; justify-content: space-between; gap: 12px; }
+.streak-today .bar { height: 8px; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--border); overflow: hidden; }
+.streak-today .bar i { display: block; height: 100%; background: var(--accent); border-radius: 99px; transition: width .4s ease; }
+.qsl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; margin-top: 20px; }
+.qsl-card { padding: 16px 18px; position: relative; overflow: hidden; }
+.qsl-card.got { border-color: var(--accent); background: linear-gradient(135deg, var(--accent-soft), transparent 70%), var(--surface); }
+.qsl-card.locked { border-style: dashed; box-shadow: none; opacity: .62; }
+.qsl-card.locked .qsl-code { color: var(--muted); }
+.qsl-card h3 { margin-top: 6px; }
+.qsl-card p { margin: 4px 0 12px; font-size: 13px; }
+.qsl-head, .qsl-foot { display: flex; justify-content: space-between; gap: 8px; white-space: nowrap; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.qsl-foot { border-top: 1px dashed var(--border); padding-top: 8px; }
+.qsl-code { display: block; font-family: var(--mono); font-size: 36px; font-weight: 800; color: var(--accent); letter-spacing: .02em; margin-top: 10px; }
+.toast { position: fixed; right: 20px; bottom: 20px; z-index: 60; display: flex; align-items: center; gap: 14px; max-width: min(420px, calc(100vw - 32px));
+  padding: 14px 18px; text-align: left; font: inherit; color: var(--text); border-color: var(--accent); box-shadow: var(--shadow-lg); cursor: pointer; animation: toastIn .35s ease both; }
+.toast .qsl-code { font-size: 22px; margin: 0; }
+.toast > span:last-child { display: grid; gap: 2px; font-size: 13.5px; }
+@keyframes toastIn { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
+@media (max-width: 520px) {
+  .streak-bar { flex-direction: column; align-items: stretch; gap: 14px; }
+  .toast { right: 16px; bottom: 16px; }
+}
+
+/* contest */
+.contest-fields { display: grid; grid-template-columns: 2fr 1fr 1.2fr; gap: 12px; }
+.contest-fields label { display: grid; gap: 6px; }
+.contest-fields input { width: 100%; text-transform: uppercase; }
+.contest-fields input:disabled { opacity: .55; }
+@media (max-width: 520px) { .contest-fields { grid-template-columns: 1fr 1fr; } .contest-fields label:first-child { grid-column: 1 / -1; } }
+
+/* earned QSL cards on the home page */
+.earned-qsl { padding: 18px 22px; margin-bottom: 20px; }
+.qsl-row { display: flex; gap: 12px; overflow-x: auto; margin: 12px -22px -6px; padding: 2px 22px 12px; scroll-snap-type: x proximity; scroll-padding-inline: 22px; overscroll-behavior-x: contain; }
+.qsl-card.mini { flex: 0 0 168px; padding: 12px 14px; text-align: left; font: inherit; color: var(--text); cursor: pointer; scroll-snap-align: start; transition: transform .18s, box-shadow .18s; }
+.qsl-card.mini:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.qsl-card.mini .qsl-head { font-size: 10px; }
+.qsl-card.mini .qsl-code { font-size: 26px; margin-top: 6px; }
+.qsl-card.mini h3 { font-size: 13.5px; margin-top: 2px; }
+@media (max-width: 520px) { .earned-qsl { padding: 16px; } .qsl-row { margin: 12px -16px -6px; padding: 2px 16px 12px; scroll-padding-inline: 16px; } }
