@@ -15,7 +15,7 @@
       "binding": "DB",
       "database_name": "harec-trainer",
       // From `npx wrangler d1 create harec-trainer`.
-      "database_id": "REPLACE_WITH_DATABASE_ID",
+      "database_id": "be68cb5a-5515-47ae-9464-dc498ed32110",
       "migrations_dir": "./worker/migrations"
     }
   ],
