@@ -1,12 +1,26 @@
-// Cloudflare Workers deployment: serves the static app in app/src at harec-trainer.com and www.harec-trainer.com.
+// Cloudflare Workers deployment: serves the static app in app/src at harec-trainer.com and www.harec-trainer.com,
+// and the leaderboard API (worker/index.js, D1 database) under /api/*.
 // Deploy with `npx wrangler deploy` (also what Cloudflare's Git builds run).
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "harec-trainer",
   "compatibility_date": "2026-10-07",
+  "main": "./worker/index.js",
   "assets": {
-    "directory": "./app/src"
+    "directory": "./app/src",
+    "run_worker_first": ["/api/*"]
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "harec-trainer",
+      // From `npx wrangler d1 create harec-trainer`.
+      "database_id": "REPLACE_WITH_DATABASE_ID",
+      "migrations_dir": "./worker/migrations"
+    }
+  ],
+  // Closes each contest week (Monday 00:00 UTC) and works out who finished in the top 5.
+  "triggers": { "crons": ["5 0 * * 1"] },
   "routes": [
     { "pattern": "harec-trainer.com", "custom_domain": true },
     { "pattern": "www.harec-trainer.com", "custom_domain": true }

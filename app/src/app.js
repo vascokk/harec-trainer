@@ -146,7 +146,7 @@ function go(view, extra = {}) {
 function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
     practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
-    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest, contest: renderContest, contestDone: renderContestDone, qsl: renderQsl };
+    morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest, contest: renderContest, contestDone: renderContestDone, qsl: renderQsl, profile: renderProfile };
   if (termsAccepted && state.view !== 'exam') checkAwards();
   app.innerHTML = `<div class="fade-in">${termsAccepted ? views[state.view]() : renderTerms()}</div>`;
   topStatus.textContent = state.view === 'exam' || !termsAccepted ? ''
@@ -156,6 +156,7 @@ function render() {
   document.getElementById('k-input')?.focus();
   document.getElementById('t-input')?.focus();
   document.getElementById('c-call')?.focus();
+  hydrateBoards();
 }
 
 /* ---------- home ---------- */
@@ -743,7 +744,7 @@ const morseCfg = Object.assign({
   lesson: null, rounds: 10, includePrev: true, farnsworth: false, effWpm: 8,
   sendKey: 'straight', sendWpm: 15, sendSrc: 'koch', ownText: '', swapPaddles: false, showCode: true,
   testPart: 'rxText', testWpm: 5, testFarns: false,
-  contestMin: 2, contestWpm: 20, contestAdapt: true, contestCut: false,
+  contestMin: 2, contestWpm: 20, contestAdapt: true, contestCut: false, lbPeriod: 'week',
 }, store.get('morseCfg', {}));
 morseCfg.testWpm = Math.min(TEST_MAX, Math.max(TEST_MIN, morseCfg.testWpm));
 morseCfg.contestWpm = Math.min(CONTEST_MAX, Math.max(CONTEST_MIN, morseCfg.contestWpm));
@@ -1597,7 +1598,8 @@ function contestPanel() {
       <div class="summary"><b>${min} minute${min === 1 ? '' : 's'}</b> starting at <b id="contest-speed">${morseCfg.contestWpm} WPM</b>. ${best
         ? `Personal best: <b>${best.score}</b> points (${best.qsos} QSOs × ${best.mults}).` : 'No personal best at this length yet.'}${contestLog.top ? ` Top speed: <b>${contestLog.top} WPM</b>.` : ''}</div>
       <button class="btn btn-primary" data-action="startContest">Start contest →</button>
-    </div>`;
+    </div>
+    ${boardPanel(min)}`;
 }
 
 function startContest() {
@@ -1646,7 +1648,9 @@ function finishContest(full) {
   if (record) contestLog.best[min] = { score: s.score, qsos: s.qsos, mults: s.mults, date: Date.now() };
   contestLog.top = Math.max(contestLog.top, s.top);
   store.set('contest', contestLog);
-  go('contestDone', { ...s, log: state.log, min, full, prev, record });
+  const post = player && full ? { status: 'sending' } : null;
+  go('contestDone', { ...s, log: state.log, min, full, prev, record, post });
+  if (post) postContest(state);
 }
 
 function renderContest() {
@@ -1668,9 +1672,9 @@ function renderContest() {
         <p class="q-text">${!last ? 'Stations are calling. Copy the first one…'
           : last.ok ? `${esc(last.call)} ${last.nr} is in the log. Next station…` : `Bust: that was ${esc(last.call)} ${last.nr}. Next station…`}</p>
         <div class="contest-fields">
-          ${field('Call', `id="c-call" data-c-in="call" value="${esc(callIn)}"`)}
+          ${field('Call', `id="c-call" data-c-in="call" maxlength="12" value="${esc(callIn)}"`)}
           ${field('RST', 'value="599" disabled')}
-          ${field('Nr', `id="c-nr" data-c-in="nr" value="${esc(nrIn)}"`)}
+          ${field('Nr', `id="c-nr" data-c-in="nr" maxlength="6" value="${esc(nrIn)}"`)}
         </div>
         <div class="send-stats">
           <div><span class="big">${s.qsos}</span><span class="muted">QSOs</span></div>
@@ -1699,6 +1703,7 @@ function renderContestDone() {
       <div class="eyebrow">Contest · ${min} min${full ? '' : ' · ended early'}</div>
       <div class="verdict-big ${record ? 'pass' : ''}" style="margin-top:6px">${record ? 'New personal best!' : 'Contest over'}</div>
       <p class="muted" style="margin:4px 0 0">${msg}</p>
+      ${postHtml()}
       <div class="send-stats">
         <div><span class="big ${record ? 'ok' : ''}">${score}</span><span class="muted">score</span></div>
         <div><span class="big">${qsos}</span><span class="muted">QSOs</span></div>
@@ -1722,8 +1727,235 @@ function renderContestDone() {
               <td><span class="pill ${q.ok ? 'ok' : 'bad'}">${q.ok ? 'QSO' : 'Bust'}</span></td></tr>`).join('')}
           </tbody>
         </table>
-      </section>` : ''}`;
+      </section>` : ''}
+    <div style="margin-top:20px">${boardPanel(min)}</div>`;
 }
+
+/* ---------- leaderboards (optional, online) ---------- */
+// Joining is opt-in: until then nothing leaves the device. A player is a random secret
+// (the player code) kept here and sent as a bearer token; the server stores only its
+// hash, a public id and a nickname (worker/index.js). The desktop app and other hosts
+// talk to the live site.
+const API = ['harec-trainer.com', 'www.harec-trainer.com', 'localhost', '127.0.0.1'].includes(location.hostname) ? '' : 'https://harec-trainer.com';
+let player = store.get('player', null);   // { secret, id, name }
+const savePlayer = p => { player = p; p ? store.set('player', p) : store.remove('player'); };
+const lbCache = {};                       // 'board:period' -> { at, data | error } while fresh, { loading } while fetching
+
+// Weeks this player finished #1, in the top 3 and in the top 5 (a #1 week counts in all
+// three), as last reported by the server. Kept locally and never lowered, so the weekly
+// QSL cards keep their counts after signing out or deleting the server data.
+const weekWins = Object.assign({ w1: 0, w3: 0, w5: 0 }, store.get('weekWins', {}));
+const WEEK_CARDS = [['weekTop1', 'w1', 'as number 1'], ['weekTop3', 'w3', 'in the top 3'], ['weekTop5', 'w5', 'in the top 5']];
+
+function syncWins(w) {
+  if (!w) return;
+  const before = { ...weekWins };
+  let up = false;
+  for (const k of ['w1', 'w3', 'w5']) if ((w[k] || 0) > weekWins[k]) { weekWins[k] = w[k]; up = true; }
+  if (!up) return;
+  store.set('weekWins', weekWins);
+  // Cards already held get a toast for the new week; new cards are announced by checkAwards.
+  const again = WEEK_CARDS.filter(([id, k]) => qsl[id] && weekWins[k] > before[k]);
+  if (again.length) {
+    const [id, k, how] = again[0];
+    toast([QSL_CARDS.find(c => c.id === id)], `Another week ${how}: ×${weekWins[k]}`);
+  }
+  if (termsAccepted && state.view !== 'exam') checkAwards();
+}
+
+const winsHtml = r => [['w1', '#1'], ['w3', 'Top 3'], ['w5', 'Top 5']].filter(([k]) => r[k] > 0)
+  .map(([k, label]) => `<span class="wk-badge ${k}" title="Weeks finished ${label === '#1' ? 'as number 1' : `in the ${label.toLowerCase()}`}">${label} ×${r[k]}</span>`).join('');
+
+async function api(path, { method = 'GET', body, secret = player?.secret } = {}) {
+  const headers = {};
+  if (secret) headers.Authorization = `Bearer ${secret}`;
+  if (body) headers['Content-Type'] = 'application/json';
+  let res;
+  try {
+    res = await fetch(API + path, { method, headers, body: body && JSON.stringify(body), signal: AbortSignal.timeout(10000) });
+  } catch {
+    throw Object.assign(new Error('Can\'t reach the leaderboard server. Check your connection and try again.'), { status: 0 });
+  }
+  const data = await res.json().catch(() => null);
+  // A server without the API (e.g. a plain static file server) answers without our JSON.
+  if (!data) throw Object.assign(new Error('The leaderboards aren\'t available on this copy of the app.'), { status: res.status });
+  if (!res.ok) throw Object.assign(new Error(data.error || `The leaderboard server answered with error ${res.status}.`), { status: res.status });
+  return data;
+}
+
+const fmtDay = ts => new Date(ts).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+
+function boardHtml(data) {
+  const closes = data.period === 'week' ? `<p class="hint" style="margin:10px 0 0">This week's standings close ${new Date(data.closes).toLocaleString(undefined, { weekday: 'long', hour: '2-digit', minute: '2-digit' })} (Monday 00:00 UTC). Finish the week in the top 5 of any board to earn a weekly QSL card.</p>` : '';
+  if (!data.top.length) return `<p class="hint" style="margin:0">No scores ${data.period === 'week' ? 'this week' : ''} yet. Post a full-length run to be the first on the board!</p>${closes}`;
+  const row = r => `
+    <tr class="${r.id === player?.id ? 'me' : ''}"><td class="num">${r.rank}</td>
+      <td><span class="op">${esc(r.name)}${r.id === player?.id ? ' <span class="pill accent">you</span>' : ''}${winsHtml(r)}</span></td>
+      <td class="num"><b>${r.score}</b></td><td class="num muted">${r.qsos} × ${r.mults}</td>
+      <td class="num muted">${r.top} WPM</td><td class="muted">${fmtDay(r.date)}</td></tr>`;
+  const inTop = data.me && data.top.some(r => r.id === data.me.id);
+  return `
+    <div class="lb-scroll"><table class="lb">
+      <thead><tr><th>#</th><th>Operator</th><th>Score</th><th>QSOs × mults</th><th>Top speed</th><th>Date</th></tr></thead>
+      <tbody>${data.top.map(row).join('')}${data.me && !inTop ? `<tr class="gap"><td colspan="6">⋯</td></tr>${row(data.me)}` : ''}</tbody>
+    </table></div>
+    <p class="hint" style="margin:10px 0 0">${data.total} operator${data.total === 1 ? '' : 's'} on this board${data.period === 'week' ? ' this week' : ''}.</p>${closes}`;
+}
+
+function fillBoard(el) {
+  const c = lbCache[el.dataset.lb];
+  if (c?.data) el.innerHTML = boardHtml(c.data);
+  else if (c?.error) el.innerHTML = `<p class="hint" style="margin:0">${esc(c.error)}</p>`;
+}
+
+// Fills every [data-lb] element after a render, fetching boards older than a minute.
+function hydrateBoards() {
+  for (const el of document.querySelectorAll('[data-lb]')) {
+    const board = el.dataset.lb, c = lbCache[board];
+    const [name, period] = board.split(':');
+    fillBoard(el);
+    if (c && (c.loading || Date.now() - c.at < 60_000)) continue;
+    const token = {};
+    lbCache[board] = { ...c, loading: token };
+    const done = entry => {
+      if (lbCache[board]?.loading !== token) return;   // dropped meanwhile, e.g. after posting a score
+      lbCache[board] = { at: Date.now(), ...entry };
+      document.querySelectorAll(`[data-lb="${board}"]`).forEach(fillBoard);
+    };
+    api(`/api/leaderboard?board=${name}&period=${period}`).then(data => { syncWins(data.wins); done({ data }); }, e => done({ error: e.message }));
+  }
+}
+
+const boardPanel = min => `
+  <div class="card panel">
+    <div class="btn-row"><h3>Leaderboard · ${min} min</h3>
+      <div class="segmented">${[['week', 'This week'], ['all', 'All time']].map(([v, l]) =>
+        `<button class="${morseCfg.lbPeriod === v ? 'on' : ''}" data-action="lbPeriod" data-v="${v}">${l}</button>`).join('')}</div>
+      <span class="spacer"></span>${player
+      ? `<span class="muted" style="font-size:13px">Posting as <b>${esc(player.name)}</b></span>`
+      : '<button class="btn btn-ghost" data-go="profile" style="padding:6px 12px;font-size:12.5px">Join the leaderboards →</button>'}</div>
+    <div data-lb="contest-${min}:${morseCfg.lbPeriod}" style="margin-top:12px"><p class="hint" style="margin:0">Loading the leaderboard…</p></div>
+  </div>`;
+
+function postContest(run) {
+  const log = run.log.map(({ call, nr, gotCall, gotNr, wpm }) => ({ call, nr, gotCall, gotNr, wpm }));
+  api('/api/scores', { method: 'POST', body: { board: `contest-${run.min}`, log } })
+    .then(r => { run.post = { status: 'done', ...r }; delete lbCache[`${r.board}:week`]; delete lbCache[`${r.board}:all`]; },
+      e => { run.post = { status: 'error', error: e.message }; })
+    .finally(() => { if (state === run) render(); });
+}
+
+function postHtml() {
+  const { post, full, min } = state;
+  const p = (text, cls = '') => `<p class="post-note ${cls}">${text}</p>`;
+  if (!player) return full ? p('<button class="link-btn" data-go="profile">Join the leaderboards</button> to post your full-length runs.') : '';
+  if (!full) return p('Only full-length runs are posted to the leaderboard.');
+  if (!post) return '';
+  if (post.status === 'sending') return p('Posting to the leaderboard…');
+  if (post.status === 'error') return p(`Couldn't post this run: ${esc(post.error)}`, 'bad');
+  const week = post.weekBest ? `You're <b>#${post.weekRank}</b> this week` : `Your best this week is still ${post.weekScore} points, at <b>#${post.weekRank}</b>`;
+  const all = post.best ? `<b>#${post.rank}</b> all time` : `<b>#${post.rank}</b> all time with ${post.bestScore} points`;
+  return p(`${post.weekBest || post.best ? 'Posted!' : 'Posted.'} ${week} and ${all} on the ${min}-minute board.`, post.weekBest || post.best ? 'ok' : '');
+}
+
+/* ---------- profile ---------- */
+function loadProfile() {
+  const run = state;
+  api('/api/me')
+    .then(me => { run.me = me; savePlayer({ ...player, name: me.name }); syncWins(me.wins); },
+      e => { run.error = e.message; run.gone = e.status === 401; })
+    .finally(() => { run.loading = false; if (state === run) render(); });
+}
+
+function renderProfile() {
+  if (player && !state.me && !state.loading && !state.error) { state.loading = true; queueMicrotask(loadProfile); }
+  const { me, loading, error, gone, msg, busy } = state;
+  const note = msg ? `<div class="card panel profile-msg ${msg.bad ? 'bad' : ''}" role="status">${esc(msg.text)}</div>` : '';
+  const head = `
+    <div class="setup-head">
+      <div><div class="eyebrow">Profile</div><h2 style="margin-top:6px">${player ? esc(player.name) : 'Contest leaderboards'}</h2></div>
+      <button class="btn btn-ghost" data-go="home">← Back</button>
+    </div>`;
+  if (!player) return `
+    <div class="setup">${head}${note}
+      <div class="card panel">
+        <h3>Join the contest leaderboards</h3>
+        <p class="hint">Post your full-length contest runs and see how you rank against other operators. Joining is optional: until you join, nothing leaves this device.</p>
+        <h3 style="font-size:14px">What the server stores</h3>
+        <ul class="plain-list">
+          <li>A random player ID and a random nickname, which you can change.</li>
+          <li>A fingerprint (hash) of your player code, so the server can recognise you.</li>
+          <li>Your best score on each contest board, and when you last posted a run.</li>
+        </ul>
+        <p class="hint">No email, name, callsign, IP address or device details are stored. You can delete everything at any time from this page.</p>
+        <div class="btn-row"><button class="btn btn-primary" data-action="pJoin" ${busy ? 'disabled' : ''}>${busy ? 'Joining…' : 'Join the leaderboards'}</button></div>
+      </div>
+      <div class="card panel">
+        <h3>Joined on another device?</h3>
+        <p class="hint">Paste your player code to use the same nickname and scores here.</p>
+        <div class="field-row"><input class="text-input code-input" data-code-in value="${esc(state.codeIn || '')}" autocomplete="off" spellcheck="false" placeholder="Player code">
+          <button class="btn" data-action="pRestore" ${busy ? 'disabled' : ''}>Use code</button></div>
+      </div>
+    </div>`;
+  const find = (m, period) => me?.scores.find(s => s.board === `contest-${m}` && s.period === period);
+  const boards = CONTEST_LENGTHS.map(m => [m, find(m, 'all'), find(m, 'week')]);
+  return `
+    <div class="setup">${head}${note}
+      ${gone ? `
+      <div class="card panel profile-msg bad">
+        <p style="margin:0 0 12px">The server doesn't know this player code any more. Its data may have been deleted from another device.</p>
+        <button class="btn" data-action="pSignOut">Remove it from this device</button>
+      </div>` : ''}
+      <div class="card panel">
+        <h3>Nickname</h3>
+        <p class="hint">Shown on the leaderboards for everyone to see, so don't use anything you'd rather keep private.</p>
+        <div class="field-row"><input class="text-input plain-input" data-name-in value="${esc(state.nameIn ?? player.name)}" maxlength="24" autocomplete="off">
+          <button class="btn" data-action="pRename" ${busy ? 'disabled' : ''}>Save</button></div>
+        <p class="muted" style="font-size:12.5px;margin:10px 0 0">Player ID <span class="mono">${esc(player.id)}</span>${me ? ` · joined ${fmtDay(me.created)}` : ''}</p>
+      </div>
+      ${gone ? '' : `<div class="card panel">
+        <h3>Your contest boards</h3>
+        ${loading ? '<p class="hint" style="margin:0">Loading…</p>' : error ? `<p class="hint" style="margin:0">${esc(error)}</p>` : `
+        <div class="lb-scroll"><table class="lb">
+          <thead><tr><th>Board</th><th>Best score</th><th>QSOs × mults</th><th>All time</th><th>This week</th><th>Date</th></tr></thead>
+          <tbody>${boards.map(([m, b, w]) => `
+            <tr><td>${m} min</td>${b ? `<td class="num"><b>${b.score}</b></td><td class="num muted">${b.qsos} × ${b.mults}</td><td class="num">#${b.rank}</td>
+              <td class="num">${w ? `#${w.rank} <span class="muted">(${w.score})</span>` : '<span class="muted">—</span>'}</td><td class="muted">${fmtDay(b.date)}</td>`
+              : '<td class="muted" colspan="5">No run posted yet</td>'}</tr>`).join('')}
+          </tbody>
+        </table></div>
+        <p class="hint" style="margin:12px 0 0">Weekly finishes: ${me && winsHtml(me.wins) || 'none yet. Finish a week in the top 5 of any board to earn a weekly QSL card.'}</p>`}
+      </div>`}
+      <div class="card panel">
+        <h3>Player code</h3>
+        <p class="hint">Your player code is the key to this profile. Save it somewhere safe to use the profile on another device: there is no other way to recover it. Don't share it, since anyone who has it can post scores, rename or delete the profile.</p>
+        <div class="code-box mono">${state.codeShown ? esc(player.secret) : '•'.repeat(32)}</div>
+        <div class="btn-row" style="margin-top:12px">
+          <button class="btn" data-action="pShowCode">${state.codeShown ? 'Hide' : 'Show'}</button>
+          <button class="btn" data-action="pCopyCode">Copy</button>
+        </div>
+      </div>
+      <div class="card panel danger-zone">
+        <h3>Delete my data</h3>
+        <p class="hint">Permanently removes your nickname, player ID and all your scores from the server. Your progress in the app on this device (question stats, Koch lessons, QSL cards and personal bests) stays.</p>
+        <div class="btn-row">
+          <button class="btn btn-danger" data-action="pDelete" ${busy ? 'disabled' : ''}>Delete my data</button>
+          <button class="btn btn-ghost" data-action="pSignOut">Sign out on this device</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// Runs an async profile action, showing its outcome as a message on the profile page.
+function profileTask(promise, ok) {
+  const run = state;
+  run.busy = true;
+  render();
+  promise.then(r => ok(r, run), e => { run.msg = { text: e.message, bad: true }; })
+    .finally(() => { run.busy = false; if (state === run) render(); });
+}
+
+const forgetBoards = () => { for (const k in lbCache) delete lbCache[k]; };
 
 /* ---------- events ---------- */
 /* ---------- streak and QSL cards ---------- */
@@ -1807,6 +2039,9 @@ const QSL_CARDS = [
   { id: 'cw5', code: `${TEST_MIN}WPM`, title: 'Morse test ready', how: 'Pass all four parts of the Morse test.', got: () => testPassed(Object.keys(TEST_PARTS)) },
   { id: 'cq', code: 'CQ', title: 'CQ test', how: 'Log 10 good QSOs in a full contest run.', got: () => Object.values(contestLog.best).some(b => b.qsos >= 10) },
   { id: 'qrq', code: '30+', title: 'Speed merchant', how: 'Log a good contest QSO at 30 WPM or faster.', got: () => contestLog.top >= 30 },
+  { id: 'weekTop5', code: 'TOP5', title: 'Top five', how: 'Finish a week in the top 5 of a contest leaderboard.', got: () => weekWins.w5 > 0, count: () => weekWins.w5 },
+  { id: 'weekTop3', code: 'TOP3', title: 'On the podium', how: 'Finish a week in the top 3 of a contest leaderboard.', got: () => weekWins.w3 > 0, count: () => weekWins.w3 },
+  { id: 'weekTop1', code: '#1', title: 'Number one', how: 'Finish a week as number 1 on a contest leaderboard.', got: () => weekWins.w1 > 0, count: () => weekWins.w1 },
   { id: 'week', code: '7D', title: 'A week on the air', how: 'Keep a 7-day streak.', got: c => c.streak >= 7 },
   { id: 'month', code: '30D', title: 'A month on the air', how: 'Keep a 30-day streak.', got: c => c.streak >= 30 },
   { id: 'night', code: 'GN', title: 'Grey line', how: 'Study between midnight and 4 a.m.', got: () => activity.night },
@@ -1822,13 +2057,13 @@ function checkAwards() {
   toast(fresh);
 }
 
-function toast(cards) {
+function toast(cards, heading) {
   document.querySelector('.toast')?.remove();
   const el = document.createElement('button');
   el.className = 'card toast';
   el.setAttribute('role', 'status');
   el.innerHTML = `<span class="qsl-code">${esc(cards[0].code)}</span>
-    <span><b>${cards.length === 1 ? `New QSL card: ${esc(cards[0].title)}` : `${cards.length} new QSL cards`}</b>
+    <span><b>${heading ? esc(heading) : cards.length === 1 ? `New QSL card: ${esc(cards[0].title)}` : `${cards.length} new QSL cards`}</b>
     <span class="muted">${cards.length === 1 ? esc(cards[0].how) : cards.map(c => esc(c.title)).join(' · ')}</span></span>`;
   el.onclick = () => { el.remove(); if (state.view !== 'exam') go('qsl'); };
   document.body.append(el);
@@ -1860,7 +2095,7 @@ function earnedQslHtml() {
       <div class="qsl-row">${got.map(c => `
         <button class="card qsl-card got mini" data-go="qsl" title="${esc(c.how)}">
           <div class="qsl-head"><span>QSL card</span><span>${new Date(qsl[c.id]).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })}</span></div>
-          <div class="qsl-code">${esc(c.code)}</div>
+          <div class="qsl-code">${esc(c.code)}${c.count?.() > 1 ? `<span class="qsl-count">×${c.count()}</span>` : ''}</div>
           <h3>${esc(c.title)}</h3>
         </button>`).join('')}
       </div>` : '<p class="hint" style="margin:10px 0 0">Earn QSL cards for milestones such as passing a mock exam, finishing the Koch course or keeping a streak. Answer your first question to get the first one.</p>'}
@@ -1876,14 +2111,14 @@ function renderQsl() {
     </div>
     <div class="eyebrow">${got} of ${QSL_CARDS.length} confirmed</div>
     <h2 style="margin:8px 0 6px">QSL cards</h2>
-    <p class="hint">Earn a card for each milestone: answering questions, passing mock exams, working through the Koch lessons and the Morse test, and keeping up your streak. A day counts towards the streak at ${DAY_GOAL} points: one per question answered, four per sending exercise checked, or a complete Koch session or Morse test part. One missed day a week is forgiven. Current streak: ${s.days} day${s.days === 1 ? '' : 's'}, best ${Math.max(activity.best, s.days)}.</p>
+    <p class="hint">Earn a card for each milestone: answering questions, passing mock exams, working through the Koch lessons and the Morse test, and keeping up your streak. The weekly cards count every week you finish in the top 5, top 3 or as number 1 of a contest leaderboard. A day counts towards the streak at ${DAY_GOAL} points: one per question answered, four per sending exercise checked, or a complete Koch session or Morse test part. One missed day a week is forgiven. Current streak: ${s.days} day${s.days === 1 ? '' : 's'}, best ${Math.max(activity.best, s.days)}.</p>
     <div class="qsl-grid">${QSL_CARDS.map(c => `
       <article class="card qsl-card ${qsl[c.id] ? 'got' : 'locked'}">
         <div class="qsl-head"><span>QSL card</span><span>${qsl[c.id] ? new Date(qsl[c.id]).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }) : 'Not yet worked'}</span></div>
-        <div class="qsl-code">${esc(c.code)}</div>
+        <div class="qsl-code">${esc(c.code)}${c.count?.() > 1 ? `<span class="qsl-count">×${c.count()}</span>` : ''}</div>
         <h3>${esc(c.title)}</h3>
         <p class="muted">${esc(c.how)}</p>
-        <div class="qsl-foot">${qsl[c.id] ? 'TNX QSO · 73' : 'PSE QSL'}</div>
+        <div class="qsl-foot"><span>${qsl[c.id] ? 'TNX QSO · 73' : 'PSE QSL'}</span>${c.count && qsl[c.id] ? `<span>${c.count()} week${c.count() === 1 ? '' : 's'}</span>` : ''}</div>
       </article>`).join('')}
     </div>`;
 }
@@ -2010,11 +2245,64 @@ const actions = {
   tNew() { startTest(state.part); return true; },
   tBack() { morseCfg.tab = 'test'; saveMorse(); go('morse'); return true; },
   cLen(el) { morseCfg.contestMin = +el.dataset.v; saveMorse(); },
+  lbPeriod(el) { morseCfg.lbPeriod = el.dataset.v; saveMorse(); },
   startContest() { startContest(); return true; },
   cRepeat() { contestPlay(); document.getElementById('c-call')?.focus(); return true; },
   cLog() { contestEnter(); return true; },
   cEnd() { finishContest(false); return true; },
   cBack() { morseCfg.tab = 'contest'; saveMorse(); go('morse'); return true; },
+  pJoin() {
+    profileTask(api('/api/players', { method: 'POST', secret: null }), p => {
+      savePlayer({ secret: p.secret, id: p.id, name: p.name });
+      forgetBoards();
+      go('profile', { msg: { text: `Welcome, ${p.name}! Change your nickname below if you like, and save your player code.` } });
+    });
+    return true;
+  },
+  pRestore() {
+    const code = (state.codeIn || '').trim().toLowerCase();
+    if (!/^[0-9a-f]{64}$/.test(code)) { state.msg = { text: 'A player code is 64 characters, 0–9 and a–f.', bad: true }; return; }
+    profileTask(api('/api/me', { secret: code }), me => {
+      savePlayer({ secret: code, id: me.id, name: me.name });
+      forgetBoards();
+      go('profile', { me, msg: { text: `Signed in as ${me.name}.` } });
+    });
+    return true;
+  },
+  pRename() {
+    profileTask(api('/api/me', { method: 'PATCH', body: { name: state.nameIn ?? player.name } }), (r, run) => {
+      savePlayer({ ...player, name: r.name });
+      forgetBoards();
+      Object.assign(run, { nameIn: undefined, msg: { text: 'Nickname saved.' } });
+    });
+    return true;
+  },
+  pShowCode() { state.codeShown = !state.codeShown; },
+  pCopyCode() {
+    const run = state;
+    navigator.clipboard.writeText(player.secret)
+      .then(() => { run.msg = { text: 'Player code copied.' }; }, () => { run.msg = { text: 'Couldn\'t copy. Press Show and copy the code by hand.', bad: true }; })
+      .finally(() => { if (state === run) render(); });
+    return true;
+  },
+  pDelete() {
+    confirmModal('Delete your leaderboard data?', 'This permanently removes your nickname, player ID and all your scores from the server. It can\'t be undone.', 'Delete my data', () => {
+      profileTask(api('/api/me', { method: 'DELETE' }), () => {
+        savePlayer(null);
+        forgetBoards();
+        go('profile', { msg: { text: 'Your data has been deleted from the server.' } });
+      });
+    });
+    return true;
+  },
+  pSignOut() {
+    confirmModal('Sign out on this device?', 'Your profile and scores stay on the server. To use them again you need your player code, so copy it first if you haven\'t.', 'Sign out', () => {
+      savePlayer(null);
+      forgetBoards();
+      go('profile');
+    });
+    return true;
+  },
 };
 
 app.addEventListener('click', e => {
@@ -2024,6 +2312,11 @@ app.addEventListener('click', e => {
   if (!el || el.disabled) return;
   const handled = actions[el.dataset.action](el);
   if (!handled) render();
+});
+document.getElementById('profile-btn').addEventListener('click', () => {
+  if (!termsAccepted) return;
+  if (state.view === 'exam') saveExam();
+  go('profile');
 });
 document.querySelector('.brand').addEventListener('click', () => {
   if (state.view === 'exam') saveExam();
@@ -2081,6 +2374,10 @@ app.addEventListener('input', e => {
     }
   } else if ('kInput' in t.dataset || 'tInput' in t.dataset) {
     state.typed = t.value;
+  } else if ('codeIn' in t.dataset) {
+    state.codeIn = t.value;
+  } else if ('nameIn' in t.dataset) {
+    state.nameIn = t.value;
   } else if ('cIn' in t.dataset) {
     state[t.dataset.cIn === 'call' ? 'callIn' : 'nrIn'] = t.value;
   } else if (t.dataset.cfg === 'contestWpm') {
@@ -2174,3 +2471,5 @@ document.addEventListener('keydown', e => {
 window.addEventListener('beforeunload', () => { if (state.view === 'exam') saveExam(); });
 
 render();
+// Picks up weekly finishes settled since the last visit.
+if (player) api('/api/me').then(me => syncWins(me.wins), () => {});
