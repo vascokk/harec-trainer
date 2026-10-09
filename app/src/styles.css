@@ -613,3 +613,4 @@ h3 { font-size: 16px; font-weight: 700; }
 .wk-badge.w3 { color: var(--text); }
 .qsl-count { font-size: .5em; margin-left: 6px; vertical-align: middle; color: var(--text); }
 .wk-badge + .wk-badge { margin-left: 4px; }
+.modal-check { display: flex; align-items: center; gap: 8px; margin-top: 14px; color: var(--text); cursor: pointer; }

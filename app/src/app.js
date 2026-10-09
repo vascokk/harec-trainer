@@ -597,6 +597,7 @@ function examMove(i) {
   render();
 }
 
+// A body may hold one checkbox marked data-modal-check; onOk receives whether it was ticked.
 function confirmModal(title, body, okLabel, onOk) {
   modalRoot.innerHTML = `
     <div class="modal-backdrop" data-modal="cancel">
@@ -609,8 +610,9 @@ function confirmModal(title, body, okLabel, onOk) {
   modalRoot.onclick = e => {
     const t = e.target.closest('[data-modal]');
     if (!t || (t.classList.contains('modal-backdrop') && e.target !== t)) return;
+    const checked = !!modalRoot.querySelector('[data-modal-check]')?.checked;
     close();
-    if (t.dataset.modal === 'ok') onOk();
+    if (t.dataset.modal === 'ok') onOk(checked);
   };
   modalRoot.querySelector('[data-modal="ok"]').focus();
 }
@@ -1935,6 +1937,12 @@ function renderProfile() {
           <button class="btn" data-action="pCopyCode">Copy</button>
         </div>
       </div>
+      <div class="card panel">
+        <h3>Use a player code from another device</h3>
+        <p class="hint">Switch this device to a profile you created elsewhere, so your scores stay in one place.</p>
+        <div class="field-row"><input class="text-input code-input" data-switch-in value="${esc(state.switchIn || '')}" autocomplete="off" spellcheck="false" placeholder="Player code">
+          <button class="btn" data-action="pSwitch" ${busy ? 'disabled' : ''}>Switch</button></div>
+      </div>
       <div class="card panel danger-zone">
         <h3>Delete my data</h3>
         <p class="hint">Permanently removes your nickname, player ID and all your scores from the server. Your progress in the app on this device (question stats, Koch lessons, QSL cards and personal bests) stays.</p>
@@ -2266,6 +2274,30 @@ const actions = {
       savePlayer({ secret: code, id: me.id, name: me.name });
       forgetBoards();
       go('profile', { me, msg: { text: `Signed in as ${me.name}.` } });
+      syncWins(me.wins);
+    });
+    return true;
+  },
+  // Switches this device to another profile. A profile left behind with no scores can be
+  // deleted on the way, so switching doesn't leave empty profiles on the server.
+  pSwitch() {
+    const code = (state.switchIn || '').trim().toLowerCase();
+    if (!/^[0-9a-f]{64}$/.test(code)) { state.msg = { text: 'A player code is 64 characters, 0–9 and a–f.', bad: true }; return; }
+    if (code === player.secret) { state.msg = { text: 'That is the player code of the profile you are using.', bad: true }; return; }
+    profileTask(api('/api/me', { secret: code }), (next, run) => {
+      const cur = run.me;
+      const empty = cur && !cur.scores.length && !cur.wins?.w5;
+      const switchTo = () => {
+        savePlayer({ secret: code, id: next.id, name: next.name });
+        forgetBoards();
+        go('profile', { me: next, msg: { text: `Signed in as ${next.name}.` } });
+        syncWins(next.wins);
+      };
+      confirmModal(`Switch to ${esc(next.name)}?`, empty
+        ? `This device will use ${esc(next.name)} from now on. Your current profile, ${esc(player.name)}, has no scores yet.
+          <label class="modal-check"><input type="checkbox" data-modal-check checked> Delete ${esc(player.name)} from the server</label>`
+        : `This device will use ${esc(next.name)} from now on. ${esc(player.name)} stays on the server with its scores; you need its player code to use it again, so copy it first if you haven't.`,
+      'Switch', drop => drop ? profileTask(api('/api/me', { method: 'DELETE' }), switchTo) : switchTo());
     });
     return true;
   },
@@ -2376,6 +2408,8 @@ app.addEventListener('input', e => {
     state.typed = t.value;
   } else if ('codeIn' in t.dataset) {
     state.codeIn = t.value;
+  } else if ('switchIn' in t.dataset) {
+    state.switchIn = t.value;
   } else if ('nameIn' in t.dataset) {
     state.nameIn = t.value;
   } else if ('cIn' in t.dataset) {
