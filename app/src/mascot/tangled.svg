@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="190" rx="60" ry="6" fill="#000" opacity=".12"/>
+  <!-- ears, one bent -->
+  <ellipse cx="78" cy="48" rx="12" ry="36" fill="#b97a47" transform="rotate(-20 78 48)"/>
+  <ellipse cx="79" cy="52" rx="5" ry="25" fill="#f0a6a6" transform="rotate(-20 79 52)"/>
+  <path d="M116 66 L126 30 C128 22 138 22 138 30 L132 50 C150 44 168 50 170 58 C172 66 160 66 150 62 L128 70Z" fill="#b97a47"/>
+  <!-- body -->
+  <ellipse cx="100" cy="148" rx="46" ry="40" fill="#b97a47"/>
+  <ellipse cx="100" cy="156" rx="27" ry="28" fill="#f3e2c4"/>
+  <ellipse cx="76" cy="184" rx="17" ry="7" fill="#8a5530"/>
+  <ellipse cx="124" cy="184" rx="17" ry="7" fill="#8a5530"/>
+  <!-- head -->
+  <ellipse cx="100" cy="98" rx="38" ry="33" fill="#b97a47"/>
+  <ellipse cx="100" cy="112" rx="22" ry="14" fill="#f3e2c4"/>
+  <!-- dizzy eyes -->
+  <g fill="none" stroke="#2e2118" stroke-width="2.2" stroke-linecap="round">
+    <path d="M86 94 m-7 0 a7 7 0 1 1 7 7 a5 5 0 1 1 -5 -5 a3 3 0 1 1 3 3"/>
+    <path d="M114 94 m-7 0 a7 7 0 1 1 7 7 a5 5 0 1 1 -5 -5 a3 3 0 1 1 3 3"/>
+  </g>
+  <path d="M95 105 Q100 102 105 105 Q100 110 95 105Z" fill="#d9707a"/>
+  <path d="M90 115 Q100 110 110 116" fill="none" stroke="#2e2118" stroke-width="2" stroke-linecap="round"/>
+  <path d="M104 115 q2 10 8 6 q2 -3 -1 -7Z" fill="#e8798a"/>
+  <!-- stars -->
+  <g fill="#f4c430">
+    <path d="M62 60 l3 6 6 1 -5 4 1 6 -5 -3 -5 3 1 -6 -5 -4 6 -1z"/>
+    <path d="M146 76 l2 4 4 1 -3 3 1 4 -4 -2 -4 2 1 -4 -3 -3 4 -1z"/>
+    <path d="M100 52 l2 4 4 1 -3 3 1 4 -4 -2 -4 2 1 -4 -3 -3 4 -1z"/>
+  </g>
+  <!-- coax tangle -->
+  <!-- pale outline keeps the cable visible on dark backgrounds -->
+  <g fill="none" stroke="#f3efe6" stroke-width="11" stroke-linecap="round">
+    <path d="M10 170 C40 160 50 130 70 132 C100 134 140 120 150 140 C160 160 120 168 96 160 C70 152 50 160 60 176 C70 190 130 186 146 170 C158 158 172 126 136 130 C112 134 64 138 52 116 C44 100 50 84 60 76"/>
+    <path d="M150 174 C170 182 186 176 192 162"/>
+  </g>
+  <g fill="none" stroke="#3a3d42" stroke-width="7" stroke-linecap="round">
+    <path d="M10 170 C40 160 50 130 70 132 C100 134 140 120 150 140 C160 160 120 168 96 160 C70 152 50 160 60 176 C70 190 130 186 146 170 C158 158 172 126 136 130 C112 134 64 138 52 116 C44 100 50 84 60 76"/>
+    <path d="M150 174 C170 182 186 176 192 162"/>
+  </g>
+  <g fill="none" stroke="#8a929c" stroke-width="1.5" stroke-linecap="round" transform="translate(-1 -1.5)">
+    <path d="M10 170 C40 160 50 130 70 132 C100 134 140 120 150 140 C160 160 120 168 96 160 C70 152 50 160 60 176 C70 190 130 186 146 170 C158 158 172 126 136 130 C112 134 64 138 52 116 C44 100 50 84 60 76"/>
+    <path d="M150 174 C170 182 186 176 192 162"/>
+  </g>
+  <!-- connector -->
+  <rect x="56" y="66" width="14" height="10" rx="2" fill="#b8c0c8" transform="rotate(-40 63 71)"/>
+  <rect x="67" y="62" width="7" height="3" fill="#d4a017" transform="rotate(-40 63 71)"/>
+  <rect x="186" y="150" width="10" height="14" rx="2" fill="#b8c0c8"/>
+</svg>

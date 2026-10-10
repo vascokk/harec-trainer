@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="eL"><ellipse cx="78" cy="48" rx="12" ry="38" transform="rotate(-12 78 48)"/></clipPath>
+    <clipPath id="eR"><ellipse cx="122" cy="48" rx="12" ry="38" transform="rotate(12 122 48)"/></clipPath>
+  </defs>
+  <ellipse cx="100" cy="188" rx="52" ry="6" fill="#000" opacity=".12"/>
+  <g clip-path="url(#eL)"><rect x="50" y="0" width="60" height="100" fill="#b97a47"/><rect x="50" y="0" width="60" height="22" fill="#2e2118"/></g>
+  <g clip-path="url(#eR)"><rect x="90" y="0" width="60" height="100" fill="#b97a47"/><rect x="90" y="0" width="60" height="22" fill="#2e2118"/></g>
+  <ellipse cx="79" cy="52" rx="5" ry="26" fill="#f0a6a6" transform="rotate(-12 79 52)"/>
+  <ellipse cx="121" cy="52" rx="5" ry="26" fill="#f0a6a6" transform="rotate(12 121 52)"/>
+  <ellipse cx="100" cy="144" rx="46" ry="42" fill="#b97a47"/>
+  <ellipse cx="100" cy="152" rx="27" ry="30" fill="#f3e2c4"/>
+  <ellipse cx="76" cy="182" rx="17" ry="7" fill="#8a5530"/>
+  <ellipse cx="124" cy="182" rx="17" ry="7" fill="#8a5530"/>
+  <ellipse cx="86" cy="142" rx="8" ry="11" fill="#a86c3d"/>
+  <ellipse cx="114" cy="142" rx="8" ry="11" fill="#a86c3d"/>
+  <ellipse cx="100" cy="94" rx="38" ry="34" fill="#b97a47"/>
+  <ellipse cx="100" cy="108" rx="22" ry="15" fill="#f3e2c4"/>
+  <path d="M63 94 A38 42 0 0 1 137 94" fill="none" stroke="#2e2118" stroke-width="6" stroke-linecap="round"/>
+  <rect x="55" y="84" width="15" height="25" rx="7" fill="#169b62"/>
+  <rect x="130" y="84" width="15" height="25" rx="7" fill="#169b62"/>
+  <ellipse cx="78" cy="104" rx="6" ry="4" fill="#f0a6a6" opacity=".6"/>
+  <ellipse cx="122" cy="104" rx="6" ry="4" fill="#f0a6a6" opacity=".6"/>
+  <circle cx="87" cy="91" r="5.5" fill="#2e2118"/><circle cx="89" cy="89" r="2" fill="#fff"/>
+  <circle cx="113" cy="91" r="5.5" fill="#2e2118"/><circle cx="115" cy="89" r="2" fill="#fff"/>
+  <path d="M95 101 Q100 98 105 101 Q100 107 95 101Z" fill="#d9707a"/>
+  <path d="M100 105 v4 M100 109 q-5 4 -9 0 M100 109 q5 4 9 0" fill="none" stroke="#2e2118" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M84 106 l-16 -3 M84 109 l-16 2 M116 106 l16 -3 M116 109 l16 2" stroke="#2e2118" stroke-width="1" opacity=".5"/>
+</svg>

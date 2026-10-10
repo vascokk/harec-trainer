@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <ellipse cx="105" cy="190" rx="70" ry="6" fill="#000" opacity=".12"/>
+  <!-- upright ear -->
+  <ellipse cx="74" cy="42" rx="15" ry="34" fill="#b97a47" transform="rotate(-14 74 42)"/>
+  <ellipse cx="75" cy="46" rx="7" ry="24" fill="#f0a6a6" transform="rotate(-14 75 46)"/>
+  <!-- floppy ear -->
+  <path d="M118 58 C130 30 160 22 176 36 C184 44 172 52 160 52 C146 52 134 58 126 66Z" fill="#b97a47"/>
+  <path d="M126 58 C138 40 156 34 168 40 C160 44 146 48 132 62Z" fill="#f0a6a6"/>
+  <!-- body -->
+  <ellipse cx="96" cy="162" rx="34" ry="26" fill="#b97a47"/>
+  <ellipse cx="96" cy="168" rx="20" ry="16" fill="#f3e2c4"/>
+  <ellipse cx="74" cy="186" rx="13" ry="6" fill="#8a5530"/>
+  <ellipse cx="112" cy="186" rx="13" ry="6" fill="#8a5530"/>
+  <!-- head -->
+  <ellipse cx="100" cy="98" rx="60" ry="50" fill="#b97a47"/>
+  <ellipse cx="100" cy="116" rx="30" ry="22" fill="#f3e2c4"/>
+  <ellipse cx="62" cy="114" rx="9" ry="6" fill="#f0a6a6" opacity=".7"/>
+  <ellipse cx="138" cy="114" rx="9" ry="6" fill="#f0a6a6" opacity=".7"/>
+  <circle cx="76" cy="95" r="13" fill="#2e2118"/><circle cx="80" cy="90" r="5" fill="#fff"/><circle cx="72" cy="100" r="2.2" fill="#fff"/>
+  <circle cx="124" cy="95" r="13" fill="#2e2118"/><circle cx="128" cy="90" r="5" fill="#fff"/><circle cx="120" cy="100" r="2.2" fill="#fff"/>
+  <path d="M95 108 Q100 105 105 108 Q100 113 95 108Z" fill="#d9707a"/>
+  <path d="M90 116 Q100 132 110 116Z" fill="#2e2118"/>
+  <path d="M95 123 Q100 129 105 123 Q100 120 95 123Z" fill="#e8798a"/>
+  <!-- morse key -->
+  <rect x="118" y="176" width="64" height="12" rx="3" fill="#7a4f2a"/>
+  <rect x="128" y="168" width="10" height="9" fill="#c9a227"/>
+  <rect x="124" y="164" width="52" height="5" rx="2" fill="#c9a227"/>
+  <circle cx="172" cy="160" r="7" fill="#2e2118"/>
+  <ellipse cx="168" cy="152" rx="11" ry="8" fill="#b97a47"/>
+  <path d="M125 150 Q150 140 160 150" fill="none" stroke="#b97a47" stroke-width="10" stroke-linecap="round"/>
+  <!-- dits and dahs -->
+  <g fill="#169b62">
+    <circle cx="150" cy="122" r="3.5"/><rect x="158" y="119" width="14" height="6" rx="3"/><circle cx="180" cy="122" r="3.5"/>
+    <rect x="160" y="100" width="14" height="6" rx="3" opacity=".7"/><circle cx="182" cy="103" r="3.5" opacity=".7"/>
+    <circle cx="176" cy="84" r="3.5" opacity=".4"/>
+  </g>
+</svg>

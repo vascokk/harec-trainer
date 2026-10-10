@@ -128,6 +128,9 @@ const ICON = {
   key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M6 19v-3h12v3M9 16l9-7M18 9a1.5 1.5 0 1 0 0-.01"/></svg>',
 };
 
+// The hare mascot: one SVG per mood in mascot/. Decorative, so it has no alt text.
+const mascot = (mood, cls = '') => `<img class="mascot ${cls}" src="mascot/${mood}.svg" alt="" draggable="false">`;
+
 /* ---------- views ---------- */
 let state = { view: 'home' };
 // The app is usable only once the terms below are accepted. Bump TERMS_VERSION
@@ -839,6 +842,7 @@ function renderResults() {
   return `
     <div class="card result-hero">
       ${ring(pct, `${total}/${of}`)}
+      ${mascot(pass ? 'qsl' : 'tangled')}
       <div>
         <div class="eyebrow">${esc(ex.label)} · ${fmtTime(ex.elapsed)}${timeUp ? ' · time ran out' : ''}</div>
         <div class="verdict-big ${pass ? 'pass' : 'fail'}" style="margin-top:6px">${pass ? 'Pass, well done!' : 'Not a pass this time'}</div>
@@ -1178,6 +1182,7 @@ function renderKochDone() {
   return `
     <div class="card result-hero">
       ${ring(total.pct, `${total.matched}/${total.of}`, KOCH_PASS)}
+      ${mascot(pass || (spaced && complete) ? 'morse' : 'tangled')}
       <div>
         <div class="eyebrow">Koch lesson ${lesson + 1} · ${speedLabel()}</div>
         <div class="verdict-big ${pass ? 'pass' : spaced && complete ? '' : 'fail'}" style="margin-top:6px">${pass ? 'Lesson passed!' : !complete ? 'Session ended early' : spaced ? 'Practice complete' : `Not ${KOCH_PASS}% yet`}</div>
@@ -1838,6 +1843,7 @@ function renderContestDone() {
     : `Your best for ${min} minute${min === 1 ? '' : 's'} is ${prev ? prev.score : 0} points.`;
   return `
     <div class="card panel">
+      ${mascot(record ? 'qsl' : 'cq', 'float')}
       <div class="eyebrow">Contest · ${min} min${full ? '' : ' · ended early'}</div>
       <div class="verdict-big ${record ? 'pass' : ''}" style="margin-top:6px">${record ? 'New personal best!' : 'Contest over'}</div>
       <p class="muted" style="margin:4px 0 0">${msg}</p>
@@ -2224,6 +2230,7 @@ function streakHtml() {
   const s = streak(), pts = Math.min(todayPoints(), DAY_GOAL);
   return `
     <div class="card streak-bar">
+      ${mascot(s.days && !s.today ? 'sleepy' : 'classic')}
       <div class="streak-n"><b>${s.days}</b><span>day streak${activity.best > s.days ? ` · best ${activity.best}` : ''}</span></div>
       <div class="streak-today">
         <div class="top"><b>${s.today ? 'Today is done' : s.days ? 'Keep the streak going' : 'Start a streak today'}</b><span class="muted">${pts}/${DAY_GOAL}</span></div>

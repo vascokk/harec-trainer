@@ -375,7 +375,8 @@ h3 { font-size: 16px; font-weight: 700; }
 .flag-btn.on { color: var(--flag); border-color: var(--flag); }
 
 /* ---------- Results ---------- */
-.result-hero { padding: 30px; display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: center; }
+.result-hero { padding: 30px; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
+.result-hero .mascot { grid-column: 3; grid-row: 1; width: 140px; }
 .ring { width: 150px; height: 150px; position: relative; }
 .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .ring .val { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
@@ -530,6 +531,7 @@ h3 { font-size: 16px; font-weight: 700; }
 
 @media (max-width: 860px) {
   .hero, .modes, .result-hero, .section-scores, .breakdown-grid { grid-template-columns: 1fr; }
+  .result-hero .mascot { grid-column: auto; grid-row: auto; order: -1; justify-self: center; width: 110px; }
   .quiz.with-nav { grid-template-columns: 1fr; }
   .navigator { position: static; order: -1; }
   .nav-grid { grid-template-columns: repeat(10, 1fr); }
@@ -555,6 +557,11 @@ h3 { font-size: 16px; font-weight: 700; }
 .sign-row .sign-sym { min-width: 44px; font-weight: 700; }
 .sign-row .code { color: var(--accent); }
 .send-target.test-target { font-size: 20px; line-height: 1.5; letter-spacing: .05em; overflow-wrap: anywhere; }
+
+/* hare mascot */
+.mascot { display: block; height: auto; flex: none; user-select: none; }
+.mascot.float { float: right; width: 110px; margin: -8px 0 8px 16px; }
+.streak-bar .mascot { width: 64px; margin: -6px 0; }
 
 /* streak and QSL cards */
 .streak-bar { display: flex; align-items: center; gap: 22px; padding: 18px 22px; margin-bottom: 20px; }
@@ -582,6 +589,7 @@ h3 { font-size: 16px; font-weight: 700; }
 @keyframes toastIn { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
 @media (max-width: 520px) {
   .streak-bar { flex-direction: column; align-items: stretch; gap: 14px; }
+  .streak-bar .mascot { align-self: center; }
   .toast { right: 16px; bottom: 16px; }
 }
 

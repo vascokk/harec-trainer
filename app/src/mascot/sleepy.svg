@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="176" rx="80" ry="7" fill="#000" opacity=".12"/>
+  <!-- body lying -->
+  <ellipse cx="116" cy="148" rx="62" ry="28" fill="#b97a47"/>
+  <circle cx="176" cy="140" r="9" fill="#f3e2c4"/>
+  <ellipse cx="70" cy="170" rx="18" ry="6" fill="#8a5530"/>
+  <!-- ears laid back -->
+  <ellipse cx="108" cy="104" rx="11" ry="40" fill="#b97a47" transform="rotate(72 108 104)"/>
+  <ellipse cx="104" cy="114" rx="11" ry="40" fill="#a86c3d" transform="rotate(80 104 114)"/>
+  <ellipse cx="112" cy="102" rx="5" ry="30" fill="#f0a6a6" transform="rotate(72 112 102)"/>
+  <!-- head -->
+  <ellipse cx="66" cy="136" rx="36" ry="30" fill="#b97a47"/>
+  <ellipse cx="56" cy="148" rx="20" ry="13" fill="#f3e2c4"/>
+  <!-- headphones slipped -->
+  <path d="M38 118 A34 30 0 0 1 96 112" fill="none" stroke="#2e2118" stroke-width="5" stroke-linecap="round"/>
+  <rect x="88" y="104" width="14" height="22" rx="6" fill="#169b62" transform="rotate(-20 95 115)"/>
+  <rect x="26" y="140" width="14" height="22" rx="6" fill="#169b62" transform="rotate(30 33 151)"/>
+  <!-- sleeping eyes -->
+  <path d="M48 132 q6 5 12 0 M70 132 q6 5 12 0" fill="none" stroke="#2e2118" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="46" cy="142" rx="6" ry="4" fill="#f0a6a6" opacity=".6"/>
+  <path d="M60 142 Q64 140 68 142 Q64 146 60 142Z" fill="#d9707a"/>
+  <circle cx="70" cy="152" r="4" fill="#bfe3f2" stroke="#8ec5db" stroke-width="1"/>
+  <!-- Z in Morse: dah dah dit dit -->
+  <g fill="#169b62" transform="translate(-10 34)">
+    <rect x="100" y="52" width="14" height="6" rx="3"/><rect x="118" y="52" width="14" height="6" rx="3"/><circle cx="139" cy="55" r="3.5"/><circle cx="149" cy="55" r="3.5"/>
+    <g opacity=".6" transform="translate(64 -20) scale(.8)"><rect x="100" y="52" width="14" height="6" rx="3"/><rect x="118" y="52" width="14" height="6" rx="3"/><circle cx="139" cy="55" r="3.5"/><circle cx="149" cy="55" r="3.5"/></g>
+    <g opacity=".35" transform="translate(118 -18) scale(.6)"><rect x="100" y="52" width="14" height="6" rx="3"/><rect x="118" y="52" width="14" height="6" rx="3"/><circle cx="139" cy="55" r="3.5"/><circle cx="149" cy="55" r="3.5"/></g>
+  </g>
+</svg>

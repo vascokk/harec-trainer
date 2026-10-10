@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="94" fill="#169b62"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#f3e2c4" stroke-width="3" stroke-dasharray="14 6 4 6"/>
+  <!-- hare head silhouette in profile -->
+  <g fill="#f3e2c4">
+    <path d="M86 92 C80 60 84 34 96 26 C104 22 108 34 104 52 C102 64 100 80 102 92Z"/>
+    <path d="M100 94 C102 62 114 40 126 36 C134 34 134 46 126 60 C120 72 114 84 112 96Z"/>
+    <ellipse cx="102" cy="120" rx="36" ry="28"/>
+    <path d="M128 112 C142 114 150 122 148 130 C146 138 134 140 124 136Z"/>
+  </g>
+  <circle cx="114" cy="114" r="4.5" fill="#169b62"/>
+  <circle cx="146" cy="126" r="3" fill="#169b62"/>
+  <!-- waves from ears -->
+  <g fill="none" stroke="#f3e2c4" stroke-width="4" stroke-linecap="round">
+    <path d="M140 40 q8 10 2 22"/><path d="M152 32 q12 16 4 36"/>
+  </g>
+  <text x="100" y="172" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="15" font-weight="800" letter-spacing="2" fill="#f3e2c4">EI0HARE</text>
+</svg>

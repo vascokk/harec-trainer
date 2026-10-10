@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="190" rx="54" ry="6" fill="#000" opacity=".12"/>
+  <ellipse cx="74" cy="40" rx="12" ry="36" fill="#b97a47" transform="rotate(-18 74 40)"/>
+  <ellipse cx="75" cy="44" rx="5" ry="25" fill="#f0a6a6" transform="rotate(-18 75 44)"/>
+  <ellipse cx="126" cy="40" rx="12" ry="36" fill="#b97a47" transform="rotate(18 126 40)"/>
+  <ellipse cx="125" cy="44" rx="5" ry="25" fill="#f0a6a6" transform="rotate(18 125 44)"/>
+  <!-- sparkles -->
+  <g fill="#f4c430"><path d="M30 40 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/><path d="M168 30 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"/><path d="M176 90 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g>
+  <ellipse cx="100" cy="152" rx="44" ry="36" fill="#b97a47"/>
+  <ellipse cx="78" cy="186" rx="16" ry="6" fill="#8a5530"/>
+  <ellipse cx="122" cy="186" rx="16" ry="6" fill="#8a5530"/>
+  <ellipse cx="100" cy="88" rx="38" ry="33" fill="#b97a47"/>
+  <ellipse cx="100" cy="102" rx="22" ry="14" fill="#f3e2c4"/>
+  <!-- happy closed eyes -->
+  <path d="M80 86 q7 -8 14 0 M106 86 q7 -8 14 0" fill="none" stroke="#2e2118" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="76" cy="98" rx="7" ry="4.5" fill="#f0a6a6" opacity=".7"/>
+  <ellipse cx="124" cy="98" rx="7" ry="4.5" fill="#f0a6a6" opacity=".7"/>
+  <path d="M95 95 Q100 92 105 95 Q100 100 95 95Z" fill="#d9707a"/>
+  <path d="M90 103 Q100 116 110 103Z" fill="#2e2118"/>
+  <!-- QSL card -->
+  <g transform="rotate(-6 100 146)">
+    <rect x="50" y="118" width="100" height="58" rx="4" fill="#fffdf6" stroke="#2e2118" stroke-width="2"/>
+    <rect x="50" y="118" width="100" height="14" rx="4" fill="#169b62"/>
+    <rect x="50" y="128" width="100" height="4" fill="#169b62"/>
+    <text x="100" y="129" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" font-weight="700" fill="#fff">QSL · TNX QSO</text>
+    <text x="100" y="152" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="16" font-weight="800" fill="#2e2118">EI0HARE</text>
+    <text x="100" y="167" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="8" fill="#2e2118">RST 599 · 73!</text>
+  </g>
+  <!-- paws over card -->
+  <ellipse cx="56" cy="140" rx="10" ry="8" fill="#b97a47"/>
+  <ellipse cx="146" cy="132" rx="10" ry="8" fill="#b97a47"/>
+</svg>
