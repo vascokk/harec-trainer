@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** The bandwidth of the filter shown is:
 
-![Figure for question 15](figures/set17_q15.svg)
+![Figure for question 15](../figures/set17_q15.svg)
 
 - A) f1
 - B) f2
@@ -166,7 +166,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **21.** Component "X" connects a balanced dipole to coaxial cable. It is typically a:
 
-![Figure for question 21](figures/set17_q21.svg)
+![Figure for question 21](../figures/set17_q21.svg)
 
 - A) 1:1 current balun (common-mode choke)
 - B) Low-pass filter
@@ -219,7 +219,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **28.** To increase the maximum line-of-sight distance between the two VHF stations shown, you should:
 
-![Figure for question 28](figures/set17_q28.svg)
+![Figure for question 28](../figures/set17_q28.svg)
 
 - A) Lower the frequency to HF
 - B) Use AM

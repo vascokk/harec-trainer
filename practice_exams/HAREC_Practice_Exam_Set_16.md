@@ -125,7 +125,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **16.** In the bipolar transistor symbol shown, terminal 3 (with the arrow) is the:
 
-![Figure for question 16](figures/set16_q16.svg)
+![Figure for question 16](../figures/set16_q16.svg)
 
 - A) Base
 - B) Collector
@@ -136,7 +136,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **17.** The figure shows the spectrum of a voice transmission. Which mode is it?
 
-![Figure for question 17](figures/set16_q17.svg)
+![Figure for question 17](../figures/set16_q17.svg)
 
 - A) LSB
 - B) AM
@@ -228,7 +228,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **29.** To measure the SWR on the feeder to the antenna, the SWR meter should be placed at:
 
-![Figure for question 29](figures/set16_q29.svg)
+![Figure for question 29](../figures/set16_q29.svg)
 
 - A) P1
 - B) P2

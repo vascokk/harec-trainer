@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** What is the total inductance of the two coils shown (assuming no mutual coupling)?
 
-![Figure for question 14](figures/set20_q14.svg)
+![Figure for question 14](../figures/set20_q14.svg)
 
 - A) 40 µH
 - B) 20 µH
@@ -150,7 +150,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **19.** In the receiver shown, a CW signal at the IF of 455 kHz beats with the BFO. What audio tone is heard?
 
-![Figure for question 19](figures/set20_q19.svg)
+![Figure for question 19](../figures/set20_q19.svg)
 
 - A) 455 kHz
 - B) 911 kHz
@@ -205,7 +205,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **26.** Which ray in the figure produces the longer skip distance?
 
-![Figure for question 26](figures/set20_q26.svg)
+![Figure for question 26](../figures/set20_q26.svg)
 
 - A) Ray B (high angle)
 - B) Both are the same

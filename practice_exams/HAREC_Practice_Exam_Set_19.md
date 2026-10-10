@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** The component marked "X" in the oscillator circuit shown is a:
 
-![Figure for question 15](figures/set19_q15.svg)
+![Figure for question 15](../figures/set19_q15.svg)
 
 - A) Capacitor
 - B) Zener diode
@@ -173,7 +173,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **22.** The figure shows the voltage along a feeder. What is the SWR?
 
-![Figure for question 22](figures/set19_q22.svg)
+![Figure for question 22](../figures/set19_q22.svg)
 
 - A) 3:1
 - B) 1:1
@@ -228,7 +228,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **29.** In the figure, a voltmeter with an internal resistance of 1 MΩ is connected across the lower resistor. What does it read?
 
-![Figure for question 29](figures/set19_q29.svg)
+![Figure for question 29](../figures/set19_q29.svg)
 
 - A) 5 V
 - B) 10 V

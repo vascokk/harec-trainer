@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** The circuit shown is a:
 
-![Figure for question 15](figures/set12_q15.svg)
+![Figure for question 15](../figures/set12_q15.svg)
 
 - A) Low-pass filter
 - B) Band-stop filter
@@ -150,7 +150,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **19.** In the receiver shown, block "X" feeds the product detector. When receiving CW or SSB, X is the:
 
-![Figure for question 19](figures/set12_q19.svg)
+![Figure for question 19](../figures/set12_q19.svg)
 
 - A) Local oscillator for the first mixer
 - B) Squelch
@@ -198,7 +198,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **25.** In the daytime ionosphere shown, which numbered layer mainly absorbs lower HF signals?
 
-![Figure for question 25](figures/set12_q25.svg)
+![Figure for question 25](../figures/set12_q25.svg)
 
 - A) Layer 4
 - B) Layer 3

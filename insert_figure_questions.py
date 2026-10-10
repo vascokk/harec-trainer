@@ -101,7 +101,7 @@ Q = {
 }
 
 for (s, q), (text, opts, ans, expl) in Q.items():
-    path = f'{DIR}/HAREC_Practice_Exam_Set_{s:02d}.md'
+    path = f'{DIR}/practice_exams/HAREC_Practice_Exam_Set_{s:02d}.md'
     md = open(path).read()
     fig = f'figures/set{s:02d}_q{q}.svg'
     block = (f'**{q}.** {text}\n\n![Figure for question {q}]({fig})\n\n' +

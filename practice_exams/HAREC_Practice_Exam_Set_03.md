@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** In the circuit shown, what current flows?
 
-![Figure for question 14](figures/set03_q14.svg)
+![Figure for question 14](../figures/set03_q14.svg)
 
 - A) 100 mA
 - B) 300 mA
@@ -157,7 +157,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **20.** The block diagram shows a CW transmitter. What is the stage marked "X"?
 
-![Figure for question 20](figures/set03_q20.svg)
+![Figure for question 20](../figures/set03_q20.svg)
 
 - A) Mixer
 - B) Product detector
@@ -235,7 +235,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **30.** The figure shows the RF envelopes of two CW transmissions on an oscilloscope. Which is likely to cause key clicks?
 
-![Figure for question 30](figures/set03_q30.svg)
+![Figure for question 30](../figures/set03_q30.svg)
 
 - A) Trace 2
 - B) Both

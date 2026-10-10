@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** The figure shows the voltage V (solid) and current I (dashed) in an AC circuit. What kind of circuit is it?
 
-![Figure for question 15](figures/set04_q15.svg)
+![Figure for question 15](../figures/set04_q15.svg)
 
 - A) A pure resistance
 - B) A pure inductance
@@ -136,7 +136,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **17.** In the superheterodyne receiver block diagram, what is the block marked "X"?
 
-![Figure for question 17](figures/set04_q17.svg)
+![Figure for question 17](../figures/set04_q17.svg)
 
 - A) Detector
 - B) IF amplifier
@@ -189,7 +189,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** In the station shown, the ATU has been adjusted until meter M reads an SWR of 1:1. What does this tell you?
 
-![Figure for question 24](figures/set04_q24.svg)
+![Figure for question 24](../figures/set04_q24.svg)
 
 - A) The SWR on the coax to the antenna is also 1:1
 - B) The antenna is resonant

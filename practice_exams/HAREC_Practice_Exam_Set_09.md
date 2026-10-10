@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** The circuit shown is a:
 
-![Figure for question 15](figures/set09_q15.svg)
+![Figure for question 15](../figures/set09_q15.svg)
 
 - A) High-pass filter
 - B) Band-stop filter
@@ -136,7 +136,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **17.** The figure shows part of an SDR transmitter using direct digital synthesis. What is block "X"?
 
-![Figure for question 17](figures/set09_q17.svg)
+![Figure for question 17](../figures/set09_q17.svg)
 
 - A) ADC
 - B) BFO
@@ -189,7 +189,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** The figure shows the horizontal radiation pattern of an antenna. It is typical of:
 
-![Figure for question 24](figures/set09_q24.svg)
+![Figure for question 24](../figures/set09_q24.svg)
 
 - A) A 3-element Yagi
 - B) A horizontal half-wave dipole

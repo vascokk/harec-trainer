@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** In the circuit shown, what current is drawn from the 12 V battery?
 
-![Figure for question 14](figures/set01_q14.svg)
+![Figure for question 14](../figures/set01_q14.svg)
 
 - A) 40 mA
 - B) 80 mA
@@ -150,7 +150,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **19.** The block diagram shows a superheterodyne receiver. What is the block marked "X" most likely to be?
 
-![Figure for question 19](figures/set01_q19.svg)
+![Figure for question 19](../figures/set01_q19.svg)
 
 - A) Beat frequency oscillator
 - B) IF filter (e.g. a crystal filter)
@@ -228,7 +228,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **29.** In the circuit shown, which meter is connected as an ammeter?
 
-![Figure for question 29](figures/set01_q29.svg)
+![Figure for question 29](../figures/set01_q29.svg)
 
 - A) M2
 - B) M1

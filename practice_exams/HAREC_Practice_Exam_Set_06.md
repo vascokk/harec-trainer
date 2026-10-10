@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** The graph shows the frequency response of a filter. It is a:
 
-![Figure for question 15](figures/set06_q15.svg)
+![Figure for question 15](../figures/set06_q15.svg)
 
 - A) High-pass filter
 - B) Low-pass filter
@@ -173,7 +173,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **22.** The figure shows the distribution of current and voltage along a resonant half-wave dipole. Curve 2 (dashed) represents:
 
-![Figure for question 22](figures/set06_q22.svg)
+![Figure for question 22](../figures/set06_q22.svg)
 
 - A) Current
 - B) Radiated power
@@ -228,7 +228,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **29.** You want to measure the current through resistor R. At which position should the ammeter be connected?
 
-![Figure for question 29](figures/set06_q29.svg)
+![Figure for question 29](../figures/set06_q29.svg)
 
 - A) Y
 - B) Z

@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** In the circuit shown, what does the (ideal) voltmeter V read?
 
-![Figure for question 14](figures/set11_q14.svg)
+![Figure for question 14](../figures/set11_q14.svg)
 
 - A) 4 V
 - B) 6 V
@@ -166,7 +166,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **21.** In the ground plane antenna shown, the elements marked "X" are the:
 
-![Figure for question 21](figures/set11_q21.svg)
+![Figure for question 21](../figures/set11_q21.svg)
 
 - A) Directors
 - B) Radials, forming an artificial ground (counterpoise)
@@ -228,7 +228,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **29.** The oscilloscope is set to 1 V/div vertical and 0.5 ms/div horizontal. What is the frequency of the square wave?
 
-![Figure for question 29](figures/set11_q29.svg)
+![Figure for question 29](../figures/set11_q29.svg)
 
 - A) 250 Hz
 - B) 500 Hz

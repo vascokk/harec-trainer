@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** What is the total resistance between terminals A and B?
 
-![Figure for question 14](figures/set08_q14.svg)
+![Figure for question 14](../figures/set08_q14.svg)
 
 - A) 500 Ω
 - B) 300 Ω
@@ -150,7 +150,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **19.** The block diagram shows an FM receiver. What is the block marked "X"?
 
-![Figure for question 19](figures/set08_q19.svg)
+![Figure for question 19](../figures/set08_q19.svg)
 
 - A) Discriminator (FM demodulator)
 - B) Product detector
@@ -189,7 +189,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** The figure shows a 3-element Yagi from above; element 2 is fed. In which direction is the maximum radiation?
 
-![Figure for question 24](figures/set08_q24.svg)
+![Figure for question 24](../figures/set08_q24.svg)
 
 - A) Towards element 1
 - B) Perpendicular to the boom

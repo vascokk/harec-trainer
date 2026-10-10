@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** In the circuit shown, the ammeter reads 10 mA. What power is dissipated in the resistor?
 
-![Figure for question 14](figures/set10_q14.svg)
+![Figure for question 14](../figures/set10_q14.svg)
 
 - A) 10 W
 - B) 0.1 W
@@ -166,7 +166,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **21.** You want to connect a 300 Ω folded dipole to 75 Ω coax as shown. What should block "X" be?
 
-![Figure for question 21](figures/set10_q21.svg)
+![Figure for question 21](../figures/set10_q21.svg)
 
 - A) A 1:1 balun
 - B) A 9:1 unun
@@ -235,7 +235,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **30.** The oscilloscope is set to 1 V/div vertical and 0.2 ms/div horizontal. What is the frequency of the signal?
 
-![Figure for question 30](figures/set10_q30.svg)
+![Figure for question 30](../figures/set10_q30.svg)
 
 - A) 1 Hz
 - B) 200 Hz

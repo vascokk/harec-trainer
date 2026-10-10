@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** L and C in the circuit shown are resonant at frequency f₀. Ignoring losses, signals at f₀:
 
-![Figure for question 14](figures/set05_q14.svg)
+![Figure for question 14](../figures/set05_q14.svg)
 
 - A) Pass through readily
 - B) Pass only above f₀
@@ -150,7 +150,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **19.** The block diagram shows an SSB transmitter. What is the block marked "X"?
 
-![Figure for question 19](figures/set05_q19.svg)
+![Figure for question 19](../figures/set05_q19.svg)
 
 - A) Balanced modulator
 - B) Frequency multiplier
@@ -235,7 +235,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **30.** The oscilloscope trace shows the RF output of an AM transmitter. It shows:
 
-![Figure for question 30](figures/set05_q30.svg)
+![Figure for question 30](../figures/set05_q30.svg)
 
 - A) Overmodulation
 - B) Correct modulation (below 100%)

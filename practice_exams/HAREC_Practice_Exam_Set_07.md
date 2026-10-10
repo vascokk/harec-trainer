@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** In the circuit shown, what current is drawn from the 30 V battery?
 
-![Figure for question 14](figures/set07_q14.svg)
+![Figure for question 14](../figures/set07_q14.svg)
 
 - A) 0.1 A
 - B) 0.3 A
@@ -187,7 +187,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** Using the figure, what is the ERP?
 
-![Figure for question 24](figures/set07_q24.svg)
+![Figure for question 24](../figures/set07_q24.svg)
 
 - A) 23 dBW (200 W)
 - B) 20 dBW (100 W)
@@ -235,7 +235,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **30.** In the station shown, the SWR meter measures:
 
-![Figure for question 30](figures/set07_q30.svg)
+![Figure for question 30](../figures/set07_q30.svg)
 
 - A) The SWR on the feeder to the antenna
 - B) The SWR between the transmitter and the ATU

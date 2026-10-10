@@ -6,7 +6,7 @@ Unofficial practice material for the **IRTS HAREC** exam, the Harmonised Amateur
 - **Answer keys** with a short explanation for each answer and the Study Guide page that confirms it.
 - **Chapter practice:** 1,036 more questions, separate from the papers, arranged by Study Guide chapter (chapters 3–29) so you can practise each chapter right after reading it. Every subsection the exam draws on has questions, and 70 of them come with diagrams.
 - **60 diagram questions** covering circuits, block diagrams, radiation patterns and oscilloscope traces. They are drawn as SVG.
-- **HAREC Trainer**, a study app that runs in the browser or as a desktop app and works offline. It has question practice, study by chapter, timed mock exams, and a Morse code trainer for receiving and sending, with a mock IRTS Morse test and a contest mode. Daily streaks and QSL-card awards track your progress, and there are optional online contest leaderboards.
+- **HAREC Trainer**, a study app that runs in the browser or as a desktop app and works offline. It has question practice by syllabus section or by Study Guide chapter, timed mock exams, and a Morse code trainer for receiving and sending, with a mock IRTS Morse test and a contest mode. Daily streaks and QSL-card awards track your progress, and there are optional online contest leaderboards.
 
 **▶ Try the app online: <https://harec-trainer.com/>**
 
@@ -23,7 +23,7 @@ You have 2 hours for all 60 questions, and you must reach the pass mark **in eac
 
 ## Using the practice papers
 
-Open any `HAREC_Practice_Exam_Set_NN.md` file. GitHub renders these with their figures. The answer key is at the end of each paper.
+Open any `practice_exams/HAREC_Practice_Exam_Set_NN.md` file. GitHub renders these with their figures. The answer key is at the end of each paper.
 
 For chapter practice, open `chapter_practice/Chapter_NN.md`. The questions are grouped by the chapter's subsections, with the answer key at the end.
 
@@ -33,8 +33,9 @@ Page numbers in the answer keys are the **printed** page numbers of the Study Gu
 
 A small static web app in `app/src/`. It has no dependencies or build step, and everything except the optional leaderboards works offline. A hosted copy is at <https://harec-trainer.com/>.
 
-- **Question practice:** pick sets and syllabus sections. You can put questions you got wrong first and shuffle the answer order. Each answer shows its explanation and Study Guide page straight away.
-- **Study by chapter:** pick a Study Guide chapter and practise its questions, all at once or one subsection at a time, in the guide's order or mixed. The exam-set diagram questions whose answers are in that chapter are included too. A mastery bar for each chapter and subsection shows the share of questions you got right the last time you answered them.
+- **Question practice:** one question at a time, with the explanation and Study Guide page shown straight away. You can put questions you got wrong first and shuffle the answer order. Choose how to practise:
+  - **By syllabus section:** pick sections and draw from all exam sets, one set, the chapter questions, or everything.
+  - **By Study Guide chapter:** pick a chapter and practise its questions, all at once or one subsection at a time, in the guide's order or mixed. The exam-set diagram questions whose answers are in that chapter are included too. A mastery bar for each chapter and subsection shows the share of questions you got right the last time you answered them.
 - **Exam practice:** sit any of the 20 sets, or a random paper weighted by syllabus that prefers questions you haven't seen yet or got wrong. You can turn the 2-hour timer on, flag questions to come back to, and get a per-section result with a full review.
 - **Morse code (CW)** has five tabs:
   - **Koch course:** 21 lessons, each adding two characters in Koch order. Every lesson sends groups of the new characters first, then, if you choose, groups, words and callsigns using everything learned so far. You type what you hear and the trainer marks each mistake. Copying 90% unlocks the next lesson. Characters are sent at 18–25 WPM with ITU timing. Lessons can use Farnsworth spacing, which keeps the characters at full speed but lengthens the gaps to an effective speed of 5–15 WPM. These sessions are practice only; a lesson is passed only at full speed.
@@ -89,7 +90,7 @@ The desktop app uses the leaderboard API at <https://harec-trainer.com>.
 ```
 question_bank/setNN.py           Source of truth: the questions for each paper
 figures/                         SVG diagrams (generated)
-HAREC_Practice_Exam_Set_NN.md    Practice papers (generated)
+practice_exams/                  Practice papers HAREC_Practice_Exam_Set_NN.md (generated)
 make_exams.py                    Builds and validates the Markdown papers
 guide_index.py                   Finds Study Guide pages for answer references
 make_figures.py                  Draws the figures for sets 01–10

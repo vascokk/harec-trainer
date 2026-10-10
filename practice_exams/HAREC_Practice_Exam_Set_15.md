@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** What is the total capacitance between A and B?
 
-![Figure for question 14](figures/set15_q14.svg)
+![Figure for question 14](../figures/set15_q14.svg)
 
 - A) 200 pF
 - B) 100 pF
@@ -157,7 +157,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **20.** The figure shows a direct-sampling SDR receiver. What is block "X"?
 
-![Figure for question 20](figures/set15_q20.svg)
+![Figure for question 20](../figures/set15_q20.svg)
 
 - A) DAC
 - B) BFO
@@ -182,7 +182,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **23.** On the resonant half-wave dipole shown, at which point is the RF voltage highest?
 
-![Figure for question 23](figures/set15_q23.svg)
+![Figure for question 23](../figures/set15_q23.svg)
 
 - A) P
 - B) R

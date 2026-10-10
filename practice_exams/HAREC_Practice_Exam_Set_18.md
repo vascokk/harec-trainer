@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** In the circuit shown, what power is dissipated in the 20 Ω resistor?
 
-![Figure for question 14](figures/set18_q14.svg)
+![Figure for question 14](../figures/set18_q14.svg)
 
 - A) 10 W
 - B) 20 W
@@ -143,7 +143,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **18.** The receiver shown is tuned to 7.1 MHz with the local oscillator at 16.1 MHz and a 9 MHz IF. What is the image frequency?
 
-![Figure for question 18](figures/set18_q18.svg)
+![Figure for question 18](../figures/set18_q18.svg)
 
 - A) 1.9 MHz
 - B) 9 MHz
@@ -189,7 +189,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** Using the figure, what is the ERP?
 
-![Figure for question 24](figures/set18_q24.svg)
+![Figure for question 24](../figures/set18_q24.svg)
 
 - A) 26 dBW (400 W)
 - B) 28 dBW (630 W)

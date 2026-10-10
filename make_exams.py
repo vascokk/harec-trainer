@@ -1,4 +1,4 @@
-"""Build HAREC practice exam Markdown files from question_bank/setNN.py.
+"""Build HAREC practice exam Markdown files (practice_exams/) from question_bank/setNN.py.
 
 Each bank module defines QUESTIONS, a list of tuples:
 
@@ -23,6 +23,7 @@ import sys
 from guide_index import PDF_OFFSET, TOPIC_PAGES, Guide, norm
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+OUT_DIR = os.path.join(HERE, 'practice_exams')
 
 SECTIONS = [
     ('A.1', 'Safety', 5),
@@ -93,7 +94,7 @@ def build(n, questions, guide, errors):
                     errors.append(f'set {n} Q{num}: figure {fig} does not match its position')
                 if not os.path.exists(os.path.join(HERE, 'figures', fig + '.svg')):
                     errors.append(f'set {n} Q{num}: figures/{fig}.svg is missing')
-                out.append(f'![Figure for question {num}](figures/{fig}.svg)\n')
+                out.append(f'![Figure for question {num}](../figures/{fig}.svg)\n')
             out.append(''.join(f'- {l}) {o}\n' for l, o in zip('ABCD', opts)))
             phrase, ranges = (ref, None) if isinstance(ref, str) else (ref[0], [(ref[1], ref[2])])
             if len(norm(phrase)) < 5 and ranges is None:
@@ -122,8 +123,9 @@ def main():
     if errors:
         print('\n'.join(errors))
         sys.exit(f'{len(errors)} problem(s); no files written')
+    os.makedirs(OUT_DIR, exist_ok=True)
     for n, (md, letters) in sorted(results.items()):
-        with open(os.path.join(HERE, f'HAREC_Practice_Exam_Set_{n:02d}.md'), 'w') as f:
+        with open(os.path.join(OUT_DIR, f'HAREC_Practice_Exam_Set_{n:02d}.md'), 'w') as f:
             f.write(md)
         print(f'Set {n:02d} written; answers', dict(sorted(letters.items())))
 

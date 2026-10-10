@@ -111,7 +111,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **14.** The circuit shown is a:
 
-![Figure for question 14](figures/set13_q14.svg)
+![Figure for question 14](../figures/set13_q14.svg)
 
 - A) Half-wave rectifier
 - B) Full-wave bridge rectifier
@@ -187,7 +187,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** The horizontal pattern shown is typical of:
 
-![Figure for question 24](figures/set13_q24.svg)
+![Figure for question 24](../figures/set13_q24.svg)
 
 - A) A half-wave dipole
 - B) A quarter-wave vertical
@@ -235,7 +235,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **30.** The oscilloscope trace shows the output of an AM transmitter. It shows:
 
-![Figure for question 30](figures/set13_q30.svg)
+![Figure for question 30](../figures/set13_q30.svg)
 
 - A) Overmodulation
 - B) An unmodulated carrier

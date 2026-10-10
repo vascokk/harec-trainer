@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** L and C in the circuit shown are resonant at frequency f₀. Ignoring losses, the circuit:
 
-![Figure for question 15](figures/set02_q15.svg)
+![Figure for question 15](../figures/set02_q15.svg)
 
 - A) Passes signals at f₀ readily and attenuates others (band-pass)
 - B) Blocks signals at f₀
@@ -187,7 +187,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **24.** The figure shows the horizontal (plan view) radiation pattern of an antenna in free space. It is typical of:
 
-![Figure for question 24](figures/set02_q24.svg)
+![Figure for question 24](../figures/set02_q24.svg)
 
 - A) A quarter-wave vertical
 - B) A 3-element Yagi
@@ -235,7 +235,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **30.** The oscilloscope is set to 2 V/div vertical and 1 ms/div horizontal. What is the peak-to-peak voltage of the signal?
 
-![Figure for question 30](figures/set02_q30.svg)
+![Figure for question 30](../figures/set02_q30.svg)
 
 - A) 8 V
 - B) 4 V

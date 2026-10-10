@@ -118,7 +118,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **15.** In the transformer shown, what is the secondary voltage?
 
-![Figure for question 15](figures/set14_q15.svg)
+![Figure for question 15](../figures/set14_q15.svg)
 
 - A) 2.3 V
 - B) 23 V
@@ -173,7 +173,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **22.** The figure shows a cross-section of coaxial cable. Its characteristic impedance depends on:
 
-![Figure for question 22](figures/set14_q22.svg)
+![Figure for question 22](../figures/set14_q22.svg)
 
 - A) Its length
 - B) The ratio of D to d and the dielectric material
@@ -212,7 +212,7 @@ Only ONE answer is correct for each question. Answers and short explanations are
 
 **27.** In the figure, the region marked "X" is the:
 
-![Figure for question 27](figures/set14_q27.svg)
+![Figure for question 27](../figures/set14_q27.svg)
 
 - A) Ground-wave zone
 - B) Skip (dead) zone

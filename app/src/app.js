@@ -150,13 +150,13 @@ function go(view, extra = {}) {
 
 function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
-    practiceDone: renderPracticeDone, chapters: renderChapters, chapter: renderChapter, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
+    practiceDone: renderPracticeDone, chapter: renderChapter, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
     morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest, contest: renderContest, contestDone: renderContestDone, qsl: renderQsl, profile: renderProfile };
   if (termsAccepted && state.view !== 'exam') checkAwards();
   app.innerHTML = `<div class="fade-in">${termsAccepted ? views[state.view]() : renderTerms()}</div>`;
   topStatus.textContent = state.view === 'exam' || !termsAccepted ? ''
     : MORSE_VIEWS.includes(state.view) ? `Koch lesson ${koch.unlocked + 1} of ${Morse.LESSONS.length}`
-    : `${QUESTIONS.length} questions · ${SET_NUMBERS.length} sets`;
+    : `${QUESTIONS.length + CHAPTER_QS.length} questions · ${SET_NUMBERS.length} sets · ${CHAPTERS.length} chapters`;
   if (state.view === 'exam') startTimer();
   document.getElementById('k-input')?.focus();
   document.getElementById('t-input')?.focus();
@@ -177,7 +177,7 @@ function renderHome() {
       <div>
         <div class="eyebrow">IRTS HAREC · Amateur Station Licence</div>
         <h1 style="margin-top:10px">Get on the air.<br><span class="glow">Pass the HAREC.</span></h1>
-        <p class="lead">${QUESTIONS.length} questions across all ${SECTIONS.length} syllabus sections, each with an explanation and the Study Guide page where you can check it, plus ${CHAPTER_QS.length} more to practise chapter by chapter as you read the guide.</p>
+        <p class="lead">${QUESTIONS.length + CHAPTER_QS.length} questions across all ${SECTIONS.length} syllabus sections and ${CHAPTERS.length} Study Guide chapters, each with an explanation and the Study Guide page where you can check it.</p>
       </div>
       <div class="card dial">
         <div class="dial-scale"><span>3.5</span><span>7.0</span><span>10.1</span><span>14.0</span><span>21.0</span><span>28.0</span></div>
@@ -203,14 +203,7 @@ function renderHome() {
         <div class="icon">${ICON.bolt}</div>
         <h2>Question practice</h2>
         <p>One question at a time. Pick an answer and see straight away whether it's right, with the explanation.</p>
-        <ul><li>Practise by section or by set</li><li>Wrongly answered questions can come first</li><li>Study Guide page for every answer</li></ul>
-      </button>
-      <button class="card mode-card" data-go="chapters">
-        <span class="go">→</span>
-        <div class="icon">${ICON.book}</div>
-        <h2>Study by chapter</h2>
-        <p>Read a chapter of the Study Guide, then practise on questions written for it, subsection by subsection.</p>
-        <ul><li>${CHAPTERS.length} chapters, ${CHAPTER_QS.length} questions</li><li>Every subsection the exam draws on is covered</li><li>Circuits, waveforms and block diagrams to read, as in the exam</li><li>Track your mastery of each chapter and subsection</li></ul>
+        <ul><li>Practise by syllabus section, by exam set, or chapter by chapter as you read the Study Guide</li><li>Track your mastery of each chapter and subsection</li><li>Wrongly answered questions can come first</li><li>Study Guide page for every answer</li></ul>
       </button>
       <button class="card mode-card" data-go="examSetup">
         <span class="go">→</span>
@@ -272,15 +265,27 @@ function renderTerms() {
 
 /* ---------- practice setup ---------- */
 const practiceCfg = Object.assign({
-  source: 'all', set: 1, sections: SECTIONS.map(s => s.id), length: 20, shuffle: true, missedFirst: true,
+  by: 'section', source: 'all', set: 1, sections: SECTIONS.map(s => s.id), length: 20, shuffle: true, missedFirst: true,
 }, store.get('practiceCfg', {}));
 
+// Sources: 'all' exam sets, one 'set', the 'chapters' questions, or 'everything'.
 function practicePool() {
-  return QUESTIONS.filter(q => practiceCfg.sections.includes(q.section)
-    && (practiceCfg.source === 'all' || q.set === practiceCfg.set));
+  const src = practiceCfg.source;
+  const base = src === 'chapters' ? CHAPTER_QS : src === 'everything' ? QUESTIONS.concat(CHAPTER_QS) : QUESTIONS;
+  return base.filter(q => practiceCfg.sections.includes(q.section) && (src !== 'set' || q.set === practiceCfg.set));
 }
 
 function renderPracticeSetup() {
+  const head = `
+      <div class="setup-head">
+        <div><div class="eyebrow">Question practice</div><h2 style="margin-top:6px">Choose what to practise</h2></div>
+        <button class="btn btn-ghost" data-go="home">← Back</button>
+      </div>
+      <div><div class="segmented">
+        <button class="${practiceCfg.by === 'section' ? 'on' : ''}" data-action="pBy" data-v="section">By syllabus section</button>
+        <button class="${practiceCfg.by === 'chapter' ? 'on' : ''}" data-action="pBy" data-v="chapter">By Study Guide chapter</button>
+      </div></div>`;
+  if (practiceCfg.by === 'chapter') return `<div class="setup">${head}${chapterListHtml()}</div>`;
   const pool = practicePool();
   const missed = pool.filter(q => stats[q.id] && stats[q.id].last === 0).length;
   const group = h => {
@@ -296,17 +301,15 @@ function renderPracticeSetup() {
   };
   const n = practiceCfg.length === 0 ? pool.length : Math.min(practiceCfg.length, pool.length);
   return `
-    <div class="setup">
-      <div class="setup-head">
-        <div><div class="eyebrow">Question practice</div><h2 style="margin-top:6px">Choose what to practise</h2></div>
-        <button class="btn btn-ghost" data-go="home">← Back</button>
-      </div>
+    <div class="setup">${head}
       <div class="card panel">
         <h3>Questions from</h3>
-        <p class="hint">Use every set, or stick to one paper.</p>
+        <p class="hint">The ${SET_NUMBERS.length} exam sets (${QUESTIONS.length} questions), one paper, the ${CHAPTER_QS.length} chapter questions, or all of them.</p>
         <div class="segmented">
           <button class="${practiceCfg.source === 'all' ? 'on' : ''}" data-action="pSource" data-v="all">All ${SET_NUMBERS.length} sets</button>
           <button class="${practiceCfg.source === 'set' ? 'on' : ''}" data-action="pSource" data-v="set">One set</button>
+          <button class="${practiceCfg.source === 'chapters' ? 'on' : ''}" data-action="pSource" data-v="chapters">Chapter questions</button>
+          <button class="${practiceCfg.source === 'everything' ? 'on' : ''}" data-action="pSource" data-v="everything">Everything</button>
         </div>
         ${practiceCfg.source === 'set' ? `
           <div class="set-grid" style="margin-top:14px">${SET_NUMBERS.map(n => `
@@ -495,7 +498,7 @@ function mastery(qs) {
   return { ok, of: qs.length, seen: qs.filter(q => stats[q.id]).length, pct: qs.length ? Math.round(100 * ok / qs.length) : 0 };
 }
 
-function renderChapters() {
+function chapterListHtml() {
   const tile = c => {
     const m = mastery(chapterQs(c.num));
     return `
@@ -516,14 +519,8 @@ function renderChapters() {
       <div class="chapter-grid">${CHAPTERS.filter(c => half(c.section) === h).map(tile).join('')}</div>
     </div>`;
   return `
-    <div class="setup">
-      <div class="setup-head">
-        <div><div class="eyebrow">Study by chapter</div><h2 style="margin-top:6px">Read a chapter, then practise it</h2></div>
-        <button class="btn btn-ghost" data-go="home">← Back</button>
-      </div>
-      <p class="muted" style="margin:0">Each chapter has its own questions, separate from the exam sets, covering every subsection of the chapter that the exam draws on. The bar shows your mastery: the share of the chapter's questions you got right the last time you answered them.</p>
-      ${part('A')}${part('B')}
-    </div>`;
+      <p class="muted" style="margin:0">Read a chapter of the Study Guide, then practise it. Each chapter has its own questions, covering every subsection that the exam draws on, plus the exam-set diagram questions on that chapter. The bar shows your mastery: the share of the chapter's questions you got right the last time you answered them.</p>
+      ${part('A')}${part('B')}`;
 }
 
 function renderChapter() {
@@ -558,7 +555,7 @@ function renderChapter() {
       <div class="setup-head">
         <div><div class="eyebrow">Chapter ${c.num} · Syllabus ${c.section} · Study Guide pp. ${c.pages[0]}–${c.pages[1]} (PDF ${c.pages[0] + PDF_OFFSET}–${c.pages[1] + PDF_OFFSET})</div>
           <h2 style="margin-top:6px">${esc(c.title)}</h2></div>
-        <button class="btn btn-ghost" data-go="chapters">← Chapters</button>
+        <button class="btn btn-ghost" data-go="practiceSetup">← Chapters</button>
       </div>
       <div class="card panel">
         <h3>Subsections</h3>
@@ -2293,6 +2290,7 @@ const actions = {
       : [...new Set([...practiceCfg.sections, ...ids])];
   },
   pSource(el) { practiceCfg.source = el.dataset.v; },
+  pBy(el) { practiceCfg.by = el.dataset.v; store.set('practiceCfg', practiceCfg); },
   pSet(el) { practiceCfg.set = +el.dataset.n; },
   pLength(el) { practiceCfg.length = +el.dataset.v; },
   startPractice() { store.set('practiceCfg', practiceCfg); startPractice(); return true; },
