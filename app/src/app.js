@@ -4,7 +4,11 @@ const DATA = window.HAREC_DATA;
 const SECTIONS = DATA.sections;
 const SECTION = Object.fromEntries(SECTIONS.map(s => [s.id, s]));
 const QUESTIONS = DATA.questions;
-const BY_ID = Object.fromEntries(QUESTIONS.map(q => [q.id, q]));
+// Chapter practice banks: one per Study Guide chapter, kept apart from the exam sets.
+const CHAPTERS = DATA.chapters || [];
+const CHAPTER = Object.fromEntries(CHAPTERS.map(c => [c.num, c]));
+const CHAPTER_QS = DATA.chapterQuestions || [];
+const BY_ID = Object.fromEntries([...QUESTIONS, ...CHAPTER_QS].map(q => [q.id, q]));
 const SET_NUMBERS = [...new Set(QUESTIONS.map(q => q.set))].sort((a, b) => a - b);
 const PDF_OFFSET = 24;
 const EXAM_SECONDS = 2 * 60 * 60;
@@ -120,6 +124,7 @@ const ICON = {
   clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h6M9 19h3"/></svg>',
   book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7"/></svg>',
   flag: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
+  github: '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
   key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M6 19v-3h12v3M9 16l9-7M18 9a1.5 1.5 0 1 0 0-.01"/></svg>',
 };
 
@@ -145,7 +150,7 @@ function go(view, extra = {}) {
 
 function render() {
   const views = { home: renderHome, practiceSetup: renderPracticeSetup, practice: renderPractice,
-    practiceDone: renderPracticeDone, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
+    practiceDone: renderPracticeDone, chapters: renderChapters, chapter: renderChapter, examSetup: renderExamSetup, exam: renderExam, results: renderResults,
     morse: renderMorse, koch: renderKoch, kochDone: renderKochDone, morseTest: renderMorseTest, contest: renderContest, contestDone: renderContestDone, qsl: renderQsl, profile: renderProfile };
   if (termsAccepted && state.view !== 'exam') checkAwards();
   app.innerHTML = `<div class="fade-in">${termsAccepted ? views[state.view]() : renderTerms()}</div>`;
@@ -172,7 +177,7 @@ function renderHome() {
       <div>
         <div class="eyebrow">IRTS HAREC · Amateur Station Licence</div>
         <h1 style="margin-top:10px">Get on the air.<br><span class="glow">Pass the HAREC.</span></h1>
-        <p class="lead">${QUESTIONS.length} questions across all ${SECTIONS.length} syllabus sections, each with an explanation and the Study Guide page where you can check it.</p>
+        <p class="lead">${QUESTIONS.length} questions across all ${SECTIONS.length} syllabus sections, each with an explanation and the Study Guide page where you can check it, plus ${CHAPTER_QS.length} more to practise chapter by chapter as you read the guide.</p>
       </div>
       <div class="card dial">
         <div class="dial-scale"><span>3.5</span><span>7.0</span><span>10.1</span><span>14.0</span><span>21.0</span><span>28.0</span></div>
@@ -199,6 +204,13 @@ function renderHome() {
         <h2>Question practice</h2>
         <p>One question at a time. Pick an answer and see straight away whether it's right, with the explanation.</p>
         <ul><li>Practise by section or by set</li><li>Wrongly answered questions can come first</li><li>Study Guide page for every answer</li></ul>
+      </button>
+      <button class="card mode-card" data-go="chapters">
+        <span class="go">→</span>
+        <div class="icon">${ICON.book}</div>
+        <h2>Study by chapter</h2>
+        <p>Read a chapter of the Study Guide, then practise on questions written for it, subsection by subsection.</p>
+        <ul><li>${CHAPTERS.length} chapters, ${CHAPTER_QS.length} questions</li><li>Every subsection the exam draws on is covered</li><li>Circuits, waveforms and block diagrams to read, as in the exam</li><li>Track your mastery of each chapter and subsection</li></ul>
       </button>
       <button class="card mode-card" data-go="examSetup">
         <span class="go">→</span>
@@ -228,7 +240,8 @@ function renderHome() {
               <td><span class="pill ${h.pass ? 'ok' : 'bad'}">${h.pass ? 'Pass' : 'Fail'}</span></td></tr>`).join('')}
           </tbody>
         </table>
-      </section>` : ''}`;
+      </section>` : ''}
+    <p class="repo-link"><a href="https://github.com/vascokk/harec-trainer" target="_blank" rel="noopener">${ICON.github}Source code on GitHub</a></p>`;
 }
 
 /* ---------- terms ---------- */
@@ -352,6 +365,7 @@ function pageRef(q) {
 }
 
 function sectionPill(q) {
+  if (q.chapter) return `<span class="pill accent">${esc(q.topic)}</span><span class="pill wrap">${esc(CHAPTER[q.chapter].topics[q.topic])}</span>`;
   return `<span class="pill accent">${q.section}</span><span class="pill">${esc(SECTION[q.section].title)}</span>`;
 }
 
@@ -398,7 +412,7 @@ function renderPractice() {
         <button class="btn btn-ghost" data-action="endPractice" style="padding:7px 14px">End</button>
       </div>
       <article class="card q-card">
-        <div class="q-head">${sectionPill(q)}<span class="spacer"></span><span class="q-num">Set ${pad2(q.set)} · Q${q.num}</span></div>
+        <div class="q-head">${sectionPill(q)}<span class="spacer"></span><span class="q-num">${q.chapter ? `Ch ${q.chapter}` : `Set ${pad2(q.set)}`} · Q${q.num}</span></div>
         <p class="q-text">${esc(q.text)}</p>
         ${figureHtml(q)}
         <div class="options">${answered ? revealedOptions(item, chosen, true)
@@ -437,7 +451,7 @@ function practiceNext() {
 
 function finishPractice() {
   const n = state.results.length;
-  go('practiceDone', { items: state.items.slice(0, n), answers: state.answers || [], results: state.results });
+  go('practiceDone', { items: state.items.slice(0, n), answers: state.answers || [], results: state.results, again: state.again });
 }
 
 function renderPracticeDone() {
@@ -453,14 +467,139 @@ function renderPracticeDone() {
         <div class="verdict-big ${pct >= 60 ? 'pass' : 'fail'}" style="margin-top:6px">${pct >= 80 ? 'Excellent work!' : pct >= 60 ? 'Good going.' : 'Keep practising.'}</div>
         <p class="muted">You answered ${ok} of ${results.length} correctly. ${missed.length ? 'The questions you missed are below, so you can go over them again.' : 'No mistakes this time.'}</p>
         <div class="btn-row" style="margin-top:14px">
+          ${state.again ? `
+          <button class="btn btn-primary" data-action="chapterAgain">Practise again</button>
+          <button class="btn" data-action="openChapter" data-n="${state.again.chapter}">Back to chapter ${state.again.chapter}</button>` : `
           <button class="btn btn-primary" data-action="startPractice">Practise again</button>
-          <button class="btn" data-go="practiceSetup">Change selection</button>
+          <button class="btn" data-go="practiceSetup">Change selection</button>`}
           <button class="btn btn-ghost" data-go="home">Home</button>
         </div>
       </div>
     </div>
     ${missed.length ? `<section class="review"><div class="review-head"><h3>Questions to review (${missed.length})</h3></div>
       ${missed.map(([it, a]) => reviewItem(it, a)).join('')}</section>` : ''}`;
+}
+
+/* ---------- study by chapter ---------- */
+const chapterCfg = Object.assign({ length: 20, inOrder: true, missedFirst: true, shuffle: true }, store.get('chapterCfg', {}));
+// A chapter's pool: its own questions plus the exam-set figure questions whose
+// Study Guide page lies in the chapter (topic 'sets' selects only those).
+const SET_TOPIC = 'sets';
+const chapterSetQs = n => (CHAPTER[n].setFigures || []).map(id => BY_ID[id]).filter(Boolean);
+const chapterQs = (n, topic) => topic === SET_TOPIC ? chapterSetQs(n)
+  : CHAPTER_QS.filter(q => q.chapter === n && (!topic || q.topic === topic)).concat(topic ? [] : chapterSetQs(n));
+
+// Mastery: the share of questions whose most recent answer was correct.
+function mastery(qs) {
+  const ok = qs.filter(q => stats[q.id]?.last === 1).length;
+  return { ok, of: qs.length, seen: qs.filter(q => stats[q.id]).length, pct: qs.length ? Math.round(100 * ok / qs.length) : 0 };
+}
+
+function renderChapters() {
+  const tile = c => {
+    const m = mastery(chapterQs(c.num));
+    return `
+      <button class="card chapter-tile" data-action="openChapter" data-n="${c.num}">
+        <div class="chapter-num">${pad2(c.num)}</div>
+        <div class="chapter-body">
+          <div class="t">${esc(c.title)}</div>
+          <div class="d">${c.section} · pp. ${c.pages[0]}–${c.pages[1]} · ${m.of} questions</div>
+          <div class="progress" title="${m.ok} of ${m.of} last answered correctly"><i style="width:${m.pct}%"></i></div>
+        </div>
+        <div class="chapter-pct">${m.seen ? m.pct + '%' : '—'}</div>
+      </button>`;
+  };
+  const part = h => `
+    <div class="card panel">
+      <h3>Part ${h}: ${h === 'A' ? 'Technical' : 'Operating, Rules & Regulations'}</h3>
+      <p class="hint">${h === 'A' ? 'Chapters 3–19 of the Study Guide.' : 'Chapters 20–29 of the Study Guide.'}</p>
+      <div class="chapter-grid">${CHAPTERS.filter(c => half(c.section) === h).map(tile).join('')}</div>
+    </div>`;
+  return `
+    <div class="setup">
+      <div class="setup-head">
+        <div><div class="eyebrow">Study by chapter</div><h2 style="margin-top:6px">Read a chapter, then practise it</h2></div>
+        <button class="btn btn-ghost" data-go="home">← Back</button>
+      </div>
+      <p class="muted" style="margin:0">Each chapter has its own questions, separate from the exam sets, covering every subsection of the chapter that the exam draws on. The bar shows your mastery: the share of the chapter's questions you got right the last time you answered them.</p>
+      ${part('A')}${part('B')}
+    </div>`;
+}
+
+function renderChapter() {
+  const c = CHAPTER[state.chapter];
+  const all = chapterQs(c.num), m = mastery(all);
+  const missed = all.filter(q => stats[q.id]?.last === 0).length;
+  const n = chapterCfg.length ? Math.min(chapterCfg.length, all.length) : all.length;
+  const idx = CHAPTERS.indexOf(c), prev = CHAPTERS[idx - 1], next = CHAPTERS[idx + 1];
+  const topics = Object.entries(c.topics).map(([id, title]) => {
+    const t = mastery(chapterQs(c.num, id));
+    return `
+      <div class="topic-row">
+        <b>${esc(id)}</b><span>${esc(title)}</span>
+        <span class="progress" title="${t.ok} of ${t.of} last answered correctly"><i style="width:${t.pct}%"></i></span>
+        <span class="n">${t.ok}/${t.of}</span>
+        <button class="btn btn-ghost" data-action="startChapter" data-topic="${esc(id)}">Practise</button>
+      </div>`;
+  }).join('');
+  const sets = chapterSetQs(c.num);
+  const setRow = sets.length ? (() => {
+    const t = mastery(sets);
+    return `
+      <div class="topic-row">
+        <b>Sets</b><span>Figure questions from the exam sets on this chapter</span>
+        <span class="progress" title="${t.ok} of ${t.of} last answered correctly"><i style="width:${t.pct}%"></i></span>
+        <span class="n">${t.ok}/${t.of}</span>
+        <button class="btn btn-ghost" data-action="startChapter" data-topic="${SET_TOPIC}">Practise</button>
+      </div>`;
+  })() : '';
+  return `
+    <div class="setup">
+      <div class="setup-head">
+        <div><div class="eyebrow">Chapter ${c.num} · Syllabus ${c.section} · Study Guide pp. ${c.pages[0]}–${c.pages[1]} (PDF ${c.pages[0] + PDF_OFFSET}–${c.pages[1] + PDF_OFFSET})</div>
+          <h2 style="margin-top:6px">${esc(c.title)}</h2></div>
+        <button class="btn btn-ghost" data-go="chapters">← Chapters</button>
+      </div>
+      <div class="card panel">
+        <h3>Subsections</h3>
+        <p class="hint">${m.ok} of ${m.of} questions mastered (${m.pct}%), ${m.seen} seen. Practise the whole chapter below, or one subsection right after reading it.</p>
+        <div class="topic-list">${topics}${setRow}</div>
+      </div>
+      <div class="card panel">
+        <h3>Session</h3>
+        <p class="hint">How many questions, and how they're ordered.</p>
+        <div class="segmented" style="margin-bottom:18px">
+          ${[10, 20, 0].map(v => `<button class="${chapterCfg.length === v ? 'on' : ''}" data-action="cLength" data-v="${v}">${v || 'All'}</button>`).join('')}
+        </div>
+        <div class="toggle-list">
+          ${toggle('inOrder', "Follow the guide's order", 'Questions come in the order of the chapter\'s subsections. Turn off to mix them up.', chapterCfg)}
+          ${toggle('missedFirst', 'Wrong answers first', `Questions you last got wrong come first (${missed} in this chapter), then ones you haven't seen.`, chapterCfg)}
+          ${toggle('shuffle', 'Shuffle answer order', 'Learn the answer, not its letter.', chapterCfg)}
+        </div>
+      </div>
+      <div class="card start-bar">
+        <div class="summary"><b>${n}</b> question${n === 1 ? '' : 's'} from chapter ${c.num}</div>
+        <div class="btn-row">
+          ${prev ? `<button class="btn btn-ghost" data-action="openChapter" data-n="${prev.num}">← Ch ${prev.num}</button>` : ''}
+          ${next ? `<button class="btn btn-ghost" data-action="openChapter" data-n="${next.num}">Ch ${next.num} →</button>` : ''}
+          <button class="btn btn-primary" data-action="startChapter">Start practice →</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+function startChapter(n, topic) {
+  let pool = chapterQs(n, topic);
+  if (!chapterCfg.inOrder) pool = shuffle(pool);
+  if (chapterCfg.missedFirst) {
+    const rank = q => !stats[q.id] ? 1 : stats[q.id].last === 0 ? 0 : 2;
+    pool = pool.slice().sort((a, b) => rank(a) - rank(b));
+  }
+  if (chapterCfg.length) pool = pool.slice(0, chapterCfg.length);
+  go('practice', {
+    items: pool.map(q => present(q, chapterCfg.shuffle)),
+    index: 0, chosen: null, results: [], again: { chapter: n, topic },
+  });
 }
 
 /* ---------- exam setup ---------- */
@@ -2015,10 +2154,12 @@ function awardCtx() {
     const b = bySec[q.section] ||= { c: 0, w: 0 };
     b.c += s.c;
     b.w += s.w;
-    sets.add(q.set);
+    if (q.set) sets.add(q.set);
   }
   return {
-    answered: entries.reduce((n, s) => n + s.c + s.w, 0), seen: entries.length, bySec, sets,
+    answered: entries.reduce((n, s) => n + s.c + s.w, 0), bySec, sets,
+    seen: Object.keys(stats).filter(id => BY_ID[id]?.set).length,
+    chapters: CHAPTERS.map(c => mastery(chapterQs(c.num)).pct),
     history: store.get('history', []), streak: Math.max(activity.best, streak().days),
   };
 }
@@ -2034,6 +2175,10 @@ const QSL_CARDS = [
     got: c => SECTIONS.every(s => { const b = c.bySec[s.id]; return b && b.c + b.w >= 10 && b.c >= 0.8 * (b.c + b.w); }) },
   { id: 'waz', code: 'WAZ', title: 'Worked all zones', how: `Answer questions from all ${SET_NUMBERS.length} sets.`, got: c => c.sets.size >= SET_NUMBERS.length },
   { id: 'dxcc', code: 'DXCC', title: 'Honour roll', how: `See every one of the ${QUESTIONS.length} questions.`, got: c => c.seen >= QUESTIONS.length },
+  { id: 'chapter', code: 'CH', title: 'Chapter and verse', how: 'Master a whole Study Guide chapter: get every one of its questions right.',
+    got: c => c.chapters.some(p => p === 100) },
+  { id: 'rtm', code: 'RTM', title: 'Read the manual', how: 'Reach 80% mastery in every Study Guide chapter.',
+    got: c => c.chapters.length > 0 && c.chapters.every(p => p >= 80) },
   { id: 'pass', code: 'QSL', title: 'Confirmed', how: 'Pass a mock exam.', got: c => c.history.some(h => h.pass) },
   { id: 'hat', code: '3×QSL', title: 'Hat trick', how: 'Pass three mock exams in a row.', got: c => c.history.length >= 3 && c.history.slice(0, 3).every(h => h.pass) },
   { id: 'perfect', code: '599', title: 'Full scale', how: 'Score 100% in Section A or Section B of a mock exam.',
@@ -2151,10 +2296,17 @@ const actions = {
   pSet(el) { practiceCfg.set = +el.dataset.n; },
   pLength(el) { practiceCfg.length = +el.dataset.v; },
   startPractice() { store.set('practiceCfg', practiceCfg); startPractice(); return true; },
+  openChapter(el) { go('chapter', { chapter: +el.dataset.n }); return true; },
+  cLength(el) { chapterCfg.length = +el.dataset.v; store.set('chapterCfg', chapterCfg); },
+  startChapter(el) { startChapter(state.chapter, el.dataset.topic || null); return true; },
+  chapterAgain() { startChapter(state.again.chapter, state.again.topic); return true; },
   pAnswer(el) { practiceAnswer(+el.dataset.pos); return true; },
   pNext() { practiceNext(); return true; },
   endPractice() {
-    if (!state.results.length) { go('practiceSetup'); return true; }
+    if (!state.results.length) {
+      state.again ? go('chapter', { chapter: state.again.chapter }) : go('practiceSetup');
+      return true;
+    }
     if (state.chosen === null) state.items = state.items.slice(0, state.results.length);
     finishPractice();
     return true;
@@ -2362,9 +2514,11 @@ app.addEventListener('change', e => {
   }
   const key = e.target.dataset.toggle;
   if (!key) return;
-  const cfg = state.view === 'examSetup' ? examCfg : state.view === 'morse' ? morseCfg : practiceCfg;
+  const cfg = state.view === 'examSetup' ? examCfg : state.view === 'morse' ? morseCfg
+    : state.view === 'chapter' ? chapterCfg : practiceCfg;
   cfg[key] = e.target.checked;
   if (cfg === morseCfg) saveMorse();
+  if (cfg === chapterCfg) store.set('chapterCfg', chapterCfg);
   render();
 });
 

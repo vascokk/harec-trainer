@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="190" viewBox="0 0 620 190" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Loudspeaker cable passing through a ring X near a stereo amplifier</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="30" y="60" width="120" height="60" rx="4" fill="#fff"/><text x="90.0" y="87.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Stereo</text><text x="90.0" y="103.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">amplifier</text><line x1="150" y1="90" x2="520" y2="90" /><line x1="150" y1="98" x2="520" y2="98" /><rect x="290" y="70" width="60" height="48" rx="10" fill="#555"/><text x="320" y="150" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="bold">X</text><rect x="520" y="50" width="70" height="90" rx="6" fill="#fff"/><circle cx="555" cy="95" r="22"/><text x="555" y="165" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Loudspeaker</text>
+</g>
+</svg>

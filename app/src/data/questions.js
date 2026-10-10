@@ -20492,5 +20492,19357 @@ window.HAREC_DATA = {
    "page": 329,
    "figure": null
   }
+ ],
+ "chapters": [
+  {
+   "num": 3,
+   "title": "Electrical and Electronic Principles",
+   "section": "A.3",
+   "pages": [
+    12,
+    27
+   ],
+   "topics": {
+    "3.1": "The Nature of Electricity",
+    "3.2": "Dimensions, Units, and Metric Prefixes",
+    "3.3": "Current",
+    "3.4": "Sources of Electricity and Electromotive Force",
+    "3.5": "Voltage",
+    "3.6": "Difference Between Electromotive Force and Voltage",
+    "3.7": "Voltage and Current in Series and Parallel Circuits",
+    "3.8": "Resistance",
+    "3.9": "Ohm's Law",
+    "3.10": "Electric Power and Energy"
+   },
+   "count": 48,
+   "setFigures": [
+    "s10q14"
+   ]
+  },
+  {
+   "num": 4,
+   "title": "Resistors in Circuits",
+   "section": "A.4",
+   "pages": [
+    28,
+    37
+   ],
+   "topics": {
+    "4.1": "Circuits",
+    "4.2": "Resistors",
+    "4.2.1": "Resistor Power Rating",
+    "4.2.2": "Resistors Connected in Series",
+    "4.2.3": "Resistors Connected in Parallel",
+    "4.2.4": "Multiple Resistors in a Circuit",
+    "4.2.5": "Worked Example: Current, Voltage, and Power with Multiple Resistors"
+   },
+   "count": 28,
+   "setFigures": [
+    "s01q14",
+    "s03q14",
+    "s07q14",
+    "s08q14",
+    "s11q14",
+    "s18q14"
+   ]
+  },
+  {
+   "num": 5,
+   "title": "Alternating Current and Sinusoidal Signals",
+   "section": "A.3",
+   "pages": [
+    38,
+    47
+   ],
+   "topics": {
+    "5.1": "Sinusoidal Signals",
+    "5.1.1": "Amplitude",
+    "5.1.2": "Period and Frequency",
+    "5.1.3": "Wavelength and Frequency",
+    "5.1.4": "Instantaneous and Average Values",
+    "5.1.5": "rms, Effective Voltage, Peak-to-Peak Voltage, Power",
+    "5.2": "Alternating Current",
+    "5.3": "Phase",
+    "5.4": "Harmonics",
+    "5.5": "Modulated Sinusoidal Signals"
+   },
+   "count": 37,
+   "setFigures": []
+  },
+  {
+   "num": 6,
+   "title": "Digital Signal Processing and Non-Sinusoidal Signals",
+   "section": "A.3",
+   "pages": [
+    48,
+    69
+   ],
+   "topics": {
+    "6.1": "Non-Sinusoidal Signals",
+    "6.2": "Digital Signal Processing",
+    "6.2.1": "Time and Frequency Domains",
+    "6.2.2": "Fast Fourier Transform (FFT)",
+    "6.3.1": "Sampling",
+    "6.3.2": "Quantisation",
+    "6.3.3": "Sampling Rate and Resolution",
+    "6.3.4": "Minimum Sampling Rate",
+    "6.3.5": "Oversampling",
+    "6.4": "DAC and Direct Digital Synthesis",
+    "6.5": "Software Defined Radio",
+    "6.5.1": "SDR as a Broadband Receiver",
+    "6.5.2": "Modern Transceivers and SDR"
+   },
+   "count": 46,
+   "setFigures": []
+  },
+  {
+   "num": 7,
+   "title": "Radio Waves and Spectrum",
+   "section": "A.3",
+   "pages": [
+    70,
+    87
+   ],
+   "topics": {
+    "7.1": "Radio Waves and Electromagnetic Radiation",
+    "7.2": "Electromagnetic Wave",
+    "7.4": "Frequency",
+    "7.5": "Radio Spectrum",
+    "7.6": "Electric Field",
+    "7.7": "Magnetic Field",
+    "7.8": "Polarisation"
+   },
+   "count": 27,
+   "setFigures": []
+  },
+  {
+   "num": 8,
+   "title": "Resonant Circuits and Components",
+   "section": "A.4",
+   "pages": [
+    88,
+    115
+   ],
+   "topics": {
+    "8.1": "Resonant Components: Inductors",
+    "8.1.1": "Back Electromotive Force",
+    "8.1.2": "Inductors in Series and Parallel",
+    "8.1.3": "Inductive Reactance",
+    "8.2": "Resonant Components: Capacitors",
+    "8.2.1": "Dielectrics",
+    "8.2.2": "Behaviour of Capacitors in AC and DC",
+    "8.2.3": "Capacitors in Series and Parallel",
+    "8.2.4": "Capacitive Reactance",
+    "8.3.1": "Reactance",
+    "8.3.2": "Resonance",
+    "8.3.3": "Impedance",
+    "8.4.1": "Series and Parallel LC Circuits",
+    "8.4.2": "Filters",
+    "8.4.3": "Digital Filters",
+    "8.4.4": "Q factor",
+    "8.5": "Quartz Crystals",
+    "8.6": "Oscillators"
+   },
+   "count": 70,
+   "setFigures": [
+    "s02q15",
+    "s04q15",
+    "s05q14",
+    "s06q15",
+    "s09q15",
+    "s12q15",
+    "s15q14",
+    "s17q15",
+    "s19q15",
+    "s20q14"
+   ]
+  },
+  {
+   "num": 9,
+   "title": "Power Ratios and Decibels",
+   "section": "A.3",
+   "pages": [
+    116,
+    119
+   ],
+   "topics": {
+    "9.1": "Decibel",
+    "9.2.1": "Power Ratios in Watts as Decibels",
+    "9.2.2": "Power Ratios using Voltage or Current as Decibels",
+    "9.3": "Absolute Power in Decibel-Watts",
+    "9.4": "Effective Power"
+   },
+   "count": 27,
+   "setFigures": []
+  },
+  {
+   "num": 10,
+   "title": "Other Components and Circuits",
+   "section": "A.4",
+   "pages": [
+    120,
+    139
+   ],
+   "topics": {
+    "10.1": "Diodes",
+    "10.1.1": "Forward Voltage (Bias Voltage)",
+    "10.1.2": "Peak Inverse Voltage",
+    "10.1.3": "Leakage Current",
+    "10.1.4": "Power Rating",
+    "10.2": "Transistors",
+    "10.2.1": "Currents and Biasing in a BJT",
+    "10.2.2": "Amplification Factor",
+    "10.2.3": "BJT vs FET",
+    "10.3": "Valves (Thermionic Devices)",
+    "10.4": "Integrated Circuits",
+    "10.5": "Transformers",
+    "10.6": "Power Supplies",
+    "10.6.2": "Switched Mode Power Supply",
+    "10.6.3": "Rectifier",
+    "10.6.4": "Voltage Regulator (Stabiliser)",
+    "10.7": "Amplifiers",
+    "10.7.2": "Classes of Power Amplifiers",
+    "10.7.4": "Distortion from Amplifier Non-Linearity",
+    "10.7.5": "AF Amplifiers",
+    "10.7.6": "RF Amplifiers"
+   },
+   "count": 57,
+   "setFigures": [
+    "s13q14",
+    "s14q15",
+    "s16q16"
+   ]
+  },
+  {
+   "num": 11,
+   "title": "Modulation and Modes",
+   "section": "A.3",
+   "pages": [
+    140,
+    169
+   ],
+   "topics": {
+    "11.1": "Carrier, Signal, Modulation, Bandwidth, and Sidebands",
+    "11.2": "Type of Modulation vs. Operating Mode",
+    "11.3": "Analogue vs Digital: Type of Information Being Transmitted",
+    "11.3.2.1": "Bit Rate, Symbol Rate (Baud Rate), and Words-per-Minute (WPM)",
+    "11.4.1": "Amplitude Modulation",
+    "11.4.2": "Frequency Modulation",
+    "11.5": "AM (A3E)",
+    "11.6": "SSB (J3E)",
+    "11.7": "FM (F3E)",
+    "11.8": "CW, ASK, OOK (A1A)",
+    "11.9": "RTTY, FSK (F1B)",
+    "11.10": "FT8, FSK (J2B, J2D)",
+    "11.11": "PSK, 2-PSK, 4-PSK (G1B)"
+   },
+   "count": 55,
+   "setFigures": [
+    "s16q17"
+   ]
+  },
+  {
+   "num": 12,
+   "title": "Transmitters",
+   "section": "A.5",
+   "pages": [
+    170,
+    187
+   ],
+   "topics": {
+    "12.1": "Output Power",
+    "12.2": "Modulation Duty Cycle and Operational Duty Cycle",
+    "12.3": "Output Impedance",
+    "12.4": "Efficiency and Output Power",
+    "12.5": "Problems Affecting Transmitters",
+    "12.6": "CW Transmitter",
+    "12.7": "SSB Transmitter",
+    "12.8": "FM Transmitter",
+    "12.9": "Digital Modes",
+    "12.10": "Modern Transmitters and SDR",
+    "12.11": "Transverter",
+    "12.12": "High Power Linear Amplifiers",
+    "12.13": "HF Station"
+   },
+   "count": 46,
+   "setFigures": [
+    "s03q20",
+    "s05q19",
+    "s09q17"
+   ]
+  },
+  {
+   "num": 13,
+   "title": "Receivers",
+   "section": "A.5",
+   "pages": [
+    188,
+    205
+   ],
+   "topics": {
+    "13.1": "Superheterodyne Receiver",
+    "13.2": "Double Conversion Superheterodyne Receiver",
+    "13.3": "Receiver Components",
+    "13.3.6": "Detector (Demodulator)",
+    "13.3.7": "Product Detector (CW and SSB)",
+    "13.3.8": "FM Demodulator and Limiter",
+    "13.3.10": "Automatic Gain Control (AGC)",
+    "13.3.11": "S Meter",
+    "13.3.12": "Squelch",
+    "13.4": "SSB and CW Receiver",
+    "13.5": "FM Receiver",
+    "13.6": "Modern Receivers and SDR",
+    "13.7.1": "Sensitivity and Signal-to-Noise Ratio (SNR)",
+    "13.7.2": "Selectivity and Adjacent Channel Characteristics",
+    "13.7.3": "Dynamic Range",
+    "13.7.4": "Image Frequency and Image Rejection",
+    "13.7.5": "Noise Figure and Factor",
+    "13.7.6": "Stability",
+    "13.7.7": "Desensitisation and Blocking",
+    "13.7.8": "Intermodulation",
+    "13.7.9": "Cross-modulation"
+   },
+   "count": 51,
+   "setFigures": [
+    "s01q19",
+    "s04q17",
+    "s08q19",
+    "s12q19",
+    "s15q20",
+    "s18q18",
+    "s20q19"
+   ]
+  },
+  {
+   "num": 14,
+   "title": "Transmission Lines",
+   "section": "A.6",
+   "pages": [
+    206,
+    223
+   ],
+   "topics": {
+    "14.1": "Characteristic Impedance",
+    "14.2": "Line Loss (Attenuation)",
+    "14.3": "Velocity Factor",
+    "14.4": "Preventing Line Radiation",
+    "14.5": "Parallel Lines",
+    "14.6": "Coaxial Line",
+    "14.7": "Waveguide",
+    "14.8": "Common Mode Current",
+    "14.9": "Impedance Matching and Transformation",
+    "14.9.4": "Standing Wave Ratio (VSWR)",
+    "14.10": "Antenna Tuning Units",
+    "14.11": "Baluns and Chokes"
+   },
+   "count": 47,
+   "setFigures": [
+    "s04q24",
+    "s10q21",
+    "s14q22",
+    "s17q21",
+    "s19q22"
+   ]
+  },
+  {
+   "num": 15,
+   "title": "Antennas",
+   "section": "A.6",
+   "pages": [
+    224,
+    253
+   ],
+   "topics": {
+    "15.1": "How do Antennas Work?",
+    "15.2": "Near and Far Antenna Fields",
+    "15.3": "Feed Point Impedance",
+    "15.4": "Construction Materials",
+    "15.5": "Far Field Pattern",
+    "15.6": "Polarisation",
+    "15.7": "Half-wave Antenna",
+    "15.8": "Half-Wave Dipole",
+    "15.9": "Non-resonant Wire Antennas and Multiband Antennas",
+    "15.10": "End-Fed Half-Wave Antenna",
+    "15.11": "Folded Dipole",
+    "15.12": "Trap Dipole",
+    "15.13": "Quarter-Wave Ground Plane Antenna (Vertical)",
+    "15.14": "Yagi-Uda Antenna",
+    "15.15": "Directivity, Efficiency, and Gain",
+    "15.16": "Front-to-Back Ratio",
+    "15.17": "Capture Area (Effective Aperture)",
+    "15.18": "Parabolic Antenna",
+    "15.19": "Horn Antenna",
+    "15.20": "Effective Power: EIRP and ERP"
+   },
+   "count": 66,
+   "setFigures": [
+    "s02q24",
+    "s06q22",
+    "s07q24",
+    "s08q24",
+    "s09q24",
+    "s11q21",
+    "s13q24",
+    "s15q23",
+    "s18q24"
+   ]
+  },
+  {
+   "num": 16,
+   "title": "Propagation",
+   "section": "A.7",
+   "pages": [
+    254,
+    271
+   ],
+   "topics": {
+    "16.1": "Electromagnetic Wave",
+    "16.2.1": "Daily Cycle and Grey Line",
+    "16.2.2": "Solar Cycle",
+    "16.2.3": "Sunspots and Flares",
+    "16.2.4": "Geomagnetic Storms and Auroras",
+    "16.3": "Atmosphere and Ionospheric Layers",
+    "16.4": "Line-of-Sight Propagation and Radio Horizon",
+    "16.5": "LF, MF, and HF Propagation Mechanism",
+    "16.6": "LF and MF Propagation",
+    "16.7": "HF Propagation",
+    "16.8": "VHF and UHF Propagation Mechanisms",
+    "16.9": "Fading",
+    "16.10": "Estimating and Predicting Propagation"
+   },
+   "count": 48,
+   "setFigures": [
+    "s12q25",
+    "s14q27",
+    "s17q28",
+    "s20q26"
+   ]
+  },
+  {
+   "num": 17,
+   "title": "Measurements",
+   "section": "A.8",
+   "pages": [
+    272,
+    281
+   ],
+   "topics": {
+    "17.1": "Multimeter, Ammeter, Ohmmeter, Voltmeter",
+    "17.2": "SWR and Power",
+    "17.3": "Oscilloscope",
+    "17.4": "RF Envelope",
+    "17.5": "Spectrum Analyser",
+    "17.6": "Signal Generator",
+    "17.7": "Frequency Counter",
+    "17.8": "Field Strength Meter",
+    "17.9": "Antenna Analyser",
+    "17.10": "Dummy Load"
+   },
+   "count": 31,
+   "setFigures": [
+    "s01q29",
+    "s02q30",
+    "s03q30",
+    "s05q30",
+    "s06q29",
+    "s07q30",
+    "s10q30",
+    "s11q29",
+    "s13q30",
+    "s16q29",
+    "s19q29"
+   ]
+  },
+  {
+   "num": 18,
+   "title": "Electromagnetic Compatibility, Immunity, and Transmitter Interference",
+   "section": "A.2",
+   "pages": [
+    282,
+    291
+   ],
+   "topics": {
+    "18.1": "Electromagnetic Compatibility",
+    "18.1.1": "Radiated and Conducted Emissions",
+    "18.1.3": "Interference and Immunity",
+    "18.1.4": "Field Strength and EMC",
+    "18.1.5": "Prevention",
+    "18.1.5.1": "Shielding and Earthing",
+    "18.2": "Transmitter Distortion",
+    "18.2.1": "Spurious Emissions"
+   },
+   "count": 31,
+   "setFigures": []
+  },
+  {
+   "num": 19,
+   "title": "Safety",
+   "section": "A.1",
+   "pages": [
+    292,
+    313
+   ],
+   "topics": {
+    "19.1": "Radio Safety and The Irish Law",
+    "19.2": "Equipment Labelling and Access Control Requirements",
+    "19.3": "Electricity and The Human Body",
+    "19.3.2": "RF Burns",
+    "19.4.1": "Supply Safety: Switches and RCDs",
+    "19.4.2": "Protective Earth",
+    "19.4.3": "Wiring, Plugs and Fuses",
+    "19.4.5": "Valve Equipment and High Voltage Power Supplies",
+    "19.4.6": "Adjusting Live Equipment",
+    "19.5": "Mobile and Battery Safety",
+    "19.6": "Antenna Safety and Lightning",
+    "19.7": "Chemicals",
+    "19.8.1": "Emissions and the Exposure Limits",
+    "19.8.3": "Nature of the Risks",
+    "19.8.4": "Station Characteristics Influencing RF Emissions",
+    "19.8.5": "Estimating and Modelling RF Field Strengths and Exposure",
+    "19.8.7": "Practical Suggestions"
+   },
+   "count": 56,
+   "setFigures": []
+  },
+  {
+   "num": 20,
+   "title": "ITU Radio Regulations",
+   "section": "B.8",
+   "pages": [
+    314,
+    319
+   ],
+   "topics": {
+    "20.1": "International Telecommunications Union (ITU)",
+    "20.2": "ITU Radio Regions and the IARU",
+    "20.3": "Purpose of the Amateur Service",
+    "20.4": "Permitted Communications",
+    "20.5": "Primary and Secondary Allocations",
+    "20.6": "Emission Designators",
+    "20.7": "Frequency of Identification"
+   },
+   "count": 25,
+   "setFigures": []
+  },
+  {
+   "num": 21,
+   "title": "CEPT Regulations",
+   "section": "B.9",
+   "pages": [
+    320,
+    325
+   ],
+   "topics": {
+    "21.1": "CEPT and HAREC",
+    "21.2": "CEPT Radio Amateur Licence",
+    "21.3": "Prefix When Visiting a Country Implementing CEPT T/R 61-01",
+    "21.4": "National Call Sign Prefixes"
+   },
+   "count": 27,
+   "setFigures": []
+  },
+  {
+   "num": 22,
+   "title": "Irish Laws, Regulations, and Licence Conditions",
+   "section": "B.10",
+   "pages": [
+    326,
+    333
+   ],
+   "topics": {
+    "22.1": "Wireless Telegraphy Regulations",
+    "22.2": "ComReg Amateur Station Licence Guidelines",
+    "22.3": "Obtaining an Irish Amateur Station Licence",
+    "22.4": "Licence Application, Duration, Amendments, Cancellation, Revocation",
+    "22.5": "Club Licences",
+    "22.6": "Special Events",
+    "22.7": "Land Mobile",
+    "22.8": "Maritime Mobile",
+    "22.9": "Logbook Keeping",
+    "22.10": "Additional Authorisations",
+    "22.11": "Technical Requirements",
+    "22.12": "CE Type Approval"
+   },
+   "count": 32,
+   "setFigures": []
+  },
+  {
+   "num": 23,
+   "title": "Phonetic Alphabet",
+   "section": "B.1",
+   "pages": [
+    334,
+    335
+   ],
+   "topics": {
+    "23": "Purpose of the Phonetic Alphabet",
+    "23.1": "International Radiotelephony Spelling Alphabet"
+   },
+   "count": 21,
+   "setFigures": []
+  },
+  {
+   "num": 24,
+   "title": "Call Signs",
+   "section": "B.4",
+   "pages": [
+    336,
+    337
+   ],
+   "topics": {
+    "24.1": "Allocation of Call Signs",
+    "24.2": "Composition of Call Signs",
+    "24.3": "Irish Call Signs",
+    "24.4": "Call Sign Usage"
+   },
+   "count": 13,
+   "setFigures": []
+  },
+  {
+   "num": 25,
+   "title": "Radio Spectrum Allocation in Ireland and IARU Band Plans",
+   "section": "B.5",
+   "pages": [
+    338,
+    345
+   ],
+   "topics": {
+    "25.1": "Spectrum Allocation in Ireland",
+    "25.2": "Band Plans",
+    "25.3": "Operational Bands and Sidebands",
+    "25.3.1": "80 m Band Plan",
+    "25.3.2": "Irish Regulations Regarding 60 m Band",
+    "25.3.3": "Band Edges, Status, Power, Restrictions",
+    "25.3.4": "Propagation Beacons Frequencies",
+    "25.3.5": "Emergency Centres of Activity Frequencies"
+   },
+   "count": 45,
+   "setFigures": []
+  },
+  {
+   "num": 26,
+   "title": "Q-Codes and Abbreviations",
+   "section": "B.2",
+   "pages": [
+    346,
+    349
+   ],
+   "topics": {
+    "26.1": "Q-Codes",
+    "26.2": "Q-Code as a Question or an Answer",
+    "26.3": "Operational Abbreviations"
+   },
+   "count": 32,
+   "setFigures": []
+  },
+  {
+   "num": 27,
+   "title": "International Distress Signs, Emergency and Natural Disaster Communications",
+   "section": "B.3",
+   "pages": [
+    350,
+    355
+   ],
+   "topics": {
+    "27.1": "Distress Signals",
+    "27.2": "Emergency and Natural Disaster Communications",
+    "27.3": "Emergency Frequencies",
+    "27.4": "Role of Licensed Radio Amateurs in Emergency Communication",
+    "27.5": "Measures in Case of Emergency"
+   },
+   "count": 20,
+   "setFigures": []
+  },
+  {
+   "num": 28,
+   "title": "Social Responsibility of Radio Amateur Operation and the Code of Conduct",
+   "section": "B.6",
+   "pages": [
+    356,
+    359
+   ],
+   "topics": {
+    "28.1": "Basic Principles",
+    "28.2": "Danger of Conflict",
+    "28.4": "The Authority vs. Self-discipline in Amateur Radio",
+    "28.5": "Amateur Radio Language",
+    "28.6": "Listen",
+    "28.7": "Use Your Call Sign Correctly"
+   },
+   "count": 15,
+   "setFigures": []
+  },
+  {
+   "num": 29,
+   "title": "Operating Procedures and Non-Interference",
+   "section": "B.7",
+   "pages": [
+    360,
+    371
+   ],
+   "topics": {
+    "29.1": "How to Make a QSO",
+    "29.2": "Content of Transmissions",
+    "29.3.1": "Selecting a Frequency",
+    "29.3.2": "Format of CQ Calls",
+    "29.3.5": "Initial Call to a Specific Station",
+    "29.4": "Replying to Initial Calls",
+    "29.5": "RST Code",
+    "29.6": "Non-Interference",
+    "29.6.1": "How to Deal with Spectrum Interference?"
+   },
+   "count": 35,
+   "setFigures": []
+  }
+ ],
+ "chapterQuestions": [
+  {
+   "id": "c03q01",
+   "chapter": 3,
+   "topic": "3.1",
+   "num": 1,
+   "section": "A.3",
+   "text": "Which subatomic particle carries a negative electric charge?",
+   "options": [
+    "Proton",
+    "Neutron",
+    "Electron",
+    "Photon"
+   ],
+   "answer": 2,
+   "explanation": "The proton is positive (+) and the electron is negative (−)",
+   "page": 12,
+   "figure": null
+  },
+  {
+   "id": "c03q02",
+   "chapter": 3,
+   "topic": "3.1",
+   "num": 2,
+   "section": "A.3",
+   "text": "In a metal conductor such as copper, the primary charge carriers are:",
+   "options": [
+    "Electrons",
+    "Neutrons",
+    "Protons",
+    "Holes"
+   ],
+   "answer": 0,
+   "explanation": "In metals, electrons move from atom to atom and form the current",
+   "page": 12,
+   "figure": null
+  },
+  {
+   "id": "c03q03",
+   "chapter": 3,
+   "topic": "3.1",
+   "num": 3,
+   "section": "A.3",
+   "text": "An electric current is best described as:",
+   "options": [
+    "The rate at which energy is used",
+    "The pressure that pushes charges",
+    "The opposition to the flow of charge",
+    "A flow of charge carriers, such as electrons"
+   ],
+   "answer": 3,
+   "explanation": "A flow of charge carriers such as electrons in a metal is an electric current",
+   "page": 12,
+   "figure": null
+  },
+  {
+   "id": "c03q04",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 4,
+   "section": "A.3",
+   "text": "The SI unit symbol for frequency is:",
+   "options": [
+    "hz",
+    "Hz",
+    "HZ",
+    "hZ"
+   ],
+   "answer": 1,
+   "explanation": "Hertz is written Hz: the H must be a capital",
+   "page": 13,
+   "figure": null
+  },
+  {
+   "id": "c03q05",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 5,
+   "section": "A.3",
+   "text": "Which of these is the correct unit symbol for the second?",
+   "options": [
+    "S",
+    "Sc",
+    "sec",
+    "s"
+   ],
+   "answer": 3,
+   "explanation": "Lowercase s is the second; uppercase S is the siemens",
+   "page": 13,
+   "figure": null
+  },
+  {
+   "id": "c03q06",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 6,
+   "section": "A.3",
+   "text": "Which unit is used for inductance?",
+   "options": [
+    "Farad (F)",
+    "Henry (H)",
+    "Ohm (Ω)",
+    "Hertz (Hz)"
+   ],
+   "answer": 1,
+   "explanation": "Inductance L is measured in henry, H; capacitance in farad",
+   "page": 14,
+   "figure": null
+  },
+  {
+   "id": "c03q07",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 7,
+   "section": "A.3",
+   "text": "Reactance and impedance are both measured in:",
+   "options": [
+    "Farads",
+    "Henries",
+    "Ohms",
+    "Siemens"
+   ],
+   "answer": 2,
+   "explanation": "Resistance, reactance and impedance all use the ohm, Ω",
+   "page": 14,
+   "figure": null
+  },
+  {
+   "id": "c03q08",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 8,
+   "section": "A.3",
+   "text": "The metric prefix µ (micro) means a factor of:",
+   "options": [
+    "10⁻⁶",
+    "10⁻¹²",
+    "10⁻⁹",
+    "10⁻³"
+   ],
+   "answer": 0,
+   "explanation": "Micro = one millionth = 10⁻⁶",
+   "page": 15,
+   "figure": null
+  },
+  {
+   "id": "c03q09",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 9,
+   "section": "A.3",
+   "text": "Which prefix symbol stands for one thousand million (10⁹)?",
+   "options": [
+    "G",
+    "M",
+    "k",
+    "m"
+   ],
+   "answer": 0,
+   "explanation": "Giga, G, is 10⁹; mega, M, is 10⁶",
+   "page": 15,
+   "figure": null
+  },
+  {
+   "id": "c03q10",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 10,
+   "section": "A.3",
+   "text": "Which of these is written correctly for one thousand hertz?",
+   "options": [
+    "1 KHz",
+    "1 khz",
+    "1 kHz",
+    "1 KHZ"
+   ],
+   "answer": 2,
+   "explanation": "Kilo is a lowercase k and hertz is Hz, so kHz",
+   "page": 15,
+   "figure": null
+  },
+  {
+   "id": "c03q11",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 11,
+   "section": "A.3",
+   "text": "What is 1.5 kΩ + 750 Ω?",
+   "options": [
+    "751.5 Ω",
+    "1650 Ω",
+    "2.25 Ω",
+    "2250 Ω"
+   ],
+   "answer": 3,
+   "explanation": "Convert to the same prefix first: 1500 Ω + 750 Ω = 2250 Ω",
+   "page": 15,
+   "figure": null
+  },
+  {
+   "id": "c03q12",
+   "chapter": 3,
+   "topic": "3.2",
+   "num": 12,
+   "section": "A.3",
+   "text": "What is 500 mV + 2.5 V?",
+   "options": [
+    "502.5 V",
+    "3 V",
+    "2.55 V",
+    "7.5 V"
+   ],
+   "answer": 1,
+   "explanation": "500 mV = 0.5 V; 0.5 + 2.5 = 3 V",
+   "page": 15,
+   "figure": null
+  },
+  {
+   "id": "c03q13",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 13,
+   "section": "A.3",
+   "text": "By convention, \"conventional current\" is said to flow:",
+   "options": [
+    "From the negative to the positive terminal",
+    "Only in AC circuits",
+    "From the positive to the negative terminal",
+    "In both directions at once"
+   ],
+   "answer": 2,
+   "explanation": "Electrons flow from − to +, but conventional current is said to flow from + to −",
+   "page": 16,
+   "figure": null
+  },
+  {
+   "id": "c03q14",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 14,
+   "section": "A.3",
+   "text": "Which of these materials is an insulator?",
+   "options": [
+    "Salt water",
+    "Mica",
+    "Carbon",
+    "Aluminium"
+   ],
+   "answer": 1,
+   "explanation": "Glass, Perspex, rubber, mica, most plastics, oil, air and distilled water are insulators",
+   "page": 16,
+   "figure": null
+  },
+  {
+   "id": "c03q15",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 15,
+   "section": "A.3",
+   "text": "Which of these is a good conductor?",
+   "options": [
+    "Silver",
+    "Glass",
+    "Dry air",
+    "Distilled water"
+   ],
+   "answer": 0,
+   "explanation": "Almost all metals are good conductors, including silver, copper and gold",
+   "page": 16,
+   "figure": null
+  },
+  {
+   "id": "c03q16",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 16,
+   "section": "A.3",
+   "text": "The best-known semiconductor material is:",
+   "options": [
+    "Mercury",
+    "Copper",
+    "Mica",
+    "Silicon"
+   ],
+   "answer": 3,
+   "explanation": "Silicon is the best-known semiconductor",
+   "page": 16,
+   "figure": null
+  },
+  {
+   "id": "c03q17",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 17,
+   "section": "A.3",
+   "text": "What is special about the current through a p-n junction?",
+   "options": [
+    "It does not depend on voltage",
+    "It flows only in AC circuits",
+    "It depends on the direction in which the current wants to flow",
+    "It is always zero"
+   ],
+   "answer": 2,
+   "explanation": "A p-n junction conducts according to the direction of the current, which is how a diode works",
+   "page": 16,
+   "figure": null
+  },
+  {
+   "id": "c03q18",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 18,
+   "section": "A.3",
+   "text": "The mains supply in an Irish domestic socket has a frequency of:",
+   "options": [
+    "50 Hz",
+    "60 Hz",
+    "100 Hz",
+    "230 Hz"
+   ],
+   "answer": 0,
+   "explanation": "Irish domestic AC completes 50 cycles per second",
+   "page": 17,
+   "figure": null
+  },
+  {
+   "id": "c03q19",
+   "chapter": 3,
+   "topic": "3.3",
+   "num": 19,
+   "section": "A.3",
+   "text": "Direct current (DC) is current that:",
+   "options": [
+    "Reverses direction 50 times a second",
+    "Always has a constant value",
+    "Can only come from the mains",
+    "Flows in one direction only"
+   ],
+   "answer": 3,
+   "explanation": "DC flows in one direction; its amount may still change",
+   "page": 17,
+   "figure": null
+  },
+  {
+   "id": "c03q20",
+   "chapter": 3,
+   "topic": "3.4",
+   "num": 20,
+   "section": "A.3",
+   "text": "Why does the terminal voltage of a real battery fall when a load is connected?",
+   "options": [
+    "Because the emf increases",
+    "Because of its internal resistance",
+    "Because AC is produced",
+    "Because the load generates voltage"
+   ],
+   "answer": 1,
+   "explanation": "The internal resistance causes a voltage drop when current is drawn",
+   "page": 18,
+   "figure": null
+  },
+  {
+   "id": "c03q21",
+   "chapter": 3,
+   "topic": "3.4",
+   "num": 21,
+   "section": "A.3",
+   "text": "Two 6 V batteries are connected in series (positive of one to negative of the other). The total voltage is:",
+   "options": [
+    "6 V",
+    "3 V",
+    "36 V",
+    "12 V"
+   ],
+   "answer": 3,
+   "explanation": "In series the total source voltage is the sum of the individual voltages",
+   "page": 18,
+   "figure": null
+  },
+  {
+   "id": "c03q22",
+   "chapter": 3,
+   "topic": "3.4",
+   "num": 22,
+   "section": "A.3",
+   "text": "Connecting two identical batteries in parallel:",
+   "options": [
+    "Keeps the voltage the same but increases the current capacity",
+    "Doubles the voltage",
+    "Halves the voltage",
+    "Creates an AC supply"
+   ],
+   "answer": 0,
+   "explanation": "In parallel each source has the same voltage, and the current drain is shared",
+   "page": 18,
+   "figure": null
+  },
+  {
+   "id": "c03q23",
+   "chapter": 3,
+   "topic": "3.4",
+   "num": 23,
+   "section": "A.3",
+   "text": "Why is caution needed when connecting voltage sources in parallel?",
+   "options": [
+    "Their voltages add up",
+    "Their internal resistance becomes zero",
+    "Small differences in terminal voltage can cause a circulating current between them",
+    "They stop supplying current"
+   ],
+   "answer": 2,
+   "explanation": "Different terminal voltages drive a circulating current between the sources",
+   "page": 18,
+   "figure": null
+  },
+  {
+   "id": "c03q24",
+   "chapter": 3,
+   "topic": "3.4",
+   "num": 24,
+   "section": "A.3",
+   "text": "The current that flows when the two terminals of a voltage source are joined by a wire is limited by:",
+   "options": [
+    "The load resistance",
+    "The internal resistance of the source",
+    "The voltmeter",
+    "Nothing at all"
+   ],
+   "answer": 1,
+   "explanation": "The internal resistance limits the short circuit current",
+   "page": 18,
+   "figure": null
+  },
+  {
+   "id": "c03q25",
+   "chapter": 3,
+   "topic": "3.4",
+   "num": 25,
+   "section": "A.3",
+   "text": "What does the voltmeter connected across the two batteries shown read?",
+   "options": [
+    "6 V",
+    "12 V",
+    "0 V",
+    "3 V"
+   ],
+   "answer": 1,
+   "explanation": "Batteries in series add their voltages: 6 + 6 = 12 V",
+   "page": 18,
+   "figure": "figures/ch03_batteries.svg"
+  },
+  {
+   "id": "c03q26",
+   "chapter": 3,
+   "topic": "3.5",
+   "num": 26,
+   "section": "A.3",
+   "text": "The potential difference (PD) between two points in a circuit is also called:",
+   "options": [
+    "Current",
+    "Resistance",
+    "Voltage",
+    "Power"
+   ],
+   "answer": 2,
+   "explanation": "The PD between any two points is the voltage",
+   "page": 19,
+   "figure": null
+  },
+  {
+   "id": "c03q27",
+   "chapter": 3,
+   "topic": "3.6",
+   "num": 27,
+   "section": "A.3",
+   "text": "The emf of a source is equal to its terminal voltage when:",
+   "options": [
+    "The source is short-circuited",
+    "An AC load is connected",
+    "The maximum current flows",
+    "No current is flowing"
+   ],
+   "answer": 3,
+   "explanation": "Emf equals the terminal PD when no current flows",
+   "page": 19,
+   "figure": null
+  },
+  {
+   "id": "c03q28",
+   "chapter": 3,
+   "topic": "3.6",
+   "num": 28,
+   "section": "A.3",
+   "text": "A voltmeter used to measure emf or PD must have:",
+   "options": [
+    "A very low internal resistance",
+    "A high internal resistance",
+    "Its own battery",
+    "A resistance equal to the load"
+   ],
+   "answer": 1,
+   "explanation": "A high internal resistance stops the meter drawing significant current",
+   "page": 19,
+   "figure": null
+  },
+  {
+   "id": "c03q29",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 29,
+   "section": "A.3",
+   "text": "In a series circuit:",
+   "options": [
+    "The same current flows through every component",
+    "The voltage across every component is the same",
+    "The current divides between the components",
+    "Each component has its own source"
+   ],
+   "answer": 0,
+   "explanation": "The same current flows through each component of a series circuit",
+   "page": 20,
+   "figure": null
+  },
+  {
+   "id": "c03q30",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 30,
+   "section": "A.3",
+   "text": "A 12 V battery feeds two resistors in series. 8 V is measured across the first. What is the voltage across the second?",
+   "options": [
+    "20 V",
+    "8 V",
+    "4 V",
+    "12 V"
+   ],
+   "answer": 2,
+   "explanation": "The voltages across the components add up to the source voltage: 12 − 8 = 4 V",
+   "page": 20,
+   "figure": null
+  },
+  {
+   "id": "c03q31",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 31,
+   "section": "A.3",
+   "text": "In a parallel circuit with two branches drawing 2 A and 3 A, the current from the source is:",
+   "options": [
+    "1 A",
+    "5 A",
+    "6 A",
+    "2.5 A"
+   ],
+   "answer": 1,
+   "explanation": "The source current equals the sum of the branch currents",
+   "page": 21,
+   "figure": null
+  },
+  {
+   "id": "c03q32",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 32,
+   "section": "A.3",
+   "text": "In a parallel circuit, the voltage across each branch is:",
+   "options": [
+    "The same in every branch",
+    "Different in each branch",
+    "Zero",
+    "Shared in proportion to resistance"
+   ],
+   "answer": 0,
+   "explanation": "All branches of a parallel circuit have the same voltage",
+   "page": 21,
+   "figure": null
+  },
+  {
+   "id": "c03q33",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 33,
+   "section": "A.3",
+   "text": "The way current and voltage are distributed in a circuit is described by:",
+   "options": [
+    "The inverse square law",
+    "Lenz's law",
+    "Faraday's law",
+    "Kirchhoff's current and voltage laws"
+   ],
+   "answer": 3,
+   "explanation": "Kirchhoff's laws describe current and voltage distribution",
+   "page": 20,
+   "figure": null
+  },
+  {
+   "id": "c03q34",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 34,
+   "section": "A.3",
+   "text": "In the circuit shown, the voltmeter across R1 reads 8 V. What is the voltage across R2?",
+   "options": [
+    "20 V",
+    "8 V",
+    "4 V",
+    "12 V"
+   ],
+   "answer": 2,
+   "explanation": "In a series circuit the voltages add up to the source voltage: 12 − 8 = 4 V",
+   "page": 20,
+   "figure": "figures/ch03_series.svg"
+  },
+  {
+   "id": "c03q35",
+   "chapter": 3,
+   "topic": "3.7",
+   "num": 35,
+   "section": "A.3",
+   "text": "In the circuit shown, the branch ammeters read 2 A and 3 A. What current I does the battery supply?",
+   "options": [
+    "5 A",
+    "1 A",
+    "6 A",
+    "2.5 A"
+   ],
+   "answer": 0,
+   "explanation": "The current entering a junction equals the sum of the branch currents: 2 + 3 = 5 A",
+   "page": 21,
+   "figure": "figures/ch03_parallel.svg"
+  },
+  {
+   "id": "c03q36",
+   "chapter": 3,
+   "topic": "3.8",
+   "num": 36,
+   "section": "A.3",
+   "text": "Resistance is:",
+   "options": [
+    "The rate of flow of charge",
+    "The opposition to the flow of current",
+    "The pressure that drives current",
+    "The energy stored in a circuit"
+   ],
+   "answer": 1,
+   "explanation": "Resistance is the opposition to the flow of current, measured in ohms (Ω)",
+   "page": 21,
+   "figure": null
+  },
+  {
+   "id": "c03q37",
+   "chapter": 3,
+   "topic": "3.9",
+   "num": 37,
+   "section": "A.3",
+   "text": "According to Ohm's law, if the resistance stays the same and the voltage is doubled, the current:",
+   "options": [
+    "Halves",
+    "Stays the same",
+    "Doubles",
+    "Quadruples"
+   ],
+   "answer": 2,
+   "explanation": "Current is directly proportional to voltage",
+   "page": 22,
+   "figure": null
+  },
+  {
+   "id": "c03q38",
+   "chapter": 3,
+   "topic": "3.9",
+   "num": 38,
+   "section": "A.3",
+   "text": "A 20 V battery is connected across a 100 Ω resistor. What current flows?",
+   "options": [
+    "0.2 A",
+    "2 A",
+    "5 A",
+    "2000 A"
+   ],
+   "answer": 0,
+   "explanation": "I = V/R = 20/100 = 0.2 A (200 mA)",
+   "page": 22,
+   "figure": null
+  },
+  {
+   "id": "c03q39",
+   "chapter": 3,
+   "topic": "3.9",
+   "num": 39,
+   "section": "A.3",
+   "text": "A current of 0.5 A flows through a 24 Ω resistor. The voltage across it is:",
+   "options": [
+    "48 V",
+    "0.02 V",
+    "24.5 V",
+    "12 V"
+   ],
+   "answer": 3,
+   "explanation": "V = I × R = 0.5 × 24 = 12 V",
+   "page": 22,
+   "figure": null
+  },
+  {
+   "id": "c03q40",
+   "chapter": 3,
+   "topic": "3.9",
+   "num": 40,
+   "section": "A.3",
+   "text": "If the voltage is kept constant and the resistance increases, the current:",
+   "options": [
+    "Increases",
+    "Decreases",
+    "Stays the same",
+    "Reverses"
+   ],
+   "answer": 1,
+   "explanation": "Current is inversely proportional to resistance",
+   "page": 22,
+   "figure": null
+  },
+  {
+   "id": "c03q41",
+   "chapter": 3,
+   "topic": "3.9",
+   "num": 41,
+   "section": "A.3",
+   "text": "What does the ammeter in the circuit shown read?",
+   "options": [
+    "2 A",
+    "20 mA",
+    "5 A",
+    "200 mA"
+   ],
+   "answer": 3,
+   "explanation": "I = V/R = 20 V / 100 Ω = 0.2 A = 200 mA",
+   "page": 22,
+   "figure": "figures/ch03_ohm.svg"
+  },
+  {
+   "id": "c03q42",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 42,
+   "section": "A.3",
+   "text": "Power is the rate at which:",
+   "options": [
+    "Voltage rises",
+    "Charge is stored",
+    "Resistance changes",
+    "Energy is transferred or used"
+   ],
+   "answer": 3,
+   "explanation": "Power tells us how fast energy is transferred or used",
+   "page": 23,
+   "figure": null
+  },
+  {
+   "id": "c03q43",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 43,
+   "section": "A.3",
+   "text": "A 20 V source drives 0.2 A through a resistor. The power dissipated is:",
+   "options": [
+    "100 W",
+    "0.01 W",
+    "4 W",
+    "40 W"
+   ],
+   "answer": 2,
+   "explanation": "P = V × I = 20 × 0.2 = 4 W",
+   "page": 25,
+   "figure": null
+  },
+  {
+   "id": "c03q44",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 44,
+   "section": "A.3",
+   "text": "A current of 2 A flows through a 10 Ω resistor. The power dissipated is:",
+   "options": [
+    "40 W",
+    "20 W",
+    "5 W",
+    "200 W"
+   ],
+   "answer": 0,
+   "explanation": "P = I²R = 2 × 2 × 10 = 40 W",
+   "page": 24,
+   "figure": null
+  },
+  {
+   "id": "c03q45",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 45,
+   "section": "A.3",
+   "text": "A 50 Ω dummy load has 100 V across it. The power it dissipates is:",
+   "options": [
+    "5000 W",
+    "2 W",
+    "500 W",
+    "200 W"
+   ],
+   "answer": 3,
+   "explanation": "P = V²/R = 10 000/50 = 200 W",
+   "page": 25,
+   "figure": null
+  },
+  {
+   "id": "c03q46",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 46,
+   "section": "A.3",
+   "text": "A 12 V battery is rated at 8 A⋅h. How much energy can it store?",
+   "options": [
+    "96 Wh",
+    "1.5 Wh",
+    "20 Wh",
+    "8 kWh"
+   ],
+   "answer": 0,
+   "explanation": "Energy = 8 A⋅h × 12 V = 96 Wh (0.096 kWh)",
+   "page": 26,
+   "figure": null
+  },
+  {
+   "id": "c03q47",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 47,
+   "section": "A.3",
+   "text": "An 8 A⋅h battery can supply approximately:",
+   "options": [
+    "8 A for 8 hours",
+    "1 A for 1 hour",
+    "4 A for 2 hours",
+    "16 A for 2 hours"
+   ],
+   "answer": 2,
+   "explanation": "8 A⋅h = 8 A for 1 h, 4 A for 2 h, 16 A for 30 min",
+   "page": 26,
+   "figure": null
+  },
+  {
+   "id": "c03q48",
+   "chapter": 3,
+   "topic": "3.10",
+   "num": 48,
+   "section": "A.3",
+   "text": "A 1000 W linear amplifier is used for 1 hour. How much energy does it use?",
+   "options": [
+    "1 Wh",
+    "1 kWh",
+    "1 MWh",
+    "1000 kWh"
+   ],
+   "answer": 1,
+   "explanation": "W = P × t = 1000 W × 1 h = 1000 Wh = 1 kWh",
+   "page": 26,
+   "figure": null
+  },
+  {
+   "id": "c04q01",
+   "chapter": 4,
+   "topic": "4.1",
+   "num": 1,
+   "section": "A.4",
+   "text": "On a circuit diagram, the lines joining the component symbols represent:",
+   "options": [
+    "The voltage at each point",
+    "The direction of the magnetic field",
+    "The conductors that connect the components",
+    "Where the current is zero"
+   ],
+   "answer": 2,
+   "explanation": "Lines represent the conductors that connect components to each other",
+   "page": 28,
+   "figure": null
+  },
+  {
+   "id": "c04q02",
+   "chapter": 4,
+   "topic": "4.2",
+   "num": 2,
+   "section": "A.4",
+   "text": "A resistor does its work by:",
+   "options": [
+    "Storing energy in a magnetic field",
+    "Dissipating energy as heat",
+    "Storing charge on two plates",
+    "Amplifying the current"
+   ],
+   "answer": 1,
+   "explanation": "Resistors dissipate energy as heat, which is why they get warm",
+   "page": 28,
+   "figure": null
+  },
+  {
+   "id": "c04q03",
+   "chapter": 4,
+   "topic": "4.2",
+   "num": 3,
+   "section": "A.4",
+   "text": "A nominal 100 Ω resistor has a tolerance of 10%. Its actual resistance may be anywhere between:",
+   "options": [
+    "99 Ω and 101 Ω",
+    "95 Ω and 105 Ω",
+    "90 Ω and 110 Ω",
+    "10 Ω and 1000 Ω"
+   ],
+   "answer": 2,
+   "explanation": "10% of 100 Ω is 10 Ω, so 90–110 Ω",
+   "page": 28,
+   "figure": null
+  },
+  {
+   "id": "c04q04",
+   "chapter": 4,
+   "topic": "4.2",
+   "num": 4,
+   "section": "A.4",
+   "text": "Which two symbols may be used for a resistor on a circuit diagram?",
+   "options": [
+    "Two parallel lines, or a curl",
+    "A coil, or a dashed box",
+    "A circle with an arrow, or a triangle",
+    "A zig-zag line, or a rectangle"
+   ],
+   "answer": 3,
+   "explanation": "The zig-zag (ANSI) and the rectangle (IEC, the more recent) are both used",
+   "page": 28,
+   "figure": null
+  },
+  {
+   "id": "c04q05",
+   "chapter": 4,
+   "topic": "4.2",
+   "num": 5,
+   "section": "A.4",
+   "text": "A potentiometer is:",
+   "options": [
+    "A type of variable resistor, such as a volume control",
+    "A fixed resistor with very high power rating",
+    "A meter that measures potential difference",
+    "A resistor made from a semiconductor junction"
+   ],
+   "answer": 0,
+   "explanation": "Pots are variable resistors changed by turning a knob or moving a slider",
+   "page": 29,
+   "figure": null
+  },
+  {
+   "id": "c04q06",
+   "chapter": 4,
+   "topic": "4.2",
+   "num": 6,
+   "section": "A.4",
+   "text": "The two circuit symbols (a) and (b) shown both represent a:",
+   "options": [
+    "Capacitor",
+    "Inductor",
+    "Fuse",
+    "Resistor"
+   ],
+   "answer": 3,
+   "explanation": "A resistor is drawn as a zig-zag line or as a rectangle",
+   "page": 28,
+   "figure": "figures/ch04_symbols.svg"
+  },
+  {
+   "id": "c04q07",
+   "chapter": 4,
+   "topic": "4.2.1",
+   "num": 7,
+   "section": "A.4",
+   "text": "What may happen if the power rating of a resistor is exceeded?",
+   "options": [
+    "It may burn out and fail",
+    "Its resistance falls to zero and it saves energy",
+    "It starts to oscillate",
+    "Its tolerance improves"
+   ],
+   "answer": 0,
+   "explanation": "Exceeding the maximum power rating may burn out the component",
+   "page": 29,
+   "figure": null
+  },
+  {
+   "id": "c04q08",
+   "chapter": 4,
+   "topic": "4.2.1",
+   "num": 8,
+   "section": "A.4",
+   "text": "A 5 kΩ resistor carries a current of 10 mA. How much power does it dissipate?",
+   "options": [
+    "0.05 W",
+    "0.5 W",
+    "5 W",
+    "50 W"
+   ],
+   "answer": 1,
+   "explanation": "P = I²R = 0.01² × 5000 = 0.5 W",
+   "page": 29,
+   "figure": null
+  },
+  {
+   "id": "c04q09",
+   "chapter": 4,
+   "topic": "4.2.1",
+   "num": 9,
+   "section": "A.4",
+   "text": "A 1 MΩ resistor has 1.5 kV across it. It dissipates 2.25 W. Which resistor would be suitable?",
+   "options": [
+    "1 MΩ rated 0.5 W",
+    "1 MΩ rated 1 W",
+    "1 MΩ rated 2 W",
+    "1 MΩ rated 5 W"
+   ],
+   "answer": 3,
+   "explanation": "The rating must exceed the dissipation: 5 W would do, 2 W might burn out",
+   "page": 29,
+   "figure": null
+  },
+  {
+   "id": "c04q10",
+   "chapter": 4,
+   "topic": "4.2.1",
+   "num": 10,
+   "section": "A.4",
+   "text": "A 100 Ω resistor has 10 V across it. What is the minimum power rating it needs?",
+   "options": [
+    "0.1 W",
+    "1 W",
+    "10 W",
+    "100 W"
+   ],
+   "answer": 1,
+   "explanation": "P = V²/R = 100/100 = 1 W",
+   "page": 29,
+   "figure": null
+  },
+  {
+   "id": "c04q11",
+   "chapter": 4,
+   "topic": "4.2.2",
+   "num": 11,
+   "section": "A.4",
+   "text": "Resistors of 10 kΩ and 4.7 kΩ are connected in series. What is the equivalent resistance?",
+   "options": [
+    "3.2 kΩ",
+    "5.3 kΩ",
+    "14.7 kΩ",
+    "47 kΩ"
+   ],
+   "answer": 2,
+   "explanation": "In series the resistances add: 10 + 4.7 = 14.7 kΩ",
+   "page": 30,
+   "figure": null
+  },
+  {
+   "id": "c04q12",
+   "chapter": 4,
+   "topic": "4.2.2",
+   "num": 12,
+   "section": "A.4",
+   "text": "The equivalent resistance of resistors in series is always:",
+   "options": [
+    "Less than the smallest resistance",
+    "Equal to the average resistance",
+    "Equal to the smallest resistance",
+    "Greater than the largest resistance"
+   ],
+   "answer": 3,
+   "explanation": "Series resistors increase the total, which is always greater than the largest one",
+   "page": 30,
+   "figure": null
+  },
+  {
+   "id": "c04q13",
+   "chapter": 4,
+   "topic": "4.2.2",
+   "num": 13,
+   "section": "A.4",
+   "text": "Resistors of 1.2 kΩ and 800 Ω are connected in series. What is the total resistance?",
+   "options": [
+    "2 kΩ",
+    "801.2 Ω",
+    "480 Ω",
+    "1.28 kΩ"
+   ],
+   "answer": 0,
+   "explanation": "Convert to the same prefix: 1200 Ω + 800 Ω = 2000 Ω = 2 kΩ",
+   "page": 30,
+   "figure": null
+  },
+  {
+   "id": "c04q14",
+   "chapter": 4,
+   "topic": "4.2.2",
+   "num": 14,
+   "section": "A.4",
+   "text": "What is the resistance between A and B in the circuit shown?",
+   "options": [
+    "14.7 kΩ",
+    "3.2 kΩ",
+    "5.3 kΩ",
+    "47 kΩ"
+   ],
+   "answer": 0,
+   "explanation": "Series resistances add: 10 kΩ + 4.7 kΩ = 14.7 kΩ",
+   "page": 30,
+   "figure": "figures/ch04_series.svg"
+  },
+  {
+   "id": "c04q15",
+   "chapter": 4,
+   "topic": "4.2.3",
+   "num": 15,
+   "section": "A.4",
+   "text": "Resistors of 120 Ω, 120 Ω and 60 Ω are connected in parallel. What is the equivalent resistance?",
+   "options": [
+    "30 Ω",
+    "60 Ω",
+    "100 Ω",
+    "300 Ω"
+   ],
+   "answer": 0,
+   "explanation": "1/R = 1/120 + 1/120 + 1/60 = 4/120, so R = 30 Ω",
+   "page": 30,
+   "figure": null
+  },
+  {
+   "id": "c04q16",
+   "chapter": 4,
+   "topic": "4.2.3",
+   "num": 16,
+   "section": "A.4",
+   "text": "The equivalent resistance of resistors in parallel is always:",
+   "options": [
+    "Greater than the largest resistance",
+    "Less than the smallest resistance",
+    "Equal to their sum",
+    "Equal to the largest resistance"
+   ],
+   "answer": 1,
+   "explanation": "Parallel resistors reduce the total, below the smallest one",
+   "page": 31,
+   "figure": null
+  },
+  {
+   "id": "c04q17",
+   "chapter": 4,
+   "topic": "4.2.3",
+   "num": 17,
+   "section": "A.4",
+   "text": "Two 100 Ω resistors are connected in parallel. What is the equivalent resistance?",
+   "options": [
+    "200 Ω",
+    "100 Ω",
+    "50 Ω",
+    "25 Ω"
+   ],
+   "answer": 2,
+   "explanation": "1/R = 1/100 + 1/100 = 2/100, so R = 50 Ω",
+   "page": 31,
+   "figure": null
+  },
+  {
+   "id": "c04q18",
+   "chapter": 4,
+   "topic": "4.2.3",
+   "num": 18,
+   "section": "A.4",
+   "text": "When calculating parallel resistance, the sum 1/R1 + 1/R2 + … gives:",
+   "options": [
+    "The equivalent resistance directly",
+    "The power dissipated",
+    "The total current",
+    "1/Req, which still has to be inverted"
+   ],
+   "answer": 3,
+   "explanation": "The sum of the inverses is 1/Req; you must invert it to get Req",
+   "page": 31,
+   "figure": null
+  },
+  {
+   "id": "c04q19",
+   "chapter": 4,
+   "topic": "4.2.3",
+   "num": 19,
+   "section": "A.4",
+   "text": "What is the resistance between A and B in the parallel circuit shown?",
+   "options": [
+    "300 Ω",
+    "100 Ω",
+    "30 Ω",
+    "60 Ω"
+   ],
+   "answer": 2,
+   "explanation": "1/120 + 1/120 + 1/60 = 4/120, so R = 30 Ω",
+   "page": 30,
+   "figure": "figures/ch04_parallel.svg"
+  },
+  {
+   "id": "c04q20",
+   "chapter": 4,
+   "topic": "4.2.4",
+   "num": 20,
+   "section": "A.4",
+   "text": "To find the overall resistance of a circuit with series and parallel resistors, you should first:",
+   "options": [
+    "Calculate the equivalent resistance of the parallel resistances",
+    "Add up all the resistances",
+    "Calculate the power in each resistor",
+    "Measure the battery voltage"
+   ],
+   "answer": 0,
+   "explanation": "First the parallel combinations, then the series total, then Ohm's law",
+   "page": 32,
+   "figure": null
+  },
+  {
+   "id": "c04q21",
+   "chapter": 4,
+   "topic": "4.2.4",
+   "num": 21,
+   "section": "A.4",
+   "text": "What kind of calculator is provided in the HAREC exam?",
+   "options": [
+    "None; calculators are not allowed",
+    "A simple calculator that adds, subtracts, multiplies and divides",
+    "A scientific calculator with square roots",
+    "A programmable calculator"
+   ],
+   "answer": 1,
+   "explanation": "A simple calculator without squares or square roots is provided",
+   "page": 31,
+   "figure": null
+  },
+  {
+   "id": "c04q22",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 22,
+   "section": "A.4",
+   "text": "A 12 V battery feeds a 4 Ω resistor in series with 30 Ω and 60 Ω in parallel. What is the total resistance?",
+   "options": [
+    "94 Ω",
+    "64 Ω",
+    "34 Ω",
+    "24 Ω"
+   ],
+   "answer": 3,
+   "explanation": "30 ∥ 60 = 20 Ω; 20 + 4 = 24 Ω",
+   "page": 33,
+   "figure": null
+  },
+  {
+   "id": "c04q23",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 23,
+   "section": "A.4",
+   "text": "In the same circuit (12 V, 4 Ω in series with 30 Ω ∥ 60 Ω, total 24 Ω), what current flows from the battery?",
+   "options": [
+    "3 A",
+    "2 A",
+    "0.5 A",
+    "0.2 A"
+   ],
+   "answer": 2,
+   "explanation": "I = 12 V / 24 Ω = 0.5 A",
+   "page": 33,
+   "figure": null
+  },
+  {
+   "id": "c04q24",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 24,
+   "section": "A.4",
+   "text": "In the same circuit, 0.5 A flows through the 4 Ω resistor. What voltage is across the 30 Ω and 60 Ω parallel pair?",
+   "options": [
+    "2 V",
+    "6 V",
+    "10 V",
+    "12 V"
+   ],
+   "answer": 2,
+   "explanation": "The 4 Ω resistor drops 0.5 × 4 = 2 V, leaving 12 − 2 = 10 V across the parallel pair",
+   "page": 34,
+   "figure": null
+  },
+  {
+   "id": "c04q25",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 25,
+   "section": "A.4",
+   "text": "With 10 V across a 30 Ω and a 60 Ω resistor in parallel, which statement is true?",
+   "options": [
+    "Both carry the same current",
+    "The 60 Ω resistor carries half the current of the 30 Ω resistor",
+    "The 60 Ω resistor carries twice the current of the 30 Ω resistor",
+    "The 60 Ω resistor dissipates more power"
+   ],
+   "answer": 1,
+   "explanation": "Same voltage, twice the resistance, half the current (167 mA vs 333 mA)",
+   "page": 35,
+   "figure": null
+  },
+  {
+   "id": "c04q26",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 26,
+   "section": "A.4",
+   "text": "The 12 V circuit draws 0.5 A in total. What is the total power dissipated?",
+   "options": [
+    "3 W",
+    "24 W",
+    "1 W",
+    "6 W"
+   ],
+   "answer": 3,
+   "explanation": "P = V × I = 12 × 0.5 = 6 W, also the sum of the powers in each resistor",
+   "page": 34,
+   "figure": null
+  },
+  {
+   "id": "c04q27",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 27,
+   "section": "A.4",
+   "text": "What current does the battery supply in the circuit shown?",
+   "options": [
+    "0.13 A",
+    "0.5 A",
+    "3 A",
+    "0.2 A"
+   ],
+   "answer": 1,
+   "explanation": "30 Ω ∥ 60 Ω = 20 Ω; total 4 + 20 = 24 Ω; 12 V / 24 Ω = 0.5 A",
+   "page": 33,
+   "figure": "figures/ch04_worked.svg"
+  },
+  {
+   "id": "c04q28",
+   "chapter": 4,
+   "topic": "4.2.5",
+   "num": 28,
+   "section": "A.4",
+   "text": "In the circuit shown, what is the voltage across the 30 Ω resistor?",
+   "options": [
+    "2 V",
+    "12 V",
+    "6 V",
+    "10 V"
+   ],
+   "answer": 3,
+   "explanation": "0.5 A through 4 Ω drops 2 V, leaving 12 − 2 = 10 V across the parallel pair",
+   "page": 34,
+   "figure": "figures/ch04_worked.svg"
+  },
+  {
+   "id": "c05q01",
+   "chapter": 5,
+   "topic": "5.1",
+   "num": 1,
+   "section": "A.3",
+   "text": "A plot with time on its horizontal axis is called a plot in the:",
+   "options": [
+    "Frequency domain",
+    "Time domain",
+    "Spatial domain",
+    "Phase domain"
+   ],
+   "answer": 1,
+   "explanation": "Plots that show time on the horizontal axis are time-domain plots",
+   "page": 38,
+   "figure": null
+  },
+  {
+   "id": "c05q02",
+   "chapter": 5,
+   "topic": "5.1",
+   "num": 2,
+   "section": "A.3",
+   "text": "At what angle does a sine wave that starts at zero reach its positive peak?",
+   "options": [
+    "270°",
+    "180°",
+    "90°",
+    "45°"
+   ],
+   "answer": 2,
+   "explanation": "Zero at 0°, peak at 90°, zero at 180°, negative peak at 270°",
+   "page": 39,
+   "figure": null
+  },
+  {
+   "id": "c05q03",
+   "chapter": 5,
+   "topic": "5.1",
+   "num": 3,
+   "section": "A.3",
+   "text": "To describe a sinusoidal signal completely, you need to know its:",
+   "options": [
+    "Wavelength and colour",
+    "Phase only",
+    "Average value only",
+    "Amplitude and its period or frequency"
+   ],
+   "answer": 3,
+   "explanation": "Amplitude plus period or frequency; everything else follows from the sine shape",
+   "page": 39,
+   "figure": null
+  },
+  {
+   "id": "c05q04",
+   "chapter": 5,
+   "topic": "5.1.1",
+   "num": 4,
+   "section": "A.3",
+   "text": "The amplitude (peak voltage) of a sinusoidal signal is:",
+   "options": [
+    "The maximum voltage in either direction of flow",
+    "The voltage between the positive and negative peaks",
+    "The average voltage of a whole cycle",
+    "The rms voltage"
+   ],
+   "answer": 0,
+   "explanation": "Amplitude, VPEAK or VMAX, is the maximum voltage in either direction",
+   "page": 39,
+   "figure": null
+  },
+  {
+   "id": "c05q05",
+   "chapter": 5,
+   "topic": "5.1.2",
+   "num": 5,
+   "section": "A.3",
+   "text": "A signal has a period of 1 ms. What is its frequency?",
+   "options": [
+    "1 kHz",
+    "100 Hz",
+    "1 Hz",
+    "1 MHz"
+   ],
+   "answer": 0,
+   "explanation": "f = 1/period = 1/0.001 s = 1000 Hz",
+   "page": 40,
+   "figure": null
+  },
+  {
+   "id": "c05q06",
+   "chapter": 5,
+   "topic": "5.1.2",
+   "num": 6,
+   "section": "A.3",
+   "text": "A frequency of 1 Hz means:",
+   "options": [
+    "One volt per second",
+    "One cycle per minute",
+    "One cycle per second",
+    "One metre per second"
+   ],
+   "answer": 2,
+   "explanation": "1 Hz is exactly one cycle in one second",
+   "page": 40,
+   "figure": null
+  },
+  {
+   "id": "c05q07",
+   "chapter": 5,
+   "topic": "5.1.2",
+   "num": 7,
+   "section": "A.3",
+   "text": "A signal with an identifiable period is called:",
+   "options": [
+    "A random signal",
+    "A DC signal",
+    "A noise signal",
+    "A periodic signal"
+   ],
+   "answer": 3,
+   "explanation": "Signals with an identifiable period are periodic; all sinusoids are periodic",
+   "page": 40,
+   "figure": null
+  },
+  {
+   "id": "c05q08",
+   "chapter": 5,
+   "topic": "5.1.2",
+   "num": 8,
+   "section": "A.3",
+   "text": "What is the frequency of the signal shown on the oscilloscope?",
+   "options": [
+    "500 Hz",
+    "2 kHz",
+    "250 Hz",
+    "5 kHz"
+   ],
+   "answer": 0,
+   "explanation": "One cycle spans 4 divisions × 0.5 ms = 2 ms, so f = 1/2 ms = 500 Hz",
+   "page": 40,
+   "figure": "figures/ch05_scope.svg"
+  },
+  {
+   "id": "c05q09",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 9,
+   "section": "A.3",
+   "text": "The wavelength of a signal is:",
+   "options": [
+    "The time taken by one cycle",
+    "The distance it travels in one period",
+    "The height of the wave",
+    "The number of cycles per second"
+   ],
+   "answer": 1,
+   "explanation": "Wavelength is the distance travelled in one period, e.g. crest to crest",
+   "page": 40,
+   "figure": null
+  },
+  {
+   "id": "c05q10",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 10,
+   "section": "A.3",
+   "text": "Radio waves in a vacuum travel at approximately:",
+   "options": [
+    "300 000 m/s",
+    "3 000 000 m/s",
+    "300 000 000 m/s",
+    "30 000 000 000 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The speed of light, c, is about 300 000 000 m/s",
+   "page": 41,
+   "figure": null
+  },
+  {
+   "id": "c05q11",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 11,
+   "section": "A.3",
+   "text": "What is the wavelength of a 50 MHz signal?",
+   "options": [
+    "0.6 m",
+    "6 m",
+    "60 m",
+    "15 m"
+   ],
+   "answer": 1,
+   "explanation": "λ = 300/f(MHz) = 300/50 = 6 m",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q12",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 12,
+   "section": "A.3",
+   "text": "What frequency corresponds to a wavelength of 30 m?",
+   "options": [
+    "1 MHz",
+    "9 MHz",
+    "10 MHz",
+    "90 MHz"
+   ],
+   "answer": 2,
+   "explanation": "f(MHz) = 300/λ = 300/30 = 10 MHz",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q13",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 13,
+   "section": "A.3",
+   "text": "What is the approximate wavelength of a 3650 kHz signal?",
+   "options": [
+    "8.2 m",
+    "1.1 km",
+    "820 m",
+    "82 m"
+   ],
+   "answer": 3,
+   "explanation": "Convert to MHz first: 3.65 MHz; λ = 300/3.65 ≈ 82 m",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q14",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 14,
+   "section": "A.3",
+   "text": "The distance between two successive crests of a wave is its:",
+   "options": [
+    "Wavelength",
+    "Amplitude",
+    "Period",
+    "Peak-to-peak value"
+   ],
+   "answer": 0,
+   "explanation": "Wavelength is the distance between successive crests",
+   "page": 40,
+   "figure": null
+  },
+  {
+   "id": "c05q15",
+   "chapter": 5,
+   "topic": "5.1.3",
+   "num": 15,
+   "section": "A.3",
+   "text": "In the figure, the distance X between two successive crests of the wave is its:",
+   "options": [
+    "Amplitude",
+    "Wavelength",
+    "Frequency",
+    "Period"
+   ],
+   "answer": 1,
+   "explanation": "The wavelength is the distance between two successive crests",
+   "page": 40,
+   "figure": "figures/ch05_crests.svg"
+  },
+  {
+   "id": "c05q16",
+   "chapter": 5,
+   "topic": "5.1.4",
+   "num": 16,
+   "section": "A.3",
+   "text": "The average value of one half-cycle of a sine wave is about:",
+   "options": [
+    "0.636 × VPK",
+    "0.707 × VPK",
+    "1.414 × VPK",
+    "2.828 × VPK"
+   ],
+   "answer": 0,
+   "explanation": "VAVG = 0.636 × VPK for a half-cycle",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q17",
+   "chapter": 5,
+   "topic": "5.1.4",
+   "num": 17,
+   "section": "A.3",
+   "text": "The average value of a complete cycle of a sine wave is:",
+   "options": [
+    "0.636 × VPK",
+    "Zero",
+    "0.707 × VPK",
+    "Equal to the peak value"
+   ],
+   "answer": 1,
+   "explanation": "The positive and negative halves cancel, so the average over a whole cycle is zero",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q18",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 18,
+   "section": "A.3",
+   "text": "A sine wave has a peak voltage of 100 V. Its rms voltage is about:",
+   "options": [
+    "63.6 V",
+    "70.7 V",
+    "141.4 V",
+    "200 V"
+   ],
+   "answer": 1,
+   "explanation": "VRMS = 0.707 × VPK",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q19",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 19,
+   "section": "A.3",
+   "text": "The voltage normally shown by an AC voltmeter is the:",
+   "options": [
+    "Peak voltage",
+    "Peak-to-peak voltage",
+    "Average voltage of a whole cycle",
+    "rms (effective) voltage"
+   ],
+   "answer": 3,
+   "explanation": "AC voltmeters normally indicate the effective, rms, value",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q20",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 20,
+   "section": "A.3",
+   "text": "The abbreviation rms stands for:",
+   "options": [
+    "Radio mean signal",
+    "Rated maximum supply",
+    "Root mean square",
+    "Relative modulation strength"
+   ],
+   "answer": 2,
+   "explanation": "rms = root mean square",
+   "page": 42,
+   "figure": null
+  },
+  {
+   "id": "c05q21",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 21,
+   "section": "A.3",
+   "text": "A sine wave measures 10 V rms. Its peak-to-peak voltage is about:",
+   "options": [
+    "14.1 V",
+    "20 V",
+    "7.07 V",
+    "28.3 V"
+   ],
+   "answer": 3,
+   "explanation": "VPP = 2.828 × VRMS",
+   "page": 43,
+   "figure": null
+  },
+  {
+   "id": "c05q22",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 22,
+   "section": "A.3",
+   "text": "A 500 Ω resistor is connected to the 230 V rms mains. How much power does it dissipate?",
+   "options": [
+    "0.46 W",
+    "105.8 W",
+    "115 W",
+    "211.6 W"
+   ],
+   "answer": 1,
+   "explanation": "P = VRMS²/R = 230²/500 ≈ 105.8 W",
+   "page": 43,
+   "figure": null
+  },
+  {
+   "id": "c05q23",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 23,
+   "section": "A.3",
+   "text": "Why is the rms value so useful?",
+   "options": [
+    "It makes AC calculations, such as power, as easy as for DC",
+    "It is always zero",
+    "It equals the peak-to-peak voltage",
+    "It removes harmonics"
+   ],
+   "answer": 0,
+   "explanation": "Using VRMS lets you apply Ohm's law and the power formulas as for DC",
+   "page": 43,
+   "figure": null
+  },
+  {
+   "id": "c05q24",
+   "chapter": 5,
+   "topic": "5.1.5",
+   "num": 24,
+   "section": "A.3",
+   "text": "What is the peak-to-peak voltage of the signal shown on the oscilloscope?",
+   "options": [
+    "6 V",
+    "3 V",
+    "12 V",
+    "24 V"
+   ],
+   "answer": 2,
+   "explanation": "Each peak is 3 divisions × 2 V = 6 V from the centre, so peak-to-peak is 12 V",
+   "page": 43,
+   "figure": "figures/ch05_scope.svg"
+  },
+  {
+   "id": "c05q25",
+   "chapter": 5,
+   "topic": "5.2",
+   "num": 25,
+   "section": "A.3",
+   "text": "The peak voltage of the Irish 230 V rms mains supply is about:",
+   "options": [
+    "163 V",
+    "230 V",
+    "325 V",
+    "650 V"
+   ],
+   "answer": 2,
+   "explanation": "VPK = 1.414 × 230 ≈ 325 V",
+   "page": 44,
+   "figure": null
+  },
+  {
+   "id": "c05q26",
+   "chapter": 5,
+   "topic": "5.2",
+   "num": 26,
+   "section": "A.3",
+   "text": "The period of the 50 Hz mains supply is:",
+   "options": [
+    "2 ms",
+    "20 ms",
+    "50 ms",
+    "200 ms"
+   ],
+   "answer": 1,
+   "explanation": "1 s / 50 = 0.02 s = 20 ms",
+   "page": 44,
+   "figure": null
+  },
+  {
+   "id": "c05q27",
+   "chapter": 5,
+   "topic": "5.2",
+   "num": 27,
+   "section": "A.3",
+   "text": "The peak-to-peak voltage of the Irish mains supply is about:",
+   "options": [
+    "230 V",
+    "325 V",
+    "460 V",
+    "650 V"
+   ],
+   "answer": 3,
+   "explanation": "VPP = 2.828 × 230 ≈ 650 V",
+   "page": 44,
+   "figure": null
+  },
+  {
+   "id": "c05q28",
+   "chapter": 5,
+   "topic": "5.3",
+   "num": 28,
+   "section": "A.3",
+   "text": "Two signals of the same frequency cross the zero line a quarter of a cycle apart. Their phase difference is:",
+   "options": [
+    "360°",
+    "180°",
+    "90°",
+    "45°"
+   ],
+   "answer": 2,
+   "explanation": "One cycle is 360°, so ¼ cycle is 90°",
+   "page": 44,
+   "figure": null
+  },
+  {
+   "id": "c05q29",
+   "chapter": 5,
+   "topic": "5.3",
+   "num": 29,
+   "section": "A.3",
+   "text": "Signal X crosses zero 90° before signal Y. We say that:",
+   "options": [
+    "X leads Y by 90°",
+    "X lags Y by 90°",
+    "X and Y are in phase",
+    "X has twice the frequency of Y"
+   ],
+   "answer": 0,
+   "explanation": "The one that crosses first leads; the other lags",
+   "page": 44,
+   "figure": null
+  },
+  {
+   "id": "c05q30",
+   "chapter": 5,
+   "topic": "5.3",
+   "num": 30,
+   "section": "A.3",
+   "text": "Compare the two signals shown. Which statement is true?",
+   "options": [
+    "They are in phase",
+    "A lags B by 180°",
+    "A and B have different frequencies",
+    "A leads B by 90°"
+   ],
+   "answer": 3,
+   "explanation": "A reaches its peak a quarter of a cycle (90°) before B",
+   "page": 44,
+   "figure": "figures/ch05_phase.svg"
+  },
+  {
+   "id": "c05q31",
+   "chapter": 5,
+   "topic": "5.4",
+   "num": 31,
+   "section": "A.3",
+   "text": "A harmonic is a signal whose frequency is:",
+   "options": [
+    "Slightly different from another signal",
+    "Unrelated to any other signal",
+    "Always half of another signal",
+    "An exact multiple of another signal's frequency"
+   ],
+   "answer": 3,
+   "explanation": "A harmonic is at an exact multiple of the fundamental",
+   "page": 45,
+   "figure": null
+  },
+  {
+   "id": "c05q32",
+   "chapter": 5,
+   "topic": "5.4",
+   "num": 32,
+   "section": "A.3",
+   "text": "The second harmonic of a 7.1 MHz signal is at:",
+   "options": [
+    "3.55 MHz",
+    "7.1 MHz",
+    "14.2 MHz",
+    "21.3 MHz"
+   ],
+   "answer": 2,
+   "explanation": "Second harmonic = 2 × fundamental",
+   "page": 45,
+   "figure": null
+  },
+  {
+   "id": "c05q33",
+   "chapter": 5,
+   "topic": "5.4",
+   "num": 33,
+   "section": "A.3",
+   "text": "The fundamental frequency is also known as the:",
+   "options": [
+    "First harmonic",
+    "Zero harmonic",
+    "Second harmonic",
+    "Carrier harmonic"
+   ],
+   "answer": 0,
+   "explanation": "The fundamental is the first harmonic",
+   "page": 45,
+   "figure": null
+  },
+  {
+   "id": "c05q34",
+   "chapter": 5,
+   "topic": "5.4",
+   "num": 34,
+   "section": "A.3",
+   "text": "Why do excessive harmonics from a transmitter matter?",
+   "options": [
+    "They cause interference and may put signals outside the allowed bands",
+    "They improve range",
+    "They reduce the SWR",
+    "They only affect the receiver"
+   ],
+   "answer": 0,
+   "explanation": "Unwanted harmonics cause interference and may be illegal out-of-band emissions",
+   "page": 45,
+   "figure": null
+  },
+  {
+   "id": "c05q35",
+   "chapter": 5,
+   "topic": "5.4",
+   "num": 35,
+   "section": "A.3",
+   "text": "The spectrum shows a transmitter on 7.1 MHz. The line at 14.2 MHz is the:",
+   "options": [
+    "Second harmonic",
+    "Image frequency",
+    "Third harmonic",
+    "Intermediate frequency"
+   ],
+   "answer": 0,
+   "explanation": "A frequency twice the fundamental is the second harmonic; 21.3 MHz is the third",
+   "page": 45,
+   "figure": "figures/ch05_harmonics.svg"
+  },
+  {
+   "id": "c05q36",
+   "chapter": 5,
+   "topic": "5.5",
+   "num": 36,
+   "section": "A.3",
+   "text": "A pure, unmodulated sine wave used as a carrier:",
+   "options": [
+    "Carries speech",
+    "Carries no information on its own",
+    "Contains many harmonics",
+    "Is always at 50 Hz"
+   ],
+   "answer": 1,
+   "explanation": "A pure sine wave carries no information other than its presence",
+   "page": 45,
+   "figure": null
+  },
+  {
+   "id": "c05q37",
+   "chapter": 5,
+   "topic": "5.5",
+   "num": 37,
+   "section": "A.3",
+   "text": "The process of impressing information, such as speech, on a carrier is called:",
+   "options": [
+    "Rectification",
+    "Quantisation",
+    "Resonance",
+    "Modulation"
+   ],
+   "answer": 3,
+   "explanation": "Impressing information on the carrier is modulation",
+   "page": 45,
+   "figure": null
+  },
+  {
+   "id": "c06q01",
+   "chapter": 6,
+   "topic": "6.1",
+   "num": 1,
+   "section": "A.3",
+   "text": "A square wave is:",
+   "options": [
+    "Sinusoidal and periodic",
+    "Non-sinusoidal and non-periodic",
+    "Sinusoidal but non-periodic",
+    "Non-sinusoidal but periodic"
+   ],
+   "answer": 3,
+   "explanation": "It has sudden transitions (not a sine) but repeats regularly (periodic)",
+   "page": 49,
+   "figure": null
+  },
+  {
+   "id": "c06q02",
+   "chapter": 6,
+   "topic": "6.1",
+   "num": 2,
+   "section": "A.3",
+   "text": "Most of the signals that carry information in radio, such as speech, are:",
+   "options": [
+    "Pure sine waves",
+    "Square waves",
+    "Non-periodic",
+    "DC"
+   ],
+   "answer": 2,
+   "explanation": "Most signals used in radio are non-periodic: their shape changes with the information",
+   "page": 48,
+   "figure": null
+  },
+  {
+   "id": "c06q03",
+   "chapter": 6,
+   "topic": "6.1",
+   "num": 3,
+   "section": "A.3",
+   "text": "Why must a square wave not be fed directly to an antenna?",
+   "options": [
+    "It has no harmonics",
+    "Its sudden changes create many unwanted harmonics that cause interference",
+    "It is too weak",
+    "It only contains DC"
+   ],
+   "answer": 1,
+   "explanation": "Sudden amplitude changes form many unwanted harmonic signals",
+   "page": 49,
+   "figure": null
+  },
+  {
+   "id": "c06q04",
+   "chapter": 6,
+   "topic": "6.1",
+   "num": 4,
+   "section": "A.3",
+   "text": "Which range of audio frequencies contributes most to the intelligibility of speech?",
+   "options": [
+    "300 Hz–2.7 kHz",
+    "20 Hz–300 Hz",
+    "5 kHz–12 kHz",
+    "12 kHz–20 kHz"
+   ],
+   "answer": 0,
+   "explanation": "300 Hz–2.7 kHz, used extensively in SSB",
+   "page": 50,
+   "figure": null
+  },
+  {
+   "id": "c06q05",
+   "chapter": 6,
+   "topic": "6.1",
+   "num": 5,
+   "section": "A.3",
+   "text": "The range of perfect human hearing is about:",
+   "options": [
+    "300 Hz–3 kHz",
+    "50 Hz–8 kHz",
+    "20 Hz–20 kHz",
+    "1 kHz–100 kHz"
+   ],
+   "answer": 2,
+   "explanation": "Perfect human hearing detects audio from 20 Hz to 20 kHz",
+   "page": 50,
+   "figure": null
+  },
+  {
+   "id": "c06q06",
+   "chapter": 6,
+   "topic": "6.1",
+   "num": 6,
+   "section": "A.3",
+   "text": "Why must the waveform shown never be fed directly to an antenna?",
+   "options": [
+    "It has no frequency",
+    "It contains many unwanted harmonics",
+    "It is too weak",
+    "It is a DC signal"
+   ],
+   "answer": 1,
+   "explanation": "A square wave is made of many harmonics that would be radiated",
+   "page": 49,
+   "figure": "figures/ch06_square.svg"
+  },
+  {
+   "id": "c06q07",
+   "chapter": 6,
+   "topic": "6.2",
+   "num": 7,
+   "section": "A.3",
+   "text": "Digital Signal Processing (DSP) uses:",
+   "options": [
+    "Valves to amplify RF",
+    "Mechanical relays",
+    "Only crystal filters",
+    "Software to transform a digital representation of the signal"
+   ],
+   "answer": 3,
+   "explanation": "DSP uses software to filter, remove noise, etc. on digitised data",
+   "page": 51,
+   "figure": null
+  },
+  {
+   "id": "c06q08",
+   "chapter": 6,
+   "topic": "6.2",
+   "num": 8,
+   "section": "A.3",
+   "text": "Because of cost and complexity, DSP in many radios works at:",
+   "options": [
+    "The intermediate frequency (IF)",
+    "Microwave frequencies only",
+    "The mains frequency",
+    "DC"
+   ],
+   "answer": 0,
+   "explanation": "DSP usually works at lower intermediate frequencies, with conversion to and from RF",
+   "page": 51,
+   "figure": null
+  },
+  {
+   "id": "c06q09",
+   "chapter": 6,
+   "topic": "6.2",
+   "num": 9,
+   "section": "A.3",
+   "text": "Before analogue data can be processed by DSP, it must be:",
+   "options": [
+    "Amplified to 100 W",
+    "Digitised by an analogue to digital converter",
+    "Converted to a square wave",
+    "Modulated onto a carrier"
+   ],
+   "answer": 1,
+   "explanation": "Analogue data must first be digitised, using an ADC",
+   "page": 52,
+   "figure": null
+  },
+  {
+   "id": "c06q10",
+   "chapter": 6,
+   "topic": "6.2",
+   "num": 10,
+   "section": "A.3",
+   "text": "Converting the digital output of a DSP back into an analogue signal is called:",
+   "options": [
+    "Sampling",
+    "Quantisation",
+    "Synthesis or generation",
+    "Aliasing"
+   ],
+   "answer": 2,
+   "explanation": "The reverse of digitisation is synthesis; a common technique is DDS",
+   "page": 52,
+   "figure": null
+  },
+  {
+   "id": "c06q11",
+   "chapter": 6,
+   "topic": "6.2.1",
+   "num": 11,
+   "section": "A.3",
+   "text": "A plot with frequency on its horizontal axis and amplitude on its vertical axis is a:",
+   "options": [
+    "Time domain plot",
+    "Frequency domain plot",
+    "Spatial domain plot",
+    "Circuit diagram"
+   ],
+   "answer": 1,
+   "explanation": "Frequencies on the horizontal axis make it a frequency-domain plot",
+   "page": 53,
+   "figure": null
+  },
+  {
+   "id": "c06q12",
+   "chapter": 6,
+   "topic": "6.2.1",
+   "num": 12,
+   "section": "A.3",
+   "text": "A waterfall display on a modern receiver is an example of a:",
+   "options": [
+    "Frequency domain plot",
+    "Time domain plot",
+    "Block diagram",
+    "Circuit diagram"
+   ],
+   "answer": 0,
+   "explanation": "A waterfall display is a useful frequency-domain plot",
+   "page": 56,
+   "figure": null
+  },
+  {
+   "id": "c06q13",
+   "chapter": 6,
+   "topic": "6.2.1",
+   "num": 13,
+   "section": "A.3",
+   "text": "A 1 Hz sine wave with amplitude ±4 is added to a 6 Hz sine wave with amplitude ±2. The result:",
+   "options": [
+    "Is a pure sine wave",
+    "Is a square wave",
+    "Has a frequency of 7 Hz only",
+    "Is periodic but no longer sinusoidal, varying between −6 and 6"
+   ],
+   "answer": 3,
+   "explanation": "The sum is a single periodic, non-sinusoidal signal between −6 and 6",
+   "page": 53,
+   "figure": null
+  },
+  {
+   "id": "c06q14",
+   "chapter": 6,
+   "topic": "6.2.1",
+   "num": 14,
+   "section": "A.3",
+   "text": "Can a real-world signal be converted between the time and frequency domains without losing detail?",
+   "options": [
+    "No, detail is always lost",
+    "Only for sine waves",
+    "Only once",
+    "Yes, any number of times"
+   ],
+   "answer": 3,
+   "explanation": "Real-world signals can be converted between domains any number of times without losing detail",
+   "page": 53,
+   "figure": null
+  },
+  {
+   "id": "c06q15",
+   "chapter": 6,
+   "topic": "6.2.1",
+   "num": 15,
+   "section": "A.3",
+   "text": "The plot shown, with frequency on its horizontal axis, is a:",
+   "options": [
+    "Time domain plot",
+    "Smith chart",
+    "Frequency domain plot",
+    "Radiation pattern"
+   ],
+   "answer": 2,
+   "explanation": "Frequency on the horizontal axis means a frequency domain plot",
+   "page": 53,
+   "figure": "figures/ch06_domains.svg"
+  },
+  {
+   "id": "c06q16",
+   "chapter": 6,
+   "topic": "6.2.2",
+   "num": 16,
+   "section": "A.3",
+   "text": "The Fourier transform converts a signal into:",
+   "options": [
+    "A square wave",
+    "A combination of sinusoidal signals",
+    "A DC voltage",
+    "A sequence of bits"
+   ],
+   "answer": 1,
+   "explanation": "It extracts the pure frequencies, converting any signal into sinusoids",
+   "page": 50,
+   "figure": null
+  },
+  {
+   "id": "c06q17",
+   "chapter": 6,
+   "topic": "6.2.2",
+   "num": 17,
+   "section": "A.3",
+   "text": "What does FFT stand for?",
+   "options": [
+    "Frequency Filter Transfer",
+    "Final Frequency Tuning",
+    "Fast Fourier Transform",
+    "Fixed Function Transistor"
+   ],
+   "answer": 2,
+   "explanation": "FFT = Fast Fourier Transform, the practical algorithm used in DSP",
+   "page": 57,
+   "figure": null
+  },
+  {
+   "id": "c06q18",
+   "chapter": 6,
+   "topic": "6.2.2",
+   "num": 18,
+   "section": "A.3",
+   "text": "The main difference between a Fourier transform and an FFT is that the FFT:",
+   "options": [
+    "Works with digitised (sampled and quantised) signals",
+    "Works only on sine waves",
+    "Cannot be reversed",
+    "Only works in the time domain"
+   ],
+   "answer": 0,
+   "explanation": "FFT works with digitised signals",
+   "page": 57,
+   "figure": null
+  },
+  {
+   "id": "c06q19",
+   "chapter": 6,
+   "topic": "6.2.2",
+   "num": 19,
+   "section": "A.3",
+   "text": "At its simplest, an FFT takes a digitised signal in the time domain and calculates:",
+   "options": [
+    "Its frequency domain",
+    "Its rms voltage",
+    "Its SWR",
+    "Its sampling rate"
+   ],
+   "answer": 0,
+   "explanation": "FFT calculates the frequency domain from the time domain",
+   "page": 57,
+   "figure": null
+  },
+  {
+   "id": "c06q20",
+   "chapter": 6,
+   "topic": "6.3.1",
+   "num": 20,
+   "section": "A.3",
+   "text": "Sampling means:",
+   "options": [
+    "Rounding a measurement to a number",
+    "Measuring the amplitude of a continuous analogue signal at very short intervals",
+    "Filtering out high frequencies",
+    "Mixing two signals"
+   ],
+   "answer": 1,
+   "explanation": "Sampling measures the amplitude at very short intervals",
+   "page": 58,
+   "figure": null
+  },
+  {
+   "id": "c06q21",
+   "chapter": 6,
+   "topic": "6.3.1",
+   "num": 21,
+   "section": "A.3",
+   "text": "In general, taking more samples per second makes the sampling:",
+   "options": [
+    "Less accurate",
+    "Slower to process but no different",
+    "More accurate",
+    "Impossible to quantise"
+   ],
+   "answer": 2,
+   "explanation": "The more samples taken per second, the more accurate the sampling",
+   "page": 59,
+   "figure": null
+  },
+  {
+   "id": "c06q22",
+   "chapter": 6,
+   "topic": "6.3.1",
+   "num": 22,
+   "section": "A.3",
+   "text": "What process is shown by the dots taken at regular intervals from the analogue signal?",
+   "options": [
+    "Modulation",
+    "Filtering",
+    "Amplification",
+    "Sampling"
+   ],
+   "answer": 3,
+   "explanation": "Sampling measures the amplitude of the analogue signal at regular intervals",
+   "page": 58,
+   "figure": "figures/ch06_sampling.svg"
+  },
+  {
+   "id": "c06q23",
+   "chapter": 6,
+   "topic": "6.3.2",
+   "num": 23,
+   "section": "A.3",
+   "text": "Converting an analogue sample into a number is called:",
+   "options": [
+    "Synthesis",
+    "Aliasing",
+    "Modulation",
+    "Quantisation"
+   ],
+   "answer": 3,
+   "explanation": "Quantisation turns the sample into digital data",
+   "page": 59,
+   "figure": null
+  },
+  {
+   "id": "c06q24",
+   "chapter": 6,
+   "topic": "6.3.2",
+   "num": 24,
+   "section": "A.3",
+   "text": "Why is an ADC always a physical device, not software alone?",
+   "options": [
+    "Because the law requires it",
+    "Because software cannot store numbers",
+    "Because it needs a valve",
+    "Because sampling and quantisation are implemented in hardware"
+   ],
+   "answer": 3,
+   "explanation": "Sampling and quantisation are done in hardware",
+   "page": 60,
+   "figure": null
+  },
+  {
+   "id": "c06q25",
+   "chapter": 6,
+   "topic": "6.3.3",
+   "num": 25,
+   "section": "A.3",
+   "text": "The sampling rate of an ADC determines its:",
+   "options": [
+    "Bandwidth",
+    "Resolution",
+    "Supply voltage",
+    "Power output"
+   ],
+   "answer": 0,
+   "explanation": "Sampling rate determines the bandwidth",
+   "page": 60,
+   "figure": null
+  },
+  {
+   "id": "c06q26",
+   "chapter": 6,
+   "topic": "6.3.3",
+   "num": 26,
+   "section": "A.3",
+   "text": "The resolution of an ADC is expressed in:",
+   "options": [
+    "Hertz",
+    "Ohms",
+    "Bits",
+    "Watts"
+   ],
+   "answer": 2,
+   "explanation": "Resolution is the number of bits per sample",
+   "page": 60,
+   "figure": null
+  },
+  {
+   "id": "c06q27",
+   "chapter": 6,
+   "topic": "6.3.3",
+   "num": 27,
+   "section": "A.3",
+   "text": "Increasing the resolution of an ADC:",
+   "options": [
+    "Reduces the bandwidth",
+    "Increases the signal-to-noise ratio and dynamic range",
+    "Lowers the sampling rate",
+    "Causes aliasing"
+   ],
+   "answer": 1,
+   "explanation": "The higher the resolution, the higher the SNR and dynamic range",
+   "page": 60,
+   "figure": null
+  },
+  {
+   "id": "c06q28",
+   "chapter": 6,
+   "topic": "6.3.3",
+   "num": 28,
+   "section": "A.3",
+   "text": "The dynamic range of a converter is the ratio between:",
+   "options": [
+    "The highest and lowest frequencies",
+    "The sampling rate and resolution",
+    "The input and output impedance",
+    "The loudest and quietest signals it can work with"
+   ],
+   "answer": 3,
+   "explanation": "Dynamic range measures the loudest vs. quietest signal it can handle, in dB",
+   "page": 61,
+   "figure": null
+  },
+  {
+   "id": "c06q29",
+   "chapter": 6,
+   "topic": "6.3.4",
+   "num": 29,
+   "section": "A.3",
+   "text": "The minimum sampling rate (Nyquist rate) must be at least:",
+   "options": [
+    "Twice the highest frequency in the signal",
+    "Equal to the highest frequency in the signal",
+    "Half the highest frequency in the signal",
+    "Ten times the lowest frequency in the signal"
+   ],
+   "answer": 0,
+   "explanation": "Minimum sampling rate = 2 × highest frequency",
+   "page": 61,
+   "figure": null
+  },
+  {
+   "id": "c06q30",
+   "chapter": 6,
+   "topic": "6.3.4",
+   "num": 30,
+   "section": "A.3",
+   "text": "To digitise audio up to 20 kHz perfectly, the sampling rate must be at least:",
+   "options": [
+    "10 kHz",
+    "20 kHz",
+    "40 kHz",
+    "200 kHz"
+   ],
+   "answer": 2,
+   "explanation": "2 × 20 kHz = 40 kHz",
+   "page": 62,
+   "figure": null
+  },
+  {
+   "id": "c06q31",
+   "chapter": 6,
+   "topic": "6.3.4",
+   "num": 31,
+   "section": "A.3",
+   "text": "To sample a 144 MHz VHF signal directly, the sampling rate would need to be at least:",
+   "options": [
+    "72 MHz",
+    "288 MHz",
+    "144 MHz",
+    "1.44 GHz"
+   ],
+   "answer": 1,
+   "explanation": "2 × 144 MHz = 288 MHz",
+   "page": 62,
+   "figure": null
+  },
+  {
+   "id": "c06q32",
+   "chapter": 6,
+   "topic": "6.3.4",
+   "num": 32,
+   "section": "A.3",
+   "text": "Sampling a signal below the minimum sampling rate introduces unwanted artefacts called:",
+   "options": [
+    "Harmonics",
+    "Aliasing",
+    "Key clicks",
+    "Fading"
+   ],
+   "answer": 1,
+   "explanation": "Under-sampling causes aliasing",
+   "page": 62,
+   "figure": null
+  },
+  {
+   "id": "c06q33",
+   "chapter": 6,
+   "topic": "6.3.4",
+   "num": 33,
+   "section": "A.3",
+   "text": "What is the purpose of an anti-aliasing filter in front of an ADC?",
+   "options": [
+    "To remove frequencies higher than half the sampling rate",
+    "To amplify weak signals",
+    "To remove DC",
+    "To increase the resolution"
+   ],
+   "answer": 0,
+   "explanation": "It removes frequencies above half the sampling rate so they do not appear as aliases",
+   "page": 62,
+   "figure": null
+  },
+  {
+   "id": "c06q34",
+   "chapter": 6,
+   "topic": "6.3.5",
+   "num": 34,
+   "section": "A.3",
+   "text": "Sampling at a higher rate than the minimum sampling rate is called:",
+   "options": [
+    "Undersampling",
+    "Aliasing",
+    "Quantising",
+    "Oversampling"
+   ],
+   "answer": 3,
+   "explanation": "Oversampling is genuinely useful in practice",
+   "page": 63,
+   "figure": null
+  },
+  {
+   "id": "c06q35",
+   "chapter": 6,
+   "topic": "6.3.5",
+   "num": 35,
+   "section": "A.3",
+   "text": "One benefit of oversampling is that it:",
+   "options": [
+    "Increases transmitter power",
+    "Removes the need for a DAC",
+    "Reduces the impact of quantisation errors and noise",
+    "Causes aliasing"
+   ],
+   "answer": 2,
+   "explanation": "Oversampling reduces quantisation errors and the influence of noise",
+   "page": 63,
+   "figure": null
+  },
+  {
+   "id": "c06q36",
+   "chapter": 6,
+   "topic": "6.4",
+   "num": 36,
+   "section": "A.3",
+   "text": "Direct Digital Synthesis (DDS) typically combines a DAC with:",
+   "options": [
+    "A crystal filter",
+    "A numerically controlled oscillator (NCO)",
+    "A valve amplifier",
+    "An SWR bridge"
+   ],
+   "answer": 1,
+   "explanation": "DDS combines an NCO and a DAC",
+   "page": 52,
+   "figure": null
+  },
+  {
+   "id": "c06q37",
+   "chapter": 6,
+   "topic": "6.4",
+   "num": 37,
+   "section": "A.3",
+   "text": "After a DAC, a reconstruction filter is used. What type of filter is it?",
+   "options": [
+    "High-pass",
+    "Notch",
+    "Band-stop",
+    "Low-pass"
+   ],
+   "answer": 3,
+   "explanation": "The reconstruction filter is a low-pass filter that smooths the AC",
+   "page": 64,
+   "figure": null
+  },
+  {
+   "id": "c06q38",
+   "chapter": 6,
+   "topic": "6.4",
+   "num": 38,
+   "section": "A.3",
+   "text": "The NCO in a DDS relies on:",
+   "options": [
+    "A high-precision reference clock",
+    "A thermionic valve",
+    "The mains frequency",
+    "An SWR meter"
+   ],
+   "answer": 0,
+   "explanation": "The NCO relies on a high-precision reference clock",
+   "page": 64,
+   "figure": null
+  },
+  {
+   "id": "c06q39",
+   "chapter": 6,
+   "topic": "6.5",
+   "num": 39,
+   "section": "A.3",
+   "text": "Software Defined Radio (SDR) uses:",
+   "options": [
+    "Valves exclusively",
+    "Only analogue filters",
+    "Software (algorithms) to implement key radio functions",
+    "No hardware at all"
+   ],
+   "answer": 2,
+   "explanation": "SDR implements in software the functions traditionally done by components",
+   "page": 64,
+   "figure": null
+  },
+  {
+   "id": "c06q40",
+   "chapter": 6,
+   "topic": "6.5",
+   "num": 40,
+   "section": "A.3",
+   "text": "Which function still cannot be done by software alone in an SDR?",
+   "options": [
+    "Noise reduction",
+    "Final stage high power amplification",
+    "Filtering of audio",
+    "Demodulation"
+   ],
+   "answer": 1,
+   "explanation": "Software cannot do final high-power amplification and is poor at rejecting strong out-of-band signals",
+   "page": 65,
+   "figure": null
+  },
+  {
+   "id": "c06q41",
+   "chapter": 6,
+   "topic": "6.5.1",
+   "num": 41,
+   "section": "A.3",
+   "text": "An SDR used as a broadband receiver is typically used to:",
+   "options": [
+    "Listen to one station at a time with the best audio",
+    "Measure SWR",
+    "Transmit on many bands",
+    "Display a waterfall of an entire band or several bands"
+   ],
+   "answer": 3,
+   "explanation": "A broadband receiver receives a whole band at once, ideal for waterfall displays",
+   "page": 65,
+   "figure": null
+  },
+  {
+   "id": "c06q42",
+   "chapter": 6,
+   "topic": "6.5.1",
+   "num": 42,
+   "section": "A.3",
+   "text": "Why can a broadband SDR for waterfall displays be inexpensive?",
+   "options": [
+    "It has low requirements of resolution and dynamic range",
+    "It works only at audio frequencies",
+    "It has no ADC",
+    "It uses valves"
+   ],
+   "answer": 0,
+   "explanation": "Waterfall-only use has low resolution and dynamic range needs",
+   "page": 66,
+   "figure": null
+  },
+  {
+   "id": "c06q43",
+   "chapter": 6,
+   "topic": "6.5.2",
+   "num": 43,
+   "section": "A.3",
+   "text": "A fully digital SDR receiver uses:",
+   "options": [
+    "A crystal set",
+    "Only analogue superheterodyne stages",
+    "Direct sampling of the RF signal from the antenna",
+    "A valve detector"
+   ],
+   "answer": 2,
+   "explanation": "Fully digital receivers use direct sampling of the RF",
+   "page": 67,
+   "figure": null
+  },
+  {
+   "id": "c06q44",
+   "chapter": 6,
+   "topic": "6.5.2",
+   "num": 44,
+   "section": "A.3",
+   "text": "A hybrid SDR typically uses a superheterodyne front end to deliver to the DSP:",
+   "options": [
+    "RF at the operating frequency",
+    "Mains frequency AC",
+    "A good quality lower IF",
+    "Only CW signals"
+   ],
+   "answer": 2,
+   "explanation": "The analogue superhet delivers a good lower IF to the DSP",
+   "page": 68,
+   "figure": null
+  },
+  {
+   "id": "c06q45",
+   "chapter": 6,
+   "topic": "6.5.2",
+   "num": 45,
+   "section": "A.3",
+   "text": "Since about when have traditional, all-analogue transceivers not been commercially produced?",
+   "options": [
+    "2020",
+    "2005",
+    "1985",
+    "1965"
+   ],
+   "answer": 1,
+   "explanation": "Hybrid designs since about 1995; all-analogue not produced since about 2005",
+   "page": 67,
+   "figure": null
+  },
+  {
+   "id": "c06q46",
+   "chapter": 6,
+   "topic": "6.5.2",
+   "num": 46,
+   "section": "A.3",
+   "text": "An older transceiver that uses DSP only to improve the received audio is:",
+   "options": [
+    "Not a form of SDR, as the DSP does not work with the RF signal",
+    "A hybrid SDR",
+    "A fully digital SDR",
+    "A direct sampling receiver"
+   ],
+   "answer": 0,
+   "explanation": "DSP that only augments the AF is not SDR",
+   "page": 69,
+   "figure": null
+  },
+  {
+   "id": "c07q01",
+   "chapter": 7,
+   "topic": "7.1",
+   "num": 1,
+   "section": "A.3",
+   "text": "Radio waves are a type of:",
+   "options": [
+    "Electromagnetic radiation",
+    "Sound wave",
+    "Ionising radiation",
+    "Mechanical vibration"
+   ],
+   "answer": 0,
+   "explanation": "Radio waves are invisible electromagnetic radiation",
+   "page": 70,
+   "figure": null
+  },
+  {
+   "id": "c07q02",
+   "chapter": 7,
+   "topic": "7.1",
+   "num": 2,
+   "section": "A.3",
+   "text": "In a vacuum, radio waves travel at about:",
+   "options": [
+    "300 km/s",
+    "3000 km/s",
+    "300 000 km/s",
+    "300 000 000 km/s"
+   ],
+   "answer": 2,
+   "explanation": "The speed of light, c, is about 300 000 km/s (300 000 000 m/s)",
+   "page": 70,
+   "figure": null
+  },
+  {
+   "id": "c07q03",
+   "chapter": 7,
+   "topic": "7.1",
+   "num": 3,
+   "section": "A.3",
+   "text": "Which of these is also a form of electromagnetic radiation?",
+   "options": [
+    "Earthquake waves",
+    "Ultrasound",
+    "Ocean waves",
+    "Visible light"
+   ],
+   "answer": 3,
+   "explanation": "Visible light, infrared, microwaves and x-rays are all electromagnetic radiation",
+   "page": 70,
+   "figure": null
+  },
+  {
+   "id": "c07q04",
+   "chapter": 7,
+   "topic": "7.1",
+   "num": 4,
+   "section": "A.3",
+   "text": "Which letter represents the speed of light in formulae?",
+   "options": [
+    "v",
+    "c",
+    "λ",
+    "f"
+   ],
+   "answer": 1,
+   "explanation": "The speed of light is represented by lowercase c",
+   "page": 70,
+   "figure": null
+  },
+  {
+   "id": "c07q05",
+   "chapter": 7,
+   "topic": "7.2",
+   "num": 5,
+   "section": "A.3",
+   "text": "An electromagnetic wave consists of:",
+   "options": [
+    "An electric field only",
+    "A magnetic field only",
+    "A stream of electrons",
+    "Oscillating electric (E) and magnetic (H) fields"
+   ],
+   "answer": 3,
+   "explanation": "It is an interaction between changing electric and magnetic fields",
+   "page": 71,
+   "figure": null
+  },
+  {
+   "id": "c07q06",
+   "chapter": 7,
+   "topic": "7.2",
+   "num": 6,
+   "section": "A.3",
+   "text": "Far from the antenna, the electric and magnetic fields of a radio wave are:",
+   "options": [
+    "Parallel to each other",
+    "At right angles (90°) to each other and to the direction of travel",
+    "At 45° to each other",
+    "Pointing in the direction of travel"
+   ],
+   "answer": 1,
+   "explanation": "They are perpendicular to each other and to the direction of propagation",
+   "page": 71,
+   "figure": null
+  },
+  {
+   "id": "c07q07",
+   "chapter": 7,
+   "topic": "7.2",
+   "num": 7,
+   "section": "A.3",
+   "text": "In amateur radio, the uppercase abbreviation EMF stands for:",
+   "options": [
+    "Electromotive force",
+    "Electronic modulation frequency",
+    "Electromagnetic fields",
+    "Effective maximum frequency"
+   ],
+   "answer": 2,
+   "explanation": "EMF = electromagnetic fields; lowercase emf = electromotive force",
+   "page": 71,
+   "figure": null
+  },
+  {
+   "id": "c07q08",
+   "chapter": 7,
+   "topic": "7.2",
+   "num": 8,
+   "section": "A.3",
+   "text": "Why must the fields oscillate for long-distance radio communication to happen?",
+   "options": [
+    "Static fields do not radiate energy away as a wave",
+    "Oscillation makes the fields stronger near the antenna",
+    "Static fields travel faster than light",
+    "It does not matter"
+   ],
+   "answer": 0,
+   "explanation": "Without oscillation no electromagnetic wave would radiate to carry energy",
+   "page": 71,
+   "figure": null
+  },
+  {
+   "id": "c07q09",
+   "chapter": 7,
+   "topic": "7.4",
+   "num": 9,
+   "section": "A.3",
+   "text": "The ITU HF band covers:",
+   "options": [
+    "3–30 MHz",
+    "300 kHz–3 MHz",
+    "30–300 MHz",
+    "300 MHz–3 GHz"
+   ],
+   "answer": 0,
+   "explanation": "HF, High Frequency, is 3–30 MHz",
+   "page": 82,
+   "figure": null
+  },
+  {
+   "id": "c07q10",
+   "chapter": 7,
+   "topic": "7.4",
+   "num": 10,
+   "section": "A.3",
+   "text": "The ITU VHF band covers:",
+   "options": [
+    "3–30 MHz",
+    "30–300 kHz",
+    "300 MHz–3 GHz",
+    "30–300 MHz"
+   ],
+   "answer": 3,
+   "explanation": "VHF, Very High Frequency, is 30–300 MHz",
+   "page": 82,
+   "figure": null
+  },
+  {
+   "id": "c07q11",
+   "chapter": 7,
+   "topic": "7.4",
+   "num": 11,
+   "section": "A.3",
+   "text": "The 433 MHz amateur band lies in which ITU band?",
+   "options": [
+    "HF",
+    "UHF",
+    "VHF",
+    "MF"
+   ],
+   "answer": 1,
+   "explanation": "UHF is 300 MHz–3 GHz",
+   "page": 82,
+   "figure": null
+  },
+  {
+   "id": "c07q12",
+   "chapter": 7,
+   "topic": "7.4",
+   "num": 12,
+   "section": "A.3",
+   "text": "The ITU MF band covers:",
+   "options": [
+    "30–300 kHz",
+    "3–30 MHz",
+    "300 kHz–3 MHz",
+    "30–300 MHz"
+   ],
+   "answer": 2,
+   "explanation": "MF, Medium Frequency, is 300 kHz–3 MHz",
+   "page": 82,
+   "figure": null
+  },
+  {
+   "id": "c07q13",
+   "chapter": 7,
+   "topic": "7.4",
+   "num": 13,
+   "section": "A.3",
+   "text": "Which ITU band is 30–300 kHz?",
+   "options": [
+    "HF",
+    "MF",
+    "LF",
+    "VHF"
+   ],
+   "answer": 2,
+   "explanation": "LF, Low Frequency, is 30–300 kHz",
+   "page": 82,
+   "figure": null
+  },
+  {
+   "id": "c07q14",
+   "chapter": 7,
+   "topic": "7.4",
+   "num": 14,
+   "section": "A.3",
+   "text": "Microwave frequencies are the range:",
+   "options": [
+    "3–30 MHz",
+    "1–300 GHz",
+    "30–300 MHz",
+    "300–3000 GHz"
+   ],
+   "answer": 1,
+   "explanation": "Microwaves are 1–300 GHz, starting in UHF",
+   "page": 83,
+   "figure": null
+  },
+  {
+   "id": "c07q15",
+   "chapter": 7,
+   "topic": "7.5",
+   "num": 15,
+   "section": "A.3",
+   "text": "Which of these is ionising radiation?",
+   "options": [
+    "X-rays",
+    "Visible light",
+    "Infrared",
+    "Radio waves"
+   ],
+   "answer": 0,
+   "explanation": "Some ultraviolet, all x-rays and gamma rays are ionising; radio waves are not",
+   "page": 83,
+   "figure": null
+  },
+  {
+   "id": "c07q16",
+   "chapter": 7,
+   "topic": "7.5",
+   "num": 16,
+   "section": "A.3",
+   "text": "Radio waves belong to the part of the electromagnetic spectrum known as:",
+   "options": [
+    "Ionising radiation",
+    "Gamma radiation",
+    "Nuclear radiation",
+    "Non-ionising radiation"
+   ],
+   "answer": 3,
+   "explanation": "Visible light and everything below it in frequency, including radio, is non-ionising",
+   "page": 83,
+   "figure": null
+  },
+  {
+   "id": "c07q17",
+   "chapter": 7,
+   "topic": "7.5",
+   "num": 17,
+   "section": "A.3",
+   "text": "Compared with visible light, radio waves have:",
+   "options": [
+    "Much higher frequencies",
+    "Much lower frequencies",
+    "The same frequency",
+    "No frequency"
+   ],
+   "answer": 1,
+   "explanation": "Radio wave frequencies are much lower than those of visible light",
+   "page": 83,
+   "figure": null
+  },
+  {
+   "id": "c07q18",
+   "chapter": 7,
+   "topic": "7.5",
+   "num": 18,
+   "section": "A.3",
+   "text": "In a rainbow, which colour has the lowest frequency?",
+   "options": [
+    "Violet",
+    "Blue",
+    "Green",
+    "Red"
+   ],
+   "answer": 3,
+   "explanation": "The lowest frequency is red and the highest is violet",
+   "page": 83,
+   "figure": null
+  },
+  {
+   "id": "c07q19",
+   "chapter": 7,
+   "topic": "7.6",
+   "num": 19,
+   "section": "A.3",
+   "text": "Electric field strength is measured in:",
+   "options": [
+    "A/m",
+    "W",
+    "V/m",
+    "Ω"
+   ],
+   "answer": 2,
+   "explanation": "Electric field strength is in volts per metre",
+   "page": 85,
+   "figure": null
+  },
+  {
+   "id": "c07q20",
+   "chapter": 7,
+   "topic": "7.6",
+   "num": 20,
+   "section": "A.3",
+   "text": "In the far field, if you double the distance from the antenna, the electric field strength:",
+   "options": [
+    "Is halved",
+    "Doubles",
+    "Falls to a quarter",
+    "Stays the same"
+   ],
+   "answer": 0,
+   "explanation": "Field strength is inversely proportional to distance",
+   "page": 85,
+   "figure": null
+  },
+  {
+   "id": "c07q21",
+   "chapter": 7,
+   "topic": "7.6",
+   "num": 21,
+   "section": "A.3",
+   "text": "If you double the distance from the antenna, the power density (W/m²):",
+   "options": [
+    "Falls to a quarter",
+    "Is halved",
+    "Doubles",
+    "Stays the same"
+   ],
+   "answer": 0,
+   "explanation": "Power density follows the inverse square law",
+   "page": 85,
+   "figure": null
+  },
+  {
+   "id": "c07q22",
+   "chapter": 7,
+   "topic": "7.6",
+   "num": 22,
+   "section": "A.3",
+   "text": "An electric field is created by:",
+   "options": [
+    "Only by magnets",
+    "Only by DC current",
+    "A difference in electric potential, such as a voltage between the ends of an antenna",
+    "Resistance in a wire"
+   ],
+   "answer": 2,
+   "explanation": "A potential difference creates an electric field; a changing magnetic field can too",
+   "page": 85,
+   "figure": null
+  },
+  {
+   "id": "c07q23",
+   "chapter": 7,
+   "topic": "7.7",
+   "num": 23,
+   "section": "A.3",
+   "text": "Magnetic field strength is measured in:",
+   "options": [
+    "V/m",
+    "A/m",
+    "W/m²",
+    "H"
+   ],
+   "answer": 1,
+   "explanation": "Magnetic field strength is in amperes per metre",
+   "page": 85,
+   "figure": null
+  },
+  {
+   "id": "c07q24",
+   "chapter": 7,
+   "topic": "7.7",
+   "num": 24,
+   "section": "A.3",
+   "text": "A conductor carrying a steady DC current has around it:",
+   "options": [
+    "No field at all",
+    "A radiating electromagnetic wave",
+    "An oscillating electric field only",
+    "A static (non-changing) magnetic field"
+   ],
+   "answer": 3,
+   "explanation": "Any current, even DC, creates a magnetic field; a steady current creates a static one",
+   "page": 85,
+   "figure": null
+  },
+  {
+   "id": "c07q25",
+   "chapter": 7,
+   "topic": "7.8",
+   "num": 25,
+   "section": "A.3",
+   "text": "The polarisation of an electromagnetic wave is determined by the direction of its:",
+   "options": [
+    "Magnetic field",
+    "Electric field",
+    "Direction of travel",
+    "Frequency"
+   ],
+   "answer": 1,
+   "explanation": "Polarisation is the direction of the electric lines of force relative to the earth",
+   "page": 86,
+   "figure": null
+  },
+  {
+   "id": "c07q26",
+   "chapter": 7,
+   "topic": "7.8",
+   "num": 26,
+   "section": "A.3",
+   "text": "A horizontal dipole antenna transmits waves that are:",
+   "options": [
+    "Vertically polarised",
+    "Circularly polarised",
+    "Horizontally polarised",
+    "Unpolarised"
+   ],
+   "answer": 2,
+   "explanation": "Horizontal antennas transmit horizontally polarised waves",
+   "page": 86,
+   "figure": null
+  },
+  {
+   "id": "c07q27",
+   "chapter": 7,
+   "topic": "7.8",
+   "num": 27,
+   "section": "A.3",
+   "text": "After refraction by the ionosphere, a radio wave is:",
+   "options": [
+    "No longer purely horizontally or vertically polarised",
+    "Still exactly vertically polarised",
+    "Still exactly horizontally polarised",
+    "Not polarised at all, and cannot be received"
+   ],
+   "answer": 0,
+   "explanation": "Ionospheric refraction makes waves elliptically polarised",
+   "page": 86,
+   "figure": null
+  },
+  {
+   "id": "c08q01",
+   "chapter": 8,
+   "topic": "8.1",
+   "num": 1,
+   "section": "A.4",
+   "text": "An inductor stores energy in:",
+   "options": [
+    "An electric field",
+    "A chemical reaction",
+    "A magnetic field",
+    "A dielectric"
+   ],
+   "answer": 2,
+   "explanation": "An inductor stores energy in a magnetic field; a capacitor in an electric field",
+   "page": 88,
+   "figure": null
+  },
+  {
+   "id": "c08q02",
+   "chapter": 8,
+   "topic": "8.1",
+   "num": 2,
+   "section": "A.4",
+   "text": "How does the inductance of a coil change if more turns are added?",
+   "options": [
+    "It decreases",
+    "It becomes zero",
+    "It stays the same",
+    "It increases"
+   ],
+   "answer": 3,
+   "explanation": "Inductance increases with the number of turns and the coil diameter",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q03",
+   "chapter": 8,
+   "topic": "8.1",
+   "num": 3,
+   "section": "A.4",
+   "text": "Increasing the spacing between the turns of a coil will:",
+   "options": [
+    "Decrease its inductance",
+    "Increase its inductance",
+    "Not change its inductance",
+    "Turn it into a capacitor"
+   ],
+   "answer": 0,
+   "explanation": "Inductance decreases if the spacing between turns is increased",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q04",
+   "chapter": 8,
+   "topic": "8.1",
+   "num": 4,
+   "section": "A.4",
+   "text": "Inserting a ferrite core into a coil will:",
+   "options": [
+    "Decrease its inductance",
+    "Increase its inductance",
+    "Have no effect",
+    "Turn the inductance negative"
+   ],
+   "answer": 1,
+   "explanation": "Ferrite cores increase inductance; brass cores decrease it",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q05",
+   "chapter": 8,
+   "topic": "8.1",
+   "num": 5,
+   "section": "A.4",
+   "text": "A brass core in a coil:",
+   "options": [
+    "Decreases the inductance",
+    "Increases the inductance",
+    "Has no effect",
+    "Makes the coil resonant"
+   ],
+   "answer": 0,
+   "explanation": "Brass cores decrease inductance",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q06",
+   "chapter": 8,
+   "topic": "8.1",
+   "num": 6,
+   "section": "A.4",
+   "text": "The unit of inductance is the:",
+   "options": [
+    "Farad",
+    "Ohm",
+    "Henry",
+    "Tesla"
+   ],
+   "answer": 2,
+   "explanation": "Inductance is in henry (H); mH and µH are common",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q07",
+   "chapter": 8,
+   "topic": "8.1.1",
+   "num": 7,
+   "section": "A.4",
+   "text": "The voltage an inductor generates to oppose a change of current is called:",
+   "options": [
+    "Leakage current",
+    "Back emf",
+    "Dielectric strength",
+    "Resonance"
+   ],
+   "answer": 1,
+   "explanation": "Back (counter) emf opposes the current trying to pass through the inductor",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q08",
+   "chapter": 8,
+   "topic": "8.1.1",
+   "num": 8,
+   "section": "A.4",
+   "text": "When DC passes through an inductor, its back emf:",
+   "options": [
+    "Lasts all the time",
+    "Reverses the current",
+    "Never appears",
+    "Only lasts during the initial surge"
+   ],
+   "answer": 3,
+   "explanation": "With DC the opposition only lasts until the current stabilises; with AC it is continuous",
+   "page": 89,
+   "figure": null
+  },
+  {
+   "id": "c08q09",
+   "chapter": 8,
+   "topic": "8.1.2",
+   "num": 9,
+   "section": "A.4",
+   "text": "Inductors of 22 mH and 10 mH are connected in series. The total inductance is:",
+   "options": [
+    "6.9 mH",
+    "12 mH",
+    "32 mH",
+    "220 mH"
+   ],
+   "answer": 2,
+   "explanation": "Inductors in series add, like resistors: 22 + 10 = 32 mH",
+   "page": 90,
+   "figure": null
+  },
+  {
+   "id": "c08q10",
+   "chapter": 8,
+   "topic": "8.1.2",
+   "num": 10,
+   "section": "A.4",
+   "text": "Two 20 mH inductors are connected in parallel. The total inductance is:",
+   "options": [
+    "10 mH",
+    "20 mH",
+    "40 mH",
+    "400 mH"
+   ],
+   "answer": 0,
+   "explanation": "Inductors in parallel combine like resistors in parallel: 20 ∥ 20 = 10 mH",
+   "page": 90,
+   "figure": null
+  },
+  {
+   "id": "c08q11",
+   "chapter": 8,
+   "topic": "8.1.2",
+   "num": 11,
+   "section": "A.4",
+   "text": "What is the inductance between A and B in the circuit shown?",
+   "options": [
+    "6.9 mH",
+    "12 mH",
+    "32 mH",
+    "220 mH"
+   ],
+   "answer": 2,
+   "explanation": "Inductors in series add: 22 + 10 = 32 mH",
+   "page": 90,
+   "figure": "figures/ch08_inductors.svg"
+  },
+  {
+   "id": "c08q12",
+   "chapter": 8,
+   "topic": "8.1.3",
+   "num": 12,
+   "section": "A.4",
+   "text": "As the frequency increases, the reactance of an inductor:",
+   "options": [
+    "Decreases",
+    "Increases",
+    "Stays the same",
+    "Becomes negative"
+   ],
+   "answer": 1,
+   "explanation": "XL = 2πfL rises with frequency",
+   "page": 91,
+   "figure": null
+  },
+  {
+   "id": "c08q13",
+   "chapter": 8,
+   "topic": "8.1.3",
+   "num": 13,
+   "section": "A.4",
+   "text": "What is the approximate reactance of a 1 µH inductor at 2 MHz?",
+   "options": [
+    "1.3 Ω",
+    "13 Ω",
+    "79 Ω",
+    "130 Ω"
+   ],
+   "answer": 1,
+   "explanation": "XL = 2 × 3.14 × 2 000 000 × 0.000 001 ≈ 12.6 ≈ 13 Ω",
+   "page": 91,
+   "figure": null
+  },
+  {
+   "id": "c08q14",
+   "chapter": 8,
+   "topic": "8.1.3",
+   "num": 14,
+   "section": "A.4",
+   "text": "In a pure inductor carrying AC, the current:",
+   "options": [
+    "Is in phase with the voltage",
+    "Lags the voltage by 180°",
+    "Leads the voltage by 90°",
+    "Lags the voltage by 90°"
+   ],
+   "answer": 3,
+   "explanation": "Back emf makes the current lag the voltage by 90°",
+   "page": 92,
+   "figure": null
+  },
+  {
+   "id": "c08q15",
+   "chapter": 8,
+   "topic": "8.1.3",
+   "num": 15,
+   "section": "A.4",
+   "text": "Does the inductance of a coil change with frequency?",
+   "options": [
+    "No; inductance is a property of its construction, but its reactance changes",
+    "Yes, it falls with frequency",
+    "Yes, it rises with frequency",
+    "Only at DC"
+   ],
+   "answer": 0,
+   "explanation": "Inductance stays the same; inductive reactance increases with frequency",
+   "page": 91,
+   "figure": null
+  },
+  {
+   "id": "c08q16",
+   "chapter": 8,
+   "topic": "8.2",
+   "num": 16,
+   "section": "A.4",
+   "text": "A capacitor stores energy in:",
+   "options": [
+    "A magnetic field",
+    "Its resistance",
+    "An electric field",
+    "A coil of wire"
+   ],
+   "answer": 2,
+   "explanation": "A capacitor stores electrical energy in an electric field",
+   "page": 93,
+   "figure": null
+  },
+  {
+   "id": "c08q17",
+   "chapter": 8,
+   "topic": "8.2",
+   "num": 17,
+   "section": "A.4",
+   "text": "Which change increases the capacitance of a capacitor?",
+   "options": [
+    "Moving the plates further apart",
+    "Using smaller plates",
+    "Using a dielectric with a lower dielectric constant",
+    "Moving the plates closer together"
+   ],
+   "answer": 3,
+   "explanation": "Larger plates, closer spacing and a higher dielectric constant all increase capacitance",
+   "page": 93,
+   "figure": null
+  },
+  {
+   "id": "c08q18",
+   "chapter": 8,
+   "topic": "8.2",
+   "num": 18,
+   "section": "A.4",
+   "text": "The unit of capacitance is the:",
+   "options": [
+    "Henry",
+    "Farad",
+    "Coulomb",
+    "Siemens"
+   ],
+   "answer": 1,
+   "explanation": "Capacitance is in farad (F); µF, nF and pF are common",
+   "page": 93,
+   "figure": null
+  },
+  {
+   "id": "c08q19",
+   "chapter": 8,
+   "topic": "8.2",
+   "num": 19,
+   "section": "A.4",
+   "text": "Besides capacitance and tolerance, a capacitor is rated for its:",
+   "options": [
+    "Maximum working voltage",
+    "Inductance",
+    "Turns ratio",
+    "Resonant frequency"
+   ],
+   "answer": 0,
+   "explanation": "Capacitors have a maximum working voltage they can support",
+   "page": 93,
+   "figure": null
+  },
+  {
+   "id": "c08q20",
+   "chapter": 8,
+   "topic": "8.2.1",
+   "num": 20,
+   "section": "A.4",
+   "text": "A dielectric is:",
+   "options": [
+    "A good conductor",
+    "A magnetic material",
+    "A semiconductor",
+    "An insulator that can hold a static electric field"
+   ],
+   "answer": 3,
+   "explanation": "A dielectric is an insulator in which charges separate under an electric field",
+   "page": 94,
+   "figure": null
+  },
+  {
+   "id": "c08q21",
+   "chapter": 8,
+   "topic": "8.2.1",
+   "num": 21,
+   "section": "A.4",
+   "text": "Which dielectric is used in tuning capacitors with fixed and moving plates?",
+   "options": [
+    "Paper",
+    "Metal oxide",
+    "Air",
+    "Electrolyte"
+   ],
+   "answer": 2,
+   "explanation": "Air variable capacitors let the effective plate area vary",
+   "page": 94,
+   "figure": null
+  },
+  {
+   "id": "c08q22",
+   "chapter": 8,
+   "topic": "8.2.1",
+   "num": 22,
+   "section": "A.4",
+   "text": "Electrolytic capacitors are damaged if:",
+   "options": [
+    "Their polarity is reversed",
+    "They are used at DC",
+    "They are kept cool",
+    "They are used below their working voltage"
+   ],
+   "answer": 0,
+   "explanation": "Electrolytics are polarised and are easily damaged by reversed polarity",
+   "page": 94,
+   "figure": null
+  },
+  {
+   "id": "c08q23",
+   "chapter": 8,
+   "topic": "8.2.2",
+   "num": 23,
+   "section": "A.4",
+   "text": "Once a capacitor connected to DC has charged:",
+   "options": [
+    "It passes DC freely",
+    "Its capacitance doubles",
+    "It generates AC",
+    "It blocks DC, apart from a small leakage current"
+   ],
+   "answer": 3,
+   "explanation": "After the initial surge, a capacitor blocks DC; a small leakage current remains",
+   "page": 94,
+   "figure": null
+  },
+  {
+   "id": "c08q24",
+   "chapter": 8,
+   "topic": "8.2.2",
+   "num": 24,
+   "section": "A.4",
+   "text": "The small current that flows through the dielectric of a charged capacitor is called:",
+   "options": [
+    "Back emf",
+    "Leakage current",
+    "Eddy current",
+    "Bias current"
+   ],
+   "answer": 1,
+   "explanation": "This is the leakage current",
+   "page": 94,
+   "figure": null
+  },
+  {
+   "id": "c08q25",
+   "chapter": 8,
+   "topic": "8.2.3",
+   "num": 25,
+   "section": "A.4",
+   "text": "Capacitors of 120 pF and 60 pF are connected in series. The total capacitance is:",
+   "options": [
+    "40 pF",
+    "60 pF",
+    "90 pF",
+    "180 pF"
+   ],
+   "answer": 0,
+   "explanation": "Series capacitors combine like parallel resistors: 1/(1/120 + 1/60) = 40 pF",
+   "page": 95,
+   "figure": null
+  },
+  {
+   "id": "c08q26",
+   "chapter": 8,
+   "topic": "8.2.3",
+   "num": 26,
+   "section": "A.4",
+   "text": "Capacitors of 150 pF, 300 pF and 50 pF are connected in parallel. The total capacitance is:",
+   "options": [
+    "30 pF",
+    "150 pF",
+    "300 pF",
+    "500 pF"
+   ],
+   "answer": 3,
+   "explanation": "Capacitors in parallel add: 150 + 300 + 50 = 500 pF",
+   "page": 96,
+   "figure": null
+  },
+  {
+   "id": "c08q27",
+   "chapter": 8,
+   "topic": "8.2.3",
+   "num": 27,
+   "section": "A.4",
+   "text": "Connecting capacitors in series:",
+   "options": [
+    "Increases the total capacitance",
+    "Gives the average capacitance",
+    "Reduces the total capacitance below the smallest one",
+    "Has no effect"
+   ],
+   "answer": 2,
+   "explanation": "Series capacitors reduce the value below the smallest capacitance",
+   "page": 95,
+   "figure": null
+  },
+  {
+   "id": "c08q28",
+   "chapter": 8,
+   "topic": "8.2.3",
+   "num": 28,
+   "section": "A.4",
+   "text": "What is the capacitance between A and B in the circuit shown?",
+   "options": [
+    "180 pF",
+    "40 pF",
+    "60 pF",
+    "90 pF"
+   ],
+   "answer": 1,
+   "explanation": "In series: 1/(1/120 + 1/60) = 40 pF",
+   "page": 95,
+   "figure": "figures/ch08_caps.svg"
+  },
+  {
+   "id": "c08q29",
+   "chapter": 8,
+   "topic": "8.2.4",
+   "num": 29,
+   "section": "A.4",
+   "text": "As the frequency increases, the reactance of a capacitor:",
+   "options": [
+    "Increases",
+    "Stays the same",
+    "Decreases",
+    "Becomes infinite"
+   ],
+   "answer": 2,
+   "explanation": "XC = 1/(2πfC) falls as frequency rises",
+   "page": 96,
+   "figure": null
+  },
+  {
+   "id": "c08q30",
+   "chapter": 8,
+   "topic": "8.2.4",
+   "num": 30,
+   "section": "A.4",
+   "text": "What is the approximate reactance of a 1 nF capacitor at 2 MHz?",
+   "options": [
+    "790 Ω",
+    "79 Ω",
+    "32 Ω",
+    "13 Ω"
+   ],
+   "answer": 1,
+   "explanation": "XC = 1/(2 × 3.14 × 2 000 000 × 0.000 000 001) ≈ 79 Ω",
+   "page": 97,
+   "figure": null
+  },
+  {
+   "id": "c08q31",
+   "chapter": 8,
+   "topic": "8.2.4",
+   "num": 31,
+   "section": "A.4",
+   "text": "In a pure capacitor carrying AC, the current:",
+   "options": [
+    "Lags the voltage by 90°",
+    "Leads the voltage by 180°",
+    "Is in phase with the voltage",
+    "Leads the voltage by 90°"
+   ],
+   "answer": 3,
+   "explanation": "In a capacitor the current leads the voltage by 90°, the opposite of an inductor",
+   "page": 97,
+   "figure": null
+  },
+  {
+   "id": "c08q32",
+   "chapter": 8,
+   "topic": "8.2.4",
+   "num": 32,
+   "section": "A.4",
+   "text": "The figure shows the voltage and current in a component; the current leads the voltage by 90°. The component is:",
+   "options": [
+    "A resistor",
+    "An inductor",
+    "A diode",
+    "A capacitor"
+   ],
+   "answer": 3,
+   "explanation": "In a capacitor the current leads the voltage by 90°; in an inductor it lags",
+   "page": 97,
+   "figure": "figures/ch08_lead.svg"
+  },
+  {
+   "id": "c08q33",
+   "chapter": 8,
+   "topic": "8.3.1",
+   "num": 33,
+   "section": "A.4",
+   "text": "A circuit has 13 Ω inductive reactance and 79 Ω capacitive reactance. Its total reactance is:",
+   "options": [
+    "92 Ω, inductive",
+    "66 Ω, capacitive",
+    "66 Ω, inductive",
+    "Zero"
+   ],
+   "answer": 1,
+   "explanation": "X = XL − XC = 13 − 79 = −66 Ω; negative means capacitive",
+   "page": 98,
+   "figure": null
+  },
+  {
+   "id": "c08q34",
+   "chapter": 8,
+   "topic": "8.3.1",
+   "num": 34,
+   "section": "A.4",
+   "text": "A circuit whose total reactance is a positive number is said to be:",
+   "options": [
+    "Inductive",
+    "Capacitive",
+    "Resonant",
+    "Purely resistive"
+   ],
+   "answer": 0,
+   "explanation": "More inductive than capacitive reactance gives a positive X: inductive",
+   "page": 98,
+   "figure": null
+  },
+  {
+   "id": "c08q35",
+   "chapter": 8,
+   "topic": "8.3.2",
+   "num": 35,
+   "section": "A.4",
+   "text": "A series LC circuit is resonant when:",
+   "options": [
+    "Its resistance is zero",
+    "Its inductance equals its capacitance",
+    "Its inductive reactance equals its capacitive reactance",
+    "Its frequency is zero"
+   ],
+   "answer": 2,
+   "explanation": "At resonance XL = XC and the total reactance is zero",
+   "page": 98,
+   "figure": null
+  },
+  {
+   "id": "c08q36",
+   "chapter": 8,
+   "topic": "8.3.2",
+   "num": 36,
+   "section": "A.4",
+   "text": "The resonant frequency of an LC circuit depends on:",
+   "options": [
+    "Only the inductance",
+    "Only the capacitance",
+    "Both the inductance and the capacitance",
+    "Only the resistance"
+   ],
+   "answer": 2,
+   "explanation": "fres = 1/(2π√(LC)), so it depends on both L and C",
+   "page": 99,
+   "figure": null
+  },
+  {
+   "id": "c08q37",
+   "chapter": 8,
+   "topic": "8.3.2",
+   "num": 37,
+   "section": "A.4",
+   "text": "If the capacitance in a tuned circuit is increased, its resonant frequency:",
+   "options": [
+    "Falls",
+    "Rises",
+    "Stays the same",
+    "Doubles"
+   ],
+   "answer": 0,
+   "explanation": "fres = 1/(2π√(LC)): more C gives a lower frequency",
+   "page": 100,
+   "figure": null
+  },
+  {
+   "id": "c08q38",
+   "chapter": 8,
+   "topic": "8.3.2",
+   "num": 38,
+   "section": "A.4",
+   "text": "Adjusting the resonance of a circuit with variable capacitors and inductors is the principle of:",
+   "options": [
+    "An SWR meter",
+    "A rectifier",
+    "A dummy load",
+    "An antenna tuning unit (ATU)"
+   ],
+   "answer": 3,
+   "explanation": "ATUs use variable L and C to match impedances",
+   "page": 100,
+   "figure": null
+  },
+  {
+   "id": "c08q39",
+   "chapter": 8,
+   "topic": "8.3.3",
+   "num": 39,
+   "section": "A.4",
+   "text": "Impedance is:",
+   "options": [
+    "Resistance only",
+    "The combination of resistance and reactance",
+    "Reactance only",
+    "The inverse of conductance only"
+   ],
+   "answer": 1,
+   "explanation": "Impedance (Z, in ohms) combines resistance and reactance",
+   "page": 100,
+   "figure": null
+  },
+  {
+   "id": "c08q40",
+   "chapter": 8,
+   "topic": "8.3.3",
+   "num": 40,
+   "section": "A.4",
+   "text": "The impedance of a resonant circuit is:",
+   "options": [
+    "Purely reactive",
+    "Always zero",
+    "Always infinite",
+    "Purely resistive"
+   ],
+   "answer": 3,
+   "explanation": "With no reactance at resonance, the impedance is purely resistive",
+   "page": 100,
+   "figure": null
+  },
+  {
+   "id": "c08q41",
+   "chapter": 8,
+   "topic": "8.3.3",
+   "num": 41,
+   "section": "A.4",
+   "text": "The characteristic impedance of the coaxial cable commonly used in amateur stations is:",
+   "options": [
+    "50 Ω",
+    "75 Ω",
+    "300 Ω",
+    "600 Ω"
+   ],
+   "answer": 0,
+   "explanation": "Common coaxial cable is 50 Ω",
+   "page": 100,
+   "figure": null
+  },
+  {
+   "id": "c08q42",
+   "chapter": 8,
+   "topic": "8.4.1",
+   "num": 42,
+   "section": "A.4",
+   "text": "A series LC circuit, connected in series with a load, at resonance has:",
+   "options": [
+    "A high impedance and blocks the signal",
+    "Infinite resistance",
+    "A low impedance and passes the signal",
+    "No effect"
+   ],
+   "answer": 2,
+   "explanation": "A series LC is an acceptor: low impedance at resonance",
+   "page": 103,
+   "figure": null
+  },
+  {
+   "id": "c08q43",
+   "chapter": 8,
+   "topic": "8.4.1",
+   "num": 43,
+   "section": "A.4",
+   "text": "A parallel LC circuit at resonance has:",
+   "options": [
+    "A low impedance; it is an acceptor",
+    "A high impedance; it is a rejector",
+    "Zero impedance",
+    "A negative impedance"
+   ],
+   "answer": 1,
+   "explanation": "A parallel LC is a rejector: high impedance at resonance",
+   "page": 103,
+   "figure": null
+  },
+  {
+   "id": "c08q44",
+   "chapter": 8,
+   "topic": "8.4.1",
+   "num": 44,
+   "section": "A.4",
+   "text": "A series LC circuit connected in parallel with a load acts as a:",
+   "options": [
+    "Band-pass filter",
+    "Band-stop filter",
+    "Low-pass filter",
+    "High-pass filter"
+   ],
+   "answer": 1,
+   "explanation": "Connecting LC circuits in parallel with the load reverses their behaviour: series LC becomes band-stop",
+   "page": 105,
+   "figure": null
+  },
+  {
+   "id": "c08q45",
+   "chapter": 8,
+   "topic": "8.4.1",
+   "num": 45,
+   "section": "A.4",
+   "text": "The series LC circuit shown is connected across the line, in parallel with the load. It acts as a:",
+   "options": [
+    "Band-pass filter",
+    "Low-pass filter",
+    "Band-stop filter",
+    "High-pass filter"
+   ],
+   "answer": 2,
+   "explanation": "At resonance its low impedance shorts the resonant frequency away from the load",
+   "page": 105,
+   "figure": "figures/ch08_series_shunt.svg"
+  },
+  {
+   "id": "c08q46",
+   "chapter": 8,
+   "topic": "8.4.1",
+   "num": 46,
+   "section": "A.4",
+   "text": "At its resonant frequency, the parallel LC circuit shown in the signal path:",
+   "options": [
+    "Has a high impedance and blocks that frequency",
+    "Has a low impedance and passes that frequency",
+    "Has zero impedance",
+    "Turns AC into DC"
+   ],
+   "answer": 0,
+   "explanation": "A parallel LC circuit has a high impedance at resonance",
+   "page": 103,
+   "figure": "figures/ch08_parallel_lc.svg"
+  },
+  {
+   "id": "c08q47",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 47,
+   "section": "A.4",
+   "text": "A filter that passes low frequencies and stops high frequencies is a:",
+   "options": [
+    "High-pass filter",
+    "Band-stop filter",
+    "Low-pass filter",
+    "Notch filter"
+   ],
+   "answer": 2,
+   "explanation": "Low-pass passes low frequencies, stops high ones",
+   "page": 108,
+   "figure": null
+  },
+  {
+   "id": "c08q48",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 48,
+   "section": "A.4",
+   "text": "A band-stop filter with a very sharp transition, used to remove a narrow range of frequencies, is called a:",
+   "options": [
+    "Notch filter",
+    "Pi filter",
+    "Roofing filter",
+    "T filter"
+   ],
+   "answer": 0,
+   "explanation": "A sharp band-stop filter is a notch filter",
+   "page": 108,
+   "figure": null
+  },
+  {
+   "id": "c08q49",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 49,
+   "section": "A.4",
+   "text": "The half-power (−3 dB) bandwidth of a circuit is where the signal voltage has fallen to about:",
+   "options": [
+    "50% of its peak",
+    "10% of its peak",
+    "25% of its peak",
+    "70.7% of its peak"
+   ],
+   "answer": 3,
+   "explanation": "Half power corresponds to 0.7071 of the peak voltage",
+   "page": 107,
+   "figure": null
+  },
+  {
+   "id": "c08q50",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 50,
+   "section": "A.4",
+   "text": "The shape factor of a filter is the ratio of its:",
+   "options": [
+    "−6 dB and −60 dB bandwidths",
+    "Input and output impedances",
+    "Inductance and capacitance",
+    "Resonant frequency and bandwidth"
+   ],
+   "answer": 0,
+   "explanation": "Shape factor compares the −6 dB and −60 dB bandwidths",
+   "page": 108,
+   "figure": null
+  },
+  {
+   "id": "c08q51",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 51,
+   "section": "A.4",
+   "text": "A low-pass Pi filter is named after:",
+   "options": [
+    "Its inventor",
+    "The number 3.14",
+    "The Greek letter Π, which its circuit layout resembles",
+    "Its use with PIN diodes"
+   ],
+   "answer": 2,
+   "explanation": "T and Pi filters are named after the letters their layout resembles",
+   "page": 109,
+   "figure": null
+  },
+  {
+   "id": "c08q52",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 52,
+   "section": "A.4",
+   "text": "The response curve shown is that of a:",
+   "options": [
+    "High-pass filter",
+    "Band-stop filter",
+    "Band-pass filter",
+    "Low-pass filter"
+   ],
+   "answer": 3,
+   "explanation": "It passes frequencies below fc and stops those above",
+   "page": 108,
+   "figure": "figures/ch08_lowpass.svg"
+  },
+  {
+   "id": "c08q53",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 53,
+   "section": "A.4",
+   "text": "The response curve shown, which falls away below fc, is that of a:",
+   "options": [
+    "Low-pass filter",
+    "High-pass filter",
+    "Notch filter",
+    "Band-pass filter"
+   ],
+   "answer": 1,
+   "explanation": "It stops frequencies below fc and passes those above",
+   "page": 108,
+   "figure": "figures/ch08_highpass.svg"
+  },
+  {
+   "id": "c08q54",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 54,
+   "section": "A.4",
+   "text": "The circuit shown, with a capacitor in series and an inductor to ground, is a:",
+   "options": [
+    "High-pass filter",
+    "Low-pass filter",
+    "Band-stop filter",
+    "Rectifier"
+   ],
+   "answer": 0,
+   "explanation": "The series capacitor blocks low frequencies and the inductor shunts them to ground",
+   "page": 108,
+   "figure": "figures/ch08_hp_circuit.svg"
+  },
+  {
+   "id": "c08q55",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 55,
+   "section": "A.4",
+   "text": "A filter with the very narrow, deep dip shown is called a:",
+   "options": [
+    "Roofing filter",
+    "Low-pass filter",
+    "Notch filter",
+    "Pi filter"
+   ],
+   "answer": 2,
+   "explanation": "A sharp band-stop filter that removes a narrow range is a notch filter",
+   "page": 108,
+   "figure": "figures/ch08_notch.svg"
+  },
+  {
+   "id": "c08q56",
+   "chapter": 8,
+   "topic": "8.4.2",
+   "num": 56,
+   "section": "A.4",
+   "text": "The filter shown, with C1, L and C2, is known as a:",
+   "options": [
+    "Pi filter",
+    "T filter",
+    "Notch filter",
+    "Crystal filter"
+   ],
+   "answer": 0,
+   "explanation": "Its layout resembles the Greek letter π; this one is low-pass",
+   "page": 109,
+   "figure": "figures/ch08_pi.svg"
+  },
+  {
+   "id": "c08q57",
+   "chapter": 8,
+   "topic": "8.4.3",
+   "num": 57,
+   "section": "A.4",
+   "text": "Which digital filter type can represent traditional electronic filter designs and give a very sharp transition?",
+   "options": [
+    "FIR",
+    "IIR",
+    "FFT",
+    "DDS"
+   ],
+   "answer": 1,
+   "explanation": "IIR filters can represent any RLC design and give sharp transitions",
+   "page": 111,
+   "figure": null
+  },
+  {
+   "id": "c08q58",
+   "chapter": 8,
+   "topic": "8.4.3",
+   "num": 58,
+   "section": "A.4",
+   "text": "Why are analogue band-pass filters still needed in front of an SDR receiver?",
+   "options": [
+    "The law requires them",
+    "Digital filters cannot filter audio",
+    "Analogue filters are always sharper",
+    "Digital filters cannot handle strong out-of-band signals before the ADC"
+   ],
+   "answer": 3,
+   "explanation": "Strong nearby signals must be filtered before they reach the ADC",
+   "page": 111,
+   "figure": null
+  },
+  {
+   "id": "c08q59",
+   "chapter": 8,
+   "topic": "8.4.4",
+   "num": 59,
+   "section": "A.4",
+   "text": "A circuit with a high Q factor has:",
+   "options": [
+    "A wide bandwidth",
+    "No resonance",
+    "A narrow bandwidth",
+    "High losses"
+   ],
+   "answer": 2,
+   "explanation": "High Q = narrow bandwidth; low Q = wide bandwidth",
+   "page": 112,
+   "figure": null
+  },
+  {
+   "id": "c08q60",
+   "chapter": 8,
+   "topic": "8.4.4",
+   "num": 60,
+   "section": "A.4",
+   "text": "A filter resonates at 7 MHz and has a half-power bandwidth of 70 kHz. Its Q is:",
+   "options": [
+    "10",
+    "100",
+    "490",
+    "1000"
+   ],
+   "answer": 1,
+   "explanation": "Q = fres / B = 7 000 000 / 70 000 = 100",
+   "page": 112,
+   "figure": null
+  },
+  {
+   "id": "c08q61",
+   "chapter": 8,
+   "topic": "8.4.4",
+   "num": 61,
+   "section": "A.4",
+   "text": "The unit of Q factor is:",
+   "options": [
+    "It has no unit; it is a ratio",
+    "Hertz",
+    "Decibel",
+    "Ohm"
+   ],
+   "answer": 0,
+   "explanation": "Q is a ratio and has no unit",
+   "page": 112,
+   "figure": null
+  },
+  {
+   "id": "c08q62",
+   "chapter": 8,
+   "topic": "8.4.4",
+   "num": 62,
+   "section": "A.4",
+   "text": "What is the Q factor of the resonant circuit whose response is shown?",
+   "options": [
+    "7",
+    "70",
+    "1000",
+    "100"
+   ],
+   "answer": 3,
+   "explanation": "Q = resonant frequency / bandwidth = 7000 kHz / 70 kHz = 100",
+   "page": 112,
+   "figure": "figures/ch08_bandpass.svg"
+  },
+  {
+   "id": "c08q63",
+   "chapter": 8,
+   "topic": "8.5",
+   "num": 63,
+   "section": "A.4",
+   "text": "A quartz crystal that deforms when a voltage is applied, and generates a voltage when squeezed, shows:",
+   "options": [
+    "The Hall effect",
+    "The Doppler effect",
+    "The skin effect",
+    "The piezo-electric effect"
+   ],
+   "answer": 3,
+   "explanation": "This is the piezo-electric effect",
+   "page": 113,
+   "figure": null
+  },
+  {
+   "id": "c08q64",
+   "chapter": 8,
+   "topic": "8.5",
+   "num": 64,
+   "section": "A.4",
+   "text": "Crystal overtones are:",
+   "options": [
+    "Even harmonics of the fundamental",
+    "Frequencies below the fundamental",
+    "Odd harmonics (3rd, 5th, …) of the fundamental",
+    "Random frequencies"
+   ],
+   "answer": 2,
+   "explanation": "Crystals can resonate on overtones, the odd harmonics",
+   "page": 113,
+   "figure": null
+  },
+  {
+   "id": "c08q65",
+   "chapter": 8,
+   "topic": "8.5",
+   "num": 65,
+   "section": "A.4",
+   "text": "Quartz crystals are widely used because they:",
+   "options": [
+    "Resonate only at a very exact frequency, making accurate filters and stable oscillators",
+    "Have a very low Q",
+    "Pass DC",
+    "Amplify signals"
+   ],
+   "answer": 0,
+   "explanation": "Their very exact resonance makes accurate filters and stable oscillators",
+   "page": 113,
+   "figure": null
+  },
+  {
+   "id": "c08q66",
+   "chapter": 8,
+   "topic": "8.6",
+   "num": 66,
+   "section": "A.4",
+   "text": "An electronic oscillator generates:",
+   "options": [
+    "DC from AC",
+    "AC at a desired frequency from a DC supply",
+    "Power from heat",
+    "Square waves only"
+   ],
+   "answer": 1,
+   "explanation": "Oscillators generate AC at the desired frequency from DC",
+   "page": 113,
+   "figure": null
+  },
+  {
+   "id": "c08q67",
+   "chapter": 8,
+   "topic": "8.6",
+   "num": 67,
+   "section": "A.4",
+   "text": "Which oscillator is used to make received CW signals audible?",
+   "options": [
+    "Master oscillator",
+    "Numerically controlled oscillator",
+    "Variable frequency oscillator (VFO)",
+    "Beat frequency oscillator (BFO)"
+   ],
+   "answer": 3,
+   "explanation": "The BFO is mixed with the IF to produce an audible CW tone",
+   "page": 115,
+   "figure": null
+  },
+  {
+   "id": "c08q68",
+   "chapter": 8,
+   "topic": "8.6",
+   "num": 68,
+   "section": "A.4",
+   "text": "In an SSB receiver, the suppressed carrier is restored by the:",
+   "options": [
+    "Crystal filter",
+    "Master oscillator",
+    "Carrier insertion oscillator (CIO)",
+    "AGC"
+   ],
+   "answer": 2,
+   "explanation": "The CIO restores the carrier suppressed by the SSB transmitter",
+   "page": 115,
+   "figure": null
+  },
+  {
+   "id": "c08q69",
+   "chapter": 8,
+   "topic": "8.6",
+   "num": 69,
+   "section": "A.4",
+   "text": "A practical oscillator can be made from an amplifier and:",
+   "options": [
+    "A resonant circuit providing positive feedback",
+    "A resistor providing negative feedback",
+    "A rectifier",
+    "A fuse"
+   ],
+   "answer": 0,
+   "explanation": "An amplifier with positive feedback through a resonant circuit (LC or crystal)",
+   "page": 115,
+   "figure": null
+  },
+  {
+   "id": "c08q70",
+   "chapter": 8,
+   "topic": "8.6",
+   "num": 70,
+   "section": "A.4",
+   "text": "The oscillator in a receiver that is mixed with the incoming signal to change its frequency is the:",
+   "options": [
+    "Beat frequency oscillator",
+    "Local oscillator (LO)",
+    "Carrier oscillator",
+    "Master oscillator"
+   ],
+   "answer": 1,
+   "explanation": "The local oscillator is mixed with the incoming signal",
+   "page": 114,
+   "figure": null
+  },
+  {
+   "id": "c09q01",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 1,
+   "section": "A.3",
+   "text": "The decibel (dB) expresses:",
+   "options": [
+    "A ratio between two quantities",
+    "An absolute power in watts",
+    "A voltage",
+    "A frequency"
+   ],
+   "answer": 0,
+   "explanation": "A decibel is a relative unit for expressing ratios",
+   "page": 116,
+   "figure": null
+  },
+  {
+   "id": "c09q02",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 2,
+   "section": "A.3",
+   "text": "An amplifier makes its output signal ten times as strong as its input. Its gain is:",
+   "options": [
+    "1 dB",
+    "3 dB",
+    "10 dB",
+    "100 dB"
+   ],
+   "answer": 2,
+   "explanation": "A power ratio of 10 is 10 dB",
+   "page": 116,
+   "figure": null
+  },
+  {
+   "id": "c09q03",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 3,
+   "section": "A.3",
+   "text": "Why are decibels so convenient for working out the power through a transmitter, feeder and antenna?",
+   "options": [
+    "They do not depend on power",
+    "They are always whole numbers",
+    "They are measured in watts",
+    "They can be added instead of multiplying the ratios"
+   ],
+   "answer": 3,
+   "explanation": "Because the scale is logarithmic, gains and losses in dB simply add",
+   "page": 116,
+   "figure": null
+  },
+  {
+   "id": "c09q04",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 4,
+   "section": "A.3",
+   "text": "A power gain of 3 dB is approximately a power ratio of:",
+   "options": [
+    "1.5",
+    "2",
+    "3",
+    "30"
+   ],
+   "answer": 1,
+   "explanation": "3 dB ≈ ×2",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q05",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 5,
+   "section": "A.3",
+   "text": "A power gain of 6 dB is approximately a power ratio of:",
+   "options": [
+    "2",
+    "4",
+    "6",
+    "60"
+   ],
+   "answer": 1,
+   "explanation": "6 dB = 3 dB + 3 dB ≈ ×4",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q06",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 6,
+   "section": "A.3",
+   "text": "A power gain of 9 dB is approximately a power ratio of:",
+   "options": [
+    "90",
+    "9",
+    "8",
+    "3"
+   ],
+   "answer": 2,
+   "explanation": "9 dB = 3 + 3 + 3 dB ≈ ×8",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q07",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 7,
+   "section": "A.3",
+   "text": "A power ratio of 1000 is:",
+   "options": [
+    "10 dB",
+    "20 dB",
+    "30 dB",
+    "1000 dB"
+   ],
+   "answer": 2,
+   "explanation": "30 dB = ×1000",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q08",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 8,
+   "section": "A.3",
+   "text": "A loss of 3 dB means the power is:",
+   "options": [
+    "Doubled",
+    "Reduced to a tenth",
+    "Reduced to a quarter",
+    "Halved"
+   ],
+   "answer": 3,
+   "explanation": "−3 dB ≈ half the power",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q09",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 9,
+   "section": "A.3",
+   "text": "A loss of 10 dB means the power falls to:",
+   "options": [
+    "One tenth",
+    "A quarter",
+    "Half",
+    "One hundredth"
+   ],
+   "answer": 0,
+   "explanation": "−10 dB = one tenth",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q10",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 10,
+   "section": "A.3",
+   "text": "A loss of 6 dB means the power falls to about:",
+   "options": [
+    "Half",
+    "One tenth",
+    "One sixth",
+    "A quarter"
+   ],
+   "answer": 3,
+   "explanation": "−6 dB ≈ a quarter",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q11",
+   "chapter": 9,
+   "topic": "9.1",
+   "num": 11,
+   "section": "A.3",
+   "text": "0 dB corresponds to a power ratio of:",
+   "options": [
+    "0",
+    "1",
+    "10",
+    "100"
+   ],
+   "answer": 1,
+   "explanation": "0 dB means no change: a ratio of one",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q12",
+   "chapter": 9,
+   "topic": "9.2.1",
+   "num": 12,
+   "section": "A.3",
+   "text": "An amplifier outputs 1000 W when driven with 10 W. Its power gain is:",
+   "options": [
+    "10 dB",
+    "20 dB",
+    "30 dB",
+    "100 dB"
+   ],
+   "answer": 1,
+   "explanation": "1000/10 = 100 = 20 dB",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q13",
+   "chapter": 9,
+   "topic": "9.2.1",
+   "num": 13,
+   "section": "A.3",
+   "text": "An amplifier outputs 400 W with 25 W of drive. Its gain is about:",
+   "options": [
+    "24 dB",
+    "16 dB",
+    "12 dB",
+    "6 dB"
+   ],
+   "answer": 2,
+   "explanation": "400/25 = 16 = 4 × 4, and each ×4 is 6 dB, so 6 + 6 = 12 dB",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q14",
+   "chapter": 9,
+   "topic": "9.2.1",
+   "num": 14,
+   "section": "A.3",
+   "text": "What is the gain of the amplifier shown?",
+   "options": [
+    "6 dB",
+    "16 dB",
+    "12 dB",
+    "24 dB"
+   ],
+   "answer": 2,
+   "explanation": "400/25 = 16 = 4 × 4; each ×4 is 6 dB, so 12 dB",
+   "page": 117,
+   "figure": "figures/ch09_amp.svg"
+  },
+  {
+   "id": "c09q15",
+   "chapter": 9,
+   "topic": "9.2.2",
+   "num": 15,
+   "section": "A.3",
+   "text": "An amplifier has 10 V at its input and 1000 V at its output (same impedance). The power gain is:",
+   "options": [
+    "20 dB",
+    "30 dB",
+    "40 dB",
+    "100 dB"
+   ],
+   "answer": 2,
+   "explanation": "Voltage ratio 100 = 20 dB, multiplied by two = 40 dB",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q16",
+   "chapter": 9,
+   "topic": "9.2.2",
+   "num": 16,
+   "section": "A.3",
+   "text": "When a power ratio is calculated from a voltage or current ratio, the dB value from the table must be:",
+   "options": [
+    "Multiplied by two",
+    "Halved",
+    "Squared",
+    "Left as it is"
+   ],
+   "answer": 0,
+   "explanation": "Power goes with the square of voltage, so the dB figure is doubled",
+   "page": 117,
+   "figure": null
+  },
+  {
+   "id": "c09q17",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 17,
+   "section": "A.3",
+   "text": "The unit dBW means decibels relative to:",
+   "options": [
+    "1 mW",
+    "1 W",
+    "1 kW",
+    "1 V"
+   ],
+   "answer": 1,
+   "explanation": "dBW is dB relative to 1 W",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q18",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 18,
+   "section": "A.3",
+   "text": "0 dBW is:",
+   "options": [
+    "0 W",
+    "1 W",
+    "10 W",
+    "100 W"
+   ],
+   "answer": 1,
+   "explanation": "0 dB = ratio of 1; 1 × 1 W = 1 W",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q19",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 19,
+   "section": "A.3",
+   "text": "20 dBW is:",
+   "options": [
+    "1000 W",
+    "200 W",
+    "100 W",
+    "20 W"
+   ],
+   "answer": 2,
+   "explanation": "20 dB = ×100, so 100 W",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q20",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 20,
+   "section": "A.3",
+   "text": "26 dBW is about:",
+   "options": [
+    "26 W",
+    "100 W",
+    "400 W",
+    "1000 W"
+   ],
+   "answer": 2,
+   "explanation": "26 dBW = 20 dBW + 6 dB = 100 W × 4 = 400 W",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q21",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 21,
+   "section": "A.3",
+   "text": "30 dBW is:",
+   "options": [
+    "1 kW",
+    "100 W",
+    "30 W",
+    "1.5 kW"
+   ],
+   "answer": 0,
+   "explanation": "30 dB = ×1000, so 1 kW",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q22",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 22,
+   "section": "A.3",
+   "text": "17 dBW is about:",
+   "options": [
+    "170 W",
+    "50 W",
+    "25 W",
+    "17 W"
+   ],
+   "answer": 1,
+   "explanation": "17 dBW = 20 − 3 dB = 100 W / 2 = 50 W",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q23",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 23,
+   "section": "A.3",
+   "text": "32 dBW is about:",
+   "options": [
+    "320 W",
+    "1 kW",
+    "3.2 kW",
+    "1.5 kW"
+   ],
+   "answer": 3,
+   "explanation": "32 dBW ≈ 1.5 kW (Table 9-B)",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q24",
+   "chapter": 9,
+   "topic": "9.3",
+   "num": 24,
+   "section": "A.3",
+   "text": "A power of 10 mW expressed in dBm is:",
+   "options": [
+    "1 dBm",
+    "−10 dBm",
+    "20 dBm",
+    "10 dBm"
+   ],
+   "answer": 3,
+   "explanation": "dBm is relative to 1 mW: 10 mW = 10 dBm",
+   "page": 118,
+   "figure": null
+  },
+  {
+   "id": "c09q25",
+   "chapter": 9,
+   "topic": "9.4",
+   "num": 25,
+   "section": "A.3",
+   "text": "A 100 W transmitter feeds a cable with 1 dB loss and an antenna with 7 dBi gain. The EIRP is:",
+   "options": [
+    "26 dBW (400 W)",
+    "20 dBW (100 W)",
+    "28 dBW (630 W)",
+    "27 dBW (500 W)"
+   ],
+   "answer": 0,
+   "explanation": "20 dBW − 1 dB + 7 dBi = 26 dBW = 400 W",
+   "page": 119,
+   "figure": null
+  },
+  {
+   "id": "c09q26",
+   "chapter": 9,
+   "topic": "9.4",
+   "num": 26,
+   "section": "A.3",
+   "text": "To find the effective power at the end of a chain of devices, you:",
+   "options": [
+    "Add the transmitter power in dBW and all the dB gains and losses",
+    "Multiply all the dB values",
+    "Take the largest dB value",
+    "Divide by the number of devices"
+   ],
+   "answer": 0,
+   "explanation": "Add the dBW output and all the dB gains (and subtract the losses)",
+   "page": 119,
+   "figure": null
+  },
+  {
+   "id": "c09q27",
+   "chapter": 9,
+   "topic": "9.4",
+   "num": 27,
+   "section": "A.3",
+   "text": "What is the EIRP of the station shown?",
+   "options": [
+    "26 dBW (400 W)",
+    "28 dBW",
+    "20 dBW (100 W)",
+    "13 dBW"
+   ],
+   "answer": 0,
+   "explanation": "100 W = 20 dBW; 20 − 1 + 7 = 26 dBW = 400 W",
+   "page": 119,
+   "figure": "figures/ch09_chain.svg"
+  },
+  {
+   "id": "c10q01",
+   "chapter": 10,
+   "topic": "10.1",
+   "num": 1,
+   "section": "A.4",
+   "text": "A diode is made by joining:",
+   "options": [
+    "Two n-type materials",
+    "An n-type and a p-type semiconductor, forming one junction",
+    "Two metal plates with a dielectric",
+    "A coil and a capacitor"
+   ],
+   "answer": 1,
+   "explanation": "A diode has a single semiconducting p-n junction",
+   "page": 120,
+   "figure": null
+  },
+  {
+   "id": "c10q02",
+   "chapter": 10,
+   "topic": "10.1",
+   "num": 2,
+   "section": "A.4",
+   "text": "A diode conducts current:",
+   "options": [
+    "In one direction only, shown by the arrowhead of its symbol",
+    "Equally in both directions",
+    "Only at radio frequencies",
+    "Only when light falls on it"
+   ],
+   "answer": 0,
+   "explanation": "The arrowhead shows the conventional current direction in which it conducts",
+   "page": 120,
+   "figure": null
+  },
+  {
+   "id": "c10q03",
+   "chapter": 10,
+   "topic": "10.1",
+   "num": 3,
+   "section": "A.4",
+   "text": "Which type of diode is used to set and stabilise the output voltage of a power supply?",
+   "options": [
+    "LED",
+    "Photodiode",
+    "Rectifying diode",
+    "Zener diode"
+   ],
+   "answer": 3,
+   "explanation": "Zener diodes set and stabilise voltages",
+   "page": 121,
+   "figure": null
+  },
+  {
+   "id": "c10q04",
+   "chapter": 10,
+   "topic": "10.1",
+   "num": 4,
+   "section": "A.4",
+   "text": "Rectifying (power) diodes are used to:",
+   "options": [
+    "Detect light",
+    "Emit light",
+    "Convert AC into DC",
+    "Store charge"
+   ],
+   "answer": 2,
+   "explanation": "Rectifying diodes convert (rectify) AC into DC",
+   "page": 120,
+   "figure": null
+  },
+  {
+   "id": "c10q05",
+   "chapter": 10,
+   "topic": "10.1",
+   "num": 5,
+   "section": "A.4",
+   "text": "In the diode symbol shown, conventional current flows easily:",
+   "options": [
+    "From Y to X",
+    "From X to Y",
+    "In both directions",
+    "In neither direction"
+   ],
+   "answer": 1,
+   "explanation": "The arrow (triangle) points in the direction of conventional current: from anode X to cathode Y",
+   "page": 120,
+   "figure": "figures/ch10_diode.svg"
+  },
+  {
+   "id": "c10q06",
+   "chapter": 10,
+   "topic": "10.1.1",
+   "num": 6,
+   "section": "A.4",
+   "text": "The forward (bias) voltage of a silicon diode is about:",
+   "options": [
+    "0.1–0.2 V",
+    "0.6–0.7 V",
+    "1.5–2 V",
+    "12 V"
+   ],
+   "answer": 1,
+   "explanation": "A silicon diode needs about 0.6–0.7 V before it conducts",
+   "page": 121,
+   "figure": null
+  },
+  {
+   "id": "c10q07",
+   "chapter": 10,
+   "topic": "10.1.2",
+   "num": 7,
+   "section": "A.4",
+   "text": "If the peak inverse voltage (PIV) of a diode is exceeded:",
+   "options": [
+    "It breaks down and lets current flow backwards, usually damaging it",
+    "It conducts better in the forward direction",
+    "Its forward voltage doubles",
+    "Nothing happens"
+   ],
+   "answer": 0,
+   "explanation": "Exceeding PIV breaks the diode down, usually damaging it",
+   "page": 121,
+   "figure": null
+  },
+  {
+   "id": "c10q08",
+   "chapter": 10,
+   "topic": "10.1.3",
+   "num": 8,
+   "section": "A.4",
+   "text": "The small current that flows through a diode in the reverse direction is called:",
+   "options": [
+    "Bias current",
+    "Forward current",
+    "Leakage current",
+    "Eddy current"
+   ],
+   "answer": 2,
+   "explanation": "A diode is not a perfect insulator in reverse: a small leakage current flows",
+   "page": 121,
+   "figure": null
+  },
+  {
+   "id": "c10q09",
+   "chapter": 10,
+   "topic": "10.1.4",
+   "num": 9,
+   "section": "A.4",
+   "text": "When choosing a diode for a circuit, which limit must be considered along with PIV?",
+   "options": [
+    "Its colour code",
+    "Its turns ratio",
+    "Its Q factor",
+    "Its maximum power rating"
+   ],
+   "answer": 3,
+   "explanation": "Like resistors and transistors, diodes have a maximum power rating",
+   "page": 121,
+   "figure": null
+  },
+  {
+   "id": "c10q10",
+   "chapter": 10,
+   "topic": "10.2",
+   "num": 10,
+   "section": "A.4",
+   "text": "The three terminals of a bipolar junction transistor (BJT) are the:",
+   "options": [
+    "Anode, cathode and grid",
+    "Gate, source and drain",
+    "Base, collector and emitter",
+    "Primary, secondary and core"
+   ],
+   "answer": 2,
+   "explanation": "A BJT has a base, a collector and an emitter",
+   "page": 122,
+   "figure": null
+  },
+  {
+   "id": "c10q11",
+   "chapter": 10,
+   "topic": "10.2",
+   "num": 11,
+   "section": "A.4",
+   "text": "How many semiconducting junctions does a bipolar transistor have?",
+   "options": [
+    "Two",
+    "One",
+    "Three",
+    "None"
+   ],
+   "answer": 0,
+   "explanation": "A diode has one junction; a bipolar transistor has two",
+   "page": 122,
+   "figure": null
+  },
+  {
+   "id": "c10q12",
+   "chapter": 10,
+   "topic": "10.2",
+   "num": 12,
+   "section": "A.4",
+   "text": "Depending on how the n-type and p-type materials are arranged, a BJT is either:",
+   "options": [
+    "N-channel or P-channel",
+    "NPN or PNP",
+    "Triode or pentode",
+    "Class A or class B"
+   ],
+   "answer": 1,
+   "explanation": "A bipolar transistor is either NPN or PNP",
+   "page": 122,
+   "figure": null
+  },
+  {
+   "id": "c10q13",
+   "chapter": 10,
+   "topic": "10.2",
+   "num": 13,
+   "section": "A.4",
+   "text": "In the transistor symbol shown, terminal Z (with the arrow) is the:",
+   "options": [
+    "Emitter",
+    "Base",
+    "Collector",
+    "Gate"
+   ],
+   "answer": 0,
+   "explanation": "The arrow marks the emitter; X is the base and Y the collector",
+   "page": 122,
+   "figure": "figures/ch10_npn.svg"
+  },
+  {
+   "id": "c10q14",
+   "chapter": 10,
+   "topic": "10.2.1",
+   "num": 14,
+   "section": "A.4",
+   "text": "To turn on a silicon BJT, the voltage applied between the base and emitter is about:",
+   "options": [
+    "0.1 V",
+    "0.6–0.7 V",
+    "5 V",
+    "12 V"
+   ],
+   "answer": 1,
+   "explanation": "About 0.6–0.7 V between base and emitter turns a silicon transistor on",
+   "page": 122,
+   "figure": null
+  },
+  {
+   "id": "c10q15",
+   "chapter": 10,
+   "topic": "10.2.1",
+   "num": 15,
+   "section": "A.4",
+   "text": "In a BJT, the emitter current IE is equal to:",
+   "options": [
+    "IC − IB",
+    "IC / IB",
+    "IC × IB",
+    "IC + IB"
+   ],
+   "answer": 3,
+   "explanation": "IE = IC + IB",
+   "page": 123,
+   "figure": null
+  },
+  {
+   "id": "c10q16",
+   "chapter": 10,
+   "topic": "10.2.2",
+   "num": 16,
+   "section": "A.4",
+   "text": "The amplification factor (β) of a BJT is the ratio of:",
+   "options": [
+    "Collector current to base current",
+    "Base current to collector current",
+    "Output voltage to input voltage",
+    "Emitter voltage to base voltage"
+   ],
+   "answer": 0,
+   "explanation": "β = IC / IB, which can be many hundreds",
+   "page": 123,
+   "figure": null
+  },
+  {
+   "id": "c10q17",
+   "chapter": 10,
+   "topic": "10.2.2",
+   "num": 17,
+   "section": "A.4",
+   "text": "Apart from amplifying, a BJT can also be used as:",
+   "options": [
+    "A rectifier for mains",
+    "A crystal",
+    "A capacitor",
+    "An on-off switch controlled by its base current"
+   ],
+   "answer": 3,
+   "explanation": "A BJT can be an on-off switch controlled by its base",
+   "page": 123,
+   "figure": null
+  },
+  {
+   "id": "c10q18",
+   "chapter": 10,
+   "topic": "10.2.3",
+   "num": 18,
+   "section": "A.4",
+   "text": "What is the main difference between a BJT and a FET?",
+   "options": [
+    "A FET has no terminals",
+    "A BJT is controlled by voltage, a FET by current",
+    "A BJT is controlled by current, a FET by voltage",
+    "A BJT only works at RF"
+   ],
+   "answer": 2,
+   "explanation": "BJT: base current controls collector current. FET: small voltage changes control larger currents",
+   "page": 123,
+   "figure": null
+  },
+  {
+   "id": "c10q19",
+   "chapter": 10,
+   "topic": "10.3",
+   "num": 19,
+   "section": "A.4",
+   "text": "In a triode valve, which electrode emits electrons when heated?",
+   "options": [
+    "Cathode",
+    "Anode",
+    "Grid",
+    "Filament screen"
+   ],
+   "answer": 0,
+   "explanation": "The hot cathode emits electrons: thermionic emission",
+   "page": 125,
+   "figure": null
+  },
+  {
+   "id": "c10q20",
+   "chapter": 10,
+   "topic": "10.3",
+   "num": 20,
+   "section": "A.4",
+   "text": "In a triode, the current between cathode and anode is controlled by the voltage on the:",
+   "options": [
+    "Heater",
+    "Control grid",
+    "Glass envelope",
+    "Plate cap"
+   ],
+   "answer": 1,
+   "explanation": "A small varying grid voltage controls a large cathode-anode current",
+   "page": 125,
+   "figure": null
+  },
+  {
+   "id": "c10q21",
+   "chapter": 10,
+   "topic": "10.3",
+   "num": 21,
+   "section": "A.4",
+   "text": "One advantage of valves over transistors in RF power amplifiers is that valves:",
+   "options": [
+    "Last forever",
+    "Need no high voltage",
+    "Are less affected by a mismatched load and can give high power inexpensively",
+    "Are smaller"
+   ],
+   "answer": 2,
+   "explanation": "Valves tolerate mismatched loads better and give high power relatively cheaply",
+   "page": 125,
+   "figure": null
+  },
+  {
+   "id": "c10q22",
+   "chapter": 10,
+   "topic": "10.3",
+   "num": 22,
+   "section": "A.4",
+   "text": "Before working inside switched-off valve equipment you must:",
+   "options": [
+    "Increase the bias voltage",
+    "Earth the antenna only",
+    "Remove the valves while hot",
+    "Fully discharge its capacitors, which may hold high voltage for a long time"
+   ],
+   "answer": 3,
+   "explanation": "Capacitors may hold lethal voltage for months or years",
+   "page": 126,
+   "figure": null
+  },
+  {
+   "id": "c10q23",
+   "chapter": 10,
+   "topic": "10.4",
+   "num": 23,
+   "section": "A.4",
+   "text": "Which of these is a digital integrated circuit?",
+   "options": [
+    "A microprocessor",
+    "An audio amplifier IC",
+    "A voltage regulator IC",
+    "A mixer IC"
+   ],
+   "answer": 0,
+   "explanation": "Logic gates, microprocessors, DSPs, ADCs and DACs are digital ICs",
+   "page": 126,
+   "figure": null
+  },
+  {
+   "id": "c10q24",
+   "chapter": 10,
+   "topic": "10.4",
+   "num": 24,
+   "section": "A.4",
+   "text": "Analogue integrated circuits, such as amplifiers and voltage regulators, are also called:",
+   "options": [
+    "Logic ICs",
+    "FPGAs",
+    "Linear ICs",
+    "Chips"
+   ],
+   "answer": 2,
+   "explanation": "Traditional analogue ICs are sometimes referred to as linear ICs",
+   "page": 126,
+   "figure": null
+  },
+  {
+   "id": "c10q25",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 25,
+   "section": "A.4",
+   "text": "A transformer has 100 turns on the primary and 20 turns on the secondary. With 200 V AC on the primary, the secondary voltage is:",
+   "options": [
+    "10 V",
+    "40 V",
+    "1000 V",
+    "4000 V"
+   ],
+   "answer": 1,
+   "explanation": "Voltage ratio = turns ratio: 200 × 20/100 = 40 V (a step-down transformer)",
+   "page": 127,
+   "figure": null
+  },
+  {
+   "id": "c10q26",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 26,
+   "section": "A.4",
+   "text": "Why does a transformer not work with steady DC?",
+   "options": [
+    "DC has too high a voltage",
+    "It does, equally well",
+    "DC damages the core",
+    "A non-varying DC does not create the changing magnetic field needed"
+   ],
+   "answer": 3,
+   "explanation": "Only a changing current induces an emf in the secondary",
+   "page": 127,
+   "figure": null
+  },
+  {
+   "id": "c10q27",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 27,
+   "section": "A.4",
+   "text": "A transformer whose primary and secondary have the same number of turns, used for safety, is called:",
+   "options": [
+    "A step-up transformer",
+    "A balun",
+    "An autotransformer",
+    "An isolation transformer"
+   ],
+   "answer": 3,
+   "explanation": "It passes AC without a physical connection, isolating the mains neutral",
+   "page": 128,
+   "figure": null
+  },
+  {
+   "id": "c10q28",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 28,
+   "section": "A.4",
+   "text": "When a transformer steps the voltage up, the current in the secondary:",
+   "options": [
+    "Decreases in proportion",
+    "Increases in proportion",
+    "Stays the same",
+    "Becomes DC"
+   ],
+   "answer": 0,
+   "explanation": "Nothing is gained: the current falls as the voltage rises",
+   "page": 128,
+   "figure": null
+  },
+  {
+   "id": "c10q29",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 29,
+   "section": "A.4",
+   "text": "A transformer has a 10:1 turns ratio. The primary circuit has an impedance of 5 kΩ. The impedance on the secondary is:",
+   "options": [
+    "500 Ω",
+    "50 Ω",
+    "5 Ω",
+    "50 kΩ"
+   ],
+   "answer": 1,
+   "explanation": "The impedance ratio is the square of the turns ratio: 5000/100 = 50 Ω",
+   "page": 128,
+   "figure": null
+  },
+  {
+   "id": "c10q30",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 30,
+   "section": "A.4",
+   "text": "Typically, how much of the applied power is lost in a real transformer?",
+   "options": [
+    "About 90%",
+    "About 50%",
+    "About 5%",
+    "None"
+   ],
+   "answer": 2,
+   "explanation": "About 5% is lost, mostly as heat",
+   "page": 129,
+   "figure": null
+  },
+  {
+   "id": "c10q31",
+   "chapter": 10,
+   "topic": "10.5",
+   "num": 31,
+   "section": "A.4",
+   "text": "What voltage appears across the secondary of the transformer shown?",
+   "options": [
+    "1000 V AC",
+    "200 V AC",
+    "20 V AC",
+    "40 V AC"
+   ],
+   "answer": 3,
+   "explanation": "The voltage follows the turns ratio: 200 V × 20/100 = 40 V",
+   "page": 127,
+   "figure": "figures/ch10_transformer.svg"
+  },
+  {
+   "id": "c10q32",
+   "chapter": 10,
+   "topic": "10.6",
+   "num": 32,
+   "section": "A.4",
+   "text": "What are the three main stages of a power supply converting 230 V AC to 13.5 V DC?",
+   "options": [
+    "Oscillator, mixer, filter",
+    "Transformer (or switched mode), rectifier, voltage regulator",
+    "Amplifier, detector, speaker",
+    "Fuse, RCD, earth"
+   ],
+   "answer": 1,
+   "explanation": "Reduce the voltage, rectify it to DC, then regulate it",
+   "page": 129,
+   "figure": null
+  },
+  {
+   "id": "c10q33",
+   "chapter": 10,
+   "topic": "10.6",
+   "num": 33,
+   "section": "A.4",
+   "text": "Why are linear power supplies for high currents heavy and bulky?",
+   "options": [
+    "Because of their fans only",
+    "Because of their batteries",
+    "Because of the size and weight of the 50 Hz transformer",
+    "Because they use valves"
+   ],
+   "answer": 2,
+   "explanation": "High-current 50 Hz transformers are large and heavy",
+   "page": 130,
+   "figure": null
+  },
+  {
+   "id": "c10q34",
+   "chapter": 10,
+   "topic": "10.6",
+   "num": 34,
+   "section": "A.4",
+   "text": "In the power supply shown, block X is the:",
+   "options": [
+    "Oscillator",
+    "Rectifier",
+    "Mixer",
+    "Amplifier"
+   ],
+   "answer": 1,
+   "explanation": "After the transformer, a rectifier converts AC to DC before smoothing and regulation",
+   "page": 129,
+   "figure": "figures/ch10_psu.svg"
+  },
+  {
+   "id": "c10q35",
+   "chapter": 10,
+   "topic": "10.6.2",
+   "num": 35,
+   "section": "A.4",
+   "text": "How does a switched mode power supply manage to use a much smaller transformer?",
+   "options": [
+    "It uses a valve",
+    "It uses no rectifier",
+    "It runs at a lower voltage",
+    "It runs the transformer at a much higher frequency"
+   ],
+   "answer": 3,
+   "explanation": "It drives an oscillator at up to 200 kHz; higher frequencies need smaller transformers",
+   "page": 130,
+   "figure": null
+  },
+  {
+   "id": "c10q36",
+   "chapter": 10,
+   "topic": "10.6.2",
+   "num": 36,
+   "section": "A.4",
+   "text": "A common problem with switched mode power supplies in a radio station is:",
+   "options": [
+    "They can generate RF noise (EMC problems)",
+    "They are too heavy",
+    "They only supply AC",
+    "They cannot supply 13.8 V"
+   ],
+   "answer": 0,
+   "explanation": "Their oscillator harmonics can generate RF noise if not filtered and shielded",
+   "page": 130,
+   "figure": null
+  },
+  {
+   "id": "c10q37",
+   "chapter": 10,
+   "topic": "10.6.3",
+   "num": 37,
+   "section": "A.4",
+   "text": "A single diode used as a rectifier gives:",
+   "options": [
+    "Full-wave rectification",
+    "Pure, smooth DC",
+    "Half-wave rectification",
+    "Three-phase AC"
+   ],
+   "answer": 2,
+   "explanation": "One diode conducts only on alternate half-cycles: half-wave rectification",
+   "page": 131,
+   "figure": null
+  },
+  {
+   "id": "c10q38",
+   "chapter": 10,
+   "topic": "10.6.3",
+   "num": 38,
+   "section": "A.4",
+   "text": "A bridge rectifier uses:",
+   "options": [
+    "One diode",
+    "Two diodes",
+    "Four transistors",
+    "Four diodes"
+   ],
+   "answer": 3,
+   "explanation": "Four power diodes form a bridge rectifier giving full-wave output",
+   "page": 132,
+   "figure": null
+  },
+  {
+   "id": "c10q39",
+   "chapter": 10,
+   "topic": "10.6.3",
+   "num": 39,
+   "section": "A.4",
+   "text": "What is the purpose of the smoothing capacitor after a rectifier?",
+   "options": [
+    "To block DC",
+    "To reduce the variations in the output voltage",
+    "To raise the frequency",
+    "To limit the current to zero"
+   ],
+   "answer": 1,
+   "explanation": "It charges and discharges to top up the current, smoothing the voltage",
+   "page": 131,
+   "figure": null
+  },
+  {
+   "id": "c10q40",
+   "chapter": 10,
+   "topic": "10.6.3",
+   "num": 40,
+   "section": "A.4",
+   "text": "The circuit shown, with one diode, gives the output voltage drawn on the right. It is a:",
+   "options": [
+    "Full-wave rectifier",
+    "Bridge rectifier",
+    "Voltage regulator",
+    "Half-wave rectifier"
+   ],
+   "answer": 3,
+   "explanation": "A single diode passes only every other half-cycle: half-wave rectification",
+   "page": 131,
+   "figure": "figures/ch10_halfwave.svg"
+  },
+  {
+   "id": "c10q41",
+   "chapter": 10,
+   "topic": "10.6.3",
+   "num": 41,
+   "section": "A.4",
+   "text": "The arrangement of four diodes shown is a:",
+   "options": [
+    "Bridge rectifier",
+    "Half-wave rectifier",
+    "Voltage doubler",
+    "Zener regulator"
+   ],
+   "answer": 0,
+   "explanation": "Four power diodes in this arrangement make a bridge (full-wave) rectifier",
+   "page": 132,
+   "figure": "figures/ch10_bridge.svg"
+  },
+  {
+   "id": "c10q42",
+   "chapter": 10,
+   "topic": "10.6.4",
+   "num": 42,
+   "section": "A.4",
+   "text": "Voltage regulators (stabilisers) can be built from:",
+   "options": [
+    "Transistors and Zener diodes, or ready-made ICs",
+    "Only valves",
+    "Capacitors only",
+    "Crystals"
+   ],
+   "answer": 0,
+   "explanation": "Regulators combine transistors and Zener diodes; ICs are also available",
+   "page": 133,
+   "figure": null
+  },
+  {
+   "id": "c10q43",
+   "chapter": 10,
+   "topic": "10.7",
+   "num": 43,
+   "section": "A.4",
+   "text": "An amplifier is fed with 10 W and outputs 1000 W. Its power gain is:",
+   "options": [
+    "10, or 10 dB",
+    "1000, or 30 dB",
+    "100, or 20 dB",
+    "990 W"
+   ],
+   "answer": 2,
+   "explanation": "1000/10 = 100 = 20 dB",
+   "page": 134,
+   "figure": null
+  },
+  {
+   "id": "c10q44",
+   "chapter": 10,
+   "topic": "10.7",
+   "num": 44,
+   "section": "A.4",
+   "text": "An amplifier whose gain does not depend on the power of the input signal is said to be:",
+   "options": [
+    "Stable",
+    "Linear",
+    "Efficient",
+    "Broadband"
+   ],
+   "answer": 1,
+   "explanation": "Linearity: a constant gain regardless of input power",
+   "page": 134,
+   "figure": null
+  },
+  {
+   "id": "c10q45",
+   "chapter": 10,
+   "topic": "10.7",
+   "num": 45,
+   "section": "A.4",
+   "text": "Feeding an amplifier with more drive than it needs to reach its rated output is called:",
+   "options": [
+    "Biasing",
+    "Matching",
+    "Neutralising",
+    "Overdriving"
+   ],
+   "answer": 3,
+   "explanation": "Exceeding the maximum drive level is overdriving",
+   "page": 135,
+   "figure": null
+  },
+  {
+   "id": "c10q46",
+   "chapter": 10,
+   "topic": "10.7",
+   "num": 46,
+   "section": "A.4",
+   "text": "An amplifier that maintains the frequency of the input signal without adding its own oscillations is:",
+   "options": [
+    "Stable",
+    "Efficient",
+    "Linear",
+    "Class C"
+   ],
+   "answer": 0,
+   "explanation": "Stability means no unwanted oscillations",
+   "page": 135,
+   "figure": null
+  },
+  {
+   "id": "c10q47",
+   "chapter": 10,
+   "topic": "10.7.2",
+   "num": 47,
+   "section": "A.4",
+   "text": "Which amplifier class conducts for the full input cycle and has the best linearity, but the poorest efficiency?",
+   "options": [
+    "Class C",
+    "Class AB",
+    "Class B",
+    "Class A"
+   ],
+   "answer": 3,
+   "explanation": "Class A: full cycle, best linearity, 25–30% efficient",
+   "page": 136,
+   "figure": null
+  },
+  {
+   "id": "c10q48",
+   "chapter": 10,
+   "topic": "10.7.2",
+   "num": 48,
+   "section": "A.4",
+   "text": "Which amplifier class conducts for less than half of the input cycle?",
+   "options": [
+    "Class C",
+    "Class AB",
+    "Class B",
+    "Class A"
+   ],
+   "answer": 0,
+   "explanation": "Class C conducts for less than half the cycle: most efficient, least linear",
+   "page": 137,
+   "figure": null
+  },
+  {
+   "id": "c10q49",
+   "chapter": 10,
+   "topic": "10.7.2",
+   "num": 49,
+   "section": "A.4",
+   "text": "A class B amplifier conducts for:",
+   "options": [
+    "The full cycle",
+    "Less than half of the cycle",
+    "Half of the cycle",
+    "None of the cycle"
+   ],
+   "answer": 2,
+   "explanation": "Class B conducts for half the cycle",
+   "page": 137,
+   "figure": null
+  },
+  {
+   "id": "c10q50",
+   "chapter": 10,
+   "topic": "10.7.2",
+   "num": 50,
+   "section": "A.4",
+   "text": "The typical efficiency of a class C amplifier is about:",
+   "options": [
+    "25%",
+    "50%",
+    "65%",
+    "80%"
+   ],
+   "answer": 3,
+   "explanation": "Class C: about 80% efficiency, best efficiency, high distortion",
+   "page": 136,
+   "figure": null
+  },
+  {
+   "id": "c10q51",
+   "chapter": 10,
+   "topic": "10.7.2",
+   "num": 51,
+   "section": "A.4",
+   "text": "The class of an amplifier is commonly set by:",
+   "options": [
+    "The supply frequency",
+    "The bias voltage applied to the transistor or valve",
+    "The size of the heat sink",
+    "The type of connector"
+   ],
+   "answer": 1,
+   "explanation": "Biasing sets how much of the cycle the device conducts",
+   "page": 137,
+   "figure": null
+  },
+  {
+   "id": "c10q52",
+   "chapter": 10,
+   "topic": "10.7.4",
+   "num": 52,
+   "section": "A.4",
+   "text": "Overdriving an amplifier:",
+   "options": [
+    "Reduces its distortion",
+    "Greatly increases its non-linearity and distortion",
+    "Improves its efficiency without side effects",
+    "Has no effect if ALC is fitted"
+   ],
+   "answer": 1,
+   "explanation": "Non-linearity dramatically increases when overdriven; ALC cannot fully prevent distortion",
+   "page": 137,
+   "figure": null
+  },
+  {
+   "id": "c10q53",
+   "chapter": 10,
+   "topic": "10.7.4",
+   "num": 53,
+   "section": "A.4",
+   "text": "Unwanted mixing products amplified by a non-linear amplifier are called:",
+   "options": [
+    "Intermodulation distortion (IMD)",
+    "Harmonic distortion",
+    "Key clicks",
+    "Aliasing"
+   ],
+   "answer": 0,
+   "explanation": "IMD amplifies unwanted signal mixing by-products",
+   "page": 137,
+   "figure": null
+  },
+  {
+   "id": "c10q54",
+   "chapter": 10,
+   "topic": "10.7.5",
+   "num": 54,
+   "section": "A.4",
+   "text": "AF amplifiers used in radio for speech only need to cover about:",
+   "options": [
+    "20 Hz–20 kHz",
+    "3–30 MHz",
+    "300 Hz–3 kHz",
+    "50 Hz only"
+   ],
+   "answer": 2,
+   "explanation": "Speech needs about 300 Hz–3 kHz",
+   "page": 138,
+   "figure": null
+  },
+  {
+   "id": "c10q55",
+   "chapter": 10,
+   "topic": "10.7.5",
+   "num": 55,
+   "section": "A.4",
+   "text": "Which amplifier classes are usually used for AF because speech needs very low distortion?",
+   "options": [
+    "C only",
+    "B or C",
+    "A or AB",
+    "D or E"
+   ],
+   "answer": 2,
+   "explanation": "Class A or AB is used for low distortion audio",
+   "page": 138,
+   "figure": null
+  },
+  {
+   "id": "c10q56",
+   "chapter": 10,
+   "topic": "10.7.6",
+   "num": 56,
+   "section": "A.4",
+   "text": "Which signals can be amplified by a class C RF amplifier?",
+   "options": [
+    "SSB voice",
+    "Any signal without distortion",
+    "AM broadcast quality audio",
+    "FM and CW"
+   ],
+   "answer": 3,
+   "explanation": "Class C is fine for FM and many digital signals such as CW",
+   "page": 139,
+   "figure": null
+  },
+  {
+   "id": "c10q57",
+   "chapter": 10,
+   "topic": "10.7.6",
+   "num": 57,
+   "section": "A.4",
+   "text": "The most common RF power amplifier classes are:",
+   "options": [
+    "A and C",
+    "AB and B",
+    "D and E",
+    "A only"
+   ],
+   "answer": 1,
+   "explanation": "Common RF power amplifier classes are AB and B",
+   "page": 139,
+   "figure": null
+  },
+  {
+   "id": "c11q01",
+   "chapter": 11,
+   "topic": "11.1",
+   "num": 1,
+   "section": "A.3",
+   "text": "In modulation, the information being impressed on the carrier is called the:",
+   "options": [
+    "Modulating signal",
+    "Modulated signal",
+    "Sideband",
+    "Subcarrier"
+   ],
+   "answer": 0,
+   "explanation": "The information is the modulating signal; the result is the modulated signal",
+   "page": 140,
+   "figure": null
+  },
+  {
+   "id": "c11q02",
+   "chapter": 11,
+   "topic": "11.1",
+   "num": 2,
+   "section": "A.3",
+   "text": "Most or all of the useful information in a modulated signal is carried in the:",
+   "options": [
+    "Carrier",
+    "Sidebands",
+    "Harmonics",
+    "DC component"
+   ],
+   "answer": 1,
+   "explanation": "The sidebands carry the information; the AM carrier carries none",
+   "page": 140,
+   "figure": null
+  },
+  {
+   "id": "c11q03",
+   "chapter": 11,
+   "topic": "11.1",
+   "num": 3,
+   "section": "A.3",
+   "text": "The bandwidth of a modulated signal spans:",
+   "options": [
+    "Twice the carrier frequency",
+    "Only the carrier frequency",
+    "The whole amateur band",
+    "From the lowest to the highest frequency in its sidebands (plus the carrier, if sent)"
+   ],
+   "answer": 3,
+   "explanation": "Bandwidth runs from the lowest to the highest sideband frequency",
+   "page": 140,
+   "figure": null
+  },
+  {
+   "id": "c11q04",
+   "chapter": 11,
+   "topic": "11.2",
+   "num": 4,
+   "section": "A.3",
+   "text": "The ITU emission designator J3E describes:",
+   "options": [
+    "FM telephony",
+    "Morse telegraphy",
+    "Single sideband suppressed carrier telephony (SSB phone)",
+    "Double sideband AM telephony"
+   ],
+   "answer": 2,
+   "explanation": "J = SSB suppressed carrier, 3 = one analogue channel, E = telephony",
+   "page": 142,
+   "figure": null
+  },
+  {
+   "id": "c11q05",
+   "chapter": 11,
+   "topic": "11.2",
+   "num": 5,
+   "section": "A.3",
+   "text": "The VFO knob on a radio selects the:",
+   "options": [
+    "Carrier wave frequency",
+    "Modulation index",
+    "Bandwidth",
+    "Emission designator"
+   ],
+   "answer": 0,
+   "explanation": "The carrier frequency is selected with the main tuning knob, the VFO",
+   "page": 141,
+   "figure": null
+  },
+  {
+   "id": "c11q06",
+   "chapter": 11,
+   "topic": "11.2",
+   "num": 6,
+   "section": "A.3",
+   "text": "RTTY and FT8 both use frequency shift keying. Why will an RTTY decoder not decode FT8?",
+   "options": [
+    "FT8 uses AM",
+    "FT8 is analogue",
+    "The text is encoded very differently in the two operating modes",
+    "RTTY is only used on VHF"
+   ],
+   "answer": 2,
+   "explanation": "Same modulation type, but very different encoding",
+   "page": 141,
+   "figure": null
+  },
+  {
+   "id": "c11q07",
+   "chapter": 11,
+   "topic": "11.3",
+   "num": 7,
+   "section": "A.3",
+   "text": "What is the main difference between a bit and a symbol?",
+   "options": [
+    "Bits are analogue",
+    "A symbol can only represent two values",
+    "They are the same",
+    "A bit can only represent two values; a symbol can represent more than two"
+   ],
+   "answer": 3,
+   "explanation": "A bit has two states; a symbol can have many (4 in 4-PSK, 8 in FT8)",
+   "page": 143,
+   "figure": null
+  },
+  {
+   "id": "c11q08",
+   "chapter": 11,
+   "topic": "11.3",
+   "num": 8,
+   "section": "A.3",
+   "text": "The digital equivalents of AM, FM and PM are called:",
+   "options": [
+    "SSB, DSB and VSB",
+    "ASK, FSK and PSK",
+    "USB, LSB and CW",
+    "QAM, OFDM and DMR"
+   ],
+   "answer": 1,
+   "explanation": "Amplitude, frequency and phase shift keying",
+   "page": 143,
+   "figure": null
+  },
+  {
+   "id": "c11q09",
+   "chapter": 11,
+   "topic": "11.3.2.1",
+   "num": 9,
+   "section": "A.3",
+   "text": "The symbol rate of a digital mode is measured in:",
+   "options": [
+    "WPM",
+    "Bits per character",
+    "Hertz",
+    "Baud"
+   ],
+   "answer": 3,
+   "explanation": "Symbol rate, or baud rate, is in baud: symbols per second",
+   "page": 144,
+   "figure": null
+  },
+  {
+   "id": "c11q10",
+   "chapter": 11,
+   "topic": "11.3.2.1",
+   "num": 10,
+   "section": "A.3",
+   "text": "The speed of Morse code (CW) is usually expressed in:",
+   "options": [
+    "Baud",
+    "Words per minute (WPM)",
+    "Bits per second",
+    "Hertz"
+   ],
+   "answer": 1,
+   "explanation": "CW speed is in WPM, using a word of average length (PARIS)",
+   "page": 144,
+   "figure": null
+  },
+  {
+   "id": "c11q11",
+   "chapter": 11,
+   "topic": "11.3.2.1",
+   "num": 11,
+   "section": "A.3",
+   "text": "A common range of conversational CW speeds in amateur use is:",
+   "options": [
+    "100–150 WPM",
+    "50–80 WPM",
+    "10–25 WPM",
+    "1–5 WPM"
+   ],
+   "answer": 2,
+   "explanation": "Conversational CW is typically 10–25 WPM",
+   "page": 144,
+   "figure": null
+  },
+  {
+   "id": "c11q12",
+   "chapter": 11,
+   "topic": "11.3.2.1",
+   "num": 12,
+   "section": "A.3",
+   "text": "FT8 uses 8 tones. Its symbol rate is about:",
+   "options": [
+    "6 baud",
+    "45 baud",
+    "170 baud",
+    "31 baud"
+   ],
+   "answer": 0,
+   "explanation": "FT8 sends just over 6 symbols per second",
+   "page": 144,
+   "figure": null
+  },
+  {
+   "id": "c11q13",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 13,
+   "section": "A.3",
+   "text": "In amplitude modulation (AM):",
+   "options": [
+    "The frequency of the carrier varies with the modulating signal",
+    "The amplitude of the carrier varies with the modulating signal",
+    "The phase of the carrier is reversed",
+    "The carrier is switched on and off at random"
+   ],
+   "answer": 1,
+   "explanation": "AM varies the carrier amplitude with the modulating signal",
+   "page": 145,
+   "figure": null
+  },
+  {
+   "id": "c11q14",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 14,
+   "section": "A.3",
+   "text": "A 30 Hz carrier is amplitude modulated by a 6 Hz signal. The modulated signal contains frequencies of:",
+   "options": [
+    "24, 30 and 36 Hz",
+    "30 Hz only",
+    "6 and 30 Hz",
+    "30 and 180 Hz"
+   ],
+   "answer": 0,
+   "explanation": "Carrier plus sidebands at 30 − 6 and 30 + 6 Hz",
+   "page": 147,
+   "figure": null
+  },
+  {
+   "id": "c11q15",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 15,
+   "section": "A.3",
+   "text": "In AM, if the modulating audio is 3 kHz wide, the overall bandwidth of the signal is:",
+   "options": [
+    "1.5 kHz",
+    "3 kHz",
+    "6 kHz",
+    "12 kHz"
+   ],
+   "answer": 2,
+   "explanation": "AM needs twice the bandwidth of the modulating signal: two 3 kHz sidebands",
+   "page": 148,
+   "figure": null
+  },
+  {
+   "id": "c11q16",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 16,
+   "section": "A.3",
+   "text": "An AM modulation index of 100% (m = 1) means:",
+   "options": [
+    "The carrier is suppressed",
+    "No modulation",
+    "Overmodulation",
+    "Full modulation: the carrier amplitude reaches zero and twice its original value"
+   ],
+   "answer": 3,
+   "explanation": "Full modulation gives the best signal-to-noise ratio without distortion",
+   "page": 149,
+   "figure": null
+  },
+  {
+   "id": "c11q17",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 17,
+   "section": "A.3",
+   "text": "What happens when the AM modulation index exceeds 100%?",
+   "options": [
+    "The signal becomes FM",
+    "The carrier disappears without side effects",
+    "The bandwidth halves",
+    "Overmodulation: the signal is clipped and distorted"
+   ],
+   "answer": 3,
+   "explanation": "Above 100% the signal is clipped, distorted and may be unreadable",
+   "page": 149,
+   "figure": null
+  },
+  {
+   "id": "c11q18",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 18,
+   "section": "A.3",
+   "text": "A disadvantage of AM is that:",
+   "options": [
+    "It needs complex hardware",
+    "It cannot carry voice",
+    "It is easily affected by noise and fading",
+    "It has no sidebands"
+   ],
+   "answer": 2,
+   "explanation": "Atmospheric noise and fading readily affect AM amplitude",
+   "page": 151,
+   "figure": null
+  },
+  {
+   "id": "c11q19",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 19,
+   "section": "A.3",
+   "text": "The RF signal shown is an example of:",
+   "options": [
+    "Frequency modulation",
+    "Phase shift keying",
+    "Amplitude modulation",
+    "An unmodulated carrier"
+   ],
+   "answer": 2,
+   "explanation": "The amplitude of the carrier follows the modulating signal",
+   "page": 145,
+   "figure": "figures/ch11_am.svg"
+  },
+  {
+   "id": "c11q20",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 20,
+   "section": "A.3",
+   "text": "The AM envelope shown, cut off to zero with flat gaps, indicates:",
+   "options": [
+    "Overmodulation",
+    "Correct 50% modulation",
+    "An FM signal",
+    "A pure carrier"
+   ],
+   "answer": 0,
+   "explanation": "A modulation index above 100% clips the envelope and causes splatter",
+   "page": 149,
+   "figure": "figures/ch11_overmod.svg"
+  },
+  {
+   "id": "c11q21",
+   "chapter": 11,
+   "topic": "11.4.1",
+   "num": 21,
+   "section": "A.3",
+   "text": "What is the bandwidth of the AM signal whose spectrum is shown?",
+   "options": [
+    "3 kHz",
+    "6 kHz",
+    "7.1 MHz",
+    "1.5 kHz"
+   ],
+   "answer": 1,
+   "explanation": "The sidebands extend 3 kHz either side of the carrier: 7.097 to 7.103 MHz = 6 kHz",
+   "page": 148,
+   "figure": "figures/ch11_am_spectrum.svg"
+  },
+  {
+   "id": "c11q22",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 22,
+   "section": "A.3",
+   "text": "In frequency modulation (FM), the amplitude of the modulated signal:",
+   "options": [
+    "Varies with the audio",
+    "Does not change",
+    "Doubles",
+    "Falls to zero"
+   ],
+   "answer": 1,
+   "explanation": "FM varies the frequency; the amplitude of the modulated signal stays constant",
+   "page": 151,
+   "figure": null
+  },
+  {
+   "id": "c11q23",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 23,
+   "section": "A.3",
+   "text": "The FM modulation index is:",
+   "options": [
+    "Peak deviation ÷ maximum modulating frequency",
+    "Maximum modulating frequency ÷ peak deviation",
+    "Carrier frequency ÷ bandwidth",
+    "Peak deviation × carrier frequency"
+   ],
+   "answer": 0,
+   "explanation": "m = peak deviation / max modulating frequency",
+   "page": 153,
+   "figure": null
+  },
+  {
+   "id": "c11q24",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 24,
+   "section": "A.3",
+   "text": "With a peak deviation of 2.5 kHz and audio up to 3 kHz, what bandwidth does Carson's rule give?",
+   "options": [
+    "5.5 kHz",
+    "11 kHz",
+    "16 kHz",
+    "25 kHz"
+   ],
+   "answer": 1,
+   "explanation": "2 × (2.5 + 3) = 11 kHz",
+   "page": 155,
+   "figure": null
+  },
+  {
+   "id": "c11q25",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 25,
+   "section": "A.3",
+   "text": "Carson's rule estimates FM bandwidth as:",
+   "options": [
+    "Peak deviation × 3",
+    "Peak deviation + max modulating frequency",
+    "2 × max modulating frequency",
+    "2 × (peak deviation + max modulating frequency)"
+   ],
+   "answer": 3,
+   "explanation": "FM bandwidth = 2 (peak deviation + max modulating frequency)",
+   "page": 155,
+   "figure": null
+  },
+  {
+   "id": "c11q26",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 26,
+   "section": "A.3",
+   "text": "Amateur FM channels on the 70 cm band are spaced:",
+   "options": [
+    "6.25 kHz",
+    "12.5 kHz",
+    "25 kHz",
+    "100 kHz"
+   ],
+   "answer": 2,
+   "explanation": "VHF channels are 12.5 kHz apart; 70 cm uses 25 kHz",
+   "page": 155,
+   "figure": null
+  },
+  {
+   "id": "c11q27",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 27,
+   "section": "A.3",
+   "text": "Compared with AM, FM is:",
+   "options": [
+    "Much less affected by noise, but needs more bandwidth",
+    "More affected by noise",
+    "Narrower in bandwidth",
+    "Unable to carry speech"
+   ],
+   "answer": 0,
+   "explanation": "FM is clear in noise because noise mainly affects amplitude, but it needs more bandwidth",
+   "page": 155,
+   "figure": null
+  },
+  {
+   "id": "c11q28",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 28,
+   "section": "A.3",
+   "text": "An FM signal produces sidebands:",
+   "options": [
+    "Many, each separated from the next by the modulating frequency",
+    "Only one on each side of the carrier",
+    "None",
+    "Only below the carrier"
+   ],
+   "answer": 0,
+   "explanation": "FM generates many sidebands spaced at the modulating frequency",
+   "page": 151,
+   "figure": null
+  },
+  {
+   "id": "c11q29",
+   "chapter": 11,
+   "topic": "11.4.2",
+   "num": 29,
+   "section": "A.3",
+   "text": "The RF signal shown, with constant amplitude but cycles bunching together and spreading apart, is:",
+   "options": [
+    "AM",
+    "SSB",
+    "CW",
+    "FM"
+   ],
+   "answer": 3,
+   "explanation": "In FM the frequency varies while the amplitude stays the same",
+   "page": 151,
+   "figure": "figures/ch11_fm.svg"
+  },
+  {
+   "id": "c11q30",
+   "chapter": 11,
+   "topic": "11.5",
+   "num": 30,
+   "section": "A.3",
+   "text": "The ITU designator A3E is:",
+   "options": [
+    "FM telephony",
+    "SSB telephony",
+    "Double sideband AM telephony",
+    "Morse telegraphy"
+   ],
+   "answer": 2,
+   "explanation": "A = AM double sideband, 3 = one analogue channel, E = telephony",
+   "page": 156,
+   "figure": null
+  },
+  {
+   "id": "c11q31",
+   "chapter": 11,
+   "topic": "11.5",
+   "num": 31,
+   "section": "A.3",
+   "text": "Why is AM (A3E) an inefficient mode?",
+   "options": [
+    "It has no carrier",
+    "It needs complex receivers",
+    "It cannot be received on HF",
+    "Its carrier uses much power but carries no information, and it needs two sidebands"
+   ],
+   "answer": 3,
+   "explanation": "The strong carrier wastes power and two sidebands waste bandwidth",
+   "page": 156,
+   "figure": null
+  },
+  {
+   "id": "c11q32",
+   "chapter": 11,
+   "topic": "11.6",
+   "num": 32,
+   "section": "A.3",
+   "text": "Compared with AM, SSB (J3E):",
+   "options": [
+    "Transmits both sidebands and the carrier",
+    "Transmits one sideband with a suppressed carrier, in less than half the bandwidth",
+    "Needs twice the bandwidth",
+    "Is a form of FM"
+   ],
+   "answer": 1,
+   "explanation": "SSB sends only one sideband and suppresses the carrier: about 2.6 kHz",
+   "page": 157,
+   "figure": null
+  },
+  {
+   "id": "c11q33",
+   "chapter": 11,
+   "topic": "11.6",
+   "num": 33,
+   "section": "A.3",
+   "text": "The typical bandwidth of an SSB voice signal is about:",
+   "options": [
+    "150 Hz",
+    "11 kHz",
+    "6 kHz",
+    "2.6 kHz"
+   ],
+   "answer": 3,
+   "explanation": "About 2.6 kHz, less than half of AM",
+   "page": 157,
+   "figure": null
+  },
+  {
+   "id": "c11q34",
+   "chapter": 11,
+   "topic": "11.6",
+   "num": 34,
+   "section": "A.3",
+   "text": "In LSB, the transmitted signal lies:",
+   "options": [
+    "Above the suppressed carrier frequency",
+    "Centred on the carrier",
+    "Below the suppressed carrier frequency",
+    "On both sides of the carrier"
+   ],
+   "answer": 2,
+   "explanation": "LSB energy is below the carrier frequency; USB is above it",
+   "page": 157,
+   "figure": null
+  },
+  {
+   "id": "c11q35",
+   "chapter": 11,
+   "topic": "11.6",
+   "num": 35,
+   "section": "A.3",
+   "text": "SSB is a form of:",
+   "options": [
+    "Amplitude modulation",
+    "Frequency modulation",
+    "Phase modulation",
+    "Pulse modulation"
+   ],
+   "answer": 0,
+   "explanation": "SSB is a form of AM",
+   "page": 157,
+   "figure": null
+  },
+  {
+   "id": "c11q36",
+   "chapter": 11,
+   "topic": "11.6",
+   "num": 36,
+   "section": "A.3",
+   "text": "The spectrum shown, with all the speech energy below the suppressed carrier, is:",
+   "options": [
+    "USB",
+    "AM",
+    "LSB",
+    "FM"
+   ],
+   "answer": 2,
+   "explanation": "In LSB all the signal power lies below the carrier frequency",
+   "page": 157,
+   "figure": "figures/ch11_ssb.svg"
+  },
+  {
+   "id": "c11q37",
+   "chapter": 11,
+   "topic": "11.7",
+   "num": 37,
+   "section": "A.3",
+   "text": "Narrow-band FM phone on VHF uses a bandwidth of about:",
+   "options": [
+    "3 kHz",
+    "11 kHz",
+    "25 kHz",
+    "200 kHz"
+   ],
+   "answer": 1,
+   "explanation": "NBFM: about 11 kHz on VHF and 16 kHz on UHF",
+   "page": 158,
+   "figure": null
+  },
+  {
+   "id": "c11q38",
+   "chapter": 11,
+   "topic": "11.7",
+   "num": 38,
+   "section": "A.3",
+   "text": "In FM (F3E), can the carrier be removed as in SSB?",
+   "options": [
+    "Yes, always",
+    "No; the FM carrier carries some information and is a necessary part of the signal",
+    "Only on HF",
+    "Only for data"
+   ],
+   "answer": 1,
+   "explanation": "Unlike SSB, the FM carrier cannot be removed",
+   "page": 159,
+   "figure": null
+  },
+  {
+   "id": "c11q39",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 39,
+   "section": "A.3",
+   "text": "CW transmits Morse code by:",
+   "options": [
+    "On-off keying of the carrier",
+    "Shifting the frequency between two tones",
+    "Shifting the phase by 180°",
+    "Varying the amplitude with speech"
+   ],
+   "answer": 0,
+   "explanation": "CW is on-off keying (OOK), a form of amplitude shift keying",
+   "page": 159,
+   "figure": null
+  },
+  {
+   "id": "c11q40",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 40,
+   "section": "A.3",
+   "text": "The ITU designator of CW (Morse) for aural reception is:",
+   "options": [
+    "J3E",
+    "A3E",
+    "F1B",
+    "A1A"
+   ],
+   "answer": 3,
+   "explanation": "A1A: AM, one-channel digital without subcarrier, telegraphy by ear",
+   "page": 160,
+   "figure": null
+  },
+  {
+   "id": "c11q41",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 41,
+   "section": "A.3",
+   "text": "A good choice of rise and fall time for CW is about:",
+   "options": [
+    "0.5 ms",
+    "2 ms",
+    "6 ms",
+    "50 ms"
+   ],
+   "answer": 2,
+   "explanation": "Around 4–6 ms keeps CW within about 150 Hz",
+   "page": 162,
+   "figure": null
+  },
+  {
+   "id": "c11q42",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 42,
+   "section": "A.3",
+   "text": "CW keying with very short rise and fall times causes:",
+   "options": [
+    "Key clicks and excessive bandwidth",
+    "A narrower signal",
+    "Better readability with no side effects",
+    "Frequency drift"
+   ],
+   "answer": 0,
+   "explanation": "Too-sudden transitions widen the signal and cause key clicks",
+   "page": 162,
+   "figure": null
+  },
+  {
+   "id": "c11q43",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 43,
+   "section": "A.3",
+   "text": "The bandwidth of a well-formed CW signal should be about:",
+   "options": [
+    "5–10 Hz",
+    "50–200 Hz",
+    "2.6 kHz",
+    "6 kHz"
+   ],
+   "answer": 1,
+   "explanation": "Well-formed CW is 50–200 Hz wide",
+   "page": 162,
+   "figure": null
+  },
+  {
+   "id": "c11q44",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 44,
+   "section": "A.3",
+   "text": "Techniques that smooth the CW keying waveform to reduce bandwidth are known as:",
+   "options": [
+    "Squelch",
+    "Pre-emphasis",
+    "Pulse shaping",
+    "Clipping"
+   ],
+   "answer": 2,
+   "explanation": "Improving the waveform edges is pulse shaping",
+   "page": 162,
+   "figure": null
+  },
+  {
+   "id": "c11q45",
+   "chapter": 11,
+   "topic": "11.8",
+   "num": 45,
+   "section": "A.3",
+   "text": "Which of the two CW envelopes shown will cause key clicks?",
+   "options": [
+    "1, because it switches on and off abruptly",
+    "2, because it rises gradually",
+    "Both equally",
+    "Neither"
+   ],
+   "answer": 0,
+   "explanation": "Very short rise and fall times spread the signal and cause key clicks",
+   "page": 162,
+   "figure": "figures/ch11_keying.svg"
+  },
+  {
+   "id": "c11q46",
+   "chapter": 11,
+   "topic": "11.9",
+   "num": 46,
+   "section": "A.3",
+   "text": "The most popular form of RTTY uses a frequency shift of:",
+   "options": [
+    "50 Hz",
+    "3 kHz",
+    "850 Hz",
+    "170 Hz"
+   ],
+   "answer": 3,
+   "explanation": "RTTY shifts by 170 Hz at 45 baud",
+   "page": 164,
+   "figure": null
+  },
+  {
+   "id": "c11q47",
+   "chapter": 11,
+   "topic": "11.9",
+   "num": 47,
+   "section": "A.3",
+   "text": "The ITU designator of RTTY using FSK is:",
+   "options": [
+    "F1B",
+    "A1A",
+    "J3E",
+    "G1B"
+   ],
+   "answer": 0,
+   "explanation": "F1B: FM, one digital channel without subcarrier, telegraphy for machine reception",
+   "page": 164,
+   "figure": null
+  },
+  {
+   "id": "c11q48",
+   "chapter": 11,
+   "topic": "11.9",
+   "num": 48,
+   "section": "A.3",
+   "text": "Does RTTY use error correction?",
+   "options": [
+    "Yes, forward error correction like FT8",
+    "Only at 45 baud",
+    "Only on VHF",
+    "No; noise or fading may corrupt the received text"
+   ],
+   "answer": 3,
+   "explanation": "RTTY has no error correction, unlike FT8",
+   "page": 166,
+   "figure": null
+  },
+  {
+   "id": "c11q49",
+   "chapter": 11,
+   "topic": "11.10",
+   "num": 49,
+   "section": "A.3",
+   "text": "FT8 is described as a time-synced mode because:",
+   "options": [
+    "It needs a GPS receiver to work",
+    "All transmissions begin and end at the same times",
+    "It only works at night",
+    "It uses Morse timing"
+   ],
+   "answer": 1,
+   "explanation": "Every 15-second period, transmissions start and end together",
+   "page": 166,
+   "figure": null
+  },
+  {
+   "id": "c11q50",
+   "chapter": 11,
+   "topic": "11.10",
+   "num": 50,
+   "section": "A.3",
+   "text": "What lets FT8 decode even somewhat corrupted transmissions?",
+   "options": [
+    "AM modulation",
+    "High power",
+    "Forward error correction",
+    "Long antennas"
+   ],
+   "answer": 2,
+   "explanation": "FT8 sends extra information for forward error correction",
+   "page": 166,
+   "figure": null
+  },
+  {
+   "id": "c11q51",
+   "chapter": 11,
+   "topic": "11.10",
+   "num": 51,
+   "section": "A.3",
+   "text": "The bandwidth of a single FT8 transmission is about:",
+   "options": [
+    "50 Hz",
+    "500 Hz",
+    "3 kHz",
+    "11 kHz"
+   ],
+   "answer": 0,
+   "explanation": "Each FT8 signal is only about 50 Hz wide",
+   "page": 167,
+   "figure": null
+  },
+  {
+   "id": "c11q52",
+   "chapter": 11,
+   "topic": "11.10",
+   "num": 52,
+   "section": "A.3",
+   "text": "How is an FT8 signal normally transmitted?",
+   "options": [
+    "Directly by the radio's FSK keying",
+    "Using AM",
+    "As an audio subcarrier from modem software, sent using SSB (USB)",
+    "Using on-off keying"
+   ],
+   "answer": 2,
+   "explanation": "Modem software makes an audio FSK subcarrier that the transceiver sends on USB (J2B/J2D)",
+   "page": 166,
+   "figure": null
+  },
+  {
+   "id": "c11q53",
+   "chapter": 11,
+   "topic": "11.11",
+   "num": 53,
+   "section": "A.3",
+   "text": "Phase shift keying (PSK) changes the carrier's:",
+   "options": [
+    "Amplitude",
+    "Frequency",
+    "Polarisation",
+    "Phase"
+   ],
+   "answer": 3,
+   "explanation": "PSK shifts the phase of the carrier",
+   "page": 167,
+   "figure": null
+  },
+  {
+   "id": "c11q54",
+   "chapter": 11,
+   "topic": "11.11",
+   "num": 54,
+   "section": "A.3",
+   "text": "2-PSK shifts the phase of the carrier by:",
+   "options": [
+    "360°",
+    "180°",
+    "90°",
+    "45°"
+   ],
+   "answer": 1,
+   "explanation": "2-PSK uses a 180° shift; 4-PSK uses 90° shifts",
+   "page": 167,
+   "figure": null
+  },
+  {
+   "id": "c11q55",
+   "chapter": 11,
+   "topic": "11.11",
+   "num": 55,
+   "section": "A.3",
+   "text": "The ITU designator for PSK generated directly in the radio is:",
+   "options": [
+    "F1B",
+    "G1B",
+    "A1A",
+    "J3E"
+   ],
+   "answer": 1,
+   "explanation": "G1B: phase modulation, single digital channel, telegraphy for automatic reception",
+   "page": 168,
+   "figure": null
+  },
+  {
+   "id": "c12q01",
+   "chapter": 12,
+   "topic": "12.1",
+   "num": 1,
+   "section": "A.5",
+   "text": "Irish amateur power limits for almost all bands are specified as:",
+   "options": [
+    "Peak envelope power (PEP) at the output of the transmitter or amplifier",
+    "Average power at the antenna",
+    "EIRP in every band",
+    "DC input power to the final stage"
+   ],
+   "answer": 0,
+   "explanation": "Limits are PEP at the transmitter (or amplifier) output, with a few EIRP exceptions",
+   "page": 171,
+   "figure": null
+  },
+  {
+   "id": "c12q02",
+   "chapter": 12,
+   "topic": "12.1",
+   "num": 2,
+   "section": "A.5",
+   "text": "Peak envelope power (PEP) is:",
+   "options": [
+    "The DC power drawn from the supply",
+    "The average power over several minutes",
+    "The power averaged over one RF cycle at the crest of the modulation",
+    "The power radiated in the best direction"
+   ],
+   "answer": 2,
+   "explanation": "PEP is averaged over a single RF cycle at the maximum of the modulation",
+   "page": 171,
+   "figure": null
+  },
+  {
+   "id": "c12q03",
+   "chapter": 12,
+   "topic": "12.1",
+   "num": 3,
+   "section": "A.5",
+   "text": "For which mode is the average power normally much lower than the PEP?",
+   "options": [
+    "FM",
+    "FSK during a long transmission",
+    "A continuous carrier",
+    "SSB"
+   ],
+   "answer": 3,
+   "explanation": "In SSB the peaks occur only briefly, so average power is lower than PEP",
+   "page": 171,
+   "figure": null
+  },
+  {
+   "id": "c12q04",
+   "chapter": 12,
+   "topic": "12.1",
+   "num": 4,
+   "section": "A.5",
+   "text": "To measure the PEP of an SSB transmitter in line with Irish regulations, you should use:",
+   "options": [
+    "Normal speech",
+    "A 1 kHz tone",
+    "Silence",
+    "A 50 Hz tone"
+   ],
+   "answer": 1,
+   "explanation": "A 1 kHz tone must be used for the PEP measurement",
+   "page": 171,
+   "figure": null
+  },
+  {
+   "id": "c12q05",
+   "chapter": 12,
+   "topic": "12.2",
+   "num": 5,
+   "section": "A.5",
+   "text": "The modulation duty cycle of CW is about:",
+   "options": [
+    "20%",
+    "40%",
+    "80%",
+    "100%"
+   ],
+   "answer": 1,
+   "explanation": "No power is sent in the gaps, about 60% of the time, so CW is 40%",
+   "page": 172,
+   "figure": null
+  },
+  {
+   "id": "c12q06",
+   "chapter": 12,
+   "topic": "12.2",
+   "num": 6,
+   "section": "A.5",
+   "text": "The modulation duty cycle of FM is:",
+   "options": [
+    "20%",
+    "40%",
+    "50%",
+    "100%"
+   ],
+   "answer": 3,
+   "explanation": "FM transmits at full amplitude all the time: 100%",
+   "page": 173,
+   "figure": null
+  },
+  {
+   "id": "c12q07",
+   "chapter": 12,
+   "topic": "12.2",
+   "num": 7,
+   "section": "A.5",
+   "text": "The modulation duty cycle of uncompressed SSB speech is about:",
+   "options": [
+    "20%",
+    "40%",
+    "60%",
+    "100%"
+   ],
+   "answer": 0,
+   "explanation": "Unprocessed SSB speech: 20%; with compression about 40%",
+   "page": 172,
+   "figure": null
+  },
+  {
+   "id": "c12q08",
+   "chapter": 12,
+   "topic": "12.2",
+   "num": 8,
+   "section": "A.5",
+   "text": "Why might an amplifier only allow 50% of its rated PEP when used for RTTY?",
+   "options": [
+    "RTTY is AM",
+    "RTTY needs less power",
+    "RTTY is a high duty cycle mode, so the average power equals PEP",
+    "The law limits RTTY to half power"
+   ],
+   "answer": 2,
+   "explanation": "High duty cycle modes can overheat and damage the final stage at full PEP",
+   "page": 172,
+   "figure": null
+  },
+  {
+   "id": "c12q09",
+   "chapter": 12,
+   "topic": "12.2",
+   "num": 9,
+   "section": "A.5",
+   "text": "The percentage of time the operator actually transmits during an averaging period is called the:",
+   "options": [
+    "Modulation duty cycle",
+    "Efficiency",
+    "Mode factor",
+    "Operational duty cycle"
+   ],
+   "answer": 3,
+   "explanation": "Operational duty cycle depends on the operator and their habits",
+   "page": 172,
+   "figure": null
+  },
+  {
+   "id": "c12q10",
+   "chapter": 12,
+   "topic": "12.3",
+   "num": 10,
+   "section": "A.5",
+   "text": "The nominal output impedance of commercial amateur transmitters is:",
+   "options": [
+    "25 Ω",
+    "50 Ω",
+    "75 Ω",
+    "300 Ω"
+   ],
+   "answer": 1,
+   "explanation": "They are designed for a 50 Ω load, matching common coax",
+   "page": 174,
+   "figure": null
+  },
+  {
+   "id": "c12q11",
+   "chapter": 12,
+   "topic": "12.3",
+   "num": 11,
+   "section": "A.5",
+   "text": "The circuit in a transmitter that matches the final amplifier to the 50 Ω load is the:",
+   "options": [
+    "Output network (Pi tank)",
+    "Balanced modulator",
+    "Buffer",
+    "Frequency multiplier"
+   ],
+   "answer": 0,
+   "explanation": "The output network, often a Pi tank, matches the amplifier to 50 Ω",
+   "page": 173,
+   "figure": null
+  },
+  {
+   "id": "c12q12",
+   "chapter": 12,
+   "topic": "12.4",
+   "num": 12,
+   "section": "A.5",
+   "text": "A transmitter with 60% efficiency produces 100 W of RF. Roughly how much power does it waste as heat?",
+   "options": [
+    "166 W",
+    "100 W",
+    "66 W",
+    "40 W"
+   ],
+   "answer": 2,
+   "explanation": "It needs about 166 W in; 40% of that, about 66 W, becomes heat",
+   "page": 174,
+   "figure": null
+  },
+  {
+   "id": "c12q13",
+   "chapter": 12,
+   "topic": "12.4",
+   "num": 13,
+   "section": "A.5",
+   "text": "The efficiency of a transmitter is mainly determined by:",
+   "options": [
+    "The length of the feeder",
+    "The class of its final amplifier",
+    "The microphone",
+    "The SWR meter"
+   ],
+   "answer": 1,
+   "explanation": "The class of the final amplifier determines efficiency, typically 25–80%",
+   "page": 174,
+   "figure": null
+  },
+  {
+   "id": "c12q14",
+   "chapter": 12,
+   "topic": "12.5",
+   "num": 14,
+   "section": "A.5",
+   "text": "The ability of a transmitter to stay on the same frequency without drifting is its:",
+   "options": [
+    "Frequency stability",
+    "Selectivity",
+    "Linearity",
+    "Sensitivity"
+   ],
+   "answer": 0,
+   "explanation": "Frequency stability: maintaining a precise frequency over time",
+   "page": 174,
+   "figure": null
+  },
+  {
+   "id": "c12q15",
+   "chapter": 12,
+   "topic": "12.5",
+   "num": 15,
+   "section": "A.5",
+   "text": "By far the most common cause of non-linearity in a transmitter is:",
+   "options": [
+    "A low SWR",
+    "A dummy load",
+    "An overdriven amplifier",
+    "A good earth"
+   ],
+   "answer": 2,
+   "explanation": "Overdriving, for example with loud audio, is the main cause",
+   "page": 174,
+   "figure": null
+  },
+  {
+   "id": "c12q16",
+   "chapter": 12,
+   "topic": "12.6",
+   "num": 16,
+   "section": "A.5",
+   "text": "In a simple CW transmitter, which stage generates the carrier?",
+   "options": [
+    "Buffer/driver",
+    "Morse key",
+    "Power amplifier",
+    "Master oscillator"
+   ],
+   "answer": 3,
+   "explanation": "The master oscillator generates the carrier at the required frequency",
+   "page": 176,
+   "figure": null
+  },
+  {
+   "id": "c12q17",
+   "chapter": 12,
+   "topic": "12.6",
+   "num": 17,
+   "section": "A.5",
+   "text": "What is the purpose of the buffer/driver stage in a CW transmitter?",
+   "options": [
+    "To match the antenna",
+    "To key the transmitter",
+    "To filter harmonics",
+    "To isolate the master oscillator so its frequency stays stable"
+   ],
+   "answer": 3,
+   "explanation": "It stops the keying and the power amplifier from pulling the oscillator off frequency",
+   "page": 176,
+   "figure": null
+  },
+  {
+   "id": "c12q18",
+   "chapter": 12,
+   "topic": "12.6",
+   "num": 18,
+   "section": "A.5",
+   "text": "A CW signal whose frequency changes when the key is pressed, sounding like a bird, has:",
+   "options": [
+    "Chirp",
+    "Key clicks",
+    "Splatter",
+    "Hum"
+   ],
+   "answer": 0,
+   "explanation": "Chirp: often poor supply regulation or poor buffer design",
+   "page": 176,
+   "figure": null
+  },
+  {
+   "id": "c12q19",
+   "chapter": 12,
+   "topic": "12.6",
+   "num": 19,
+   "section": "A.5",
+   "text": "Which amplifier class may be used in a CW transmitter despite its poor linearity?",
+   "options": [
+    "Class A",
+    "Class C",
+    "Class AB",
+    "None"
+   ],
+   "answer": 1,
+   "explanation": "Class C is efficient and acceptable for CW, with careful filtering",
+   "page": 176,
+   "figure": null
+  },
+  {
+   "id": "c12q20",
+   "chapter": 12,
+   "topic": "12.6",
+   "num": 20,
+   "section": "A.5",
+   "text": "In the CW transmitter shown, stage X is the:",
+   "options": [
+    "Balanced modulator",
+    "Buffer / driver",
+    "Product detector",
+    "Sideband filter"
+   ],
+   "answer": 1,
+   "explanation": "The buffer isolates the master oscillator so its frequency stays stable",
+   "page": 176,
+   "figure": "figures/ch12_cw.svg"
+  },
+  {
+   "id": "c12q21",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 21,
+   "section": "A.5",
+   "text": "In an SSB transmitter, the balanced modulator produces:",
+   "options": [
+    "A carrier only",
+    "One sideband with full carrier",
+    "Both sidebands without the carrier",
+    "An FM signal"
+   ],
+   "answer": 2,
+   "explanation": "The balanced modulator produces both sidebands with the carrier suppressed",
+   "page": 178,
+   "figure": null
+  },
+  {
+   "id": "c12q22",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 22,
+   "section": "A.5",
+   "text": "In an SSB transmitter, which stage removes the unwanted sideband?",
+   "options": [
+    "The mixer",
+    "The filter (usually a crystal band-pass filter)",
+    "The VFO",
+    "The speech amplifier"
+   ],
+   "answer": 1,
+   "explanation": "The filter removes the unwanted sideband",
+   "page": 178,
+   "figure": null
+  },
+  {
+   "id": "c12q23",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 23,
+   "section": "A.5",
+   "text": "Typical filter bandwidths used for SSB are:",
+   "options": [
+    "150–500 Hz",
+    "6–10 kHz",
+    "1.8–2.4 kHz",
+    "12.5–25 kHz"
+   ],
+   "answer": 2,
+   "explanation": "SSB filters are typically 1.8–2.4 kHz wide",
+   "page": 179,
+   "figure": null
+  },
+  {
+   "id": "c12q24",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 24,
+   "section": "A.5",
+   "text": "In an SSB transmitter, the mixer combines the IF signal with the output of the:",
+   "options": [
+    "VFO, to translate it to the desired frequency",
+    "Microphone",
+    "ALC",
+    "Dummy load"
+   ],
+   "answer": 0,
+   "explanation": "The mixer combines the IF with the VFO to reach the output frequency",
+   "page": 179,
+   "figure": null
+  },
+  {
+   "id": "c12q25",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 25,
+   "section": "A.5",
+   "text": "When two signals are mixed, the output contains:",
+   "options": [
+    "Only the higher frequency",
+    "Only DC",
+    "Only the difference frequency",
+    "Their sum and difference frequencies (and harmonics)"
+   ],
+   "answer": 3,
+   "explanation": "Mixing produces the sum and difference frequencies; a filter selects the wanted one",
+   "page": 179,
+   "figure": null
+  },
+  {
+   "id": "c12q26",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 26,
+   "section": "A.5",
+   "text": "Why must the final amplifier of an SSB transmitter be linear?",
+   "options": [
+    "To keep the frequency stable",
+    "Non-linearity causes distortion, IMD and splatter",
+    "To reduce the supply voltage",
+    "It does not need to be linear"
+   ],
+   "answer": 1,
+   "explanation": "Non-linearity causes harmonic and intermodulation distortion and splatter",
+   "page": 180,
+   "figure": null
+  },
+  {
+   "id": "c12q27",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 27,
+   "section": "A.5",
+   "text": "What does the automatic level control (ALC) do?",
+   "options": [
+    "Selects the sideband",
+    "Controls the receiver volume",
+    "Measures SWR",
+    "Reduces the incoming audio level to avoid overdriving the amplifier"
+   ],
+   "answer": 3,
+   "explanation": "ALC turns down the audio drive when the amplifier is near overload",
+   "page": 180,
+   "figure": null
+  },
+  {
+   "id": "c12q28",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 28,
+   "section": "A.5",
+   "text": "When transmitting digital modes through an SSB transmitter, how much ALC activity should be seen?",
+   "options": [
+    "As much as possible",
+    "About half scale",
+    "None",
+    "Full scale"
+   ],
+   "answer": 2,
+   "explanation": "As a rule of thumb there should be no ALC activity on digital modes",
+   "page": 180,
+   "figure": null
+  },
+  {
+   "id": "c12q29",
+   "chapter": 12,
+   "topic": "12.7",
+   "num": 29,
+   "section": "A.5",
+   "text": "In the SSB transmitter shown, stage X is the:",
+   "options": [
+    "Limiter",
+    "Frequency multiplier",
+    "Discriminator",
+    "Sideband filter"
+   ],
+   "answer": 3,
+   "explanation": "After the balanced modulator, a filter removes the unwanted sideband",
+   "page": 178,
+   "figure": "figures/ch12_ssb.svg"
+  },
+  {
+   "id": "c12q30",
+   "chapter": 12,
+   "topic": "12.8",
+   "num": 30,
+   "section": "A.5",
+   "text": "In an FM transmitter with a frequency multiplier, the oscillator for a 30 MHz output (tripler) runs at:",
+   "options": [
+    "3 MHz",
+    "10 MHz",
+    "30 MHz",
+    "90 MHz"
+   ],
+   "answer": 1,
+   "explanation": "A ×3 multiplier needs a 10 MHz oscillator for 30 MHz",
+   "page": 182,
+   "figure": null
+  },
+  {
+   "id": "c12q31",
+   "chapter": 12,
+   "topic": "12.8",
+   "num": 31,
+   "section": "A.5",
+   "text": "A frequency multiplier is:",
+   "options": [
+    "A low power amplifier whose output is tuned to a harmonic of its input",
+    "A linear amplifier",
+    "A mixer with a VFO",
+    "A crystal filter"
+   ],
+   "answer": 0,
+   "explanation": "It is overdriven on purpose and tuned to a harmonic, often the 3rd",
+   "page": 181,
+   "figure": null
+  },
+  {
+   "id": "c12q32",
+   "chapter": 12,
+   "topic": "12.8",
+   "num": 32,
+   "section": "A.5",
+   "text": "Why can a class C power amplifier be used in an FM transmitter?",
+   "options": [
+    "The amplitude of an FM signal does not carry the information",
+    "FM needs very little power",
+    "FM signals have no sidebands",
+    "Class C is the most linear"
+   ],
+   "answer": 0,
+   "explanation": "FM does not depend on amplitude, so linearity is less important",
+   "page": 182,
+   "figure": null
+  },
+  {
+   "id": "c12q33",
+   "chapter": 12,
+   "topic": "12.8",
+   "num": 33,
+   "section": "A.5",
+   "text": "In the FM transmitter shown, what frequency must the oscillator produce?",
+   "options": [
+    "10 MHz",
+    "30 MHz",
+    "90 MHz",
+    "3 MHz"
+   ],
+   "answer": 0,
+   "explanation": "A ×3 multiplier needs 30 / 3 = 10 MHz from the oscillator",
+   "page": 182,
+   "figure": "figures/ch12_fm.svg"
+  },
+  {
+   "id": "c12q34",
+   "chapter": 12,
+   "topic": "12.9",
+   "num": 34,
+   "section": "A.5",
+   "text": "The most common way to operate digital modes such as FT8 is:",
+   "options": [
+    "Morse key and BFO",
+    "A dedicated RTTY teleprinter",
+    "An FM transmitter with a multiplier",
+    "A computer running modem software feeding an AF subcarrier to an SSB transmitter"
+   ],
+   "answer": 3,
+   "explanation": "The software modem generates audio which the transceiver sends using SSB",
+   "page": 183,
+   "figure": null
+  },
+  {
+   "id": "c12q35",
+   "chapter": 12,
+   "topic": "12.9",
+   "num": 35,
+   "section": "A.5",
+   "text": "Why must the audio level from a software modem be adjusted carefully?",
+   "options": [
+    "To change the frequency",
+    "To make the computer quieter",
+    "To avoid overdriving the transmitter amplifier and distorting the signal",
+    "It does not matter"
+   ],
+   "answer": 2,
+   "explanation": "Too high a level overdrives the amplifier and degrades the signal",
+   "page": 183,
+   "figure": null
+  },
+  {
+   "id": "c12q36",
+   "chapter": 12,
+   "topic": "12.10",
+   "num": 36,
+   "section": "A.5",
+   "text": "Which function in a modern SDR transmitter still has to be done by analogue circuits?",
+   "options": [
+    "Modulation",
+    "Pulse shaping of CW",
+    "Final stage power amplification",
+    "Audio compression"
+   ],
+   "answer": 2,
+   "explanation": "Software cannot amplify to high power or filter strong out-of-band signals",
+   "page": 184,
+   "figure": null
+  },
+  {
+   "id": "c12q37",
+   "chapter": 12,
+   "topic": "12.10",
+   "num": 37,
+   "section": "A.5",
+   "text": "In a hybrid SDR transmitter, the DSP and DDS generate the signal at:",
+   "options": [
+    "The final RF directly",
+    "Microwave frequencies",
+    "Audio frequencies only",
+    "A low IF, which analogue circuits then convert to RF"
+   ],
+   "answer": 3,
+   "explanation": "Hybrid designs use DSP/DDS at IF and an analogue converter or mixer to reach RF",
+   "page": 185,
+   "figure": null
+  },
+  {
+   "id": "c12q38",
+   "chapter": 12,
+   "topic": "12.10",
+   "num": 38,
+   "section": "A.5",
+   "text": "In a fully digital transmitter with RF DDS, what removes the by-products of the digital to analogue conversion?",
+   "options": [
+    "The microphone",
+    "An analogue band-pass filter",
+    "The ALC",
+    "A Morse key"
+   ],
+   "answer": 1,
+   "explanation": "An analogue band-pass filter removes by-products and enforces the bandwidth",
+   "page": 185,
+   "figure": null
+  },
+  {
+   "id": "c12q39",
+   "chapter": 12,
+   "topic": "12.11",
+   "num": 39,
+   "section": "A.5",
+   "text": "A transverter is used to:",
+   "options": [
+    "Convert a transceiver to operate on a different band",
+    "Change SSB to FM",
+    "Measure output power",
+    "Match the antenna"
+   ],
+   "answer": 0,
+   "explanation": "A transverter converts both transmit and receive to another band, e.g. 28 → 144 MHz",
+   "page": 186,
+   "figure": null
+  },
+  {
+   "id": "c12q40",
+   "chapter": 12,
+   "topic": "12.12",
+   "num": 40,
+   "section": "A.5",
+   "text": "An external high power linear amplifier used with many modes must be:",
+   "options": [
+    "A class C design",
+    "Overdriven for maximum output",
+    "Used without covers",
+    "Of high quality and appropriately linear"
+   ],
+   "answer": 3,
+   "explanation": "A non-linear amplifier distorts and causes harmful interference",
+   "page": 186,
+   "figure": null
+  },
+  {
+   "id": "c12q41",
+   "chapter": 12,
+   "topic": "12.12",
+   "num": 41,
+   "section": "A.5",
+   "text": "Why must a high power amplifier never be operated with its covers removed?",
+   "options": [
+    "Lethal voltages and harmful exposure to intense EMF",
+    "It would run too cool",
+    "It would lose its linearity",
+    "The ALC would stop working"
+   ],
+   "answer": 0,
+   "explanation": "Lethal voltages and intense fields make this dangerous",
+   "page": 186,
+   "figure": null
+  },
+  {
+   "id": "c12q42",
+   "chapter": 12,
+   "topic": "12.13",
+   "num": 42,
+   "section": "A.5",
+   "text": "In an HF station, what does the low-pass filter after the transceiver do?",
+   "options": [
+    "Measures SWR",
+    "Removes signals below 1.8 MHz",
+    "Removes harmonics above 30 MHz",
+    "Matches the antenna"
+   ],
+   "answer": 2,
+   "explanation": "The low-pass filter cuts off frequencies above 30 MHz, suppressing harmonics",
+   "page": 187,
+   "figure": null
+  },
+  {
+   "id": "c12q43",
+   "chapter": 12,
+   "topic": "12.13",
+   "num": 43,
+   "section": "A.5",
+   "text": "What does the SWR bridge in an HF station indicate?",
+   "options": [
+    "The modulation depth",
+    "Whether there is an impedance mismatch between the antenna system and the transmitter",
+    "The receiver sensitivity",
+    "The supply voltage"
+   ],
+   "answer": 1,
+   "explanation": "The SWR bridge indicates mismatch; ideally the SWR is close to 1:1",
+   "page": 187,
+   "figure": null
+  },
+  {
+   "id": "c12q44",
+   "chapter": 12,
+   "topic": "12.13",
+   "num": 44,
+   "section": "A.5",
+   "text": "A dummy load is used to:",
+   "options": [
+    "Tune and test the transmitter without radiating a signal",
+    "Increase the range of the antenna",
+    "Filter harmonics",
+    "Store energy for later"
+   ],
+   "answer": 0,
+   "explanation": "It lets you test and tune without transmitting unnecessary signals",
+   "page": 187,
+   "figure": null
+  },
+  {
+   "id": "c12q45",
+   "chapter": 12,
+   "topic": "12.13",
+   "num": 45,
+   "section": "A.5",
+   "text": "Where is it preferable to install an ATU?",
+   "options": [
+    "Between the microphone and the transceiver",
+    "Inside the SWR meter",
+    "Between the mains and the power supply",
+    "Between the transmission line and the antenna"
+   ],
+   "answer": 3,
+   "explanation": "Preferably at the antenna, matching it to the transmission line",
+   "page": 187,
+   "figure": null
+  },
+  {
+   "id": "c12q46",
+   "chapter": 12,
+   "topic": "12.13",
+   "num": 46,
+   "section": "A.5",
+   "text": "In the HF station shown, unit X is a filter that cuts off frequencies above 30 MHz. It is the:",
+   "options": [
+    "High-pass filter",
+    "Notch filter",
+    "Low-pass filter",
+    "Band-stop filter"
+   ],
+   "answer": 2,
+   "explanation": "The low-pass filter attenuates harmonics above the HF bands",
+   "page": 187,
+   "figure": "figures/ch12_station.svg"
+  },
+  {
+   "id": "c13q01",
+   "chapter": 13,
+   "topic": "13.1",
+   "num": 1,
+   "section": "A.5",
+   "text": "In a superheterodyne receiver, the incoming RF signal is converted to a fixed intermediate frequency (IF) by:",
+   "options": [
+    "The local oscillator and mixer",
+    "The detector and AF amplifier",
+    "The RF amplifier alone",
+    "The AGC"
+   ],
+   "answer": 0,
+   "explanation": "The local oscillator and mixer convert the RF to a fixed IF",
+   "page": 189,
+   "figure": null
+  },
+  {
+   "id": "c13q02",
+   "chapter": 13,
+   "topic": "13.1",
+   "num": 2,
+   "section": "A.5",
+   "text": "In a superheterodyne, the selectivity and gain of the receiver are mainly determined:",
+   "options": [
+    "At the antenna",
+    "In the loudspeaker",
+    "At the fixed IF",
+    "In the power supply"
+   ],
+   "answer": 2,
+   "explanation": "Selectivity and gain are set at the fixed IF",
+   "page": 189,
+   "figure": null
+  },
+  {
+   "id": "c13q03",
+   "chapter": 13,
+   "topic": "13.2",
+   "num": 3,
+   "section": "A.5",
+   "text": "A double conversion superheterodyne has:",
+   "options": [
+    "Two antennas",
+    "Two IFs generated by two mixers",
+    "Two detectors",
+    "Two loudspeakers"
+   ],
+   "answer": 1,
+   "explanation": "It converts twice: e.g. 10.7 MHz, then 455 kHz",
+   "page": 189,
+   "figure": null
+  },
+  {
+   "id": "c13q04",
+   "chapter": 13,
+   "topic": "13.2",
+   "num": 4,
+   "section": "A.5",
+   "text": "In a double conversion superhet, the high first IF helps with ___ and the low second IF with ___.",
+   "options": [
+    "Selectivity; image rejection",
+    "AGC; squelch",
+    "Sensitivity; stability",
+    "Image rejection; adjacent channel selectivity"
+   ],
+   "answer": 3,
+   "explanation": "High first IF: image rejection. Low second IF: good adjacent-channel selectivity",
+   "page": 189,
+   "figure": null
+  },
+  {
+   "id": "c13q05",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 5,
+   "section": "A.5",
+   "text": "What is the job of the RF amplifier in a receiver?",
+   "options": [
+    "Drive the loudspeaker",
+    "Generate the IF",
+    "Demodulate the signal",
+    "Increase the power of the weak signal from the antenna with low noise"
+   ],
+   "answer": 3,
+   "explanation": "It boosts the weak RF signal with a low-noise design",
+   "page": 190,
+   "figure": null
+  },
+  {
+   "id": "c13q06",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 6,
+   "section": "A.5",
+   "text": "Attenuators and AGC in front of the receiver stages are provided to:",
+   "options": [
+    "Increase sensitivity",
+    "Generate a BFO tone",
+    "Prevent overload of later stages by strong signals",
+    "Improve the image frequency"
+   ],
+   "answer": 2,
+   "explanation": "They stop strong signals overloading the later stages and distorting the audio",
+   "page": 190,
+   "figure": null
+  },
+  {
+   "id": "c13q07",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 7,
+   "section": "A.5",
+   "text": "A signal on 7000 kHz is mixed with a local oscillator on 7455 kHz. What IF results?",
+   "options": [
+    "455 kHz",
+    "7000 kHz",
+    "7455 kHz",
+    "14 455 kHz"
+   ],
+   "answer": 0,
+   "explanation": "fIF = |fOSC − fSIG| = 7455 − 7000 = 455 kHz",
+   "page": 192,
+   "figure": null
+  },
+  {
+   "id": "c13q08",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 8,
+   "section": "A.5",
+   "text": "Besides the wanted IF, a mixer also produces:",
+   "options": [
+    "Only DC",
+    "The sum frequency and harmonics, removed by the filter",
+    "Nothing else",
+    "A copy of the audio"
+   ],
+   "answer": 1,
+   "explanation": "The sum (e.g. 14 455 kHz) and harmonics are removed by the IF filter",
+   "page": 192,
+   "figure": null
+  },
+  {
+   "id": "c13q09",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 9,
+   "section": "A.5",
+   "text": "The IF filter of a receiver is usually a:",
+   "options": [
+    "Low-pass filter",
+    "High-pass filter",
+    "Band-pass filter, sometimes called the roofing filter",
+    "Notch filter"
+   ],
+   "answer": 2,
+   "explanation": "It selects the IF and removes everything outside the wanted bandwidth",
+   "page": 192,
+   "figure": null
+  },
+  {
+   "id": "c13q10",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 10,
+   "section": "A.5",
+   "text": "Which IF filter bandwidth would you choose to receive a single CW signal?",
+   "options": [
+    "1.8–2.4 kHz",
+    "100–500 Hz",
+    "2.7–3 kHz",
+    "12.5 kHz"
+   ],
+   "answer": 1,
+   "explanation": "CW: 100–500 Hz; SSB phone: 1.8–2.4 kHz; FM: 12.5 kHz",
+   "page": 193,
+   "figure": null
+  },
+  {
+   "id": "c13q11",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 11,
+   "section": "A.5",
+   "text": "Why is a wider filter (2.7–3 kHz) used when receiving FT8?",
+   "options": [
+    "So the software can decode many FT8 signals at once",
+    "To reduce noise",
+    "Because FT8 is 3 kHz wide",
+    "To stop image signals"
+   ],
+   "answer": 0,
+   "explanation": "The modem software decodes all the 50 Hz FT8 signals in the passband",
+   "page": 193,
+   "figure": null
+  },
+  {
+   "id": "c13q12",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 12,
+   "section": "A.5",
+   "text": "Why can the IF amplifier provide more gain and selectivity than the RF stages?",
+   "options": [
+    "It works at audio frequencies",
+    "It uses valves",
+    "It has no filter",
+    "It works at a single fixed frequency"
+   ],
+   "answer": 3,
+   "explanation": "A fixed IF allows gain and selectivity to be maximised",
+   "page": 194,
+   "figure": null
+  },
+  {
+   "id": "c13q13",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 13,
+   "section": "A.5",
+   "text": "The AF gain control on a receiver adjusts the:",
+   "options": [
+    "Volume (AF amplifier)",
+    "RF amplifier",
+    "Squelch",
+    "IF frequency"
+   ],
+   "answer": 0,
+   "explanation": "AF gain is the volume control",
+   "page": 196,
+   "figure": null
+  },
+  {
+   "id": "c13q14",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 14,
+   "section": "A.5",
+   "text": "In the superheterodyne receiver shown, block X between the mixer and the IF amplifier is usually a:",
+   "options": [
+    "Low-pass filter",
+    "Band-pass (IF) filter",
+    "Frequency multiplier",
+    "Balanced modulator"
+   ],
+   "answer": 1,
+   "explanation": "The IF filter, usually a band-pass filter, sets the selectivity",
+   "page": 192,
+   "figure": "figures/ch13_superhet.svg"
+  },
+  {
+   "id": "c13q15",
+   "chapter": 13,
+   "topic": "13.3",
+   "num": 15,
+   "section": "A.5",
+   "text": "In the figure, what is the intermediate frequency?",
+   "options": [
+    "455 kHz",
+    "14 455 kHz",
+    "7455 kHz",
+    "7000 kHz"
+   ],
+   "answer": 0,
+   "explanation": "IF = 7455 − 7000 = 455 kHz",
+   "page": 192,
+   "figure": "figures/ch13_mixer.svg"
+  },
+  {
+   "id": "c13q16",
+   "chapter": 13,
+   "topic": "13.3.6",
+   "num": 16,
+   "section": "A.5",
+   "text": "What does the detector (demodulator) in a receiver do?",
+   "options": [
+    "Amplifies RF",
+    "Removes the image frequency",
+    "Generates the local oscillator signal",
+    "Recovers the original modulating signal from the modulated signal"
+   ],
+   "answer": 3,
+   "explanation": "The detector recovers the information impressed on the carrier",
+   "page": 194,
+   "figure": null
+  },
+  {
+   "id": "c13q17",
+   "chapter": 13,
+   "topic": "13.3.6",
+   "num": 17,
+   "section": "A.5",
+   "text": "The simplest analogue AM detector uses:",
+   "options": [
+    "A crystal filter",
+    "A diode, capacitor and resistor",
+    "A transformer",
+    "A PLL"
+   ],
+   "answer": 1,
+   "explanation": "A simple diode circuit can demodulate AM",
+   "page": 194,
+   "figure": null
+  },
+  {
+   "id": "c13q18",
+   "chapter": 13,
+   "topic": "13.3.7",
+   "num": 18,
+   "section": "A.5",
+   "text": "A product detector, used for SSB and CW, works like a:",
+   "options": [
+    "Rectifier",
+    "Limiter",
+    "Frequency mixer",
+    "Squelch"
+   ],
+   "answer": 2,
+   "explanation": "It mixes the IF signal with a locally generated sine wave",
+   "page": 195,
+   "figure": null
+  },
+  {
+   "id": "c13q19",
+   "chapter": 13,
+   "topic": "13.3.7",
+   "num": 19,
+   "section": "A.5",
+   "text": "With a 455 kHz IF, a BFO for CW reception would be set to about:",
+   "options": [
+    "455 kHz exactly",
+    "800 Hz",
+    "10.7 MHz",
+    "455.8 kHz"
+   ],
+   "answer": 3,
+   "explanation": "The BFO is offset from the IF (e.g. by 800 Hz) to produce an audible tone",
+   "page": 195,
+   "figure": null
+  },
+  {
+   "id": "c13q20",
+   "chapter": 13,
+   "topic": "13.3.7",
+   "num": 20,
+   "section": "A.5",
+   "text": "To demodulate SSB, the oscillator feeding the product detector is called the:",
+   "options": [
+    "Carrier insertion oscillator (CIO)",
+    "Beat frequency oscillator",
+    "Local oscillator",
+    "VFO"
+   ],
+   "answer": 0,
+   "explanation": "For SSB it is the CIO, at the IF frequency",
+   "page": 195,
+   "figure": null
+  },
+  {
+   "id": "c13q21",
+   "chapter": 13,
+   "topic": "13.3.8",
+   "num": 21,
+   "section": "A.5",
+   "text": "In an FM receiver, the stage before the FM demodulator that removes amplitude variations is the:",
+   "options": [
+    "BFO",
+    "Product detector",
+    "Limiter",
+    "Balanced modulator"
+   ],
+   "answer": 2,
+   "explanation": "The limiter keeps the amplitude steady for the demodulator",
+   "page": 196,
+   "figure": null
+  },
+  {
+   "id": "c13q22",
+   "chapter": 13,
+   "topic": "13.3.8",
+   "num": 22,
+   "section": "A.5",
+   "text": "Two common types of FM demodulator are:",
+   "options": [
+    "Diode and crystal detectors",
+    "Discriminators and phase locked loop (PLL) detectors",
+    "Product detectors and BFOs",
+    "Envelope detectors and mixers"
+   ],
+   "answer": 1,
+   "explanation": "Discriminators and PLL detectors are common FM demodulators",
+   "page": 195,
+   "figure": null
+  },
+  {
+   "id": "c13q23",
+   "chapter": 13,
+   "topic": "13.3.8",
+   "num": 23,
+   "section": "A.5",
+   "text": "In the FM receiver stages shown, block X, which removes amplitude variations, is the:",
+   "options": [
+    "AGC",
+    "Product detector",
+    "Limiter",
+    "BFO"
+   ],
+   "answer": 2,
+   "explanation": "The limiter keeps the amplitude steady before the FM demodulator",
+   "page": 196,
+   "figure": "figures/ch13_fm.svg"
+  },
+  {
+   "id": "c13q24",
+   "chapter": 13,
+   "topic": "13.3.10",
+   "num": 24,
+   "section": "A.5",
+   "text": "The automatic gain control (AGC) of a receiver:",
+   "options": [
+    "Sets the transmitter power",
+    "Keeps the output level roughly constant as signal strength changes",
+    "Removes the image frequency",
+    "Measures SWR"
+   ],
+   "answer": 1,
+   "explanation": "AGC adjusts gain to maintain a constant output and prevent overload",
+   "page": 196,
+   "figure": null
+  },
+  {
+   "id": "c13q25",
+   "chapter": 13,
+   "topic": "13.3.10",
+   "num": 25,
+   "section": "A.5",
+   "text": "Many receivers use the AGC circuit to drive the:",
+   "options": [
+    "Squelch",
+    "BFO",
+    "S meter",
+    "Loudspeaker directly"
+   ],
+   "answer": 2,
+   "explanation": "The AGC circuit often drives the S meter",
+   "page": 197,
+   "figure": null
+  },
+  {
+   "id": "c13q26",
+   "chapter": 13,
+   "topic": "13.3.11",
+   "num": 26,
+   "section": "A.5",
+   "text": "Under the IARU standard, S9 on HF corresponds to an input of:",
+   "options": [
+    "5 µV",
+    "5 mV",
+    "500 µV",
+    "50 µV"
+   ],
+   "answer": 3,
+   "explanation": "S9 = 50 µV on HF and 5 µV on VHF (50 Ω)",
+   "page": 197,
+   "figure": null
+  },
+  {
+   "id": "c13q27",
+   "chapter": 13,
+   "topic": "13.3.11",
+   "num": 27,
+   "section": "A.5",
+   "text": "One S unit on an S meter corresponds to a power difference of:",
+   "options": [
+    "1 dB",
+    "3 dB",
+    "6 dB",
+    "10 dB"
+   ],
+   "answer": 2,
+   "explanation": "Each S unit is 6 dB, i.e. four times the power",
+   "page": 198,
+   "figure": null
+  },
+  {
+   "id": "c13q28",
+   "chapter": 13,
+   "topic": "13.3.11",
+   "num": 28,
+   "section": "A.5",
+   "text": "Under the IARU standard, S9 on VHF corresponds to:",
+   "options": [
+    "0.5 µV",
+    "5 µV",
+    "50 µV",
+    "500 µV"
+   ],
+   "answer": 1,
+   "explanation": "S9 = 5 µV on VHF",
+   "page": 197,
+   "figure": null
+  },
+  {
+   "id": "c13q29",
+   "chapter": 13,
+   "topic": "13.3.11",
+   "num": 29,
+   "section": "A.5",
+   "text": "Under the IARU standard, the S9 reading shown on an HF receiver corresponds to an input of:",
+   "options": [
+    "5 µV",
+    "0.5 µV",
+    "500 µV",
+    "50 µV"
+   ],
+   "answer": 3,
+   "explanation": "S9 is 50 µV on HF and 5 µV on VHF",
+   "page": 197,
+   "figure": "figures/ch13_smeter.svg"
+  },
+  {
+   "id": "c13q30",
+   "chapter": 13,
+   "topic": "13.3.12",
+   "num": 30,
+   "section": "A.5",
+   "text": "The squelch control on an FM receiver:",
+   "options": [
+    "Silences the audio when no sufficiently strong signal is present",
+    "Increases the RF gain",
+    "Narrows the IF filter",
+    "Sets the transmit deviation"
+   ],
+   "answer": 0,
+   "explanation": "Squelch suppresses audio, and so noise, below a set threshold",
+   "page": 198,
+   "figure": null
+  },
+  {
+   "id": "c13q31",
+   "chapter": 13,
+   "topic": "13.3.12",
+   "num": 31,
+   "section": "A.5",
+   "text": "What happens if the squelch threshold is set too high?",
+   "options": [
+    "Weak but audible signals will not be heard",
+    "The receiver overloads",
+    "Noise becomes louder",
+    "The S meter stops working"
+   ],
+   "answer": 0,
+   "explanation": "Weak signals below the threshold will be silenced",
+   "page": 198,
+   "figure": null
+  },
+  {
+   "id": "c13q32",
+   "chapter": 13,
+   "topic": "13.4",
+   "num": 32,
+   "section": "A.5",
+   "text": "A complete analogue SSB and CW receiver uses which kind of detector?",
+   "options": [
+    "Diode envelope detector",
+    "PLL detector",
+    "FM discriminator",
+    "Product detector with a CIO or BFO"
+   ],
+   "answer": 3,
+   "explanation": "SSB and CW receivers use a product detector fed by a CIO or BFO",
+   "page": 198,
+   "figure": null
+  },
+  {
+   "id": "c13q33",
+   "chapter": 13,
+   "topic": "13.5",
+   "num": 33,
+   "section": "A.5",
+   "text": "Which stage is found in an FM receiver but not in an SSB/CW receiver?",
+   "options": [
+    "Limiter",
+    "Mixer",
+    "IF amplifier",
+    "AF amplifier"
+   ],
+   "answer": 0,
+   "explanation": "The FM receiver has a limiter before its FM demodulator",
+   "page": 199,
+   "figure": null
+  },
+  {
+   "id": "c13q34",
+   "chapter": 13,
+   "topic": "13.6",
+   "num": 34,
+   "section": "A.5",
+   "text": "What is the first stage after the antenna in a direct sampling SDR receiver?",
+   "options": [
+    "DSP",
+    "DDS",
+    "An analogue band-pass filter",
+    "AF amplifier"
+   ],
+   "answer": 2,
+   "explanation": "An analogue band-pass filter removes strong out-of-band signals before the ADC",
+   "page": 200,
+   "figure": null
+  },
+  {
+   "id": "c13q35",
+   "chapter": 13,
+   "topic": "13.6",
+   "num": 35,
+   "section": "A.5",
+   "text": "A direct sampling ADC working on HF (up to 30 MHz) must sample at least at:",
+   "options": [
+    "30 MHz",
+    "60 MHz",
+    "144 MHz",
+    "288 MHz"
+   ],
+   "answer": 1,
+   "explanation": "At least twice the highest frequency: 2 × 30 = 60 MHz",
+   "page": 200,
+   "figure": null
+  },
+  {
+   "id": "c13q36",
+   "chapter": 13,
+   "topic": "13.6",
+   "num": 36,
+   "section": "A.5",
+   "text": "In an SDR receiver, signal demodulation is performed by the:",
+   "options": [
+    "Mixer",
+    "Band-pass filter",
+    "AF amplifier",
+    "DSP"
+   ],
+   "answer": 3,
+   "explanation": "The DSP does all demodulation, replacing traditional detectors",
+   "page": 200,
+   "figure": null
+  },
+  {
+   "id": "c13q37",
+   "chapter": 13,
+   "topic": "13.6",
+   "num": 37,
+   "section": "A.5",
+   "text": "Why does a hybrid SDR receiver use a low IF for its ADC?",
+   "options": [
+    "Because DSP cannot run at audio frequencies",
+    "To increase image frequencies",
+    "So the ADC can run at a low sampling rate with high resolution",
+    "To avoid needing a mixer"
+   ],
+   "answer": 2,
+   "explanation": "A low IF allows high resolution, good SNR and dynamic range, economically",
+   "page": 201,
+   "figure": null
+  },
+  {
+   "id": "c13q38",
+   "chapter": 13,
+   "topic": "13.7.1",
+   "num": 38,
+   "section": "A.5",
+   "text": "Receiver sensitivity is usually stated as:",
+   "options": [
+    "The maximum signal it can handle",
+    "The minimum input voltage (µV) needed for a given SNR, e.g. 10 dB",
+    "The filter bandwidth",
+    "The S meter reading at S9"
+   ],
+   "answer": 1,
+   "explanation": "Sensitivity is the minimum signal voltage for a stated SNR, bandwidth and frequency",
+   "page": 202,
+   "figure": null
+  },
+  {
+   "id": "c13q39",
+   "chapter": 13,
+   "topic": "13.7.1",
+   "num": 39,
+   "section": "A.5",
+   "text": "Which receiver has the better sensitivity?",
+   "options": [
+    "One needing 0.5 µV for 10 dB SNR",
+    "It cannot be compared",
+    "Both the same",
+    "One needing 0.16 µV for 10 dB SNR"
+   ],
+   "answer": 3,
+   "explanation": "The lower the sensitivity figure, the better",
+   "page": 202,
+   "figure": null
+  },
+  {
+   "id": "c13q40",
+   "chapter": 13,
+   "topic": "13.7.2",
+   "num": 40,
+   "section": "A.5",
+   "text": "The ability of a receiver to separate the wanted signal from nearby unwanted ones is its:",
+   "options": [
+    "Selectivity",
+    "Sensitivity",
+    "Stability",
+    "Dynamic range"
+   ],
+   "answer": 0,
+   "explanation": "Selectivity separates the wanted signal from interfering ones",
+   "page": 202,
+   "figure": null
+  },
+  {
+   "id": "c13q41",
+   "chapter": 13,
+   "topic": "13.7.2",
+   "num": 41,
+   "section": "A.5",
+   "text": "Using a filter much narrower than the passband needed by the mode may:",
+   "options": [
+    "Increase the noise level and cause ringing",
+    "Always improve reception",
+    "Increase the image frequency",
+    "Increase transmit power"
+   ],
+   "answer": 0,
+   "explanation": "Too narrow filters can increase noise and cause artefacts such as ringing",
+   "page": 202,
+   "figure": null
+  },
+  {
+   "id": "c13q42",
+   "chapter": 13,
+   "topic": "13.7.3",
+   "num": 42,
+   "section": "A.5",
+   "text": "The dynamic range of a receiver is:",
+   "options": [
+    "The range of frequencies it covers",
+    "Its IF bandwidth",
+    "The ratio of the strongest to the weakest signal it can handle",
+    "Its tuning step"
+   ],
+   "answer": 2,
+   "explanation": "Typically 90–110 dB, from sensitivity up to overload",
+   "page": 203,
+   "figure": null
+  },
+  {
+   "id": "c13q43",
+   "chapter": 13,
+   "topic": "13.7.3",
+   "num": 43,
+   "section": "A.5",
+   "text": "An SDR shows an overload warning. Engaging the attenuator will:",
+   "options": [
+    "Increase sensitivity",
+    "Fix the overload at the cost of some sensitivity",
+    "Change the IF",
+    "Have no effect"
+   ],
+   "answer": 1,
+   "explanation": "An attenuator resolves overload but reduces sensitivity",
+   "page": 203,
+   "figure": null
+  },
+  {
+   "id": "c13q44",
+   "chapter": 13,
+   "topic": "13.7.4",
+   "num": 44,
+   "section": "A.5",
+   "text": "With the local oscillator at 7455 kHz and an IF of 455 kHz, the wanted signal is on 7000 kHz. What is the image frequency?",
+   "options": [
+    "6545 kHz",
+    "7455 kHz",
+    "7910 kHz",
+    "8365 kHz"
+   ],
+   "answer": 2,
+   "explanation": "The image is the same distance on the other side of the LO: 7455 + 455 = 7910 kHz",
+   "page": 204,
+   "figure": null
+  },
+  {
+   "id": "c13q45",
+   "chapter": 13,
+   "topic": "13.7.4",
+   "num": 45,
+   "section": "A.5",
+   "text": "Image rejection requires:",
+   "options": [
+    "A squelch",
+    "A lower AF gain",
+    "A narrower AF filter",
+    "A filter before the mixer, and a relatively high IF"
+   ],
+   "answer": 3,
+   "explanation": "A filter ahead of the mixer removes images; a high IF makes this practical",
+   "page": 204,
+   "figure": null
+  },
+  {
+   "id": "c13q46",
+   "chapter": 13,
+   "topic": "13.7.4",
+   "num": 46,
+   "section": "A.5",
+   "text": "With the mixer shown and a 455 kHz IF, which other incoming frequency would also produce the IF (the image frequency)?",
+   "options": [
+    "6545 kHz",
+    "14 455 kHz",
+    "455 kHz",
+    "7910 kHz"
+   ],
+   "answer": 3,
+   "explanation": "7455 + 455 = 7910 kHz also mixes down to 455 kHz",
+   "page": 204,
+   "figure": "figures/ch13_mixer.svg"
+  },
+  {
+   "id": "c13q47",
+   "chapter": 13,
+   "topic": "13.7.5",
+   "num": 47,
+   "section": "A.5",
+   "text": "The degradation of SNR as a signal passes through an amplifier or a receiver is called its:",
+   "options": [
+    "Noise figure",
+    "Image response",
+    "Dynamic range",
+    "Shape factor"
+   ],
+   "answer": 0,
+   "explanation": "Noise figure or factor; important on VHF and UHF",
+   "page": 204,
+   "figure": null
+  },
+  {
+   "id": "c13q48",
+   "chapter": 13,
+   "topic": "13.7.6",
+   "num": 48,
+   "section": "A.5",
+   "text": "Receiver stability depends mainly on:",
+   "options": [
+    "The antenna length",
+    "The electrical and mechanical stability of tuned circuits, especially oscillators",
+    "The squelch setting",
+    "The loudspeaker"
+   ],
+   "answer": 1,
+   "explanation": "Oscillator stability, affected by heat, determines receiver stability",
+   "page": 205,
+   "figure": null
+  },
+  {
+   "id": "c13q49",
+   "chapter": 13,
+   "topic": "13.7.7",
+   "num": 49,
+   "section": "A.5",
+   "text": "A weak station cannot be heard because a strong signal nearby reduces the receiver's sensitivity. This is:",
+   "options": [
+    "Image response",
+    "Aliasing",
+    "Squelch",
+    "Desensitisation or blocking"
+   ],
+   "answer": 3,
+   "explanation": "An overdriven internal amplifier reduces the response to weak signals",
+   "page": 205,
+   "figure": null
+  },
+  {
+   "id": "c13q50",
+   "chapter": 13,
+   "topic": "13.7.8",
+   "num": 50,
+   "section": "A.5",
+   "text": "When the receiver amplifiers operate within their range, intermodulation mainly:",
+   "options": [
+    "Changes the IF",
+    "Improves selectivity",
+    "Raises the noise floor",
+    "Has no effect at all"
+   ],
+   "answer": 2,
+   "explanation": "IMD adds low-level noise that reduces SNR and sensitivity",
+   "page": 205,
+   "figure": null
+  },
+  {
+   "id": "c13q51",
+   "chapter": 13,
+   "topic": "13.7.9",
+   "num": 51,
+   "section": "A.5",
+   "text": "Cross-modulation is:",
+   "options": [
+    "Normal SSB demodulation",
+    "A signal on the image frequency",
+    "A harmonic of the local oscillator",
+    "The transfer of modulation from a strong unwanted signal onto a weaker wanted signal"
+   ],
+   "answer": 3,
+   "explanation": "A non-linear stage, or AGC, imparts the strong signal's modulation on the wanted one",
+   "page": 205,
+   "figure": null
+  },
+  {
+   "id": "c14q01",
+   "chapter": 14,
+   "topic": "14.1",
+   "num": 1,
+   "section": "A.6",
+   "text": "The characteristic impedance (Z0) of a transmission line is determined by:",
+   "options": [
+    "Its physical design: conductor size and spacing and the dielectric",
+    "Its length",
+    "The transmitter power",
+    "The frequency only"
+   ],
+   "answer": 0,
+   "explanation": "Z0 depends on construction, not on length",
+   "page": 206,
+   "figure": null
+  },
+  {
+   "id": "c14q02",
+   "chapter": 14,
+   "topic": "14.1",
+   "num": 2,
+   "section": "A.6",
+   "text": "If you cut a 50 Ω coaxial cable in half, the characteristic impedance of each piece is:",
+   "options": [
+    "25 Ω",
+    "It depends on the frequency",
+    "100 Ω",
+    "50 Ω"
+   ],
+   "answer": 3,
+   "explanation": "Characteristic impedance does not depend on the length of the line",
+   "page": 206,
+   "figure": null
+  },
+  {
+   "id": "c14q03",
+   "chapter": 14,
+   "topic": "14.2",
+   "num": 3,
+   "section": "A.6",
+   "text": "Line loss in a transmission line:",
+   "options": [
+    "Decreases as frequency increases",
+    "Does not depend on frequency",
+    "Increases as frequency increases",
+    "Depends only on SWR"
+   ],
+   "answer": 2,
+   "explanation": "Losses increase with frequency; good cable is essential on VHF/UHF",
+   "page": 207,
+   "figure": null
+  },
+  {
+   "id": "c14q04",
+   "chapter": 14,
+   "topic": "14.2",
+   "num": 4,
+   "section": "A.6",
+   "text": "Line loss is usually quoted in:",
+   "options": [
+    "Ω per metre",
+    "dB per 100 m",
+    "W per metre",
+    "Percent per hour"
+   ],
+   "answer": 1,
+   "explanation": "Line loss is in dB per unit length, usually per 100 m",
+   "page": 207,
+   "figure": null
+  },
+  {
+   "id": "c14q05",
+   "chapter": 14,
+   "topic": "14.2",
+   "num": 5,
+   "section": "A.6",
+   "text": "RG-58 has a loss of about 7 dB per 100 m at 28 MHz. Of 100 W fed into 100 m of it, roughly how much reaches the antenna?",
+   "options": [
+    "About 20 W",
+    "About 50 W",
+    "About 90 W",
+    "About 7 W"
+   ],
+   "answer": 0,
+   "explanation": "7 dB is more than ×1/4 loss: only about 20 W arrives, 80 W becomes heat",
+   "page": 207,
+   "figure": null
+  },
+  {
+   "id": "c14q06",
+   "chapter": 14,
+   "topic": "14.2",
+   "num": 6,
+   "section": "A.6",
+   "text": "Power is lost in a transmission line because of:",
+   "options": [
+    "The velocity factor",
+    "Resistance of the conductors and heating of the dielectric",
+    "The characteristic impedance",
+    "The connectors only"
+   ],
+   "answer": 1,
+   "explanation": "Resistive (ohmic) and dielectric losses dissipate power as heat",
+   "page": 206,
+   "figure": null
+  },
+  {
+   "id": "c14q07",
+   "chapter": 14,
+   "topic": "14.3",
+   "num": 7,
+   "section": "A.6",
+   "text": "The velocity factor of common polyethylene coaxial cable is about:",
+   "options": [
+    "1.5",
+    "0.95",
+    "0.66",
+    "0.33"
+   ],
+   "answer": 2,
+   "explanation": "Waves travel at about 66% of the speed of light in such coax",
+   "page": 208,
+   "figure": null
+  },
+  {
+   "id": "c14q08",
+   "chapter": 14,
+   "topic": "14.3",
+   "num": 8,
+   "section": "A.6",
+   "text": "The velocity factor of an open wire line is about:",
+   "options": [
+    "0.5",
+    "0.66",
+    "0.85–0.9",
+    "1.2"
+   ],
+   "answer": 2,
+   "explanation": "Open wire lines are faster: 0.85–0.9 (0.85–0.95)",
+   "page": 208,
+   "figure": null
+  },
+  {
+   "id": "c14q09",
+   "chapter": 14,
+   "topic": "14.3",
+   "num": 9,
+   "section": "A.6",
+   "text": "What is the electrical half-wavelength at 14 MHz of coax with a velocity factor of 0.66?",
+   "options": [
+    "3.5 m",
+    "7.1 m",
+    "10.7 m",
+    "21.4 m"
+   ],
+   "answer": 1,
+   "explanation": "Free-space λ/2 = 10.7 m; × 0.66 ≈ 7.1 m",
+   "page": 208,
+   "figure": null
+  },
+  {
+   "id": "c14q10",
+   "chapter": 14,
+   "topic": "14.3",
+   "num": 10,
+   "section": "A.6",
+   "text": "The velocity factor of a line is always:",
+   "options": [
+    "Greater than 1",
+    "Negative",
+    "Exactly 1",
+    "Between 0 and 1"
+   ],
+   "answer": 3,
+   "explanation": "It is a fraction of the speed of light, between 0 and 1",
+   "page": 208,
+   "figure": null
+  },
+  {
+   "id": "c14q11",
+   "chapter": 14,
+   "topic": "14.4",
+   "num": 11,
+   "section": "A.6",
+   "text": "Why would a single bare wire make a poor transmission line?",
+   "options": [
+    "It has no velocity factor",
+    "It has too low resistance",
+    "It cannot carry RF",
+    "It would act as an antenna and radiate along its length"
+   ],
+   "answer": 3,
+   "explanation": "A single wire radiates energy all along its length",
+   "page": 209,
+   "figure": null
+  },
+  {
+   "id": "c14q12",
+   "chapter": 14,
+   "topic": "14.4",
+   "num": 12,
+   "section": "A.6",
+   "text": "Feedline radiation is undesirable because:",
+   "options": [
+    "It reduces the power left for the antenna and can bring RF into the shack",
+    "It improves the SWR",
+    "It is required by law",
+    "It lowers the line loss"
+   ],
+   "answer": 0,
+   "explanation": "It wastes power and can cause RF problems and interference",
+   "page": 209,
+   "figure": null
+  },
+  {
+   "id": "c14q13",
+   "chapter": 14,
+   "topic": "14.5",
+   "num": 13,
+   "section": "A.6",
+   "text": "How does a parallel (open wire) line prevent radiation?",
+   "options": [
+    "By a metal shield",
+    "By its velocity factor",
+    "Its two conductors carry equal and opposite currents, so their fields cancel",
+    "By being buried"
+   ],
+   "answer": 2,
+   "explanation": "Balanced, opposite currents make the fields cancel",
+   "page": 209,
+   "figure": null
+  },
+  {
+   "id": "c14q14",
+   "chapter": 14,
+   "topic": "14.5",
+   "num": 14,
+   "section": "A.6",
+   "text": "Which is a typical characteristic impedance of a window line?",
+   "options": [
+    "50 Ω",
+    "5 kΩ",
+    "5 Ω",
+    "450 Ω"
+   ],
+   "answer": 3,
+   "explanation": "Typical parallel lines: 600, 450, 300 and 75 Ω",
+   "page": 210,
+   "figure": null
+  },
+  {
+   "id": "c14q15",
+   "chapter": 14,
+   "topic": "14.5",
+   "num": 15,
+   "section": "A.6",
+   "text": "How should parallel line be installed?",
+   "options": [
+    "Away from metal objects and the ground, without sharp bends",
+    "Taped to a metal mast",
+    "Coiled tightly",
+    "Buried underground"
+   ],
+   "answer": 0,
+   "explanation": "Nearby metal, the ground or sharp bends unbalance it and cause radiation",
+   "page": 210,
+   "figure": null
+  },
+  {
+   "id": "c14q16",
+   "chapter": 14,
+   "topic": "14.5",
+   "num": 16,
+   "section": "A.6",
+   "text": "Typical loss of a dry parallel line at 28 MHz is:",
+   "options": [
+    "0.3–0.5 dB/100 m",
+    "3.5 dB/100 m",
+    "7 dB/100 m",
+    "20 dB/100 m"
+   ],
+   "answer": 0,
+   "explanation": "Parallel lines are very low loss: about 0.3–0.5 dB/100 m",
+   "page": 210,
+   "figure": null
+  },
+  {
+   "id": "c14q17",
+   "chapter": 14,
+   "topic": "14.6",
+   "num": 17,
+   "section": "A.6",
+   "text": "Why are coaxial cables so popular?",
+   "options": [
+    "They have the lowest loss of any line",
+    "They tolerate being bent, buried and placed near metal or other cables",
+    "They need no connectors",
+    "They are balanced lines"
+   ],
+   "answer": 1,
+   "explanation": "Coax is very tolerant of its environment and easy to use",
+   "page": 211,
+   "figure": null
+  },
+  {
+   "id": "c14q18",
+   "chapter": 14,
+   "topic": "14.6",
+   "num": 18,
+   "section": "A.6",
+   "text": "At RF, where does the return current of the signal in a coaxial cable flow?",
+   "options": [
+    "On the outside of the shield",
+    "In the jacket",
+    "In the dielectric",
+    "On the inside surface of the shield"
+   ],
+   "answer": 3,
+   "explanation": "Due to skin effect the return current is on the inside skin of the shield",
+   "page": 212,
+   "figure": null
+  },
+  {
+   "id": "c14q19",
+   "chapter": 14,
+   "topic": "14.6",
+   "num": 19,
+   "section": "A.6",
+   "text": "Why must the outer jacket of a coaxial cable keep water out?",
+   "options": [
+    "Water is a conductor that improves the shield",
+    "Water improves the velocity factor",
+    "Water would irreversibly damage the shielding braid",
+    "It does not matter"
+   ],
+   "answer": 2,
+   "explanation": "Even a small amount of water would irreversibly damage the braid",
+   "page": 212,
+   "figure": null
+  },
+  {
+   "id": "c14q20",
+   "chapter": 14,
+   "topic": "14.6",
+   "num": 20,
+   "section": "A.6",
+   "text": "Compared with RG-58, RG-213 coaxial cable:",
+   "options": [
+    "Is thinner and has higher loss",
+    "Is thicker, with lower loss and higher power handling",
+    "Has a different impedance (75 Ω)",
+    "Cannot be used outdoors"
+   ],
+   "answer": 1,
+   "explanation": "RG-213 is 10.3 mm, lower loss and handles more power; both are 50 Ω",
+   "page": 213,
+   "figure": null
+  },
+  {
+   "id": "c14q21",
+   "chapter": 14,
+   "topic": "14.6",
+   "num": 21,
+   "section": "A.6",
+   "text": "The PL-259 and SO-239 connectors are known as:",
+   "options": [
+    "N connectors",
+    "UHF connectors",
+    "BNC connectors",
+    "SMA connectors"
+   ],
+   "answer": 1,
+   "explanation": "UHF connectors: PL-259 plug and SO-239 socket, mostly used on HF",
+   "page": 213,
+   "figure": null
+  },
+  {
+   "id": "c14q22",
+   "chapter": 14,
+   "topic": "14.6",
+   "num": 22,
+   "section": "A.6",
+   "text": "In the coaxial cable cross-section shown, which part is the shielding braid?",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "answer": 2,
+   "explanation": "A is the centre conductor, B the dielectric, C the braid and D the outer jacket",
+   "page": 212,
+   "figure": "figures/ch14_coax.svg"
+  },
+  {
+   "id": "c14q23",
+   "chapter": 14,
+   "topic": "14.7",
+   "num": 23,
+   "section": "A.6",
+   "text": "A waveguide carries RF by:",
+   "options": [
+    "Two parallel wires",
+    "A centre conductor",
+    "Reflecting the electromagnetic wave from its inner walls",
+    "Optical fibre"
+   ],
+   "answer": 2,
+   "explanation": "Waveguides are tubes in which the wave reflects from the inner walls",
+   "page": 213,
+   "figure": null
+  },
+  {
+   "id": "c14q24",
+   "chapter": 14,
+   "topic": "14.7",
+   "num": 24,
+   "section": "A.6",
+   "text": "Waveguides are used:",
+   "options": [
+    "On LF",
+    "On HF",
+    "Only for mains power",
+    "At the higher end of UHF and above"
+   ],
+   "answer": 3,
+   "explanation": "They are used at upper UHF and microwave frequencies",
+   "page": 214,
+   "figure": null
+  },
+  {
+   "id": "c14q25",
+   "chapter": 14,
+   "topic": "14.7",
+   "num": 25,
+   "section": "A.6",
+   "text": "Why must you never look into an active waveguide?",
+   "options": [
+    "Risk of serious injury, especially to the eyes",
+    "It will detune the waveguide",
+    "It reduces the power",
+    "It causes key clicks"
+   ],
+   "answer": 0,
+   "explanation": "Focused microwave energy can seriously injure, especially the eyes",
+   "page": 214,
+   "figure": null
+  },
+  {
+   "id": "c14q26",
+   "chapter": 14,
+   "topic": "14.8",
+   "num": 26,
+   "section": "A.6",
+   "text": "Common mode currents on a coaxial cable flow:",
+   "options": [
+    "On the outside of the shield",
+    "On the inside of the shield",
+    "On the centre conductor",
+    "In the dielectric"
+   ],
+   "answer": 0,
+   "explanation": "The outside of the shield acts like an extra wire carrying common mode current",
+   "page": 212,
+   "figure": null
+  },
+  {
+   "id": "c14q27",
+   "chapter": 14,
+   "topic": "14.8",
+   "num": 27,
+   "section": "A.6",
+   "text": "Which of these can result from strong common mode currents?",
+   "options": [
+    "A lower noise level",
+    "RF burns from microphones or keys, and equipment malfunction",
+    "A better antenna pattern",
+    "Lower SWR"
+   ],
+   "answer": 1,
+   "explanation": "They can bring RF indoors, cause malfunctions and RF burns",
+   "page": 215,
+   "figure": null
+  },
+  {
+   "id": "c14q28",
+   "chapter": 14,
+   "topic": "14.8",
+   "num": 28,
+   "section": "A.6",
+   "text": "Common mode currents can be reduced by:",
+   "options": [
+    "Removing the balun",
+    "Longer coax",
+    "Higher power",
+    "Common mode chokes and a good RF earth"
+   ],
+   "answer": 3,
+   "explanation": "Use chokes, keep things balanced, and provide a good RF earth if possible",
+   "page": 215,
+   "figure": null
+  },
+  {
+   "id": "c14q29",
+   "chapter": 14,
+   "topic": "14.9",
+   "num": 29,
+   "section": "A.6",
+   "text": "For maximum power transfer, the transmitter output, the line and the antenna feed point impedances should:",
+   "options": [
+    "All be different",
+    "Rise from transmitter to antenna",
+    "All match",
+    "Not matter"
+   ],
+   "answer": 2,
+   "explanation": "All impedances should match for maximum transfer of power",
+   "page": 215,
+   "figure": null
+  },
+  {
+   "id": "c14q30",
+   "chapter": 14,
+   "topic": "14.9",
+   "num": 30,
+   "section": "A.6",
+   "text": "On a perfectly matched line:",
+   "options": [
+    "Standing waves are at their maximum",
+    "The SWR is infinite",
+    "All the power is reflected",
+    "There is no reflected power and no standing wave"
+   ],
+   "answer": 3,
+   "explanation": "With a matched resistive load, none is reflected; V and I are the same along the line",
+   "page": 216,
+   "figure": null
+  },
+  {
+   "id": "c14q31",
+   "chapter": 14,
+   "topic": "14.9",
+   "num": 31,
+   "section": "A.6",
+   "text": "A 100 W transmitter feeds a mismatched line; the meter shows 20 W reflected. What is the forward power and net power?",
+   "options": [
+    "100 W forward, 80 W net",
+    "120 W forward, 100 W net",
+    "80 W forward, 60 W net",
+    "120 W forward, 120 W net"
+   ],
+   "answer": 1,
+   "explanation": "The re-reflected 20 W adds to forward power (120 W); net = 120 − 20 = 100 W",
+   "page": 217,
+   "figure": null
+  },
+  {
+   "id": "c14q32",
+   "chapter": 14,
+   "topic": "14.9",
+   "num": 32,
+   "section": "A.6",
+   "text": "Is all the reflected power on a mismatched line lost?",
+   "options": [
+    "No; it is eventually used by the load, apart from extra line losses",
+    "Yes, all of it is lost",
+    "Yes, it heats the antenna",
+    "It is radiated by the transmitter"
+   ],
+   "answer": 0,
+   "explanation": "Reflected power is re-reflected and eventually absorbed or radiated by the load, except for line losses",
+   "page": 217,
+   "figure": null
+  },
+  {
+   "id": "c14q33",
+   "chapter": 14,
+   "topic": "14.9",
+   "num": 33,
+   "section": "A.6",
+   "text": "Standing waves on a mismatched line increase losses because they:",
+   "options": [
+    "Reduce the velocity factor",
+    "Lower the frequency",
+    "Increase the current and voltage on parts of the line",
+    "Shorten the line"
+   ],
+   "answer": 2,
+   "explanation": "Higher currents raise resistive loss; higher voltages raise dielectric loss",
+   "page": 218,
+   "figure": null
+  },
+  {
+   "id": "c14q34",
+   "chapter": 14,
+   "topic": "14.9.4",
+   "num": 34,
+   "section": "A.6",
+   "text": "SWR (VSWR) is the ratio of:",
+   "options": [
+    "The highest to the lowest voltage of the standing wave on the line",
+    "Forward to reflected power",
+    "Line loss to length",
+    "Antenna gain to loss"
+   ],
+   "answer": 0,
+   "explanation": "VSWR = Vmax / Vmin along the line",
+   "page": 219,
+   "figure": null
+  },
+  {
+   "id": "c14q35",
+   "chapter": 14,
+   "topic": "14.9.4",
+   "num": 35,
+   "section": "A.6",
+   "text": "A perfectly matched line has an SWR of:",
+   "options": [
+    "0",
+    "2:1",
+    "1:1",
+    "Infinite"
+   ],
+   "answer": 2,
+   "explanation": "With no standing waves the ratio is 1:1",
+   "page": 219,
+   "figure": null
+  },
+  {
+   "id": "c14q36",
+   "chapter": 14,
+   "topic": "14.9.4",
+   "num": 36,
+   "section": "A.6",
+   "text": "Which kind of line tolerates a very high SWR with little extra loss?",
+   "options": [
+    "Thin coaxial cable",
+    "Low-loss parallel line",
+    "Any line equally",
+    "A single wire"
+   ],
+   "answer": 1,
+   "explanation": "Inherently low-loss parallel lines tolerate very high SWR",
+   "page": 219,
+   "figure": null
+  },
+  {
+   "id": "c14q37",
+   "chapter": 14,
+   "topic": "14.9.4",
+   "num": 37,
+   "section": "A.6",
+   "text": "An SWR of 2:1 may cause problems mainly for:",
+   "options": [
+    "Dummy loads",
+    "Valve amplifiers",
+    "Receivers",
+    "Some solid-state transmitters and amplifiers that cannot run full power"
+   ],
+   "answer": 3,
+   "explanation": "Some solid-state equipment cannot work at full power with SWR 2:1; valves cope better",
+   "page": 219,
+   "figure": null
+  },
+  {
+   "id": "c14q38",
+   "chapter": 14,
+   "topic": "14.9.4",
+   "num": 38,
+   "section": "A.6",
+   "text": "What is the SWR on the line whose voltage standing wave is shown?",
+   "options": [
+    "1:1",
+    "3:1",
+    "2:1",
+    "4:1"
+   ],
+   "answer": 1,
+   "explanation": "SWR = highest voltage / lowest voltage = 3 V / 1 V = 3:1",
+   "page": 219,
+   "figure": "figures/ch14_standing.svg"
+  },
+  {
+   "id": "c14q39",
+   "chapter": 14,
+   "topic": "14.10",
+   "num": 39,
+   "section": "A.6",
+   "text": "What does an antenna tuning unit (ATU) do?",
+   "options": [
+    "Transforms the antenna (and line) impedance to the transmitter's nominal 50 Ω",
+    "Increases the antenna gain",
+    "Changes the frequency",
+    "Measures field strength"
+   ],
+   "answer": 0,
+   "explanation": "An ATU matches the impedance presented by the antenna system to the transmitter",
+   "page": 220,
+   "figure": null
+  },
+  {
+   "id": "c14q40",
+   "chapter": 14,
+   "topic": "14.10",
+   "num": 40,
+   "section": "A.6",
+   "text": "Why is the best place for an ATU at the antenna feed point?",
+   "options": [
+    "It is easier to adjust there",
+    "It presents 50 Ω to the line, avoiding standing waves and extra line loss",
+    "It increases the transmitter power",
+    "It reduces the velocity factor"
+   ],
+   "answer": 1,
+   "explanation": "At the antenna, the line sees a match and has no extra SWR losses",
+   "page": 220,
+   "figure": null
+  },
+  {
+   "id": "c14q41",
+   "chapter": 14,
+   "topic": "14.10",
+   "num": 41,
+   "section": "A.6",
+   "text": "An ATU typically contains:",
+   "options": [
+    "Resistors and diodes",
+    "Batteries",
+    "Transistors and valves",
+    "Variable or switched inductors and capacitors"
+   ],
+   "answer": 3,
+   "explanation": "Adjustable L and C provide a choice of matches (L-match, T-match)",
+   "page": 220,
+   "figure": null
+  },
+  {
+   "id": "c14q42",
+   "chapter": 14,
+   "topic": "14.11",
+   "num": 42,
+   "section": "A.6",
+   "text": "Why is a balun used when feeding a dipole with coaxial cable?",
+   "options": [
+    "To change the frequency",
+    "To raise the transmitter power",
+    "To keep the signal inside the coax separate from common mode currents on the outside",
+    "To lower the antenna height"
+   ],
+   "answer": 2,
+   "explanation": "Without a balun, feedline radiation and a distorted pattern are likely",
+   "page": 221,
+   "figure": null
+  },
+  {
+   "id": "c14q43",
+   "chapter": 14,
+   "topic": "14.11",
+   "num": 43,
+   "section": "A.6",
+   "text": "A 1:1 current balun used to suppress common mode currents is also called a:",
+   "options": [
+    "Transformer balun",
+    "Unun",
+    "Common mode choke",
+    "Stub"
+   ],
+   "answer": 2,
+   "explanation": "Used this way it is a common mode choke",
+   "page": 222,
+   "figure": null
+  },
+  {
+   "id": "c14q44",
+   "chapter": 14,
+   "topic": "14.11",
+   "num": 44,
+   "section": "A.6",
+   "text": "An \"ugly balun\" is made from:",
+   "options": [
+    "Ferrite beads",
+    "A length of open wire line",
+    "A 4:1 transformer",
+    "Several turns of the coaxial feeder coiled at the antenna feed point"
+   ],
+   "answer": 3,
+   "explanation": "Coiling the coax turns the outside of the shield into an inductor",
+   "page": 223,
+   "figure": null
+  },
+  {
+   "id": "c14q45",
+   "chapter": 14,
+   "topic": "14.11",
+   "num": 45,
+   "section": "A.6",
+   "text": "Compared with current baluns, voltage baluns:",
+   "options": [
+    "Do not provide common mode suppression",
+    "Provide better common mode suppression",
+    "Cannot transform impedance",
+    "Only work on VHF"
+   ],
+   "answer": 0,
+   "explanation": "Voltage baluns are inferior as baluns because they give no common mode suppression",
+   "page": 223,
+   "figure": null
+  },
+  {
+   "id": "c14q46",
+   "chapter": 14,
+   "topic": "14.11",
+   "num": 46,
+   "section": "A.6",
+   "text": "An unun with a 49:1 impedance ratio is used to match:",
+   "options": [
+    "A half-wave dipole",
+    "An end-fed half-wave (EFHW) antenna",
+    "A Yagi",
+    "A quarter-wave ground plane"
+   ],
+   "answer": 1,
+   "explanation": "49:1 ununs are used with EFHW antennas, generally with an ATU",
+   "page": 223,
+   "figure": null
+  },
+  {
+   "id": "c14q47",
+   "chapter": 14,
+   "topic": "14.11",
+   "num": 47,
+   "section": "A.6",
+   "text": "Unit X connects the balanced dipole to the unbalanced coaxial cable. It is a:",
+   "options": [
+    "Balun",
+    "Trap",
+    "Dummy load",
+    "Low-pass filter"
+   ],
+   "answer": 0,
+   "explanation": "A balun (balancing unit) connects balanced antennas to unbalanced coax",
+   "page": 221,
+   "figure": "figures/ch14_balun.svg"
+  },
+  {
+   "id": "c15q01",
+   "chapter": 15,
+   "topic": "15.1",
+   "num": 1,
+   "section": "A.6",
+   "text": "A transmitting antenna:",
+   "options": [
+    "Converts RF AC into electromagnetic waves",
+    "Converts DC into AC",
+    "Amplifies the signal",
+    "Filters harmonics"
+   ],
+   "answer": 0,
+   "explanation": "Antennas convert RF AC into radio waves, and back again when receiving",
+   "page": 224,
+   "figure": null
+  },
+  {
+   "id": "c15q02",
+   "chapter": 15,
+   "topic": "15.1",
+   "num": 2,
+   "section": "A.6",
+   "text": "An antenna radiates because the RF AC:",
+   "options": [
+    "Heats the wire",
+    "Accelerates and decelerates the electrons in the wire",
+    "Creates a static field",
+    "Reduces the resistance"
+   ],
+   "answer": 1,
+   "explanation": "Accelerating and decelerating charges radiate energy as an electromagnetic wave",
+   "page": 224,
+   "figure": null
+  },
+  {
+   "id": "c15q03",
+   "chapter": 15,
+   "topic": "15.2",
+   "num": 3,
+   "section": "A.6",
+   "text": "In which region around an antenna are the fields strongest and still attached to the antenna?",
+   "options": [
+    "Ionosphere",
+    "Radiating near field",
+    "Far field",
+    "Reactive near field"
+   ],
+   "answer": 3,
+   "explanation": "The reactive near field immediately surrounds the antenna and holds the strongest fields",
+   "page": 225,
+   "figure": null
+  },
+  {
+   "id": "c15q04",
+   "chapter": 15,
+   "topic": "15.2",
+   "num": 4,
+   "section": "A.6",
+   "text": "For a half-wave dipole, the radiating far field begins at roughly:",
+   "options": [
+    "¼ wavelength",
+    "10 wavelengths",
+    "One wavelength from the antenna",
+    "100 m regardless of frequency"
+   ],
+   "answer": 2,
+   "explanation": "Reactive near field to ¼–½ λ; radiating near field to about 1 λ; far field beyond",
+   "page": 226,
+   "figure": null
+  },
+  {
+   "id": "c15q05",
+   "chapter": 15,
+   "topic": "15.2",
+   "num": 5,
+   "section": "A.6",
+   "text": "In the far field, doubling the distance from the antenna makes the field strength:",
+   "options": [
+    "Stay the same",
+    "Fall to a quarter",
+    "Halve",
+    "Double"
+   ],
+   "answer": 2,
+   "explanation": "In the far field the EMF strength halves as the distance doubles",
+   "page": 226,
+   "figure": null
+  },
+  {
+   "id": "c15q06",
+   "chapter": 15,
+   "topic": "15.2",
+   "num": 6,
+   "section": "A.6",
+   "text": "Why should the public not be in an antenna's reactive near field?",
+   "options": [
+    "It is too cold",
+    "The fields are strongest there and hard to measure",
+    "It blocks reception",
+    "It is illegal to stand near any wire"
+   ],
+   "answer": 1,
+   "explanation": "Field strengths are strongest in the reactive near field, a safety concern",
+   "page": 226,
+   "figure": null
+  },
+  {
+   "id": "c15q07",
+   "chapter": 15,
+   "topic": "15.3",
+   "num": 7,
+   "section": "A.6",
+   "text": "The feed point impedance of an antenna is determined by:",
+   "options": [
+    "The antenna design, the frequency and the feed point position",
+    "The feedline",
+    "The transmitter",
+    "The SWR meter"
+   ],
+   "answer": 0,
+   "explanation": "It depends on the antenna design, frequency and where the feed point is",
+   "page": 227,
+   "figure": null
+  },
+  {
+   "id": "c15q08",
+   "chapter": 15,
+   "topic": "15.3",
+   "num": 8,
+   "section": "A.6",
+   "text": "Ideally, the feed point impedance of an antenna fed with common coax should be close to:",
+   "options": [
+    "5 Ω",
+    "50 Ω",
+    "300 Ω",
+    "5000 Ω"
+   ],
+   "answer": 1,
+   "explanation": "It should match the line: close to 50 Ω for common coax",
+   "page": 227,
+   "figure": null
+  },
+  {
+   "id": "c15q09",
+   "chapter": 15,
+   "topic": "15.4",
+   "num": 9,
+   "section": "A.6",
+   "text": "Antennas can be made from tubing without losing performance because of:",
+   "options": [
+    "The Q factor",
+    "The velocity factor",
+    "Polarisation",
+    "The skin effect: RF flows on the surface of conductors"
+   ],
+   "answer": 3,
+   "explanation": "RF current flows only on or near the surface (skin effect)",
+   "page": 227,
+   "figure": null
+  },
+  {
+   "id": "c15q10",
+   "chapter": 15,
+   "topic": "15.4",
+   "num": 10,
+   "section": "A.6",
+   "text": "A mesh can be used for a reflector antenna, such as a dish, if:",
+   "options": [
+    "The holes are much smaller than the wavelength",
+    "The holes are larger than the wavelength",
+    "It is made of plastic",
+    "It is painted"
+   ],
+   "answer": 0,
+   "explanation": "Holes must be much smaller than the wavelength (at least 12 times smaller)",
+   "page": 228,
+   "figure": null
+  },
+  {
+   "id": "c15q11",
+   "chapter": 15,
+   "topic": "15.5",
+   "num": 11,
+   "section": "A.6",
+   "text": "The radiation pattern of an antenna, compared with its receiving (capture) pattern, is:",
+   "options": [
+    "Opposite",
+    "Unrelated",
+    "Identical",
+    "Always circular"
+   ],
+   "answer": 2,
+   "explanation": "The transmit and receive patterns of an antenna are the same",
+   "page": 228,
+   "figure": null
+  },
+  {
+   "id": "c15q12",
+   "chapter": 15,
+   "topic": "15.5",
+   "num": 12,
+   "section": "A.6",
+   "text": "The radiation pattern of an isotropic antenna is:",
+   "options": [
+    "A doughnut",
+    "A narrow beam",
+    "A figure of eight",
+    "A perfect sphere"
+   ],
+   "answer": 3,
+   "explanation": "The theoretical isotropic radiator radiates equally in all directions",
+   "page": 228,
+   "figure": null
+  },
+  {
+   "id": "c15q13",
+   "chapter": 15,
+   "topic": "15.5",
+   "num": 13,
+   "section": "A.6",
+   "text": "Antennas with a pattern strongly favouring one direction, like Yagis, are called:",
+   "options": [
+    "Isotropic antennas",
+    "Beam antennas",
+    "Ground planes",
+    "Dummy loads"
+   ],
+   "answer": 1,
+   "explanation": "Directional antennas such as Yagis are beam antennas",
+   "page": 228,
+   "figure": null
+  },
+  {
+   "id": "c15q14",
+   "chapter": 15,
+   "topic": "15.6",
+   "num": 14,
+   "section": "A.6",
+   "text": "A vertical wire antenna produces waves that are:",
+   "options": [
+    "Vertically polarised",
+    "Horizontally polarised",
+    "Circularly polarised",
+    "Unpolarised"
+   ],
+   "answer": 0,
+   "explanation": "Wire antennas polarise waves in the direction of the wire",
+   "page": 229,
+   "figure": null
+  },
+  {
+   "id": "c15q15",
+   "chapter": 15,
+   "topic": "15.6",
+   "num": 15,
+   "section": "A.6",
+   "text": "For VHF line-of-sight contacts, the transmitting and receiving antennas should have:",
+   "options": [
+    "Opposite polarisation",
+    "Circular polarisation only",
+    "Any polarisation",
+    "The same polarisation (orientation)"
+   ],
+   "answer": 3,
+   "explanation": "Matching orientation gives the strongest received signals, especially on VHF/UHF",
+   "page": 229,
+   "figure": null
+  },
+  {
+   "id": "c15q16",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 16,
+   "section": "A.6",
+   "text": "On a half-wave antenna, where is the voltage highest?",
+   "options": [
+    "At the centre",
+    "A quarter wave from one end",
+    "At the ends",
+    "It is the same everywhere"
+   ],
+   "answer": 2,
+   "explanation": "Voltage is highest at the ends; current is highest at the centre",
+   "page": 229,
+   "figure": null
+  },
+  {
+   "id": "c15q17",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 17,
+   "section": "A.6",
+   "text": "On a half-wave antenna, where is the current highest?",
+   "options": [
+    "At the ends",
+    "At the centre",
+    "Only at the feed line",
+    "Nowhere; it is zero"
+   ],
+   "answer": 1,
+   "explanation": "Current is highest at the centre and close to zero at the ends",
+   "page": 229,
+   "figure": null
+  },
+  {
+   "id": "c15q18",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 18,
+   "section": "A.6",
+   "text": "The approximate free-space half wavelength at 14 MHz is:",
+   "options": [
+    "42.8 m",
+    "21.4 m",
+    "10.7 m",
+    "5.35 m"
+   ],
+   "answer": 2,
+   "explanation": "λ = 300/14 = 21.4 m; λ/2 = 10.7 m",
+   "page": 230,
+   "figure": null
+  },
+  {
+   "id": "c15q19",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 19,
+   "section": "A.6",
+   "text": "The practical length of a 14 MHz half-wave antenna, allowing for velocity factor and end effects, is about:",
+   "options": [
+    "10.06 m",
+    "10.7 m",
+    "21.4 m",
+    "7.1 m"
+   ],
+   "answer": 0,
+   "explanation": "10.7 × 0.99 × 0.95 ≈ 10.06 m",
+   "page": 231,
+   "figure": null
+  },
+  {
+   "id": "c15q20",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 20,
+   "section": "A.6",
+   "text": "The feed point impedance of a resonant horizontal half-wave dipole in free space is about:",
+   "options": [
+    "35 Ω",
+    "50 Ω",
+    "74 Ω",
+    "300 Ω"
+   ],
+   "answer": 2,
+   "explanation": "About 74 Ω in free space; typically 40–70 Ω at practical heights",
+   "page": 230,
+   "figure": null
+  },
+  {
+   "id": "c15q21",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 21,
+   "section": "A.6",
+   "text": "Why should you never touch the ends of an active half-wave antenna?",
+   "options": [
+    "It changes the polarisation",
+    "The current is highest there",
+    "They are always earthed",
+    "The voltage is highest there and can cause RF burns"
+   ],
+   "answer": 3,
+   "explanation": "High RF voltage at the ends can cause burns",
+   "page": 230,
+   "figure": null
+  },
+  {
+   "id": "c15q22",
+   "chapter": 15,
+   "topic": "15.7",
+   "num": 22,
+   "section": "A.6",
+   "text": "The figure shows two distributions along a half-wave dipole. Curve X, largest at the centre, shows the:",
+   "options": [
+    "Voltage",
+    "Impedance",
+    "Current",
+    "Resistance"
+   ],
+   "answer": 2,
+   "explanation": "Current is highest at the centre; voltage (Y) is highest at the ends",
+   "page": 229,
+   "figure": "figures/ch15_dipole.svg"
+  },
+  {
+   "id": "c15q23",
+   "chapter": 15,
+   "topic": "15.8",
+   "num": 23,
+   "section": "A.6",
+   "text": "A half-wave dipole is fed:",
+   "options": [
+    "At the centre",
+    "At one end",
+    "A quarter from one end",
+    "Through a ground plane"
+   ],
+   "answer": 0,
+   "explanation": "The wire is cut in the middle; each leg is λ/4",
+   "page": 231,
+   "figure": null
+  },
+  {
+   "id": "c15q24",
+   "chapter": 15,
+   "topic": "15.8",
+   "num": 24,
+   "section": "A.6",
+   "text": "A horizontal half-wave dipole radiates most strongly:",
+   "options": [
+    "Off its ends",
+    "Equally in all directions",
+    "Straight up",
+    "Broadside, perpendicular to the wire"
+   ],
+   "answer": 3,
+   "explanation": "Strongest perpendicular to the wire, front and back; weaker off the ends",
+   "page": 232,
+   "figure": null
+  },
+  {
+   "id": "c15q25",
+   "chapter": 15,
+   "topic": "15.8",
+   "num": 25,
+   "section": "A.6",
+   "text": "A horizontal dipole at λ/2 above perfect ground has its strongest radiation at about:",
+   "options": [
+    "0° (the horizon)",
+    "30° above the horizon",
+    "60° above the horizon",
+    "90° (straight up)"
+   ],
+   "answer": 1,
+   "explanation": "The vertical-plane plot shows maximum radiation about 30° above the horizon",
+   "page": 233,
+   "figure": null
+  },
+  {
+   "id": "c15q26",
+   "chapter": 15,
+   "topic": "15.8",
+   "num": 26,
+   "section": "A.6",
+   "text": "A radiation plot viewed from above the antenna, showing directions around the horizon, is a:",
+   "options": [
+    "Vertical plane (elevation) plot",
+    "Time domain plot",
+    "Horizontal plane (azimuth) plot",
+    "Smith chart"
+   ],
+   "answer": 2,
+   "explanation": "The horizontal plane plot is also called the azimuth plot",
+   "page": 234,
+   "figure": null
+  },
+  {
+   "id": "c15q27",
+   "chapter": 15,
+   "topic": "15.8",
+   "num": 27,
+   "section": "A.6",
+   "text": "The horizontal pattern of a dipole is shown; the wire runs left to right. The dipole radiates most strongly:",
+   "options": [
+    "Off the ends of the wire",
+    "Equally in all directions",
+    "Only at 90°",
+    "Broadside, perpendicular to the wire"
+   ],
+   "answer": 3,
+   "explanation": "The lobes are at right angles to the wire, with nulls off the ends",
+   "page": 232,
+   "figure": "figures/ch15_fig8.svg"
+  },
+  {
+   "id": "c15q28",
+   "chapter": 15,
+   "topic": "15.9",
+   "num": 28,
+   "section": "A.6",
+   "text": "An antenna that is a little longer than an electrical half wavelength will show at its feed point:",
+   "options": [
+    "Inductive reactance",
+    "Capacitive reactance",
+    "No reactance",
+    "Infinite resistance"
+   ],
+   "answer": 0,
+   "explanation": "Slightly long: inductive. Slightly short: capacitive",
+   "page": 235,
+   "figure": null
+  },
+  {
+   "id": "c15q29",
+   "chapter": 15,
+   "topic": "15.9",
+   "num": 29,
+   "section": "A.6",
+   "text": "Compared with a resonant antenna, a non-resonant antenna:",
+   "options": [
+    "Cannot radiate",
+    "Is illegal",
+    "Always has an SWR of 1:1",
+    "Radiates equally well, but may need an ATU to match it"
+   ],
+   "answer": 3,
+   "explanation": "Both radiate equally well; the mismatch is handled by an ATU or transformer",
+   "page": 235,
+   "figure": null
+  },
+  {
+   "id": "c15q30",
+   "chapter": 15,
+   "topic": "15.9",
+   "num": 30,
+   "section": "A.6",
+   "text": "The G5RV antenna uses which component as an impedance transformer?",
+   "options": [
+    "A trap",
+    "A length of parallel transmission line",
+    "A 49:1 unun",
+    "A gamma match"
+   ],
+   "answer": 1,
+   "explanation": "The G5RV uses a section of parallel line as a transformer",
+   "page": 235,
+   "figure": null
+  },
+  {
+   "id": "c15q31",
+   "chapter": 15,
+   "topic": "15.10",
+   "num": 31,
+   "section": "A.6",
+   "text": "Why does an end-fed half-wave (EFHW) antenna need an impedance transformer?",
+   "options": [
+    "Its feed point impedance at the end is very high, thousands of ohms",
+    "Its impedance is very low",
+    "It is not resonant",
+    "It has no polarisation"
+   ],
+   "answer": 0,
+   "explanation": "At the end of a half-wave wire, the impedance is very high (1000–5000 Ω)",
+   "page": 236,
+   "figure": null
+  },
+  {
+   "id": "c15q32",
+   "chapter": 15,
+   "topic": "15.10",
+   "num": 32,
+   "section": "A.6",
+   "text": "Why should the end of an EFHW antenna be kept away from the shack?",
+   "options": [
+    "It reduces its bandwidth",
+    "Strong electric fields at the end can cause EMC problems",
+    "It changes the frequency",
+    "It needs sunlight"
+   ],
+   "answer": 1,
+   "explanation": "The strong near field at the end can interfere with nearby equipment",
+   "page": 236,
+   "figure": null
+  },
+  {
+   "id": "c15q33",
+   "chapter": 15,
+   "topic": "15.11",
+   "num": 33,
+   "section": "A.6",
+   "text": "The feed point impedance of a folded dipole is about:",
+   "options": [
+    "50 Ω",
+    "75 Ω",
+    "300 Ω",
+    "600 Ω"
+   ],
+   "answer": 2,
+   "explanation": "About 300 Ω, convenient for parallel line",
+   "page": 237,
+   "figure": null
+  },
+  {
+   "id": "c15q34",
+   "chapter": 15,
+   "topic": "15.11",
+   "num": 34,
+   "section": "A.6",
+   "text": "Compared with a simple dipole, a folded dipole:",
+   "options": [
+    "Has a narrower bandwidth",
+    "Has a different radiation pattern",
+    "Works better on harmonics",
+    "Has a wider bandwidth"
+   ],
+   "answer": 3,
+   "explanation": "Same pattern, but a wider bandwidth and higher impedance; it does not work well on harmonics",
+   "page": 237,
+   "figure": null
+  },
+  {
+   "id": "c15q35",
+   "chapter": 15,
+   "topic": "15.12",
+   "num": 35,
+   "section": "A.6",
+   "text": "The traps in a dual-band trap dipole are:",
+   "options": [
+    "Series resonant circuits",
+    "Baluns",
+    "Resistors",
+    "Parallel resonant circuits acting as band-stop filters at the higher band"
+   ],
+   "answer": 3,
+   "explanation": "Parallel LC traps resonate on the higher band and isolate the outer wire sections",
+   "page": 238,
+   "figure": null
+  },
+  {
+   "id": "c15q36",
+   "chapter": 15,
+   "topic": "15.12",
+   "num": 36,
+   "section": "A.6",
+   "text": "On the lower band of a trap dipole, the traps:",
+   "options": [
+    "Act as inductors and add to the electrical length",
+    "Isolate the outer wires",
+    "Short the antenna",
+    "Have no effect at all"
+   ],
+   "answer": 0,
+   "explanation": "At the lower frequency, the traps look inductive, so the outer sections can be shorter",
+   "page": 238,
+   "figure": null
+  },
+  {
+   "id": "c15q37",
+   "chapter": 15,
+   "topic": "15.13",
+   "num": 37,
+   "section": "A.6",
+   "text": "A quarter-wave ground plane antenna is also known as a:",
+   "options": [
+    "Dipole",
+    "Yagi",
+    "Monopole",
+    "Loop"
+   ],
+   "answer": 2,
+   "explanation": "It is a vertical monopole working against a ground plane",
+   "page": 238,
+   "figure": null
+  },
+  {
+   "id": "c15q38",
+   "chapter": 15,
+   "topic": "15.13",
+   "num": 38,
+   "section": "A.6",
+   "text": "The horizontal radiation pattern of a quarter-wave vertical is:",
+   "options": [
+    "A figure of eight",
+    "Omnidirectional",
+    "A narrow beam",
+    "Straight up only"
+   ],
+   "answer": 1,
+   "explanation": "It radiates equally all around its vertical element",
+   "page": 240,
+   "figure": null
+  },
+  {
+   "id": "c15q39",
+   "chapter": 15,
+   "topic": "15.13",
+   "num": 39,
+   "section": "A.6",
+   "text": "Why is a quarter-wave vertical good for long-distance HF contacts?",
+   "options": [
+    "It has a high feed impedance",
+    "It radiates straight up",
+    "It is horizontally polarised",
+    "It radiates at a shallow angle, about 20° above the horizon"
+   ],
+   "answer": 3,
+   "explanation": "Its low radiation angle suits sky-wave DX",
+   "page": 240,
+   "figure": null
+  },
+  {
+   "id": "c15q40",
+   "chapter": 15,
+   "topic": "15.13",
+   "num": 40,
+   "section": "A.6",
+   "text": "The feed point impedance of a quarter-wave vertical with radials on the ground is about:",
+   "options": [
+    "20 Ω",
+    "35 Ω",
+    "75 Ω",
+    "300 Ω"
+   ],
+   "answer": 1,
+   "explanation": "About 35 Ω; drooping elevated radials 25–30° raises it to 50 Ω",
+   "page": 241,
+   "figure": null
+  },
+  {
+   "id": "c15q41",
+   "chapter": 15,
+   "topic": "15.13",
+   "num": 41,
+   "section": "A.6",
+   "text": "Drooping the elevated radials of a ground plane down at about 25–30°:",
+   "options": [
+    "Raises the feed point impedance to about 50 Ω",
+    "Lowers it to 10 Ω",
+    "Makes the antenna horizontal",
+    "Removes the need for coax"
+   ],
+   "answer": 0,
+   "explanation": "Drooping radials brings the impedance to about 50 Ω for coax",
+   "page": 241,
+   "figure": null
+  },
+  {
+   "id": "c15q42",
+   "chapter": 15,
+   "topic": "15.13",
+   "num": 42,
+   "section": "A.6",
+   "text": "In the horizontal plane, the antenna shown (a quarter-wave vertical with radials) radiates:",
+   "options": [
+    "Equally in all directions (omnidirectionally)",
+    "Mostly straight up",
+    "In a figure of eight",
+    "Only towards the radials"
+   ],
+   "answer": 0,
+   "explanation": "A vertical ground plane is omnidirectional in the horizontal plane",
+   "page": 240,
+   "figure": "figures/ch15_groundplane.svg"
+  },
+  {
+   "id": "c15q43",
+   "chapter": 15,
+   "topic": "15.14",
+   "num": 43,
+   "section": "A.6",
+   "text": "In a three-element Yagi, the element connected to the feed line is the:",
+   "options": [
+    "Reflector",
+    "Director",
+    "Driven element",
+    "Boom"
+   ],
+   "answer": 2,
+   "explanation": "Only the driven element (a half-wave dipole) is connected to the feeder",
+   "page": 242,
+   "figure": null
+  },
+  {
+   "id": "c15q44",
+   "chapter": 15,
+   "topic": "15.14",
+   "num": 44,
+   "section": "A.6",
+   "text": "In a Yagi, the reflector is:",
+   "options": [
+    "Not part of the antenna",
+    "Shorter than the driven element, at the front",
+    "The same length, connected to the feeder",
+    "About 5% longer than the driven element, at the back"
+   ],
+   "answer": 3,
+   "explanation": "The longer reflector is at the back; shorter directors are at the front",
+   "page": 242,
+   "figure": null
+  },
+  {
+   "id": "c15q45",
+   "chapter": 15,
+   "topic": "15.14",
+   "num": 45,
+   "section": "A.6",
+   "text": "In which direction does a Yagi radiate most strongly?",
+   "options": [
+    "Towards the reflector",
+    "Towards the director(s), the front",
+    "Equally all round",
+    "Straight up"
+   ],
+   "answer": 1,
+   "explanation": "The Yagi favours the front, where the directors are",
+   "page": 244,
+   "figure": null
+  },
+  {
+   "id": "c15q46",
+   "chapter": 15,
+   "topic": "15.14",
+   "num": 46,
+   "section": "A.6",
+   "text": "The feed point impedance of a three-element Yagi is about:",
+   "options": [
+    "20 Ω",
+    "50 Ω",
+    "75 Ω",
+    "300 Ω"
+   ],
+   "answer": 0,
+   "explanation": "About 20 Ω; a gamma match or folded dipole driven element helps match 50 Ω coax",
+   "page": 243,
+   "figure": null
+  },
+  {
+   "id": "c15q47",
+   "chapter": 15,
+   "topic": "15.14",
+   "num": 47,
+   "section": "A.6",
+   "text": "Which device is used to match a Yagi's low impedance to 50 Ω coax?",
+   "options": [
+    "Squelch",
+    "Trap",
+    "Gamma match",
+    "Loading coil"
+   ],
+   "answer": 2,
+   "explanation": "A gamma match gives an almost perfect match to 50 Ω coax",
+   "page": 243,
+   "figure": null
+  },
+  {
+   "id": "c15q48",
+   "chapter": 15,
+   "topic": "15.14",
+   "num": 48,
+   "section": "A.6",
+   "text": "In the Yagi shown (element 2 is fed), in which direction does it radiate most strongly?",
+   "options": [
+    "Towards element 1",
+    "Towards element 3",
+    "Along the elements",
+    "Equally both ways"
+   ],
+   "answer": 1,
+   "explanation": "Element 1 is the reflector and element 3 the director; the beam points towards the director",
+   "page": 244,
+   "figure": "figures/ch15_yagi.svg"
+  },
+  {
+   "id": "c15q49",
+   "chapter": 15,
+   "topic": "15.15",
+   "num": 49,
+   "section": "A.6",
+   "text": "Gain differs from directivity because gain also accounts for:",
+   "options": [
+    "The antenna's losses (efficiency)",
+    "The feedline length",
+    "The transmitter power",
+    "Polarisation"
+   ],
+   "answer": 0,
+   "explanation": "Gain = directivity less the antenna's inherent losses",
+   "page": 246,
+   "figure": null
+  },
+  {
+   "id": "c15q50",
+   "chapter": 15,
+   "topic": "15.15",
+   "num": 50,
+   "section": "A.6",
+   "text": "An antenna has a gain of 5 dBd. What is its gain in dBi?",
+   "options": [
+    "2.85 dBi",
+    "5 dBi",
+    "7.15 dBi",
+    "10 dBi"
+   ],
+   "answer": 2,
+   "explanation": "dBi = dBd + 2.15",
+   "page": 247,
+   "figure": null
+  },
+  {
+   "id": "c15q51",
+   "chapter": 15,
+   "topic": "15.15",
+   "num": 51,
+   "section": "A.6",
+   "text": "The gain of a half-wave dipole in free space relative to an isotropic antenna is:",
+   "options": [
+    "0 dB",
+    "2.15 dB",
+    "3 dB",
+    "7 dB"
+   ],
+   "answer": 1,
+   "explanation": "A free-space half-wave dipole has 2.15 dBi",
+   "page": 247,
+   "figure": null
+  },
+  {
+   "id": "c15q52",
+   "chapter": 15,
+   "topic": "15.15",
+   "num": 52,
+   "section": "A.6",
+   "text": "The theoretical free-space gain of a three-element Yagi is about:",
+   "options": [
+    "2 dBd",
+    "0 dBi",
+    "20 dBd",
+    "7 dBd (about 9 dBi)"
+   ],
+   "answer": 3,
+   "explanation": "About 7 dBd, or 9 dBi",
+   "page": 247,
+   "figure": null
+  },
+  {
+   "id": "c15q53",
+   "chapter": 15,
+   "topic": "15.15",
+   "num": 53,
+   "section": "A.6",
+   "text": "Adding more directors to a Yagi:",
+   "options": [
+    "Reduces its gain",
+    "Raises its feed impedance to 300 Ω",
+    "Makes it omnidirectional",
+    "Increases its gain and lowers its angle of radiation"
+   ],
+   "answer": 3,
+   "explanation": "Each extra director adds gain (about 1 dBi each, up to about 12 on HF)",
+   "page": 248,
+   "figure": null
+  },
+  {
+   "id": "c15q54",
+   "chapter": 15,
+   "topic": "15.15",
+   "num": 54,
+   "section": "A.6",
+   "text": "Which antennas are typically more than 95% efficient?",
+   "options": [
+    "Small magnetic loops",
+    "Short loaded verticals close to ground",
+    "Half-wave dipoles and Yagis",
+    "Dummy loads"
+   ],
+   "answer": 2,
+   "explanation": "Large antennas such as dipoles and Yagis usually exceed 95% efficiency",
+   "page": 246,
+   "figure": null
+  },
+  {
+   "id": "c15q55",
+   "chapter": 15,
+   "topic": "15.16",
+   "num": 55,
+   "section": "A.6",
+   "text": "The front-to-back ratio of an antenna compares:",
+   "options": [
+    "The radiation in the forward direction with that from the back",
+    "The gain in dBi and dBd",
+    "The SWR at the front and back of the feeder",
+    "The lengths of the reflector and director"
+   ],
+   "answer": 0,
+   "explanation": "Front-to-back ratio = forward intensity vs. rear intensity, in dB",
+   "page": 248,
+   "figure": null
+  },
+  {
+   "id": "c15q56",
+   "chapter": 15,
+   "topic": "15.16",
+   "num": 56,
+   "section": "A.6",
+   "text": "A Yagi's rear lobe is 23 dB below its forward lobe. Its front-to-back ratio is:",
+   "options": [
+    "−23 dB",
+    "23 dB",
+    "46 dB",
+    "2.3 dB"
+   ],
+   "answer": 1,
+   "explanation": "The front-to-back ratio is about 23 dB, almost 4 S units",
+   "page": 248,
+   "figure": null
+  },
+  {
+   "id": "c15q57",
+   "chapter": 15,
+   "topic": "15.16",
+   "num": 57,
+   "section": "A.6",
+   "text": "What is the front-to-back ratio of the antenna whose pattern is shown?",
+   "options": [
+    "−23 dB",
+    "2.3 dB",
+    "23 dB",
+    "46 dB"
+   ],
+   "answer": 2,
+   "explanation": "The rear lobe is 23 dB below the front, so the front-to-back ratio is 23 dB",
+   "page": 248,
+   "figure": "figures/ch15_pattern.svg"
+  },
+  {
+   "id": "c15q58",
+   "chapter": 15,
+   "topic": "15.17",
+   "num": 58,
+   "section": "A.6",
+   "text": "The capture area (effective aperture) of an antenna determines:",
+   "options": [
+    "The received power available at its terminals",
+    "Its polarisation",
+    "Its resonant frequency",
+    "Its SWR"
+   ],
+   "answer": 0,
+   "explanation": "The received power depends on the capture area; bigger antennas have more",
+   "page": 249,
+   "figure": null
+  },
+  {
+   "id": "c15q59",
+   "chapter": 15,
+   "topic": "15.18",
+   "num": 59,
+   "section": "A.6",
+   "text": "Parabolic (dish) antennas are mainly used:",
+   "options": [
+    "On LF and MF",
+    "At UHF and microwave frequencies",
+    "Only for reception of HF broadcasts",
+    "For 160 m DX"
+   ],
+   "answer": 1,
+   "explanation": "Dishes are used at UHF and microwave frequencies, e.g. space communications",
+   "page": 249,
+   "figure": null
+  },
+  {
+   "id": "c15q60",
+   "chapter": 15,
+   "topic": "15.18",
+   "num": 60,
+   "section": "A.6",
+   "text": "A 1.2 m dish on 432 MHz gives about:",
+   "options": [
+    "2 dBi",
+    "0 dBd",
+    "30 dBi",
+    "12 dBi (10 dBd)"
+   ],
+   "answer": 3,
+   "explanation": "About 10 dBd or 12 dBi",
+   "page": 249,
+   "figure": null
+  },
+  {
+   "id": "c15q61",
+   "chapter": 15,
+   "topic": "15.19",
+   "num": 61,
+   "section": "A.6",
+   "text": "A horn antenna can be regarded as:",
+   "options": [
+    "A trap dipole",
+    "A folded dipole",
+    "A flared-out waveguide",
+    "A long wire"
+   ],
+   "answer": 2,
+   "explanation": "Horns are opened-out waveguides used at microwave frequencies",
+   "page": 250,
+   "figure": null
+  },
+  {
+   "id": "c15q62",
+   "chapter": 15,
+   "topic": "15.20",
+   "num": 62,
+   "section": "A.6",
+   "text": "EIRP uses which reference antenna?",
+   "options": [
+    "An isotropic antenna",
+    "A half-wave dipole in free space",
+    "A quarter-wave vertical",
+    "A three-element Yagi"
+   ],
+   "answer": 0,
+   "explanation": "EIRP references an isotropic antenna; ERP references a free-space half-wave dipole",
+   "page": 250,
+   "figure": null
+  },
+  {
+   "id": "c15q63",
+   "chapter": 15,
+   "topic": "15.20",
+   "num": 63,
+   "section": "A.6",
+   "text": "A 100 W (20 dBW) transmitter feeds a 4 dB amplifier, a cable with 1.15 dB loss and a 7.15 dBi antenna. The EIRP is:",
+   "options": [
+    "27.85 dBW",
+    "20 dBW",
+    "30 dBW (1000 W)",
+    "32 dBW"
+   ],
+   "answer": 2,
+   "explanation": "20 + 4 − 1.15 + 7.15 = 30 dBW = 1000 W",
+   "page": 251,
+   "figure": null
+  },
+  {
+   "id": "c15q64",
+   "chapter": 15,
+   "topic": "15.20",
+   "num": 64,
+   "section": "A.6",
+   "text": "How do you convert an EIRP figure to ERP?",
+   "options": [
+    "Add 2.15 dB",
+    "Subtract 2.15 dB",
+    "Multiply by 2",
+    "They are the same"
+   ],
+   "answer": 1,
+   "explanation": "ERP = EIRP − 2.15 dB",
+   "page": 251,
+   "figure": null
+  },
+  {
+   "id": "c15q65",
+   "chapter": 15,
+   "topic": "15.20",
+   "num": 65,
+   "section": "A.6",
+   "text": "A station has an EIRP of 1 kW, but feeds 190 W to its antenna. How much power does the antenna actually radiate?",
+   "options": [
+    "1 kW",
+    "2 kW",
+    "600 W",
+    "No more than about 190 W, focused in one direction"
+   ],
+   "answer": 3,
+   "explanation": "An antenna cannot radiate more than it is fed; gain only focuses it",
+   "page": 252,
+   "figure": null
+  },
+  {
+   "id": "c15q66",
+   "chapter": 15,
+   "topic": "15.20",
+   "num": 66,
+   "section": "A.6",
+   "text": "What is the EIRP of the station shown?",
+   "options": [
+    "27.85 dBW",
+    "30 dBW (1000 W)",
+    "20 dBW (100 W)",
+    "32.3 dBW"
+   ],
+   "answer": 1,
+   "explanation": "20 dBW + 4 − 1.15 + 7.15 = 30 dBW = 1000 W",
+   "page": 251,
+   "figure": "figures/ch15_eirp.svg"
+  },
+  {
+   "id": "c16q01",
+   "chapter": 16,
+   "topic": "16.1",
+   "num": 1,
+   "section": "A.7",
+   "text": "Compared with free space, the propagation velocity of radio waves in other media such as water is:",
+   "options": [
+    "A little lower",
+    "Higher",
+    "Exactly the same",
+    "Zero"
+   ],
+   "answer": 0,
+   "explanation": "Radio waves are a little slower in media other than vacuum and air",
+   "page": 254,
+   "figure": null
+  },
+  {
+   "id": "c16q02",
+   "chapter": 16,
+   "topic": "16.2.1",
+   "num": 2,
+   "section": "A.7",
+   "text": "What ionises the gases of the ionosphere during the day?",
+   "options": [
+    "Cosmic rays from other galaxies",
+    "The Sun's ultraviolet (UV) radiation",
+    "Lightning",
+    "Radio transmitters"
+   ],
+   "answer": 1,
+   "explanation": "Primarily UV radiation from the Sun ionises the atmosphere",
+   "page": 255,
+   "figure": null
+  },
+  {
+   "id": "c16q03",
+   "chapter": 16,
+   "topic": "16.2.1",
+   "num": 3,
+   "section": "A.7",
+   "text": "The grey line is:",
+   "options": [
+    "The boundary between Europe and America",
+    "The edge of the D layer at noon",
+    "A type of antenna",
+    "The transition between night and day, good for long-distance MF/HF"
+   ],
+   "answer": 3,
+   "explanation": "The day/night transition often gives excellent long-distance propagation",
+   "page": 256,
+   "figure": null
+  },
+  {
+   "id": "c16q04",
+   "chapter": 16,
+   "topic": "16.2.2",
+   "num": 4,
+   "section": "A.7",
+   "text": "The solar cycle lasts approximately:",
+   "options": [
+    "1 year",
+    "5½ years",
+    "11 years",
+    "27 days"
+   ],
+   "answer": 2,
+   "explanation": "About 11 years from maximum to maximum",
+   "page": 256,
+   "figure": null
+  },
+  {
+   "id": "c16q05",
+   "chapter": 16,
+   "topic": "16.2.2",
+   "num": 5,
+   "section": "A.7",
+   "text": "During a solar minimum, which bands may remain unusable for long-distance contacts?",
+   "options": [
+    "160 m and 80 m",
+    "40 m only",
+    "10 m and 12 m",
+    "2 m only"
+   ],
+   "answer": 2,
+   "explanation": "Insufficient ionisation may leave the 10 and 12 m bands closed",
+   "page": 257,
+   "figure": null
+  },
+  {
+   "id": "c16q06",
+   "chapter": 16,
+   "topic": "16.2.3",
+   "num": 6,
+   "section": "A.7",
+   "text": "A high sunspot number usually indicates:",
+   "options": [
+    "A quiet Sun and poor propagation",
+    "Night-time",
+    "A geomagnetic storm only",
+    "An active Sun, stronger ionisation and usually better propagation"
+   ],
+   "answer": 3,
+   "explanation": "More sunspots mean an active Sun and usually better HF propagation",
+   "page": 257,
+   "figure": null
+  },
+  {
+   "id": "c16q07",
+   "chapter": 16,
+   "topic": "16.2.3",
+   "num": 7,
+   "section": "A.7",
+   "text": "Because the Sun rotates, conditions caused by an active sunspot may recur after about:",
+   "options": [
+    "27 days",
+    "7 days",
+    "24 hours",
+    "11 years"
+   ],
+   "answer": 0,
+   "explanation": "Sunspots take about 27 days to rotate back to face Earth",
+   "page": 257,
+   "figure": null
+  },
+  {
+   "id": "c16q08",
+   "chapter": 16,
+   "topic": "16.2.3",
+   "num": 8,
+   "section": "A.7",
+   "text": "The amount of electromagnetic radiation from the Sun falling on Earth is measured as the:",
+   "options": [
+    "Kp index",
+    "Solar flux",
+    "MUF",
+    "Critical frequency"
+   ],
+   "answer": 1,
+   "explanation": "A high solar flux indicates an active Sun",
+   "page": 257,
+   "figure": null
+  },
+  {
+   "id": "c16q09",
+   "chapter": 16,
+   "topic": "16.2.4",
+   "num": 9,
+   "section": "A.7",
+   "text": "Particles ejected by a coronal mass ejection (CME) typically reach Earth in:",
+   "options": [
+    "8 minutes",
+    "They never reach Earth",
+    "A year",
+    "A few days"
+   ],
+   "answer": 3,
+   "explanation": "Radiation arrives in minutes; the particles take days (about 3.5 on average)",
+   "page": 258,
+   "figure": null
+  },
+  {
+   "id": "c16q10",
+   "chapter": 16,
+   "topic": "16.2.4",
+   "num": 10,
+   "section": "A.7",
+   "text": "A severe geomagnetic storm can cause:",
+   "options": [
+    "Better VHF line of sight only",
+    "A partial or complete radio blackout",
+    "A lower noise level",
+    "Sporadic E every time"
+   ],
+   "answer": 1,
+   "explanation": "Geomagnetic storms can cause radio blackouts",
+   "page": 258,
+   "figure": null
+  },
+  {
+   "id": "c16q11",
+   "chapter": 16,
+   "topic": "16.3",
+   "num": 11,
+   "section": "A.7",
+   "text": "The lowest layer of the atmosphere, about 10 km thick and affecting VHF/UHF, is the:",
+   "options": [
+    "Troposphere",
+    "Ionosphere",
+    "Stratosphere",
+    "F layer"
+   ],
+   "answer": 0,
+   "explanation": "The troposphere holds most water vapour and weather",
+   "page": 259,
+   "figure": null
+  },
+  {
+   "id": "c16q12",
+   "chapter": 16,
+   "topic": "16.3",
+   "num": 12,
+   "section": "A.7",
+   "text": "Which ionospheric layer exists only during the day and absorbs LF and MF signals?",
+   "options": [
+    "F1 layer",
+    "E layer",
+    "D layer",
+    "F2 layer"
+   ],
+   "answer": 2,
+   "explanation": "The D layer (50–90 km) forms by day and disappears at sunset",
+   "page": 260,
+   "figure": null
+  },
+  {
+   "id": "c16q13",
+   "chapter": 16,
+   "topic": "16.3",
+   "num": 13,
+   "section": "A.7",
+   "text": "At night, the F1 and F2 layers:",
+   "options": [
+    "Disappear completely",
+    "Merge into a single F layer at about 300–450 km",
+    "Move down to 50 km",
+    "Become the D layer"
+   ],
+   "answer": 1,
+   "explanation": "At night there is a single F layer",
+   "page": 260,
+   "figure": null
+  },
+  {
+   "id": "c16q14",
+   "chapter": 16,
+   "topic": "16.3",
+   "num": 14,
+   "section": "A.7",
+   "text": "Which layer is most important for long-distance HF propagation?",
+   "options": [
+    "F layer (F2 by day)",
+    "E layer",
+    "D layer",
+    "Troposphere"
+   ],
+   "answer": 0,
+   "explanation": "The F (by night) and F2 (by day) layers refract HF back to Earth",
+   "page": 260,
+   "figure": null
+  },
+  {
+   "id": "c16q15",
+   "chapter": 16,
+   "topic": "16.3",
+   "num": 15,
+   "section": "A.7",
+   "text": "The maximum distance of a single hop from the F layer is about:",
+   "options": [
+    "400 km",
+    "1000 km",
+    "4000 km",
+    "20 000 km"
+   ],
+   "answer": 2,
+   "explanation": "A single F-layer hop can reach about 4000 km",
+   "page": 260,
+   "figure": null
+  },
+  {
+   "id": "c16q16",
+   "chapter": 16,
+   "topic": "16.3",
+   "num": 16,
+   "section": "A.7",
+   "text": "Why is the longest multi-hop propagation found on the night side of the Earth?",
+   "options": [
+    "The troposphere disappears",
+    "The Sun is stronger",
+    "The E layer is thickest",
+    "There is no D layer absorption at night"
+   ],
+   "answer": 3,
+   "explanation": "Without D-layer absorption, hops can continue further",
+   "page": 261,
+   "figure": null
+  },
+  {
+   "id": "c16q17",
+   "chapter": 16,
+   "topic": "16.4",
+   "num": 17,
+   "section": "A.7",
+   "text": "For line-of-sight propagation, the antennas of both stations should have:",
+   "options": [
+    "Different polarisation",
+    "The same polarisation",
+    "No polarisation",
+    "Circular polarisation only"
+   ],
+   "answer": 1,
+   "explanation": "Matching orientation (vertical or horizontal) is beneficial",
+   "page": 261,
+   "figure": null
+  },
+  {
+   "id": "c16q18",
+   "chapter": 16,
+   "topic": "16.4",
+   "num": 18,
+   "section": "A.7",
+   "text": "Moving a VHF station to the top of a hill will:",
+   "options": [
+    "Shorten its radio horizon",
+    "Make no difference",
+    "Extend its radio horizon",
+    "Change its polarisation"
+   ],
+   "answer": 2,
+   "explanation": "Height extends the line of sight and radio horizon",
+   "page": 261,
+   "figure": null
+  },
+  {
+   "id": "c16q19",
+   "chapter": 16,
+   "topic": "16.4",
+   "num": 19,
+   "section": "A.7",
+   "text": "In free space, if the distance from the antenna doubles, the signal power:",
+   "options": [
+    "Falls to a quarter",
+    "Halves",
+    "Stays the same",
+    "Falls to an eighth"
+   ],
+   "answer": 0,
+   "explanation": "Inverse square law: power falls to ¼, voltage to ½",
+   "page": 262,
+   "figure": null
+  },
+  {
+   "id": "c16q20",
+   "chapter": 16,
+   "topic": "16.5",
+   "num": 20,
+   "section": "A.7",
+   "text": "Ground wave propagation works best on:",
+   "options": [
+    "HF above 20 MHz",
+    "VHF and UHF",
+    "Microwaves",
+    "LF and MF"
+   ],
+   "answer": 3,
+   "explanation": "LF and MF signals follow the curvature of the ground",
+   "page": 262,
+   "figure": null
+  },
+  {
+   "id": "c16q21",
+   "chapter": 16,
+   "topic": "16.5",
+   "num": 21,
+   "section": "A.7",
+   "text": "Ground wave signals can travel up to about:",
+   "options": [
+    "20 km",
+    "Around the world",
+    "2000 km",
+    "Just beyond 200 km"
+   ],
+   "answer": 3,
+   "explanation": "Further than line-of-sight but much shorter than sky wave",
+   "page": 262,
+   "figure": null
+  },
+  {
+   "id": "c16q22",
+   "chapter": 16,
+   "topic": "16.5",
+   "num": 22,
+   "section": "A.7",
+   "text": "Why can the IRTS Sunday news on 3.650 MHz be heard around Ireland during the day?",
+   "options": [
+    "Sporadic E",
+    "Ground wave propagation",
+    "Meteor scatter",
+    "EME"
+   ],
+   "answer": 1,
+   "explanation": "The ground wave keeps 80 m usable for local contacts by day",
+   "page": 262,
+   "figure": null
+  },
+  {
+   "id": "c16q23",
+   "chapter": 16,
+   "topic": "16.5",
+   "num": 23,
+   "section": "A.7",
+   "text": "Sky wave propagation uses:",
+   "options": [
+    "Refraction in the ionospheric layers",
+    "Reflection from the troposphere only",
+    "The Earth's surface only",
+    "Satellites"
+   ],
+   "answer": 0,
+   "explanation": "Sky waves are refracted back to Earth by the ionosphere",
+   "page": 263,
+   "figure": null
+  },
+  {
+   "id": "c16q24",
+   "chapter": 16,
+   "topic": "16.6",
+   "num": 24,
+   "section": "A.7",
+   "text": "A signal sent at too steep an angle that passes through the ionosphere and leaves the Earth is called the:",
+   "options": [
+    "Ground wave",
+    "Sky wave",
+    "Escape wave",
+    "Space wave"
+   ],
+   "answer": 2,
+   "explanation": "Steep signals are not refracted enough and escape",
+   "page": 264,
+   "figure": null
+  },
+  {
+   "id": "c16q25",
+   "chapter": 16,
+   "topic": "16.6",
+   "num": 25,
+   "section": "A.7",
+   "text": "The skip distance is:",
+   "options": [
+    "The distance from the transmitter to the nearest point reached by the sky wave",
+    "The distance covered by the ground wave",
+    "The height of the F layer",
+    "The width of the dead zone"
+   ],
+   "answer": 0,
+   "explanation": "The closest place reachable by a sky wave",
+   "page": 264,
+   "figure": null
+  },
+  {
+   "id": "c16q26",
+   "chapter": 16,
+   "topic": "16.6",
+   "num": 26,
+   "section": "A.7",
+   "text": "The region between the end of the ground wave and the first sky wave landing, where no signal is heard, is the:",
+   "options": [
+    "Fresnel zone",
+    "Grey line",
+    "Skip zone of maximum signal",
+    "Dead zone"
+   ],
+   "answer": 3,
+   "explanation": "Communication is not possible in the dead zone",
+   "page": 264,
+   "figure": null
+  },
+  {
+   "id": "c16q27",
+   "chapter": 16,
+   "topic": "16.6",
+   "num": 27,
+   "section": "A.7",
+   "text": "Signals that travel around the world the opposite, longer way are said to use the:",
+   "options": [
+    "Short path",
+    "Long path",
+    "Ground wave",
+    "Escape wave"
+   ],
+   "answer": 1,
+   "explanation": "Long path: the signal arrives from the \"wrong\" direction",
+   "page": 265,
+   "figure": null
+  },
+  {
+   "id": "c16q28",
+   "chapter": 16,
+   "topic": "16.6",
+   "num": 28,
+   "section": "A.7",
+   "text": "In the figure, region X, beyond the ground wave but before the sky wave returns to Earth, is the:",
+   "options": [
+    "Skip zone of maximum signal",
+    "Grey line",
+    "Dead zone",
+    "Fresnel zone"
+   ],
+   "answer": 2,
+   "explanation": "No signal is heard in the dead zone",
+   "page": 264,
+   "figure": "figures/ch16_deadzone.svg"
+  },
+  {
+   "id": "c16q29",
+   "chapter": 16,
+   "topic": "16.6",
+   "num": 29,
+   "section": "A.7",
+   "text": "In the figure, ray A, sent almost straight up and passing through the ionosphere, is called the:",
+   "options": [
+    "Escape wave",
+    "Ground wave",
+    "Space wave",
+    "Sky wave"
+   ],
+   "answer": 0,
+   "explanation": "Steep rays are not bent enough to return and leave the Earth",
+   "page": 264,
+   "figure": "figures/ch16_escape.svg"
+  },
+  {
+   "id": "c16q30",
+   "chapter": 16,
+   "topic": "16.7",
+   "num": 30,
+   "section": "A.7",
+   "text": "How does HF propagation differ from LF/MF propagation?",
+   "options": [
+    "HF only uses ground wave",
+    "HF has no sky wave",
+    "HF does not benefit from ground wave propagation",
+    "HF is not affected by the ionosphere"
+   ],
+   "answer": 2,
+   "explanation": "On HF the dead zone extends from the radio horizon to the first hop",
+   "page": 265,
+   "figure": null
+  },
+  {
+   "id": "c16q31",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 31,
+   "section": "A.7",
+   "text": "The main propagation mechanism for VHF and UHF is:",
+   "options": [
+    "Sky wave",
+    "Line-of-sight",
+    "Ground wave",
+    "Long path"
+   ],
+   "answer": 1,
+   "explanation": "Line-of-sight, extended by repeaters on hills",
+   "page": 266,
+   "figure": null
+  },
+  {
+   "id": "c16q32",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 32,
+   "section": "A.7",
+   "text": "Repeaters are used on VHF/UHF to:",
+   "options": [
+    "Extend the practical communication range",
+    "Reduce interference on HF",
+    "Measure propagation",
+    "Store messages"
+   ],
+   "answer": 0,
+   "explanation": "Repeaters on hills receive and retransmit signals to extend range",
+   "page": 266,
+   "figure": null
+  },
+  {
+   "id": "c16q33",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 33,
+   "section": "A.7",
+   "text": "The tropospheric (space) wave extends the VHF line-of-sight range by about:",
+   "options": [
+    "1500%",
+    "150%",
+    "15%",
+    "1.5%"
+   ],
+   "answer": 2,
+   "explanation": "Refraction in humid air bends the wave slightly: about 15% further",
+   "page": 266,
+   "figure": null
+  },
+  {
+   "id": "c16q34",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 34,
+   "section": "A.7",
+   "text": "A temperature inversion trapping VHF/UHF signals over 1000 km or more is called:",
+   "options": [
+    "Troposcatter",
+    "Sporadic E",
+    "Meteor scatter",
+    "Tropospheric ducting"
+   ],
+   "answer": 3,
+   "explanation": "Warm air above cold forms a duct",
+   "page": 267,
+   "figure": null
+  },
+  {
+   "id": "c16q35",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 35,
+   "section": "A.7",
+   "text": "Sporadic E propagation is most likely:",
+   "options": [
+    "In winter at midnight",
+    "In the morning to noon, May–August (northern hemisphere)",
+    "Only at solar minimum",
+    "Only on 160 m"
+   ],
+   "answer": 1,
+   "explanation": "Dense E-layer clouds form mostly May–August, morning till noon",
+   "page": 267,
+   "figure": null
+  },
+  {
+   "id": "c16q36",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 36,
+   "section": "A.7",
+   "text": "Meteor scatter contacts are typically:",
+   "options": [
+    "Very long, lasting hours",
+    "Only on HF",
+    "Very brief, seconds to about a minute",
+    "Only possible with SSB"
+   ],
+   "answer": 2,
+   "explanation": "Meteor trails decay quickly, so dedicated digital modes are used",
+   "page": 267,
+   "figure": null
+  },
+  {
+   "id": "c16q37",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 37,
+   "section": "A.7",
+   "text": "Earth-Moon-Earth (EME) works on VHF/UHF because:",
+   "options": [
+    "The Moon transmits them back",
+    "They are reflected by the D layer",
+    "They follow the ground",
+    "These frequencies pass through the ionosphere to reach the Moon"
+   ],
+   "answer": 3,
+   "explanation": "The ionosphere absorbs HF but lets VHF/UHF pass to the Moon",
+   "page": 268,
+   "figure": null
+  },
+  {
+   "id": "c16q38",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 38,
+   "section": "A.7",
+   "text": "When an aurora is visible, VHF signals can:",
+   "options": [
+    "Be reflected over 2500–3000 km by auroral reflection",
+    "Not be transmitted at all",
+    "Only travel 1 km",
+    "Become HF"
+   ],
+   "answer": 0,
+   "explanation": "Aurora can help VHF/UHF while it disturbs HF",
+   "page": 267,
+   "figure": null
+  },
+  {
+   "id": "c16q39",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 39,
+   "section": "A.7",
+   "text": "Which propagation mechanism uses scattering in uneven humid layers of the troposphere for 100–500 km?",
+   "options": [
+    "Troposcatter",
+    "Meteor scatter",
+    "EME",
+    "Ground wave"
+   ],
+   "answer": 0,
+   "explanation": "Troposcatter, like light scattering in fog",
+   "page": 266,
+   "figure": null
+  },
+  {
+   "id": "c16q40",
+   "chapter": 16,
+   "topic": "16.8",
+   "num": 40,
+   "section": "A.7",
+   "text": "What distinguishes aircraft scatter from troposcatter?",
+   "options": [
+    "There is no difference",
+    "Aircraft scatter only works at night",
+    "Troposcatter needs aircraft",
+    "Aircraft scatter does not depend on the weather and lasts only minutes"
+   ],
+   "answer": 3,
+   "explanation": "Aircraft scatter depends on aircraft position, lasting a few minutes",
+   "page": 267,
+   "figure": null
+  },
+  {
+   "id": "c16q41",
+   "chapter": 16,
+   "topic": "16.9",
+   "num": 41,
+   "section": "A.7",
+   "text": "Fading is:",
+   "options": [
+    "Interference from another station",
+    "A permanent loss of signal",
+    "A fluctuation of the received signal strength",
+    "Distortion caused by the transmitter"
+   ],
+   "answer": 2,
+   "explanation": "Fading can be fast or slow; its Q-code is QSB",
+   "page": 269,
+   "figure": null
+  },
+  {
+   "id": "c16q42",
+   "chapter": 16,
+   "topic": "16.9",
+   "num": 42,
+   "section": "A.7",
+   "text": "One cause of fading is:",
+   "options": [
+    "A correctly matched antenna",
+    "Signals arriving by more than one path (multipath)",
+    "A stable transmitter",
+    "A narrow filter"
+   ],
+   "answer": 1,
+   "explanation": "Multipath signals can reinforce or cancel one another",
+   "page": 269,
+   "figure": null
+  },
+  {
+   "id": "c16q43",
+   "chapter": 16,
+   "topic": "16.10",
+   "num": 43,
+   "section": "A.7",
+   "text": "The critical frequency is:",
+   "options": [
+    "The frequency of a beacon",
+    "The lowest usable frequency",
+    "The frequency of the grey line",
+    "The highest frequency reflected back when beamed vertically upwards"
+   ],
+   "answer": 3,
+   "explanation": "Also called the vertical incidence frequency",
+   "page": 269,
+   "figure": null
+  },
+  {
+   "id": "c16q44",
+   "chapter": 16,
+   "topic": "16.10",
+   "num": 44,
+   "section": "A.7",
+   "text": "The maximum usable frequency (MUF) for a path depends on:",
+   "options": [
+    "Transmitter power",
+    "The state of ionisation and the angle needed to reach the receiver",
+    "Antenna gain",
+    "The receiver sensitivity"
+   ],
+   "answer": 1,
+   "explanation": "MUF does not depend on power or antenna gain",
+   "page": 269,
+   "figure": null
+  },
+  {
+   "id": "c16q45",
+   "chapter": 16,
+   "topic": "16.10",
+   "num": 45,
+   "section": "A.7",
+   "text": "For a single hop from the F2 layer, the MUF is approximately:",
+   "options": [
+    "Three times the F2 critical frequency",
+    "Equal to the critical frequency",
+    "Ten times the critical frequency",
+    "Half the critical frequency"
+   ],
+   "answer": 0,
+   "explanation": "F2: about ×3; E layer: about ×5",
+   "page": 269,
+   "figure": null
+  },
+  {
+   "id": "c16q46",
+   "chapter": 16,
+   "topic": "16.10",
+   "num": 46,
+   "section": "A.7",
+   "text": "Signals on frequencies above the MUF:",
+   "options": [
+    "Are reflected more strongly",
+    "Become ground waves",
+    "Pass through the ionised layer and are not reflected",
+    "Are absorbed by the troposphere"
+   ],
+   "answer": 2,
+   "explanation": "Frequencies higher than the MUF become escape waves",
+   "page": 269,
+   "figure": null
+  },
+  {
+   "id": "c16q47",
+   "chapter": 16,
+   "topic": "16.10",
+   "num": 47,
+   "section": "A.7",
+   "text": "The lowest usable frequency (LUF) depends on:",
+   "options": [
+    "Only the F2 layer height",
+    "Absorption mainly in the D and E layers, noise, power and antenna gain",
+    "Only the time of year",
+    "The MUF only"
+   ],
+   "answer": 1,
+   "explanation": "LUF is set by absorption and noise, and is influenced by power and antenna gain",
+   "page": 271,
+   "figure": null
+  },
+  {
+   "id": "c16q48",
+   "chapter": 16,
+   "topic": "16.10",
+   "num": 48,
+   "section": "A.7",
+   "text": "If the LUF is higher than the MUF for a path:",
+   "options": [
+    "Every band is open",
+    "The ground wave takes over",
+    "Only VHF works",
+    "No frequency supports communication on that path"
+   ],
+   "answer": 3,
+   "explanation": "With LUF above MUF, there is no usable frequency",
+   "page": 271,
+   "figure": null
+  },
+  {
+   "id": "c17q01",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 1,
+   "section": "A.8",
+   "text": "Which instrument measures current, resistance and voltage?",
+   "options": [
+    "Multimeter",
+    "Ammeter",
+    "Oscilloscope",
+    "Frequency counter"
+   ],
+   "answer": 0,
+   "explanation": "A multimeter (multi-range meter) measures current, resistance and voltage",
+   "page": 272,
+   "figure": null
+  },
+  {
+   "id": "c17q02",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 2,
+   "section": "A.8",
+   "text": "To measure voltage, the meter is connected:",
+   "options": [
+    "In series with the circuit",
+    "Only to the earth",
+    "In parallel (across) the points being measured",
+    "Through a capacitor"
+   ],
+   "answer": 2,
+   "explanation": "A voltmeter is connected across the circuit",
+   "page": 273,
+   "figure": null
+  },
+  {
+   "id": "c17q03",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 3,
+   "section": "A.8",
+   "text": "An ideal voltmeter should have:",
+   "options": [
+    "A very low resistance",
+    "A very high impedance (resistance)",
+    "Zero impedance",
+    "An inductive impedance"
+   ],
+   "answer": 1,
+   "explanation": "A high resistance draws little current, so it does not disturb the voltage measured",
+   "page": 273,
+   "figure": null
+  },
+  {
+   "id": "c17q04",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 4,
+   "section": "A.8",
+   "text": "To measure current, the meter is connected:",
+   "options": [
+    "To the antenna",
+    "In parallel with the supply",
+    "Across the load",
+    "In series with the circuit"
+   ],
+   "answer": 3,
+   "explanation": "The current must flow through the ammeter, so it goes in series",
+   "page": 273,
+   "figure": null
+  },
+  {
+   "id": "c17q05",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 5,
+   "section": "A.8",
+   "text": "An ideal ammeter should have:",
+   "options": [
+    "A high resistance",
+    "A capacitive impedance",
+    "A low impedance (resistance)",
+    "An infinite impedance"
+   ],
+   "answer": 2,
+   "explanation": "Low resistance avoids affecting the current measured",
+   "page": 273,
+   "figure": null
+  },
+  {
+   "id": "c17q06",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 6,
+   "section": "A.8",
+   "text": "Why must resistance not be measured in a live circuit?",
+   "options": [
+    "It would reduce the resistance",
+    "The ohmmeter applies its own voltage to the component",
+    "It is only possible with AC",
+    "The meter needs mains power"
+   ],
+   "answer": 1,
+   "explanation": "Ohmmeters use an internal battery; measure with the circuit unpowered",
+   "page": 273,
+   "figure": null
+  },
+  {
+   "id": "c17q07",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 7,
+   "section": "A.8",
+   "text": "In the circuit shown, which meter is connected as an ammeter?",
+   "options": [
+    "Y",
+    "Both",
+    "X",
+    "Neither"
+   ],
+   "answer": 2,
+   "explanation": "An ammeter goes in series with the circuit (X); a voltmeter goes across the load (Y)",
+   "page": 273,
+   "figure": "figures/ch17_meters.svg"
+  },
+  {
+   "id": "c17q08",
+   "chapter": 17,
+   "topic": "17.1",
+   "num": 8,
+   "section": "A.8",
+   "text": "In the circuit shown, meter Y measures:",
+   "options": [
+    "The current through the load",
+    "The resistance of the battery",
+    "The power of the battery",
+    "The voltage across the load"
+   ],
+   "answer": 3,
+   "explanation": "A meter connected across (in parallel with) a component measures voltage",
+   "page": 273,
+   "figure": "figures/ch17_meters.svg"
+  },
+  {
+   "id": "c17q09",
+   "chapter": 17,
+   "topic": "17.2",
+   "num": 9,
+   "section": "A.8",
+   "text": "An SWR meter shows 120 W forward and 20 W reflected power. The net power to the antenna is:",
+   "options": [
+    "140 W",
+    "120 W",
+    "100 W",
+    "20 W"
+   ],
+   "answer": 2,
+   "explanation": "Net power = forward − reflected = 100 W",
+   "page": 274,
+   "figure": null
+  },
+  {
+   "id": "c17q10",
+   "chapter": 17,
+   "topic": "17.2",
+   "num": 10,
+   "section": "A.8",
+   "text": "Another name for an SWR meter is:",
+   "options": [
+    "Reflectometer",
+    "Ohmmeter",
+    "Frequency counter",
+    "Dummy load"
+   ],
+   "answer": 0,
+   "explanation": "Also called an SWR bridge or reflectometer",
+   "page": 274,
+   "figure": null
+  },
+  {
+   "id": "c17q11",
+   "chapter": 17,
+   "topic": "17.2",
+   "num": 11,
+   "section": "A.8",
+   "text": "An SWR meter shows an infinite SWR. You should:",
+   "options": [
+    "Increase power",
+    "Add a longer coax",
+    "Ignore it",
+    "Turn the transmitter off immediately and investigate"
+   ],
+   "answer": 3,
+   "explanation": "Infinite SWR indicates a serious fault such as an open or short circuit",
+   "page": 276,
+   "figure": null
+  },
+  {
+   "id": "c17q12",
+   "chapter": 17,
+   "topic": "17.2",
+   "num": 12,
+   "section": "A.8",
+   "text": "On a cross-needle SWR meter, the SWR is read:",
+   "options": [
+    "From the forward needle only",
+    "From a separate display",
+    "From the reflected needle only",
+    "Where the two needles intersect"
+   ],
+   "answer": 3,
+   "explanation": "The crossing point of the forward and reflected needles gives the SWR",
+   "page": 274,
+   "figure": null
+  },
+  {
+   "id": "c17q13",
+   "chapter": 17,
+   "topic": "17.2",
+   "num": 13,
+   "section": "A.8",
+   "text": "Because an SWR meter contains diodes, it should be placed:",
+   "options": [
+    "After the low-pass filter",
+    "Before any final low-pass filter",
+    "At the antenna feed point only",
+    "Inside the transceiver"
+   ],
+   "answer": 1,
+   "explanation": "Diodes can create harmonics, so the low-pass filter goes after the meter",
+   "page": 276,
+   "figure": null
+  },
+  {
+   "id": "c17q14",
+   "chapter": 17,
+   "topic": "17.2",
+   "num": 14,
+   "section": "A.8",
+   "text": "The SWR and power meter shows the readings above. How much power is going to the antenna?",
+   "options": [
+    "140 W",
+    "120 W",
+    "20 W",
+    "100 W"
+   ],
+   "answer": 3,
+   "explanation": "Net power = forward − reflected = 120 − 20 = 100 W",
+   "page": 274,
+   "figure": "figures/ch17_swr.svg"
+  },
+  {
+   "id": "c17q15",
+   "chapter": 17,
+   "topic": "17.3",
+   "num": 15,
+   "section": "A.8",
+   "text": "An oscilloscope displays signals in the:",
+   "options": [
+    "Time domain",
+    "Frequency domain",
+    "Impedance domain",
+    "Power domain only"
+   ],
+   "answer": 0,
+   "explanation": "Horizontal axis is time; vertical is amplitude (voltage)",
+   "page": 276,
+   "figure": null
+  },
+  {
+   "id": "c17q16",
+   "chapter": 17,
+   "topic": "17.3",
+   "num": 16,
+   "section": "A.8",
+   "text": "On an oscilloscope, the vertical axis usually shows:",
+   "options": [
+    "Frequency",
+    "Time",
+    "Amplitude (voltage)",
+    "Phase"
+   ],
+   "answer": 2,
+   "explanation": "Vertical: amplitude; horizontal: time",
+   "page": 276,
+   "figure": null
+  },
+  {
+   "id": "c17q17",
+   "chapter": 17,
+   "topic": "17.3",
+   "num": 17,
+   "section": "A.8",
+   "text": "What is the peak voltage of the signal shown on the oscilloscope?",
+   "options": [
+    "10 V",
+    "5 V",
+    "2 V",
+    "20 V"
+   ],
+   "answer": 0,
+   "explanation": "2 divisions × 5 V/div = 10 V peak",
+   "page": 276,
+   "figure": "figures/ch17_scope.svg"
+  },
+  {
+   "id": "c17q18",
+   "chapter": 17,
+   "topic": "17.4",
+   "num": 18,
+   "section": "A.8",
+   "text": "The outline of a signal's time-domain plot, used to diagnose overmodulation, is the:",
+   "options": [
+    "Spectrum",
+    "RF envelope",
+    "Waterfall",
+    "Smith chart"
+   ],
+   "answer": 1,
+   "explanation": "The RF envelope can be viewed on an oscilloscope",
+   "page": 277,
+   "figure": null
+  },
+  {
+   "id": "c17q19",
+   "chapter": 17,
+   "topic": "17.4",
+   "num": 19,
+   "section": "A.8",
+   "text": "The two-tone test is used to check an SSB transmitter for:",
+   "options": [
+    "Amplitude linearity and overmodulation",
+    "Frequency accuracy",
+    "Antenna SWR",
+    "Receiver sensitivity"
+   ],
+   "answer": 0,
+   "explanation": "Two audio tones produce a steady pattern that shows flat-topping and non-linearity",
+   "page": 277,
+   "figure": null
+  },
+  {
+   "id": "c17q20",
+   "chapter": 17,
+   "topic": "17.5",
+   "num": 20,
+   "section": "A.8",
+   "text": "A spectrum analyser displays a signal in the:",
+   "options": [
+    "Time domain",
+    "Phase domain only",
+    "Impedance domain",
+    "Frequency domain"
+   ],
+   "answer": 3,
+   "explanation": "The horizontal axis shows the frequencies in the signal",
+   "page": 278,
+   "figure": null
+  },
+  {
+   "id": "c17q21",
+   "chapter": 17,
+   "topic": "17.5",
+   "num": 21,
+   "section": "A.8",
+   "text": "Which instrument best shows key clicks, splatter and spurious frequencies?",
+   "options": [
+    "Spectrum analyser",
+    "Ammeter",
+    "Dummy load",
+    "Ohmmeter"
+   ],
+   "answer": 0,
+   "explanation": "Spurious products appear as extra frequencies on a spectrum analyser",
+   "page": 278,
+   "figure": null
+  },
+  {
+   "id": "c17q22",
+   "chapter": 17,
+   "topic": "17.5",
+   "num": 22,
+   "section": "A.8",
+   "text": "Which instrument gives a display like the one shown, with frequency on the horizontal axis?",
+   "options": [
+    "Oscilloscope",
+    "Spectrum analyser",
+    "Multimeter",
+    "Frequency counter"
+   ],
+   "answer": 1,
+   "explanation": "A spectrum analyser shows the signal in the frequency domain, revealing spurious signals",
+   "page": 278,
+   "figure": "figures/ch17_spectrum.svg"
+  },
+  {
+   "id": "c17q23",
+   "chapter": 17,
+   "topic": "17.6",
+   "num": 23,
+   "section": "A.8",
+   "text": "A signal generator is used to:",
+   "options": [
+    "Absorb transmitter power",
+    "Measure resistance",
+    "Feed test signals into a device under test",
+    "Display SWR"
+   ],
+   "answer": 2,
+   "explanation": "Test AF/RF signals are fed in, and the output is compared",
+   "page": 278,
+   "figure": null
+  },
+  {
+   "id": "c17q24",
+   "chapter": 17,
+   "topic": "17.7",
+   "num": 24,
+   "section": "A.8",
+   "text": "When must a dedicated frequency counter be used?",
+   "options": [
+    "Always with modern transceivers",
+    "With home-built or older equipment, to confirm the transmit frequency",
+    "Only on VHF",
+    "Never; it is illegal"
+   ],
+   "answer": 1,
+   "explanation": "You must know your transmitter is on a legal frequency",
+   "page": 279,
+   "figure": null
+  },
+  {
+   "id": "c17q25",
+   "chapter": 17,
+   "topic": "17.8",
+   "num": 25,
+   "section": "A.8",
+   "text": "A field strength meter is useful for:",
+   "options": [
+    "Measuring resistance",
+    "Certifying EMF compliance with a hand-held reading",
+    "Measuring DC current",
+    "Checking relative field strength from a directional antenna and finding RF hotspots"
+   ],
+   "answer": 3,
+   "explanation": "Uncalibrated hand-held meters cannot evaluate EMF compliance",
+   "page": 279,
+   "figure": null
+  },
+  {
+   "id": "c17q26",
+   "chapter": 17,
+   "topic": "17.9",
+   "num": 26,
+   "section": "A.8",
+   "text": "An antenna analyser combines:",
+   "options": [
+    "A dummy load and an ammeter",
+    "A wide-range RF oscillator with a reflectometer (SWR meter)",
+    "A frequency counter and an amplifier",
+    "A filter and a balun"
+   ],
+   "answer": 1,
+   "explanation": "It generates test signals and measures SWR, impedance, resistance and reactance",
+   "page": 280,
+   "figure": null
+  },
+  {
+   "id": "c17q27",
+   "chapter": 17,
+   "topic": "17.9",
+   "num": 27,
+   "section": "A.8",
+   "text": "A vector network analyser (VNA) is a type of:",
+   "options": [
+    "Transceiver",
+    "Power supply",
+    "Dummy load",
+    "Antenna analyser"
+   ],
+   "answer": 3,
+   "explanation": "A VNA is a popular type of antenna analyser",
+   "page": 280,
+   "figure": null
+  },
+  {
+   "id": "c17q28",
+   "chapter": 17,
+   "topic": "17.10",
+   "num": 28,
+   "section": "A.8",
+   "text": "A dummy load is used to:",
+   "options": [
+    "Test a transmitter without radiating a signal",
+    "Increase antenna gain",
+    "Measure frequency",
+    "Receive weak signals"
+   ],
+   "answer": 0,
+   "explanation": "Connecting a dummy load avoids unwanted emissions during tests",
+   "page": 281,
+   "figure": null
+  },
+  {
+   "id": "c17q29",
+   "chapter": 17,
+   "topic": "17.10",
+   "num": 29,
+   "section": "A.8",
+   "text": "A dummy load should present:",
+   "options": [
+    "An open circuit",
+    "A highly inductive impedance",
+    "A purely resistive impedance, usually 50 Ω",
+    "A short circuit"
+   ],
+   "answer": 2,
+   "explanation": "Known, purely resistive 50 Ω with minimal reactance",
+   "page": 281,
+   "figure": null
+  },
+  {
+   "id": "c17q30",
+   "chapter": 17,
+   "topic": "17.10",
+   "num": 30,
+   "section": "A.8",
+   "text": "What happens if a dummy load's power rating is exceeded?",
+   "options": [
+    "It radiates the signal",
+    "It may overheat, leak or even burn",
+    "The SWR improves",
+    "Nothing"
+   ],
+   "answer": 1,
+   "explanation": "Dummy loads are rated by power and time",
+   "page": 281,
+   "figure": null
+  },
+  {
+   "id": "c17q31",
+   "chapter": 17,
+   "topic": "17.10",
+   "num": 31,
+   "section": "A.8",
+   "text": "How can a dummy load help find the source of a high SWR?",
+   "options": [
+    "Substitute it for each component in turn, from the transmitter outwards",
+    "Connect it in parallel with the antenna",
+    "Use it as an antenna",
+    "Connect it to the microphone"
+   ],
+   "answer": 0,
+   "explanation": "If the SWR is normal with the dummy load but high with the component, that component is suspect",
+   "page": 281,
+   "figure": null
+  },
+  {
+   "id": "c18q01",
+   "chapter": 18,
+   "topic": "18.1",
+   "num": 1,
+   "section": "A.2",
+   "text": "Electromagnetic compatibility (EMC) is:",
+   "options": [
+    "The maximum power of a transmitter",
+    "The avoidance of interference between pieces of electronic equipment",
+    "A type of antenna",
+    "The ability to receive weak signals"
+   ],
+   "answer": 1,
+   "explanation": "EMC means equipment works together without interference",
+   "page": 282,
+   "figure": null
+  },
+  {
+   "id": "c18q02",
+   "chapter": 18,
+   "topic": "18.1",
+   "num": 2,
+   "section": "A.2",
+   "text": "A security light turning on during your transmissions is an example of:",
+   "options": [
+    "Normal operation",
+    "Good propagation",
+    "An EMC problem",
+    "A licence condition"
+   ],
+   "answer": 2,
+   "explanation": "Unexpected behaviour due to RF suggests an EMC issue",
+   "page": 282,
+   "figure": null
+  },
+  {
+   "id": "c18q03",
+   "chapter": 18,
+   "topic": "18.1.1",
+   "num": 3,
+   "section": "A.2",
+   "text": "Interference travelling as radio waves through the air is called:",
+   "options": [
+    "Conducted emissions",
+    "Common mode current",
+    "Ground wave",
+    "Radiated emissions"
+   ],
+   "answer": 3,
+   "explanation": "Radiated emissions travel as radio waves",
+   "page": 282,
+   "figure": null
+  },
+  {
+   "id": "c18q04",
+   "chapter": 18,
+   "topic": "18.1.1",
+   "num": 4,
+   "section": "A.2",
+   "text": "RF currents carried along mains cables and power lines are:",
+   "options": [
+    "Conducted emissions",
+    "Radiated emissions",
+    "Harmonics",
+    "Key clicks"
+   ],
+   "answer": 0,
+   "explanation": "Conducted emissions travel along connected wiring",
+   "page": 283,
+   "figure": null
+  },
+  {
+   "id": "c18q05",
+   "chapter": 18,
+   "topic": "18.1.1",
+   "num": 5,
+   "section": "A.2",
+   "text": "Which of these can act as an unintended antenna?",
+   "options": [
+    "A ferrite ring",
+    "A dummy load",
+    "Headphone cables and PCB traces",
+    "An earthed metal enclosure"
+   ],
+   "answer": 2,
+   "explanation": "Cables and conductive traces can transmit and receive RF",
+   "page": 282,
+   "figure": null
+  },
+  {
+   "id": "c18q06",
+   "chapter": 18,
+   "topic": "18.1.3",
+   "num": 6,
+   "section": "A.2",
+   "text": "A device malfunctioning because it lacks immunity to a legitimate transmission is called:",
+   "options": [
+    "Breakthrough",
+    "Splatter",
+    "Key clicks",
+    "Fading"
+   ],
+   "answer": 0,
+   "explanation": "Breakthrough is caused by a lack of immunity, not by a faulty transmitter",
+   "page": 283,
+   "figure": null
+  },
+  {
+   "id": "c18q07",
+   "chapter": 18,
+   "topic": "18.1.3",
+   "num": 7,
+   "section": "A.2",
+   "text": "Interference caused by excessive spurious emissions must be fixed:",
+   "options": [
+    "Only at the affected device",
+    "At the transmitter",
+    "By the neighbour",
+    "By ComReg"
+   ],
+   "answer": 1,
+   "explanation": "Excessive spurious emissions need remediation on the transmitting side",
+   "page": 283,
+   "figure": null
+  },
+  {
+   "id": "c18q08",
+   "chapter": 18,
+   "topic": "18.1.3",
+   "num": 8,
+   "section": "A.2",
+   "text": "EU EMC directives require equipment carrying the CE mark to have:",
+   "options": [
+    "A 30 MHz filter",
+    "A built-in transmitter",
+    "An RF earth",
+    "Immunity from legitimate radio transmissions"
+   ],
+   "answer": 3,
+   "explanation": "CE-marked equipment must be immune to legitimate transmissions",
+   "page": 283,
+   "figure": null
+  },
+  {
+   "id": "c18q09",
+   "chapter": 18,
+   "topic": "18.1.4",
+   "num": 9,
+   "section": "A.2",
+   "text": "The likelihood of interference is directly related to:",
+   "options": [
+    "The age of the operator",
+    "The colour of the coax",
+    "The strength of the EMF from the station's antenna",
+    "The mode used only"
+   ],
+   "answer": 2,
+   "explanation": "Field strength depends on the antenna type, the power and the distance",
+   "page": 283,
+   "figure": null
+  },
+  {
+   "id": "c18q10",
+   "chapter": 18,
+   "topic": "18.1.4",
+   "num": 10,
+   "section": "A.2",
+   "text": "Metal fences, pipes and wiring in an antenna's near field can:",
+   "options": [
+    "Improve the SWR",
+    "Absorb and re-radiate RF, causing EMC problems",
+    "Block all interference",
+    "Have no effect"
+   ],
+   "answer": 1,
+   "explanation": "They act as unexpected transmitting antennas",
+   "page": 284,
+   "figure": null
+  },
+  {
+   "id": "c18q11",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 11,
+   "section": "A.2",
+   "text": "If reducing transmit power cures an EMC problem, you should:",
+   "options": [
+    "Identify the cause before resuming higher power",
+    "Increase power again",
+    "Ignore it",
+    "Switch to a longer antenna"
+   ],
+   "answer": 0,
+   "explanation": "Lower power is a diagnostic step, not the final fix",
+   "page": 284,
+   "figure": null
+  },
+  {
+   "id": "c18q12",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 12,
+   "section": "A.2",
+   "text": "Which antenna is generally less prone to EMC problems?",
+   "options": [
+    "A Yagi pointed at the neighbour's house",
+    "An EFHW fed next to the radio room",
+    "A small magnetic loop on the desk",
+    "A symmetrical half-wave dipole away from the house"
+   ],
+   "answer": 3,
+   "explanation": "Symmetrical antennas away from the house cause fewer problems",
+   "page": 284,
+   "figure": null
+  },
+  {
+   "id": "c18q13",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 13,
+   "section": "A.2",
+   "text": "Many EMC problems are caused by:",
+   "options": [
+    "Low SWR",
+    "A correctly matched antenna",
+    "Using a dummy load",
+    "Common mode currents on the outside of the feedline"
+   ],
+   "answer": 3,
+   "explanation": "Common mode currents re-radiate along the line inside the house",
+   "page": 284,
+   "figure": null
+  },
+  {
+   "id": "c18q14",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 14,
+   "section": "A.2",
+   "text": "To reduce common mode currents before they enter the radio room, use:",
+   "options": [
+    "A longer coax",
+    "A choke, such as a 1:1 current balun",
+    "A higher power",
+    "A frequency counter"
+   ],
+   "answer": 1,
+   "explanation": "Chokes (current baluns, ferrites) block common mode currents",
+   "page": 285,
+   "figure": null
+  },
+  {
+   "id": "c18q15",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 15,
+   "section": "A.2",
+   "text": "Interference is heard in a neighbour's loudspeakers. A simple remedy is to:",
+   "options": [
+    "Increase the volume",
+    "Remove the speakers' earth",
+    "Put ferrite rings on the speaker wires",
+    "Use a longer antenna"
+   ],
+   "answer": 2,
+   "explanation": "Ferrite chokes on affected cables increase immunity",
+   "page": 285,
+   "figure": null
+  },
+  {
+   "id": "c18q16",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 16,
+   "section": "A.2",
+   "text": "An HF station should include a low-pass filter with a cut-off at about:",
+   "options": [
+    "3 MHz",
+    "30 MHz",
+    "144 MHz",
+    "430 MHz"
+   ],
+   "answer": 1,
+   "explanation": "A 30 MHz low-pass filter attenuates harmonics above HF; VHF/UHF stations use a band-pass filter",
+   "page": 286,
+   "figure": null
+  },
+  {
+   "id": "c18q17",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 17,
+   "section": "A.2",
+   "text": "Why should parallel line not run close to the ground or metal objects?",
+   "options": [
+    "The currents may become unbalanced and the line radiates",
+    "It increases the line's velocity factor",
+    "It is illegal",
+    "It lowers the SWR too much"
+   ],
+   "answer": 0,
+   "explanation": "Unequal currents cause feedline radiation",
+   "page": 284,
+   "figure": null
+  },
+  {
+   "id": "c18q18",
+   "chapter": 18,
+   "topic": "18.1.5",
+   "num": 18,
+   "section": "A.2",
+   "text": "Interference is heard from the loudspeaker shown. What is X, fitted on the speaker cable to cure it?",
+   "options": [
+    "A fuse",
+    "A capacitor",
+    "A ferrite ring (choke)",
+    "An attenuator"
+   ],
+   "answer": 2,
+   "explanation": "Ferrite rings on speaker or headphone leads increase immunity",
+   "page": 285,
+   "figure": "figures/ch18_ferrite.svg"
+  },
+  {
+   "id": "c18q19",
+   "chapter": 18,
+   "topic": "18.1.5.1",
+   "num": 19,
+   "section": "A.2",
+   "text": "Why should transmitters never be operated with their covers removed?",
+   "options": [
+    "Removing shielding causes EMC problems and is unsafe",
+    "It improves cooling too much",
+    "The frequency display stops",
+    "It reduces power"
+   ],
+   "answer": 0,
+   "explanation": "Shielding keeps RF in; open equipment is also an electrical and EMF hazard",
+   "page": 286,
+   "figure": null
+  },
+  {
+   "id": "c18q20",
+   "chapter": 18,
+   "topic": "18.1.5.1",
+   "num": 20,
+   "section": "A.2",
+   "text": "In Ireland, an RF earth in a domestic installation should be:",
+   "options": [
+    "Unnecessary",
+    "Kept completely separate from the house earth",
+    "Connected to a water pipe",
+    "Bonded to the house's protective earth and certified by a qualified electrician"
+   ],
+   "answer": 3,
+   "explanation": "Safety regulations require bonding and certification",
+   "page": 287,
+   "figure": null
+  },
+  {
+   "id": "c18q21",
+   "chapter": 18,
+   "topic": "18.1.5.1",
+   "num": 21,
+   "section": "A.2",
+   "text": "Where is it particularly useful to connect a coax line's outer to a good earth?",
+   "options": [
+    "Inside the transceiver only",
+    "At the microphone",
+    "Where it enters the building",
+    "At the antenna's far end"
+   ],
+   "answer": 2,
+   "explanation": "Earthing at the entry point helps safety and dissipates common mode currents",
+   "page": 286,
+   "figure": null
+  },
+  {
+   "id": "c18q22",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 22,
+   "section": "A.2",
+   "text": "Harmonic distortion produces unwanted signals at:",
+   "options": [
+    "Only the input frequency",
+    "Multiples of the input frequency",
+    "Half the input frequency",
+    "Random audio frequencies"
+   ],
+   "answer": 1,
+   "explanation": "Harmonics are at integer multiples of the wanted frequency",
+   "page": 287,
+   "figure": null
+  },
+  {
+   "id": "c18q23",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 23,
+   "section": "A.2",
+   "text": "Harmonic distortion of a 40 m signal can cause interference on:",
+   "options": [
+    "The 20 m band",
+    "The 160 m band",
+    "The 80 m band",
+    "No other band"
+   ],
+   "answer": 0,
+   "explanation": "7 MHz × 2 = 14 MHz, in the 20 m band",
+   "page": 288,
+   "figure": null
+  },
+  {
+   "id": "c18q24",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 24,
+   "section": "A.2",
+   "text": "Mixing products amplified by a non-linear amplifier are called:",
+   "options": [
+    "Key clicks only",
+    "Harmonics",
+    "Fading",
+    "Intermodulation distortion (IMD)"
+   ],
+   "answer": 3,
+   "explanation": "IMD amplifies unwanted mixing products of the signal's frequencies",
+   "page": 288,
+   "figure": null
+  },
+  {
+   "id": "c18q25",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 25,
+   "section": "A.2",
+   "text": "Key clicks are usually caused by:",
+   "options": [
+    "A good antenna match",
+    "Too narrow a filter",
+    "Improperly shaped CW keying with too short a rise time",
+    "Low power"
+   ],
+   "answer": 2,
+   "explanation": "Abrupt keying edges spread energy over nearby frequencies",
+   "page": 288,
+   "figure": null
+  },
+  {
+   "id": "c18q26",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 26,
+   "section": "A.2",
+   "text": "Splatter from an SSB transmitter mainly affects:",
+   "options": [
+    "Nothing; it is harmless",
+    "Only the operator's own receiver",
+    "Frequencies 10 times higher",
+    "Nearby frequencies, through excessive bandwidth"
+   ],
+   "answer": 3,
+   "explanation": "A distorted SSB signal may occupy over 7 kHz instead of 2.7 kHz",
+   "page": 288,
+   "figure": null
+  },
+  {
+   "id": "c18q27",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 27,
+   "section": "A.2",
+   "text": "As a rule of thumb, the primary cause of most transmitter distortion is:",
+   "options": [
+    "A low SWR",
+    "Overdriven amplification",
+    "A long antenna",
+    "A narrow receive filter"
+   ],
+   "answer": 1,
+   "explanation": "Overdriving, even with excessive audio input, causes most distortion",
+   "page": 290,
+   "figure": null
+  },
+  {
+   "id": "c18q28",
+   "chapter": 18,
+   "topic": "18.2",
+   "num": 28,
+   "section": "A.2",
+   "text": "An overactive ALC fed with overdriven signals may cause:",
+   "options": [
+    "Better audio",
+    "Lower noise",
+    "Clipping, non-linearity and harmonic distortion",
+    "Lower SWR"
+   ],
+   "answer": 2,
+   "explanation": "Sudden ALC adjustments can clip the signal",
+   "page": 289,
+   "figure": null
+  },
+  {
+   "id": "c18q29",
+   "chapter": 18,
+   "topic": "18.2.1",
+   "num": 29,
+   "section": "A.2",
+   "text": "Which of these is a cause of spurious emissions?",
+   "options": [
+    "Parasitic oscillation in an amplifier",
+    "A purely resistive dummy load",
+    "A balanced dipole",
+    "A properly shaped CW signal"
+   ],
+   "answer": 0,
+   "explanation": "Parasitic oscillations from internal feedback create unrelated frequencies",
+   "page": 290,
+   "figure": null
+  },
+  {
+   "id": "c18q30",
+   "chapter": 18,
+   "topic": "18.2.1",
+   "num": 30,
+   "section": "A.2",
+   "text": "Spurious emissions in excess of the regulatory limits are:",
+   "options": [
+    "Only a problem on VHF",
+    "Allowed at night",
+    "Allowed below 10 W",
+    "Illegal and must be remedied at source"
+   ],
+   "answer": 3,
+   "explanation": "Excessive spurious emissions breach the licence conditions",
+   "page": 290,
+   "figure": null
+  },
+  {
+   "id": "c18q31",
+   "chapter": 18,
+   "topic": "18.2.1",
+   "num": 31,
+   "section": "A.2",
+   "text": "Can a high-quality transmitter be completely free of spurious emissions?",
+   "options": [
+    "Yes, always",
+    "No; good filters reduce them but cannot remove them entirely",
+    "Only on HF",
+    "Only when using FM"
+   ],
+   "answer": 1,
+   "explanation": "Regulations allow a small level of spurious emissions",
+   "page": 290,
+   "figure": null
+  },
+  {
+   "id": "c19q01",
+   "chapter": 19,
+   "topic": "19.1",
+   "num": 1,
+   "section": "A.1",
+   "text": "Under the Irish licence regulations, who is legally responsible for the safety of an amateur station and its operation?",
+   "options": [
+    "The licence holder",
+    "ComReg",
+    "The IRTS",
+    "The equipment manufacturer"
+   ],
+   "answer": 0,
+   "explanation": "The regulations make you legally responsible for your station's safety",
+   "page": 292,
+   "figure": null
+  },
+  {
+   "id": "c19q02",
+   "chapter": 19,
+   "topic": "19.1",
+   "num": 2,
+   "section": "A.1",
+   "text": "Non-ionising radiation emissions from your station must be within the limits of guidelines published by:",
+   "options": [
+    "The IEEE only",
+    "The FCC",
+    "The ARRL",
+    "ICNIRP"
+   ],
+   "answer": 3,
+   "explanation": "ComReg Guidelines 09/45 specifically require the ICNIRP limits",
+   "page": 292,
+   "figure": null
+  },
+  {
+   "id": "c19q03",
+   "chapter": 19,
+   "topic": "19.1",
+   "num": 3,
+   "section": "A.1",
+   "text": "If you operate several transmitters or antennas, the exposure limits apply to:",
+   "options": [
+    "Only the most powerful transmitter",
+    "Each part of the station and to the aggregate emissions",
+    "Only the antenna nearest the house",
+    "None of them"
+   ],
+   "answer": 1,
+   "explanation": "Emissions from all parts of the station combined must comply",
+   "page": 292,
+   "figure": null
+  },
+  {
+   "id": "c19q04",
+   "chapter": 19,
+   "topic": "19.2",
+   "num": 4,
+   "section": "A.1",
+   "text": "ComReg regulations require that important controls which change system parameters are:",
+   "options": [
+    "Removed",
+    "Painted red",
+    "Accessible to qualified personnel only",
+    "Located on the front panel"
+   ],
+   "answer": 2,
+   "explanation": "Access to important controls must be restricted",
+   "page": 293,
+   "figure": null
+  },
+  {
+   "id": "c19q05",
+   "chapter": 19,
+   "topic": "19.2",
+   "num": 5,
+   "section": "A.1",
+   "text": "All wireless telegraphy equipment must be labelled with:",
+   "options": [
+    "The manufacturer's trademark, type designation and a serial number",
+    "The owner's call sign only",
+    "The date of purchase",
+    "The maximum SWR"
+   ],
+   "answer": 0,
+   "explanation": "Labelling is a ComReg requirement",
+   "page": 293,
+   "figure": null
+  },
+  {
+   "id": "c19q06",
+   "chapter": 19,
+   "topic": "19.3",
+   "num": 6,
+   "section": "A.1",
+   "text": "Which small current through the body can cause fatal ventricular fibrillation?",
+   "options": [
+    "0.5 mA",
+    "5 µA",
+    "50 mA",
+    "50 A only"
+   ],
+   "answer": 2,
+   "explanation": "Currents as small as 50 mA can disturb the heart's rhythm",
+   "page": 293,
+   "figure": null
+  },
+  {
+   "id": "c19q07",
+   "chapter": 19,
+   "topic": "19.3",
+   "num": 7,
+   "section": "A.1",
+   "text": "Which current path through the body is the most dangerous?",
+   "options": [
+    "Through the hair",
+    "From one finger to another on the same hand",
+    "Through the foot only",
+    "From one hand across the chest to the other hand"
+   ],
+   "answer": 3,
+   "explanation": "A hand-to-hand path crosses the heart; keep one hand behind your back",
+   "page": 293,
+   "figure": null
+  },
+  {
+   "id": "c19q08",
+   "chapter": 19,
+   "topic": "19.3",
+   "num": 8,
+   "section": "A.1",
+   "text": "Someone is receiving an electric shock. Your first action should be to:",
+   "options": [
+    "Pull them away by the hand",
+    "Shut off the power before touching the person",
+    "Start CPR immediately",
+    "Pour water on them"
+   ],
+   "answer": 1,
+   "explanation": "Switch off the power first, then make safe, call for help, and give CPR if qualified",
+   "page": 293,
+   "figure": null
+  },
+  {
+   "id": "c19q09",
+   "chapter": 19,
+   "topic": "19.3.2",
+   "num": 9,
+   "section": "A.1",
+   "text": "What is the most immediately hazardous biological effect of contact with RF currents?",
+   "options": [
+    "An RF burn",
+    "Hair loss",
+    "Hearing loss",
+    "Radioactivity"
+   ],
+   "answer": 0,
+   "explanation": "RF burns come from direct or near contact with an energised conductor",
+   "page": 294,
+   "figure": null
+  },
+  {
+   "id": "c19q10",
+   "chapter": 19,
+   "topic": "19.3.2",
+   "num": 10,
+   "section": "A.1",
+   "text": "How should you treat a minor RF burn?",
+   "options": [
+    "Cover with butter",
+    "Apply ice directly",
+    "Cool the skin with tepid running water",
+    "Ignore it"
+   ],
+   "answer": 2,
+   "explanation": "Treat like any burn: cool with tepid water; seek medical help if deep",
+   "page": 294,
+   "figure": null
+  },
+  {
+   "id": "c19q11",
+   "chapter": 19,
+   "topic": "19.3.2",
+   "num": 11,
+   "section": "A.1",
+   "text": "Why avoid standing close to the ends of a transmitting half-wave dipole?",
+   "options": [
+    "The current is highest there",
+    "The high RF voltage can cause an arc and an RF burn",
+    "It will detune the receiver",
+    "It is never dangerous"
+   ],
+   "answer": 1,
+   "explanation": "An arc can form before you even touch the conductor",
+   "page": 294,
+   "figure": null
+  },
+  {
+   "id": "c19q12",
+   "chapter": 19,
+   "topic": "19.3.2",
+   "num": 12,
+   "section": "A.1",
+   "text": "RF currents on the metal case of a transceiver are often caused by:",
+   "options": [
+    "Low power",
+    "A correctly matched antenna",
+    "Using a dummy load",
+    "Improper earthing and common mode current on the coax"
+   ],
+   "answer": 3,
+   "explanation": "Common mode currents can reach poorly earthed equipment, microphones and keys",
+   "page": 294,
+   "figure": null
+  },
+  {
+   "id": "c19q13",
+   "chapter": 19,
+   "topic": "19.4.1",
+   "num": 13,
+   "section": "A.1",
+   "text": "What is the most common cause of fatal electrical accidents?",
+   "options": [
+    "Ordinary 230 V circuits",
+    "12 V batteries",
+    "RF from handhelds",
+    "Static electricity"
+   ],
+   "answer": 0,
+   "explanation": "Ordinary mains circuits cause most fatal electrical accidents",
+   "page": 295,
+   "figure": null
+  },
+  {
+   "id": "c19q14",
+   "chapter": 19,
+   "topic": "19.4.1",
+   "num": 14,
+   "section": "A.1",
+   "text": "The station's main (master) switch should be:",
+   "options": [
+    "Single pole in the neutral",
+    "Double pole, breaking both live and neutral",
+    "In the earth lead only",
+    "Hidden from family members"
+   ],
+   "answer": 1,
+   "explanation": "A double-pole switch breaks live and neutral; everyone should know where it is",
+   "page": 295,
+   "figure": null
+  },
+  {
+   "id": "c19q15",
+   "chapter": 19,
+   "topic": "19.4.1",
+   "num": 15,
+   "section": "A.1",
+   "text": "An RCD cuts the power when:",
+   "options": [
+    "The fuse blows",
+    "The voltage rises above 230 V",
+    "The SWR is high",
+    "The live and neutral currents differ by the rated amount, usually 30 mA"
+   ],
+   "answer": 3,
+   "explanation": "An imbalance suggests current leaking to earth, perhaps through a person",
+   "page": 295,
+   "figure": null
+  },
+  {
+   "id": "c19q16",
+   "chapter": 19,
+   "topic": "19.4.1",
+   "num": 16,
+   "section": "A.1",
+   "text": "How often should RCDs be tested with their test button?",
+   "options": [
+    "Never",
+    "Every 10 years",
+    "At least twice per year",
+    "Only after a fault"
+   ],
+   "answer": 2,
+   "explanation": "Test them frequently: at least twice a year",
+   "page": 295,
+   "figure": null
+  },
+  {
+   "id": "c19q17",
+   "chapter": 19,
+   "topic": "19.4.2",
+   "num": 17,
+   "section": "A.1",
+   "text": "The earthing system used in Ireland is known as:",
+   "options": [
+    "IT",
+    "TT",
+    "TN-C-S",
+    "TN-S only"
+   ],
+   "answer": 2,
+   "explanation": "Ireland uses TN-C-S with additional ESB bonding provisions",
+   "page": 296,
+   "figure": null
+  },
+  {
+   "id": "c19q18",
+   "chapter": 19,
+   "topic": "19.4.2",
+   "num": 18,
+   "section": "A.1",
+   "text": "How should station equipment be connected to the earthing point?",
+   "options": [
+    "Not at all, as 12 V equipment needs no earth",
+    "Daisy-chained from one device to the next",
+    "Through the coax only",
+    "Each device directly to a common earthing point"
+   ],
+   "answer": 3,
+   "explanation": "Avoid daisy-chaining; connect each device to a common point (bus bar)",
+   "page": 296,
+   "figure": null
+  },
+  {
+   "id": "c19q19",
+   "chapter": 19,
+   "topic": "19.4.2",
+   "num": 19,
+   "section": "A.1",
+   "text": "Having multiple earths in a house that are not bonded together:",
+   "options": [
+    "Improves safety",
+    "Can create lethal hazards",
+    "Reduces noise safely",
+    "Is required by regulations"
+   ],
+   "answer": 1,
+   "explanation": "All earths must be bonded to the house's protective earth",
+   "page": 296,
+   "figure": null
+  },
+  {
+   "id": "c19q20",
+   "chapter": 19,
+   "topic": "19.4.2",
+   "num": 20,
+   "section": "A.1",
+   "text": "Microphones and Morse keys should be:",
+   "options": [
+    "Fully insulated or properly connected to an earthed chassis",
+    "Connected to the live conductor",
+    "Wired to the antenna",
+    "Left floating"
+   ],
+   "answer": 0,
+   "explanation": "They must be insulated or earthed",
+   "page": 296,
+   "figure": null
+  },
+  {
+   "id": "c19q21",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 21,
+   "section": "A.1",
+   "text": "In a 230 V mains plug, the live conductor is:",
+   "options": [
+    "Green/yellow",
+    "Blue",
+    "Brown",
+    "Black"
+   ],
+   "answer": 2,
+   "explanation": "Live brown, neutral blue, earth green/yellow",
+   "page": 297,
+   "figure": null
+  },
+  {
+   "id": "c19q22",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 22,
+   "section": "A.1",
+   "text": "In a 230 V mains plug, the neutral conductor is:",
+   "options": [
+    "Brown",
+    "Red",
+    "Green/yellow",
+    "Blue"
+   ],
+   "answer": 3,
+   "explanation": "Neutral is blue",
+   "page": 297,
+   "figure": null
+  },
+  {
+   "id": "c19q23",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 23,
+   "section": "A.1",
+   "text": "A device draws a maximum of 2.5 A from the mains. The best fuse is:",
+   "options": [
+    "3 A",
+    "13 A",
+    "2 A",
+    "30 A"
+   ],
+   "answer": 0,
+   "explanation": "Use the lowest rating with a small margin above the maximum current",
+   "page": 297,
+   "figure": null
+  },
+  {
+   "id": "c19q24",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 24,
+   "section": "A.1",
+   "text": "In a mains plug, the fuse is fitted in:",
+   "options": [
+    "The neutral lead",
+    "The live lead only",
+    "The earth lead",
+    "Both live and neutral"
+   ],
+   "answer": 1,
+   "explanation": "The fuse goes in the live lead, on the equipment side of the switch",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q25",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 25,
+   "section": "A.1",
+   "text": "Where should fuses be fitted on the output of a DC power supply?",
+   "options": [
+    "Only inside the radio",
+    "At the far end of the cable",
+    "As close to the source of power as possible",
+    "Not needed for DC"
+   ],
+   "answer": 2,
+   "explanation": "Often on both positive and negative leads, close to the source",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q26",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 26,
+   "section": "A.1",
+   "text": "What is the maximum power that can be drawn through a 13 A fuse on 230 V mains, with no margin?",
+   "options": [
+    "2990 W",
+    "1150 W",
+    "690 W",
+    "13 kW"
+   ],
+   "answer": 0,
+   "explanation": "P = V × I = 230 × 13 = 2990 W",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q27",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 27,
+   "section": "A.1",
+   "text": "In the mains plug shown, terminal Z is next to the fuse. Which conductor connects to it?",
+   "options": [
+    "Blue (neutral)",
+    "Green/yellow (earth)",
+    "Black",
+    "Brown (live)"
+   ],
+   "answer": 3,
+   "explanation": "The fuse is in the live lead, and the live conductor is brown",
+   "page": 297,
+   "figure": "figures/ch19_plug.svg"
+  },
+  {
+   "id": "c19q28",
+   "chapter": 19,
+   "topic": "19.4.3",
+   "num": 28,
+   "section": "A.1",
+   "text": "In the mains plug shown, which colour of conductor connects to terminal Y?",
+   "options": [
+    "Brown",
+    "Blue",
+    "Green/yellow",
+    "Red"
+   ],
+   "answer": 1,
+   "explanation": "Bottom left (viewed from the back) is neutral, which is blue; the top terminal X is earth",
+   "page": 297,
+   "figure": "figures/ch19_plug.svg"
+  },
+  {
+   "id": "c19q29",
+   "chapter": 19,
+   "topic": "19.4.5",
+   "num": 29,
+   "section": "A.1",
+   "text": "A bleeder resistor in a high voltage power supply is connected across each smoothing capacitor to:",
+   "options": [
+    "Increase the output voltage",
+    "Discharge the capacitors after the power is switched off",
+    "Filter RF",
+    "Act as a fuse"
+   ],
+   "answer": 1,
+   "explanation": "Bleeders often fail, so also use a shorting stick",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q30",
+   "chapter": 19,
+   "topic": "19.4.5",
+   "num": 30,
+   "section": "A.1",
+   "text": "Before working on a high voltage power supply, you should always:",
+   "options": [
+    "Touch the capacitors to check",
+    "Rely on the bleeder resistors",
+    "Wait 5 seconds",
+    "Use a shorting stick to discharge the smoothing capacitors"
+   ],
+   "answer": 3,
+   "explanation": "Capacitors can hold a charge for months; never rely on bleeders",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q31",
+   "chapter": 19,
+   "topic": "19.4.5",
+   "num": 31,
+   "section": "A.1",
+   "text": "Micro switches on a valve power amplifier should:",
+   "options": [
+    "Bypass the fuse",
+    "Switch the antenna",
+    "Turn on the fan",
+    "Disconnect the high voltage supply when the cover is removed"
+   ],
+   "answer": 3,
+   "explanation": "Interlocks disconnect high voltages automatically",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q32",
+   "chapter": 19,
+   "topic": "19.4.5",
+   "num": 32,
+   "section": "A.1",
+   "text": "Why put an RF choke to ground at the output socket of a valve linear amplifier?",
+   "options": [
+    "To increase the output power",
+    "So that a shorted DC blocking capacitor cannot put high DC voltage on the antenna",
+    "To improve SWR",
+    "To act as a filter for harmonics"
+   ],
+   "answer": 1,
+   "explanation": "The choke gives a DC path to ground while blocking RF",
+   "page": 298,
+   "figure": null
+  },
+  {
+   "id": "c19q33",
+   "chapter": 19,
+   "topic": "19.4.6",
+   "num": 33,
+   "section": "A.1",
+   "text": "Before using a voltmeter to confirm a circuit is dead, you should:",
+   "options": [
+    "Check the meter on a known live source first",
+    "Set it to the ohms range",
+    "Earth it",
+    "Connect it in series"
+   ],
+   "answer": 0,
+   "explanation": "Prove the instrument works before trusting a zero reading",
+   "page": 299,
+   "figure": null
+  },
+  {
+   "id": "c19q34",
+   "chapter": 19,
+   "topic": "19.4.6",
+   "num": 34,
+   "section": "A.1",
+   "text": "When adjusting live equipment, you should:",
+   "options": [
+    "Wear a metal watch",
+    "Use both hands for stability",
+    "Use one hand only and remove jewellery",
+    "Stand on a wet floor"
+   ],
+   "answer": 2,
+   "explanation": "One hand only, no jewellery, and an RCD-protected supply",
+   "page": 299,
+   "figure": null
+  },
+  {
+   "id": "c19q35",
+   "chapter": 19,
+   "topic": "19.5",
+   "num": 35,
+   "section": "A.1",
+   "text": "In a vehicle installation, fuses should be fitted:",
+   "options": [
+    "On the antenna only",
+    "On both the positive and negative battery leads",
+    "Only on the negative lead",
+    "Nowhere"
+   ],
+   "answer": 1,
+   "explanation": "Fuse both battery leads; never short-circuit a high-capacity battery",
+   "page": 299,
+   "figure": null
+  },
+  {
+   "id": "c19q36",
+   "chapter": 19,
+   "topic": "19.5",
+   "num": 36,
+   "section": "A.1",
+   "text": "When refuelling a vehicle with mobile radio equipment, you should:",
+   "options": [
+    "Raise the antenna",
+    "Keep transmitting",
+    "Switch only the engine off",
+    "Switch off the engine and the radio equipment"
+   ],
+   "answer": 3,
+   "explanation": "Switch everything off when refuelling",
+   "page": 299,
+   "figure": null
+  },
+  {
+   "id": "c19q37",
+   "chapter": 19,
+   "topic": "19.6",
+   "num": 37,
+   "section": "A.1",
+   "text": "Guy ropes for a mast should be anchored at a distance from the base of about:",
+   "options": [
+    "Twice the mast height",
+    "10% of the mast height",
+    "60–80% of the mast height",
+    "Exactly the mast height"
+   ],
+   "answer": 2,
+   "explanation": "Guys are secured 60–80% of the mast height away from the base",
+   "page": 299,
+   "figure": null
+  },
+  {
+   "id": "c19q38",
+   "chapter": 19,
+   "topic": "19.6",
+   "num": 38,
+   "section": "A.1",
+   "text": "Towers and masts should be located how far from nearby power lines, people and property?",
+   "options": [
+    "Twice their own height",
+    "Half their height",
+    "1 m",
+    "It does not matter"
+   ],
+   "answer": 0,
+   "explanation": "Allow for the mast falling",
+   "page": 299,
+   "figure": null
+  },
+  {
+   "id": "c19q39",
+   "chapter": 19,
+   "topic": "19.6",
+   "num": 39,
+   "section": "A.1",
+   "text": "When thunderstorms are forecast you should:",
+   "options": [
+    "Keep transmitting",
+    "Disconnect and ground all feeders, preferably outside the building",
+    "Disconnect only the microphone",
+    "Raise the antenna"
+   ],
+   "answer": 1,
+   "explanation": "Antennas should be earthed when not in use",
+   "page": 300,
+   "figure": null
+  },
+  {
+   "id": "c19q40",
+   "chapter": 19,
+   "topic": "19.6",
+   "num": 40,
+   "section": "A.1",
+   "text": "Static dischargers (lightning arrestors) in antenna feeders protect against:",
+   "options": [
+    "Harmonics",
+    "A direct lightning strike",
+    "High SWR",
+    "Transient high voltages from a nearby strike"
+   ],
+   "answer": 3,
+   "explanation": "Nothing protects against a direct strike; arrestors help with nearby strikes",
+   "page": 300,
+   "figure": null
+  },
+  {
+   "id": "c19q41",
+   "chapter": 19,
+   "topic": "19.7",
+   "num": 41,
+   "section": "A.1",
+   "text": "Soldering should be done:",
+   "options": [
+    "In a well-ventilated area, avoiding the fumes and wearing eye protection",
+    "In a closed cupboard",
+    "Without eye protection",
+    "Only with leaded solder"
+   ],
+   "answer": 0,
+   "explanation": "Ventilate, avoid fumes, protect your eyes; consider lead-free solder",
+   "page": 300,
+   "figure": null
+  },
+  {
+   "id": "c19q42",
+   "chapter": 19,
+   "topic": "19.8.1",
+   "num": 42,
+   "section": "A.1",
+   "text": "The ICNIRP guidelines limit:",
+   "options": [
+    "The transmitter power",
+    "The emissions of an antenna as such",
+    "Exposure of people to EMF",
+    "The bandwidth"
+   ],
+   "answer": 2,
+   "explanation": "ICNIRP focuses on exposure to humans, not emissions as such",
+   "page": 301,
+   "figure": null
+  },
+  {
+   "id": "c19q43",
+   "chapter": 19,
+   "topic": "19.8.1",
+   "num": 43,
+   "section": "A.1",
+   "text": "Which group has the lower, more stringent ICNIRP exposure limits?",
+   "options": [
+    "Occupationally exposed workers",
+    "The general public",
+    "Radio amateurs only",
+    "There is only one set of limits"
+   ],
+   "answer": 1,
+   "explanation": "The general public (including pregnant women) has stricter limits",
+   "page": 302,
+   "figure": null
+  },
+  {
+   "id": "c19q44",
+   "chapter": 19,
+   "topic": "19.8.1",
+   "num": 44,
+   "section": "A.1",
+   "text": "Most ICNIRP limits are specified as:",
+   "options": [
+    "Time-averaged values over a period such as 6 or 30 minutes",
+    "Peak values only",
+    "DC values",
+    "Daily totals"
+   ],
+   "answer": 0,
+   "explanation": "Most are time-averaged; some 2020 limits are instantaneous peaks",
+   "page": 302,
+   "figure": null
+  },
+  {
+   "id": "c19q45",
+   "chapter": 19,
+   "topic": "19.8.3",
+   "num": 45,
+   "section": "A.1",
+   "text": "The primary adverse effect of RF EMF exposure is:",
+   "options": [
+    "Magnetising the blood",
+    "Radioactive contamination",
+    "Heating of human tissue",
+    "Hearing loss"
+   ],
+   "answer": 2,
+   "explanation": "Like a microwave oven, intense RF heats tissue",
+   "page": 303,
+   "figure": null
+  },
+  {
+   "id": "c19q46",
+   "chapter": 19,
+   "topic": "19.8.3",
+   "num": 46,
+   "section": "A.1",
+   "text": "To avoid a touch hazard, no part of an antenna should be lower than how far above where people can stand?",
+   "options": [
+    "10 m",
+    "1 m",
+    "0.5 m",
+    "2.4 m"
+   ],
+   "answer": 3,
+   "explanation": "Keep antennas at least 2.4 m above any standing level",
+   "page": 304,
+   "figure": null
+  },
+  {
+   "id": "c19q47",
+   "chapter": 19,
+   "topic": "19.8.3",
+   "num": 47,
+   "section": "A.1",
+   "text": "Which body parts are particularly vulnerable to RF heating at microwave frequencies?",
+   "options": [
+    "The feet",
+    "The fingernails",
+    "The hair",
+    "The eyes"
+   ],
+   "answer": 3,
+   "explanation": "Never look into an active waveguide",
+   "page": 304,
+   "figure": null
+  },
+  {
+   "id": "c19q48",
+   "chapter": 19,
+   "topic": "19.8.3",
+   "num": 48,
+   "section": "A.1",
+   "text": "RF at frequencies up to about 10 MHz may also cause:",
+   "options": [
+    "Radioactivity",
+    "Electrostimulation of the nervous system",
+    "Sunburn",
+    "Colour blindness"
+   ],
+   "answer": 1,
+   "explanation": "Induced currents in nerves; unlikely without physical contact in amateur stations",
+   "page": 304,
+   "figure": null
+  },
+  {
+   "id": "c19q49",
+   "chapter": 19,
+   "topic": "19.8.3",
+   "num": 49,
+   "section": "A.1",
+   "text": "Why need small magnetic loop antennas particular care?",
+   "options": [
+    "They are always outdoors",
+    "They cannot transmit",
+    "Their near fields are intense and extend further than their size suggests",
+    "They have no near field"
+   ],
+   "answer": 2,
+   "explanation": "Their small size gives a false sense of security",
+   "page": 304,
+   "figure": null
+  },
+  {
+   "id": "c19q50",
+   "chapter": 19,
+   "topic": "19.8.4",
+   "num": 50,
+   "section": "A.1",
+   "text": "Which station characteristics directly influence RF emissions?",
+   "options": [
+    "Power to the antenna, antenna gain and pattern, and the distance from it",
+    "The callsign",
+    "The colour of the antenna",
+    "The make of microphone"
+   ],
+   "answer": 0,
+   "explanation": "Power, gain/pattern, and near/far field distances determine emissions",
+   "page": 305,
+   "figure": null
+  },
+  {
+   "id": "c19q51",
+   "chapter": 19,
+   "topic": "19.8.4",
+   "num": 51,
+   "section": "A.1",
+   "text": "Does staying within your licence power limits guarantee compliance with exposure limits?",
+   "options": [
+    "Only with a Yagi",
+    "Yes, always",
+    "Only on HF",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "Licence power compliance does not guarantee EMF compliance",
+   "page": 305,
+   "figure": null
+  },
+  {
+   "id": "c19q52",
+   "chapter": 19,
+   "topic": "19.8.4",
+   "num": 52,
+   "section": "A.1",
+   "text": "RF exposure calculators based only on far-field assumptions:",
+   "options": [
+    "Only work for dipoles",
+    "Are always accurate",
+    "May be inaccurate for predicting exposure in the near field",
+    "Are illegal"
+   ],
+   "answer": 2,
+   "explanation": "Near fields are hard to predict and depend on surroundings",
+   "page": 306,
+   "figure": null
+  },
+  {
+   "id": "c19q53",
+   "chapter": 19,
+   "topic": "19.8.5",
+   "num": 53,
+   "section": "A.1",
+   "text": "In the far radiating field, the field intensity:",
+   "options": [
+    "Doubles as the distance doubles",
+    "Halves as the distance doubles",
+    "Is constant",
+    "Falls with the cube of the distance"
+   ],
+   "answer": 1,
+   "explanation": "Field strength is inversely proportional to distance in the far field",
+   "page": 307,
+   "figure": null
+  },
+  {
+   "id": "c19q54",
+   "chapter": 19,
+   "topic": "19.8.5",
+   "num": 54,
+   "section": "A.1",
+   "text": "According to the RSGB PAEC guidance, a 40–160 m dipole fed with up to 400 W average power is likely compliant if mounted at least:",
+   "options": [
+    "6.4 m high, with no one closer than 2.2 m",
+    "1 m high",
+    "2.4 m high with no other condition",
+    "20 m high only"
+   ],
+   "answer": 0,
+   "explanation": "For 100 W average: 3.7 m high and 1.2 m clearance",
+   "page": 309,
+   "figure": null
+  },
+  {
+   "id": "c19q55",
+   "chapter": 19,
+   "topic": "19.8.7",
+   "num": 55,
+   "section": "A.1",
+   "text": "Above what RF power should hand-held or body-worn devices with antennas close to the body be avoided?",
+   "options": [
+    "0.5 W",
+    "50 W",
+    "5 W",
+    "100 W"
+   ],
+   "answer": 2,
+   "explanation": "Avoid handhelds above 5 W near the head or body",
+   "page": 311,
+   "figure": null
+  },
+  {
+   "id": "c19q56",
+   "chapter": 19,
+   "topic": "19.8.7",
+   "num": 56,
+   "section": "A.1",
+   "text": "Which is a sensible practical precaution for EMF safety?",
+   "options": [
+    "Mount antennas at head height",
+    "Point Yagis at neighbours",
+    "Use maximum power at all times",
+    "Site antennas as high and as far away from people as practical"
+   ],
+   "answer": 3,
+   "explanation": "Height and distance reduce exposure",
+   "page": 311,
+   "figure": null
+  },
+  {
+   "id": "c20q01",
+   "chapter": 20,
+   "topic": "20.1",
+   "num": 1,
+   "section": "B.8",
+   "text": "The International Telecommunication Union (ITU) is:",
+   "options": [
+    "The United Nations agency for information and communication technologies",
+    "The Irish radio regulator",
+    "A European radio society",
+    "A manufacturer of radio equipment"
+   ],
+   "answer": 0,
+   "explanation": "The ITU Radio Regulations govern all users of radio frequencies",
+   "page": 314,
+   "figure": null
+  },
+  {
+   "id": "c20q02",
+   "chapter": 20,
+   "topic": "20.2",
+   "num": 2,
+   "section": "B.8",
+   "text": "Ireland is in which ITU Region?",
+   "options": [
+    "Region 2",
+    "Region 1",
+    "Region 3",
+    "Region 4"
+   ],
+   "answer": 1,
+   "explanation": "Region 1: Europe, Africa, the former Soviet Union, Mongolia and the Middle East west of the Persian Gulf",
+   "page": 314,
+   "figure": null
+  },
+  {
+   "id": "c20q03",
+   "chapter": 20,
+   "topic": "20.2",
+   "num": 3,
+   "section": "B.8",
+   "text": "The Americas, including Greenland, are in ITU:",
+   "options": [
+    "Region 1",
+    "Region 3",
+    "Region 2",
+    "Region 0"
+   ],
+   "answer": 2,
+   "explanation": "Region 2: the Americas including Greenland",
+   "page": 314,
+   "figure": null
+  },
+  {
+   "id": "c20q04",
+   "chapter": 20,
+   "topic": "20.2",
+   "num": 4,
+   "section": "B.8",
+   "text": "Australia and New Zealand are in ITU:",
+   "options": [
+    "Region 1",
+    "Region 2",
+    "They have no region",
+    "Region 3"
+   ],
+   "answer": 3,
+   "explanation": "Region 3: Asia east of and including Iran, and most of Oceania",
+   "page": 314,
+   "figure": null
+  },
+  {
+   "id": "c20q05",
+   "chapter": 20,
+   "topic": "20.2",
+   "num": 5,
+   "section": "B.8",
+   "text": "The worldwide representative body for amateur radio is the:",
+   "options": [
+    "ComReg",
+    "CEPT",
+    "IARU",
+    "ICNIRP"
+   ],
+   "answer": 2,
+   "explanation": "The International Amateur Radio Union, organised in three Regions; the IRTS represents Ireland in IARU R1",
+   "page": 314,
+   "figure": null
+  },
+  {
+   "id": "c20q06",
+   "chapter": 20,
+   "topic": "20.3",
+   "num": 6,
+   "section": "B.8",
+   "text": "According to the ITU, the amateur service is for:",
+   "options": [
+    "Military communications",
+    "Commercial broadcasting",
+    "Paid messaging services",
+    "Self-training, intercommunication and technical investigations"
+   ],
+   "answer": 3,
+   "explanation": "Carried out by amateurs with a personal aim and without pecuniary interest",
+   "page": 315,
+   "figure": null
+  },
+  {
+   "id": "c20q07",
+   "chapter": 20,
+   "topic": "20.3",
+   "num": 7,
+   "section": "B.8",
+   "text": "Amateurs operate \"without pecuniary interest\". This means:",
+   "options": [
+    "You cannot make money from amateur radio communications",
+    "You must pay to transmit",
+    "You may sell advertising on air",
+    "You cannot buy equipment"
+   ],
+   "answer": 0,
+   "explanation": "Amateur radio is solely for a personal aim",
+   "page": 315,
+   "figure": null
+  },
+  {
+   "id": "c20q08",
+   "chapter": 20,
+   "topic": "20.4",
+   "num": 8,
+   "section": "B.8",
+   "text": "Communications between amateur stations in different countries are permitted:",
+   "options": [
+    "Only within the same ITU Region",
+    "Unless one of the administrations concerned has objected",
+    "Only with prior written permission",
+    "Never"
+   ],
+   "answer": 1,
+   "explanation": "ITU RR article 25.1",
+   "page": 315,
+   "figure": null
+  },
+  {
+   "id": "c20q09",
+   "chapter": 20,
+   "topic": "20.4",
+   "num": 9,
+   "section": "B.8",
+   "text": "Amateur transmissions may not be encoded to obscure their meaning, except for:",
+   "options": [
+    "Personal messages",
+    "Control signals between earth command stations and amateur satellites",
+    "Contest exchanges",
+    "Emergency traffic"
+   ],
+   "answer": 1,
+   "explanation": "Only satellite control signals may be secret; digital modes are fine as long as the encoding is not secret",
+   "page": 315,
+   "figure": null
+  },
+  {
+   "id": "c20q10",
+   "chapter": 20,
+   "topic": "20.4",
+   "num": 10,
+   "section": "B.8",
+   "text": "Under the ITU rules, amateur communications are limited to:",
+   "options": [
+    "Music",
+    "Business messages",
+    "News broadcasts",
+    "Matters incidental to the amateur service and remarks of a personal character"
+   ],
+   "answer": 3,
+   "explanation": "ITU RR article 25.2",
+   "page": 315,
+   "figure": null
+  },
+  {
+   "id": "c20q11",
+   "chapter": 20,
+   "topic": "20.4",
+   "num": 11,
+   "section": "B.8",
+   "text": "ARen, the Amateur Radio Emergency Network, is run by:",
+   "options": [
+    "The Irish Coast Guard alone",
+    "The ITU",
+    "The IRTS in co-operation with ComReg",
+    "CEPT"
+   ],
+   "answer": 2,
+   "explanation": "ARen operators may pass messages for designated services in emergencies",
+   "page": 316,
+   "figure": null
+  },
+  {
+   "id": "c20q12",
+   "chapter": 20,
+   "topic": "20.5",
+   "num": 12,
+   "section": "B.8",
+   "text": "On a band allocated to amateurs on a primary basis, amateurs:",
+   "options": [
+    "Have priority and can claim protection from harmful interference from secondary users",
+    "Must give way to all other users",
+    "Cannot transmit",
+    "Must use low power"
+   ],
+   "answer": 0,
+   "explanation": "Primary users have priority",
+   "page": 316,
+   "figure": null
+  },
+  {
+   "id": "c20q13",
+   "chapter": 20,
+   "topic": "20.5",
+   "num": 13,
+   "section": "B.8",
+   "text": "Which of these amateur bands is allocated on a secondary basis?",
+   "options": [
+    "10 MHz",
+    "14 MHz",
+    "144 MHz",
+    "7 MHz"
+   ],
+   "answer": 0,
+   "explanation": "The 5, 10, 50 and 70 MHz bands are secondary",
+   "page": 316,
+   "figure": null
+  },
+  {
+   "id": "c20q14",
+   "chapter": 20,
+   "topic": "20.5",
+   "num": 14,
+   "section": "B.8",
+   "text": "Stations with a secondary allocation:",
+   "options": [
+    "Need no licence",
+    "Have priority over primary services",
+    "May use unlimited power",
+    "Must not cause harmful interference to primary services and cannot claim protection from them"
+   ],
+   "answer": 3,
+   "explanation": "Secondary users must not interfere and have no protection from primary users",
+   "page": 316,
+   "figure": null
+  },
+  {
+   "id": "c20q15",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 15,
+   "section": "B.8",
+   "text": "ITU emission designators classify:",
+   "options": [
+    "The operator's licence class",
+    "The make of the transmitter",
+    "The characteristics of the signal",
+    "The antenna type"
+   ],
+   "answer": 2,
+   "explanation": "They describe the signal, not the transmitter used",
+   "page": 316,
+   "figure": null
+  },
+  {
+   "id": "c20q16",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 16,
+   "section": "B.8",
+   "text": "The three symbols of an emission designator such as J3E describe, in order:",
+   "options": [
+    "Power, bandwidth, frequency",
+    "Type of modulation, nature of modulating signal, type of information",
+    "Band, mode, power",
+    "Antenna, feeder, transmitter"
+   ],
+   "answer": 1,
+   "explanation": "J = SSB suppressed carrier, 3 = analogue, E = telephony",
+   "page": 316,
+   "figure": null
+  },
+  {
+   "id": "c20q17",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 17,
+   "section": "B.8",
+   "text": "The emission designator for SSB voice is:",
+   "options": [
+    "A1A",
+    "F3E",
+    "J3E",
+    "A3E"
+   ],
+   "answer": 2,
+   "explanation": "J3E: single sideband, suppressed carrier, analogue telephony",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q18",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 18,
+   "section": "B.8",
+   "text": "The emission designator for CW Morse code by on-off keying of the carrier is:",
+   "options": [
+    "F1B",
+    "J3E",
+    "F3E",
+    "A1A"
+   ],
+   "answer": 3,
+   "explanation": "A1A: double-sideband AM, digital without subcarrier, aural telegraphy",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q19",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 19,
+   "section": "B.8",
+   "text": "F3E is:",
+   "options": [
+    "AM voice",
+    "FM voice (telephony)",
+    "CW",
+    "Packet radio"
+   ],
+   "answer": 1,
+   "explanation": "F = frequency modulation, 3 = analogue, E = telephony",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q20",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 20,
+   "section": "B.8",
+   "text": "A3E is:",
+   "options": [
+    "AM voice with full carrier, double sideband",
+    "SSB voice",
+    "FM voice",
+    "RTTY"
+   ],
+   "answer": 0,
+   "explanation": "A = double sideband AM",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q21",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 21,
+   "section": "B.8",
+   "text": "In an emission designator, the final letter \"D\" means:",
+   "options": [
+    "Telephony",
+    "Data, e.g. files, telemetry, packet radio",
+    "Aural telegraphy",
+    "Television"
+   ],
+   "answer": 1,
+   "explanation": "A = aural telegraphy, B = machine telegraphy, D = data, E = telephony",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q22",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 22,
+   "section": "B.8",
+   "text": "Which designator describes RTTY or FT8 (machine-received telegraphy)?",
+   "options": [
+    "J3E",
+    "A1A",
+    "F3E",
+    "F1B"
+   ],
+   "answer": 3,
+   "explanation": "B = automatic (machine) reception telegraphy",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q23",
+   "chapter": 20,
+   "topic": "20.6",
+   "num": 23,
+   "section": "B.8",
+   "text": "In an emission designator, the symbol \"3\" indicates:",
+   "options": [
+    "One channel of analogue information",
+    "Digital information without a subcarrier",
+    "Digital information using a subcarrier",
+    "Three channels"
+   ],
+   "answer": 0,
+   "explanation": "1 = digital no subcarrier, 2 = digital with subcarrier, 3 = analogue",
+   "page": 317,
+   "figure": null
+  },
+  {
+   "id": "c20q24",
+   "chapter": 20,
+   "topic": "20.7",
+   "num": 24,
+   "section": "B.8",
+   "text": "The ITU Radio Regulations require amateur stations to transmit their call sign:",
+   "options": [
+    "Only at the start of the day",
+    "Once a day",
+    "At short intervals during their transmissions",
+    "Only on request"
+   ],
+   "answer": 2,
+   "explanation": "ITU RR 25.9",
+   "page": 318,
+   "figure": null
+  },
+  {
+   "id": "c20q25",
+   "chapter": 20,
+   "topic": "20.7",
+   "num": 25,
+   "section": "B.8",
+   "text": "A land mobile station must identify at the start and end, or at intervals of:",
+   "options": [
+    "10 minutes",
+    "1 hour",
+    "30 minutes, whichever is more frequent",
+    "5 minutes"
+   ],
+   "answer": 2,
+   "explanation": "Land or maritime mobile: start and end, or every 30 minutes",
+   "page": 318,
+   "figure": null
+  },
+  {
+   "id": "c21q01",
+   "chapter": 21,
+   "topic": "21.1",
+   "num": 1,
+   "section": "B.9",
+   "text": "CEPT stands for:",
+   "options": [
+    "The Commission for European Plain Telegraphy",
+    "The European Conference of Postal and Telecommunications Administrations",
+    "The Central European Packet Transmissions",
+    "The Council for Electronic Product Testing"
+   ],
+   "answer": 1,
+   "explanation": "European policy makers and regulators harmonise telecoms, spectrum and postal regulations",
+   "page": 320,
+   "figure": null
+  },
+  {
+   "id": "c21q02",
+   "chapter": 21,
+   "topic": "21.1",
+   "num": 2,
+   "section": "B.9",
+   "text": "Which CEPT recommendation lets amateurs operate during short visits to other CEPT countries without a temporary licence?",
+   "options": [
+    "T/R 61-01",
+    "T/R 61-02",
+    "09/45",
+    "ICNIRP 2020"
+   ],
+   "answer": 0,
+   "explanation": "T/R 61-01 covers the CEPT licence; T/R 61-02 defines HAREC",
+   "page": 320,
+   "figure": null
+  },
+  {
+   "id": "c21q03",
+   "chapter": 21,
+   "topic": "21.1",
+   "num": 3,
+   "section": "B.9",
+   "text": "HAREC stands for:",
+   "options": [
+    "Home Amateur Radio Equipment Certificate",
+    "High Amplitude Radio Emission Control",
+    "Hellenic Amateur Radio Exam Council",
+    "Harmonised Amateur Radio Examination Certificate"
+   ],
+   "answer": 3,
+   "explanation": "Defined in CEPT ECC recommendation T/R 61-02",
+   "page": 320,
+   "figure": null
+  },
+  {
+   "id": "c21q04",
+   "chapter": 21,
+   "topic": "21.1",
+   "num": 4,
+   "section": "B.9",
+   "text": "A HAREC certificate allows you to:",
+   "options": [
+    "Use unlimited power",
+    "Operate anywhere without a licence",
+    "Obtain a licence in other participating countries where you have a permanent address",
+    "Avoid all local regulations"
+   ],
+   "answer": 2,
+   "explanation": "HAREC is recognised by countries implementing T/R 61-02",
+   "page": 320,
+   "figure": null
+  },
+  {
+   "id": "c21q05",
+   "chapter": 21,
+   "topic": "21.2",
+   "num": 5,
+   "section": "B.9",
+   "text": "Under T/R 61-01, Irish Class 1 and Class 2 licences are:",
+   "options": [
+    "Only Class 1 is a CEPT licence",
+    "Both CEPT licences, considered equivalent",
+    "Only Class 2 is a CEPT licence",
+    "Neither is a CEPT licence"
+   ],
+   "answer": 1,
+   "explanation": "Both classes are equivalent CEPT licences",
+   "page": 320,
+   "figure": null
+  },
+  {
+   "id": "c21q06",
+   "chapter": 21,
+   "topic": "21.2",
+   "num": 6,
+   "section": "B.9",
+   "text": "When operating abroad under a CEPT licence, you must observe:",
+   "options": [
+    "No regulations",
+    "Irish regulations only",
+    "The regulations, frequencies, modes and power limits of the country visited",
+    "Only ITU regulations"
+   ],
+   "answer": 2,
+   "explanation": "You must obey the rules of the visited country as well as your own licence limits",
+   "page": 321,
+   "figure": null
+  },
+  {
+   "id": "c21q07",
+   "chapter": 21,
+   "topic": "21.2",
+   "num": 7,
+   "section": "B.9",
+   "text": "CEPT operating arrangements are valid for:",
+   "options": [
+    "Non-residents during a short temporary visit, usually up to 3 months",
+    "Permanent residents",
+    "Any length of stay",
+    "Only 24 hours"
+   ],
+   "answer": 0,
+   "explanation": "The duration is defined by each country, usually up to 3 months",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q08",
+   "chapter": 21,
+   "topic": "21.2",
+   "num": 8,
+   "section": "B.9",
+   "text": "A visitor operating under T/R 61-01:",
+   "options": [
+    "Must use maximum power",
+    "Has priority over local amateurs",
+    "May ignore local restrictions",
+    "Cannot request protection against harmful interference"
+   ],
+   "answer": 3,
+   "explanation": "Protection against harmful interference cannot be requested by the visitor",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q09",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 9,
+   "section": "B.9",
+   "text": "An Irish amateur EI5ABC operating in Denmark under CEPT uses:",
+   "options": [
+    "OZ/EI5ABC",
+    "EI5ABC/OZ",
+    "EI/OZ5ABC",
+    "OZ5ABC"
+   ],
+   "answer": 0,
+   "explanation": "The visited country's prefix, a stroke, then the home call sign",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q10",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 10,
+   "section": "B.9",
+   "text": "A Danish amateur OZ5ABC visiting Ireland operates as:",
+   "options": [
+    "EI5ABC",
+    "OZ5ABC/EI",
+    "EI/OZ5ABC",
+    "OZ/EI5ABC"
+   ],
+   "answer": 2,
+   "explanation": "The prefix EI/ goes before the visitor's call sign",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q11",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 11,
+   "section": "B.9",
+   "text": "A CEPT visitor operating from an Irish offshore island such as Inishmore uses the prefix:",
+   "options": [
+    "EI/",
+    "EJ/",
+    "EI/P",
+    "MI/"
+   ],
+   "answer": 1,
+   "explanation": "EI/ is used on the mainland and EJ/ on Irish offshore islands",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q12",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 12,
+   "section": "B.9",
+   "text": "Irish licence holder EI0SWL visits an Irish offshore island. The correct call sign is:",
+   "options": [
+    "EI/EJ0SWL",
+    "EJ/EI0SWL",
+    "EI0SWL/P",
+    "EJ0SWL"
+   ],
+   "answer": 3,
+   "explanation": "Irish licensees simply change EI to EJ; EJ/ and EI/ with a stroke are for visitors",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q13",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 13,
+   "section": "B.9",
+   "text": "An Irish amateur EI5ABC visiting Northern Ireland under CEPT uses:",
+   "options": [
+    "GI/EI5ABC",
+    "MI/EI5ABC",
+    "EI5ABC/MI",
+    "G/EI5ABC"
+   ],
+   "answer": 1,
+   "explanation": "Use the M prefixes for UK entities: MI/ for Northern Ireland",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q14",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 14,
+   "section": "B.9",
+   "text": "An Irish amateur visiting Illinois, USA, would sign:",
+   "options": [
+    "EI5ABC",
+    "EI5ABC/W9",
+    "K/EI5ABC",
+    "W9/EI5ABC"
+   ],
+   "answer": 3,
+   "explanation": "USA requires a regional prefix; Canada uses a suffix such as /VE3",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q15",
+   "chapter": 21,
+   "topic": "21.3",
+   "num": 15,
+   "section": "B.9",
+   "text": "An Irish amateur visiting Ontario, Canada, would sign:",
+   "options": [
+    "EI5ABC/VE3",
+    "VE3/EI5ABC",
+    "VE/EI5ABC",
+    "EI5ABC"
+   ],
+   "answer": 0,
+   "explanation": "In Canada the regional prefix is added as a suffix",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q16",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 16,
+   "section": "B.9",
+   "text": "The national call sign prefix DL belongs to:",
+   "options": [
+    "Netherlands",
+    "Denmark",
+    "Germany",
+    "Luxembourg"
+   ],
+   "answer": 2,
+   "explanation": "DL = Germany; OZ = Denmark; PA = Netherlands; LX = Luxembourg",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q17",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 17,
+   "section": "B.9",
+   "text": "The prefix F belongs to:",
+   "options": [
+    "Finland",
+    "France",
+    "Faroe Islands",
+    "Germany"
+   ],
+   "answer": 1,
+   "explanation": "F = France; OH = Finland",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q18",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 18,
+   "section": "B.9",
+   "text": "The prefix EA belongs to:",
+   "options": [
+    "Greece",
+    "Estonia",
+    "Ireland",
+    "Spain"
+   ],
+   "answer": 3,
+   "explanation": "EA = Spain; ES = Estonia; SV = Greece",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q19",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 19,
+   "section": "B.9",
+   "text": "The prefix ON belongs to:",
+   "options": [
+    "Belgium",
+    "Norway",
+    "Austria",
+    "Netherlands"
+   ],
+   "answer": 0,
+   "explanation": "ON = Belgium; LA = Norway; OE = Austria; PA = Netherlands",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q20",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 20,
+   "section": "B.9",
+   "text": "The prefix HB9 belongs to:",
+   "options": [
+    "Croatia",
+    "Hungary",
+    "Switzerland",
+    "Malta"
+   ],
+   "answer": 2,
+   "explanation": "HB9 = Switzerland; HA = Hungary; 9A = Croatia; 9H = Malta",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q21",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 21,
+   "section": "B.9",
+   "text": "The prefix SM belongs to:",
+   "options": [
+    "Slovakia",
+    "Slovenia",
+    "Sweden",
+    "San Marino"
+   ],
+   "answer": 2,
+   "explanation": "SM = Sweden; S5 = Slovenia; OM = Slovakia",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q22",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 22,
+   "section": "B.9",
+   "text": "The prefix OE belongs to:",
+   "options": [
+    "Czechia",
+    "Estonia",
+    "Finland",
+    "Austria"
+   ],
+   "answer": 3,
+   "explanation": "OE = Austria; OK = Czechia",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q23",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 23,
+   "section": "B.9",
+   "text": "The prefix I belongs to:",
+   "options": [
+    "Italy",
+    "Iceland",
+    "Ireland",
+    "Israel"
+   ],
+   "answer": 0,
+   "explanation": "I = Italy; TF = Iceland; EI = Ireland",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q24",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 24,
+   "section": "B.9",
+   "text": "The prefix SP belongs to:",
+   "options": [
+    "Spain",
+    "Poland",
+    "Portugal",
+    "Slovakia"
+   ],
+   "answer": 1,
+   "explanation": "SP = Poland; CT7 = Portugal",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q25",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 25,
+   "section": "B.9",
+   "text": "The prefix CT7 belongs to:",
+   "options": [
+    "Portugal",
+    "Cyprus",
+    "Croatia",
+    "Czechia"
+   ],
+   "answer": 0,
+   "explanation": "CT7 = Portugal; 5B = Cyprus",
+   "page": 322,
+   "figure": null
+  },
+  {
+   "id": "c21q26",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 26,
+   "section": "B.9",
+   "text": "When visiting Scotland under CEPT, the prefix to use is:",
+   "options": [
+    "M/",
+    "GM/",
+    "2M/",
+    "MM/"
+   ],
+   "answer": 3,
+   "explanation": "Use the M prefix column: MM/ for Scotland, MW/ for Wales, M/ for England",
+   "page": 323,
+   "figure": null
+  },
+  {
+   "id": "c21q27",
+   "chapter": 21,
+   "topic": "21.4",
+   "num": 27,
+   "section": "B.9",
+   "text": "The prefix VE belongs to:",
+   "options": [
+    "USA",
+    "Venezuela",
+    "Canada",
+    "Vatican"
+   ],
+   "answer": 2,
+   "explanation": "VE = Canada; A, K, N and W = USA",
+   "page": 320,
+   "figure": null
+  },
+  {
+   "id": "c22q01",
+   "chapter": 22,
+   "topic": "22.1",
+   "num": 1,
+   "section": "B.10",
+   "text": "Which legislation provides for the licensing of amateur radio stations in Ireland?",
+   "options": [
+    "The Wireless Telegraphy (Amateur Station Licence) Regulations 2009",
+    "The Broadcasting Act",
+    "The Postal Act",
+    "The ITU Constitution only"
+   ],
+   "answer": 0,
+   "explanation": "These regulations also require utmost regard for ComReg guidelines",
+   "page": 326,
+   "figure": null
+  },
+  {
+   "id": "c22q02",
+   "chapter": 22,
+   "topic": "22.1",
+   "num": 2,
+   "section": "B.10",
+   "text": "Who may operate a licensed amateur station?",
+   "options": [
+    "Only the licensee",
+    "The licensee, or anyone under the direct supervision of the licensee",
+    "Any member of the public, unsupervised",
+    "Only other licensed amateurs"
+   ],
+   "answer": 1,
+   "explanation": "Unlicensed persons may operate under the licensee's direct supervision",
+   "page": 326,
+   "figure": null
+  },
+  {
+   "id": "c22q03",
+   "chapter": 22,
+   "topic": "22.2",
+   "num": 3,
+   "section": "B.10",
+   "text": "ComReg document 09/45 is the:",
+   "options": [
+    "ITU Radio Regulations",
+    "HAREC syllabus",
+    "Amateur Station Licence Guidelines",
+    "CEPT recommendation"
+   ],
+   "answer": 2,
+   "explanation": "It sets out bands, modes, power limits and technical requirements; you must follow the latest revision",
+   "page": 327,
+   "figure": null
+  },
+  {
+   "id": "c22q04",
+   "chapter": 22,
+   "topic": "22.2",
+   "num": 4,
+   "section": "B.10",
+   "text": "Which revision of the ComReg guidelines must you follow?",
+   "options": [
+    "Only revision R1",
+    "The one current when you were licensed",
+    "Any revision",
+    "The most recent revision available"
+   ],
+   "answer": 3,
+   "explanation": "You are legally required to know and use the most recent revision",
+   "page": 327,
+   "figure": null
+  },
+  {
+   "id": "c22q05",
+   "chapter": 22,
+   "topic": "22.2",
+   "num": 5,
+   "section": "B.10",
+   "text": "Do the Wireless Telegraphy Regulations exempt you from planning or electrical regulations?",
+   "options": [
+    "No, you must comply with all other applicable laws",
+    "Yes, fully",
+    "Only for antennas",
+    "Only for club stations"
+   ],
+   "answer": 0,
+   "explanation": "All other statutory requirements still apply",
+   "page": 327,
+   "figure": null
+  },
+  {
+   "id": "c22q06",
+   "chapter": 22,
+   "topic": "22.3",
+   "num": 6,
+   "section": "B.10",
+   "text": "Which body issues amateur station licences in Ireland?",
+   "options": [
+    "The IRTS",
+    "ComReg",
+    "The IARU",
+    "The Department of Defence"
+   ],
+   "answer": 1,
+   "explanation": "The Commission for Communications Regulation",
+   "page": 327,
+   "figure": null
+  },
+  {
+   "id": "c22q07",
+   "chapter": 22,
+   "topic": "22.3",
+   "num": 7,
+   "section": "B.10",
+   "text": "A HAREC holder who provides evidence of Morse qualifications receives:",
+   "options": [
+    "A club licence",
+    "A CEPT Class 2 licence",
+    "A novice licence",
+    "A CEPT Class 1 licence"
+   ],
+   "answer": 3,
+   "explanation": "Class 1 with Morse; Class 2 without",
+   "page": 328,
+   "figure": null
+  },
+  {
+   "id": "c22q08",
+   "chapter": 22,
+   "topic": "22.3",
+   "num": 8,
+   "section": "B.10",
+   "text": "How do CEPT Class 1 and Class 2 licences differ in Ireland?",
+   "options": [
+    "Class 2 is limited to 10 W",
+    "Class 2 has no HF access",
+    "Only in the type of call sign; rights are the same",
+    "Class 1 has a shorter lifetime"
+   ],
+   "answer": 2,
+   "explanation": "Same rights and entitlements; Class 1 call signs are shorter",
+   "page": 328,
+   "figure": null
+  },
+  {
+   "id": "c22q09",
+   "chapter": 22,
+   "topic": "22.4",
+   "num": 9,
+   "section": "B.10",
+   "text": "Applications for new or amended amateur station licences are made:",
+   "options": [
+    "Through the ComReg eLicensing website",
+    "By post to the IRTS",
+    "At a Garda station",
+    "By radio"
+   ],
+   "answer": 0,
+   "explanation": "All applications use www.elicensing.comreg.ie",
+   "page": 328,
+   "figure": null
+  },
+  {
+   "id": "c22q10",
+   "chapter": 22,
+   "topic": "22.4",
+   "num": 10,
+   "section": "B.10",
+   "text": "An Irish amateur station licence (other than a temporary assignment) is issued for:",
+   "options": [
+    "1 year",
+    "The lifetime of the licensee, confirmed every 5 years",
+    "10 years",
+    "5 years, then it expires"
+   ],
+   "answer": 1,
+   "explanation": "Lifetime licence; confirm the details every 5 years",
+   "page": 328,
+   "figure": null
+  },
+  {
+   "id": "c22q11",
+   "chapter": 22,
+   "topic": "22.4",
+   "num": 11,
+   "section": "B.10",
+   "text": "After changing your address or contact details, you must inform ComReg within:",
+   "options": [
+    "5 years",
+    "6 months",
+    "7 days",
+    "28 days"
+   ],
+   "answer": 3,
+   "explanation": "As soon as possible and no later than 28 days",
+   "page": 328,
+   "figure": null
+  },
+  {
+   "id": "c22q12",
+   "chapter": 22,
+   "topic": "22.4",
+   "num": 12,
+   "section": "B.10",
+   "text": "ComReg may suspend or revoke a licence when:",
+   "options": [
+    "The licensee moves house",
+    "The licensee is inactive for a month",
+    "There is serious or repeated non-compliance with the licence conditions",
+    "The licensee changes radio"
+   ],
+   "answer": 2,
+   "explanation": "Fees are not refunded on cancellation or revocation",
+   "page": 328,
+   "figure": null
+  },
+  {
+   "id": "c22q13",
+   "chapter": 22,
+   "topic": "22.5",
+   "num": 13,
+   "section": "B.10",
+   "text": "The nominated individual holder of a club licence must:",
+   "options": [
+    "Be over 65",
+    "Be the club treasurer",
+    "Hold no other licence",
+    "Hold a valid amateur station licence in their own name and be responsible for operation"
+   ],
+   "answer": 3,
+   "explanation": "Rights under a club licence vest in the club, not the individual",
+   "page": 329,
+   "figure": null
+  },
+  {
+   "id": "c22q14",
+   "chapter": 22,
+   "topic": "22.6",
+   "num": 14,
+   "section": "B.10",
+   "text": "A special event call sign must be applied for at least:",
+   "options": [
+    "One month before the event",
+    "One day before",
+    "One year before",
+    "After the event"
+   ],
+   "answer": 0,
+   "explanation": "Apply via eLicensing at least a month in advance",
+   "page": 329,
+   "figure": null
+  },
+  {
+   "id": "c22q15",
+   "chapter": 22,
+   "topic": "22.7",
+   "num": 15,
+   "section": "B.10",
+   "text": "A station installed in a land-based vehicle uses the call sign suffix:",
+   "options": [
+    "/MM",
+    "/P",
+    "/M",
+    "/A"
+   ],
+   "answer": 2,
+   "explanation": "/M, spoken \"slash mobile\", only for stations installed in a land vehicle",
+   "page": 329,
+   "figure": null
+  },
+  {
+   "id": "c22q16",
+   "chapter": 22,
+   "topic": "22.7",
+   "num": 16,
+   "section": "B.10",
+   "text": "The general power limit for land mobile operation in Ireland is:",
+   "options": [
+    "400 W",
+    "50 W (17 dBW)",
+    "10 W",
+    "100 W"
+   ],
+   "answer": 1,
+   "explanation": "50 W, except where a band limit is already lower; 25 W on 70 MHz",
+   "page": 329,
+   "figure": null
+  },
+  {
+   "id": "c22q17",
+   "chapter": 22,
+   "topic": "22.7",
+   "num": 17,
+   "section": "B.10",
+   "text": "A land mobile station may not be established:",
+   "options": [
+    "In a car park",
+    "On a motorway",
+    "Within any estuary, dock or harbour, or near an airport",
+    "In a town"
+   ],
+   "answer": 2,
+   "explanation": "These locations are excluded for land mobile operation",
+   "page": 329,
+   "figure": null
+  },
+  {
+   "id": "c22q18",
+   "chapter": 22,
+   "topic": "22.7",
+   "num": 18,
+   "section": "B.10",
+   "text": "You are operating from a field away from your registered address, not from a vehicle. Your call sign is:",
+   "options": [
+    "Your call sign /P",
+    "Your call sign without any suffix",
+    "Your call sign /M",
+    "Your call sign /MM"
+   ],
+   "answer": 1,
+   "explanation": "Irish regulations do not permit /P",
+   "page": 330,
+   "figure": null
+  },
+  {
+   "id": "c22q19",
+   "chapter": 22,
+   "topic": "22.8",
+   "num": 19,
+   "section": "B.10",
+   "text": "Before operating as maritime mobile, you need approval from:",
+   "options": [
+    "The ship's master or owner",
+    "The harbour master only",
+    "The IRTS",
+    "The Coast Guard"
+   ],
+   "answer": 0,
+   "explanation": "Always required, even in a harbour",
+   "page": 330,
+   "figure": null
+  },
+  {
+   "id": "c22q20",
+   "chapter": 22,
+   "topic": "22.8",
+   "num": 20,
+   "section": "B.10",
+   "text": "The maritime mobile call sign suffix is:",
+   "options": [
+    "/AM",
+    "/M",
+    "/P",
+    "/MM"
+   ],
+   "answer": 3,
+   "explanation": "/MM, spoken \"slash maritime mobile\"",
+   "page": 330,
+   "figure": null
+  },
+  {
+   "id": "c22q21",
+   "chapter": 22,
+   "topic": "22.8",
+   "num": 21,
+   "section": "B.10",
+   "text": "The power limit for maritime mobile operation is:",
+   "options": [
+    "10 W (10 dBW)",
+    "50 W",
+    "100 W",
+    "400 W"
+   ],
+   "answer": 0,
+   "explanation": "10 W on all permitted bands",
+   "page": 330,
+   "figure": null
+  },
+  {
+   "id": "c22q22",
+   "chapter": 22,
+   "topic": "22.8",
+   "num": 22,
+   "section": "B.10",
+   "text": "Maritime mobile operation is NOT permitted on which band?",
+   "options": [
+    "144 MHz",
+    "14 MHz",
+    "50 MHz",
+    "7 MHz"
+   ],
+   "answer": 2,
+   "explanation": "Not permitted on 1.8, 5, 10, 50, 70 or 430 MHz",
+   "page": 330,
+   "figure": null
+  },
+  {
+   "id": "c22q23",
+   "chapter": 22,
+   "topic": "22.8",
+   "num": 23,
+   "section": "B.10",
+   "text": "If an amateur station interferes with a vessel's wireless telegraphy station, you must:",
+   "options": [
+    "Continue if the contact is important",
+    "Reduce power slightly",
+    "Change band",
+    "Stop using the amateur station until the cause is remedied"
+   ],
+   "answer": 3,
+   "explanation": "Cease operation until fixed",
+   "page": 330,
+   "figure": null
+  },
+  {
+   "id": "c22q24",
+   "chapter": 22,
+   "topic": "22.9",
+   "num": 24,
+   "section": "B.10",
+   "text": "Which item must be recorded in the station logbook?",
+   "options": [
+    "The name of the other operator",
+    "The call sign of each station contacted",
+    "Signal reports",
+    "QSL card status"
+   ],
+   "answer": 1,
+   "explanation": "Required: date, UTC times, band, mode, power and stations contacted",
+   "page": 331,
+   "figure": null
+  },
+  {
+   "id": "c22q25",
+   "chapter": 22,
+   "topic": "22.9",
+   "num": 25,
+   "section": "B.10",
+   "text": "Times in the logbook are recorded in:",
+   "options": [
+    "Any time zone",
+    "Irish local time",
+    "UTC",
+    "GPS time"
+   ],
+   "answer": 2,
+   "explanation": "UTC matches Irish winter time and is one hour behind in summer",
+   "page": 331,
+   "figure": null
+  },
+  {
+   "id": "c22q26",
+   "chapter": 22,
+   "topic": "22.9",
+   "num": 26,
+   "section": "B.10",
+   "text": "When must the geographic position be recorded in the logbook?",
+   "options": [
+    "For every contact",
+    "Only for maritime mobile operation",
+    "For land mobile only",
+    "Never"
+   ],
+   "answer": 1,
+   "explanation": "Only maritime mobile requires the position in the log",
+   "page": 331,
+   "figure": null
+  },
+  {
+   "id": "c22q27",
+   "chapter": 22,
+   "topic": "22.9",
+   "num": 27,
+   "section": "B.10",
+   "text": "The logbook must be made available for inspection at the request of:",
+   "options": [
+    "ComReg",
+    "Any other amateur",
+    "The IRTS",
+    "Your neighbours"
+   ],
+   "answer": 0,
+   "explanation": "ComReg can request to inspect the log",
+   "page": 331,
+   "figure": null
+  },
+  {
+   "id": "c22q28",
+   "chapter": 22,
+   "topic": "22.10",
+   "num": 28,
+   "section": "B.10",
+   "text": "Which needs a separate formal authorisation from ComReg?",
+   "options": [
+    "Making a contest contact",
+    "Operating on 20 m SSB",
+    "Using a new antenna",
+    "A repeater, beacon or Internet gateway"
+   ],
+   "answer": 3,
+   "explanation": "Automatic or remote station licences, and extra bands or power for experiments",
+   "page": 331,
+   "figure": null
+  },
+  {
+   "id": "c22q29",
+   "chapter": 22,
+   "topic": "22.11",
+   "num": 29,
+   "section": "B.10",
+   "text": "Licence conditions require you to have a device capable of measuring:",
+   "options": [
+    "SWR",
+    "Field strength",
+    "Capacitance",
+    "Temperature"
+   ],
+   "answer": 0,
+   "explanation": "You must have an SWR measuring device and an accurate frequency indication",
+   "page": 332,
+   "figure": null
+  },
+  {
+   "id": "c22q30",
+   "chapter": 22,
+   "topic": "22.11",
+   "num": 30,
+   "section": "B.10",
+   "text": "For home-constructed equipment, the transmit frequency can be checked with:",
+   "options": [
+    "An SWR meter",
+    "A frequency counter or synthesised receiver",
+    "A dummy load",
+    "An ohmmeter"
+   ],
+   "answer": 1,
+   "explanation": "You must have an accurate way to ensure you are on the correct frequency",
+   "page": 332,
+   "figure": null
+  },
+  {
+   "id": "c22q31",
+   "chapter": 22,
+   "topic": "22.12",
+   "num": 31,
+   "section": "B.10",
+   "text": "Radio transmitting equipment sold to the public in the EU must display:",
+   "options": [
+    "The ITU logo",
+    "The IRTS logo",
+    "The CE mark",
+    "A call sign"
+   ],
+   "answer": 2,
+   "explanation": "The CE mark shows compliance with the RED and EMC directives",
+   "page": 332,
+   "figure": null
+  },
+  {
+   "id": "c22q32",
+   "chapter": 22,
+   "topic": "22.12",
+   "num": 32,
+   "section": "B.10",
+   "text": "May a licensed amateur build and use equipment without the CE mark?",
+   "options": [
+    "Only on VHF",
+    "No, never",
+    "Only below 1 W",
+    "Yes, accepting responsibility for its safety and regulatory compliance"
+   ],
+   "answer": 3,
+   "explanation": "The EU directive excludes amateur-built and kit equipment",
+   "page": 333,
+   "figure": null
+  },
+  {
+   "id": "c23q01",
+   "chapter": 23,
+   "topic": "23",
+   "num": 1,
+   "section": "B.1",
+   "text": "The ITU regulations require the phonetic alphabet to be used:",
+   "options": [
+    "Never; it is optional",
+    "Only in Morse",
+    "Only in contests",
+    "Whenever it is necessary to spell out call signs, words and abbreviations"
+   ],
+   "answer": 3,
+   "explanation": "It is mainly used in phone (voice) operation",
+   "page": 334,
+   "figure": null
+  },
+  {
+   "id": "c23q02",
+   "chapter": 23,
+   "topic": "23",
+   "num": 2,
+   "section": "B.1",
+   "text": "Why is the phonetic alphabet used?",
+   "options": [
+    "To make contacts faster in Morse",
+    "To encrypt messages",
+    "So key information is understood even with weak signals or different languages",
+    "To identify the transmitter type"
+   ],
+   "answer": 2,
+   "explanation": "Particularly important in emergencies and helpful in contests",
+   "page": 334,
+   "figure": null
+  },
+  {
+   "id": "c23q03",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 3,
+   "section": "B.1",
+   "text": "EI5ABC is spelled phonetically as:",
+   "options": [
+    "Easy Item Five Able Baker Charlie",
+    "Echo India Five Alfa Bravo Charlie",
+    "Echo Ireland Five Alpha Boston Canada",
+    "Edward India Five Adam Bravo Charlie"
+   ],
+   "answer": 1,
+   "explanation": "E = Echo, I = India, A = Alfa, B = Bravo, C = Charlie",
+   "page": 334,
+   "figure": null
+  },
+  {
+   "id": "c23q04",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 4,
+   "section": "B.1",
+   "text": "The phonetic word for the letter J is:",
+   "options": [
+    "Juliett",
+    "Jack",
+    "Japan",
+    "Jupiter"
+   ],
+   "answer": 0,
+   "explanation": "J = Juliett",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q05",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 5,
+   "section": "B.1",
+   "text": "The phonetic word for the letter Q is:",
+   "options": [
+    "Queen",
+    "Quebec",
+    "Quito",
+    "Quantum"
+   ],
+   "answer": 1,
+   "explanation": "Q = Quebec",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q06",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 6,
+   "section": "B.1",
+   "text": "The phonetic word for the letter K is:",
+   "options": [
+    "Kilo",
+    "King",
+    "Kenya",
+    "Kansas"
+   ],
+   "answer": 0,
+   "explanation": "K = Kilo",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q07",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 7,
+   "section": "B.1",
+   "text": "The phonetic word for the letter U is:",
+   "options": [
+    "Uncle",
+    "Union",
+    "Uniform",
+    "Utah"
+   ],
+   "answer": 2,
+   "explanation": "U = Uniform",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q08",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 8,
+   "section": "B.1",
+   "text": "The phonetic word for the letter V is:",
+   "options": [
+    "Volt",
+    "Victory",
+    "Venice",
+    "Victor"
+   ],
+   "answer": 3,
+   "explanation": "V = Victor",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q09",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 9,
+   "section": "B.1",
+   "text": "The phonetic word for the letter Y is:",
+   "options": [
+    "Yankee",
+    "Yellow",
+    "Yoke",
+    "York"
+   ],
+   "answer": 0,
+   "explanation": "Y = Yankee",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q10",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 10,
+   "section": "B.1",
+   "text": "The phonetic word for the letter F is:",
+   "options": [
+    "Fox",
+    "Freddie",
+    "France",
+    "Foxtrot"
+   ],
+   "answer": 3,
+   "explanation": "F = Foxtrot",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q11",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 11,
+   "section": "B.1",
+   "text": "The phonetic word for the letter L is:",
+   "options": [
+    "Love",
+    "London",
+    "Lima",
+    "Lion"
+   ],
+   "answer": 2,
+   "explanation": "L = Lima",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q12",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 12,
+   "section": "B.1",
+   "text": "The phonetic word for the letter P is:",
+   "options": [
+    "Peter",
+    "Papa",
+    "Paris",
+    "Pablo"
+   ],
+   "answer": 1,
+   "explanation": "P = Papa",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q13",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 13,
+   "section": "B.1",
+   "text": "The phonetic word for the letter S is:",
+   "options": [
+    "Sugar",
+    "Sierra",
+    "Santiago",
+    "Sam"
+   ],
+   "answer": 1,
+   "explanation": "S = Sierra",
+   "page": 334,
+   "figure": null
+  },
+  {
+   "id": "c23q14",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 14,
+   "section": "B.1",
+   "text": "The phonetic word for the letter X is:",
+   "options": [
+    "Xavier",
+    "Xylophone",
+    "X-ray",
+    "Xenon"
+   ],
+   "answer": 2,
+   "explanation": "X = X-ray",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q15",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 15,
+   "section": "B.1",
+   "text": "The phonetic word for the letter W is:",
+   "options": [
+    "Water",
+    "William",
+    "Washington",
+    "Whiskey"
+   ],
+   "answer": 3,
+   "explanation": "W = Whiskey",
+   "page": 334,
+   "figure": null
+  },
+  {
+   "id": "c23q16",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 16,
+   "section": "B.1",
+   "text": "The phonetic word for the letter G is:",
+   "options": [
+    "Golf",
+    "George",
+    "Germany",
+    "Gold"
+   ],
+   "answer": 0,
+   "explanation": "G = Golf",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q17",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 17,
+   "section": "B.1",
+   "text": "The phonetic word for the letter N is:",
+   "options": [
+    "Nancy",
+    "November",
+    "Norway",
+    "Nectar"
+   ],
+   "answer": 1,
+   "explanation": "N = November",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q18",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 18,
+   "section": "B.1",
+   "text": "The phonetic word for the letter Z is:",
+   "options": [
+    "Zulu",
+    "Zebra",
+    "Zero",
+    "Zurich"
+   ],
+   "answer": 0,
+   "explanation": "Z = Zulu",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q19",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 19,
+   "section": "B.1",
+   "text": "How is the number 9 pronounced in the radiotelephony spelling alphabet?",
+   "options": [
+    "Novenine",
+    "NINE",
+    "NIN-er",
+    "NAIN"
+   ],
+   "answer": 2,
+   "explanation": "NIN-er avoids confusion with the German \"nein\"",
+   "page": 334,
+   "figure": null
+  },
+  {
+   "id": "c23q20",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 20,
+   "section": "B.1",
+   "text": "How is the number 3 pronounced in the radiotelephony spelling alphabet?",
+   "options": [
+    "TER",
+    "THREE",
+    "Terrathree",
+    "TREE"
+   ],
+   "answer": 3,
+   "explanation": "3 = TREE; 5 = FIFE",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c23q21",
+   "chapter": 23,
+   "topic": "23.1",
+   "num": 21,
+   "section": "B.1",
+   "text": "How is the number 5 pronounced in the radiotelephony spelling alphabet?",
+   "options": [
+    "FIFE",
+    "FIVE",
+    "Pantafive",
+    "FEE"
+   ],
+   "answer": 0,
+   "explanation": "5 = FIFE",
+   "page": 335,
+   "figure": null
+  },
+  {
+   "id": "c24q01",
+   "chapter": 24,
+   "topic": "24.1",
+   "num": 1,
+   "section": "B.4",
+   "text": "Irish amateur call signs are issued:",
+   "options": [
+    "For the lifetime of the licensee",
+    "For 5 years",
+    "For 1 year",
+    "For each contact"
+   ],
+   "answer": 0,
+   "explanation": "Call signs only change when moving from Class 2 to Class 1",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q02",
+   "chapter": 24,
+   "topic": "24.1",
+   "num": 2,
+   "section": "B.4",
+   "text": "When may an Irish amateur's call sign change?",
+   "options": [
+    "When buying a new radio",
+    "When moving house",
+    "Every 5 years",
+    "When changing from a CEPT Class 2 to a Class 1 licence"
+   ],
+   "answer": 3,
+   "explanation": "That is the only occasion",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q03",
+   "chapter": 24,
+   "topic": "24.1",
+   "num": 3,
+   "section": "B.4",
+   "text": "What happens to a call sign when a licence is surrendered or cancelled?",
+   "options": [
+    "It is kept for 5 years",
+    "It is given to the next applicant",
+    "It is permanently revoked and never reissued",
+    "It passes to the family"
+   ],
+   "answer": 2,
+   "explanation": "Revoked call signs are not reissued",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q04",
+   "chapter": 24,
+   "topic": "24.2",
+   "num": 4,
+   "section": "B.4",
+   "text": "A normal amateur call sign consists of:",
+   "options": [
+    "Any six letters",
+    "A 1–2 character nationality prefix, a single digit, and a group of up to four characters ending in a letter",
+    "Three digits and three letters",
+    "A name and a number"
+   ],
+   "answer": 1,
+   "explanation": "Prefix (at least one letter), one digit, then up to four characters ending in a letter",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q05",
+   "chapter": 24,
+   "topic": "24.2",
+   "num": 5,
+   "section": "B.4",
+   "text": "Which call sign is correctly formed?",
+   "options": [
+    "2EABCD",
+    "EI4RGD7",
+    "EI6XYZ",
+    "26A"
+   ],
+   "answer": 2,
+   "explanation": "EI4RGD7 ends in a digit; 2EABCD has no digit; 26A has no letter in the prefix",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q06",
+   "chapter": 24,
+   "topic": "24.2",
+   "num": 6,
+   "section": "B.4",
+   "text": "Why is 2EABCD not a valid call sign?",
+   "options": [
+    "It has no single digit after the prefix",
+    "It ends in a letter",
+    "It is too short",
+    "It starts with a digit"
+   ],
+   "answer": 0,
+   "explanation": "Section 2 must be a single digit",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q07",
+   "chapter": 24,
+   "topic": "24.2",
+   "num": 7,
+   "section": "B.4",
+   "text": "Why is 2-6-A not a valid call sign?",
+   "options": [
+    "It ends in a letter",
+    "The prefix has no letter",
+    "It has a digit",
+    "It is too long"
+   ],
+   "answer": 1,
+   "explanation": "The nationality prefix must contain at least one letter",
+   "page": 336,
+   "figure": null
+  },
+  {
+   "id": "c24q08",
+   "chapter": 24,
+   "topic": "24.3",
+   "num": 8,
+   "section": "B.4",
+   "text": "Which is a valid normal Irish call sign?",
+   "options": [
+    "EI33RDB",
+    "EI3RD7",
+    "IE3RDB",
+    "EI3RDB"
+   ],
+   "answer": 3,
+   "explanation": "EI, one digit, and a 1–4 letter suffix",
+   "page": 337,
+   "figure": null
+  },
+  {
+   "id": "c24q09",
+   "chapter": 24,
+   "topic": "24.3",
+   "num": 9,
+   "section": "B.4",
+   "text": "When operating from an Irish offshore island, EI3F becomes:",
+   "options": [
+    "EJ/EI3F",
+    "EI3F/P",
+    "EJ3F",
+    "EI3F/I"
+   ],
+   "answer": 2,
+   "explanation": "No application needed: change EI to EJ",
+   "page": 337,
+   "figure": null
+  },
+  {
+   "id": "c24q10",
+   "chapter": 24,
+   "topic": "24.3",
+   "num": 10,
+   "section": "B.4",
+   "text": "Who may be issued a distinctive call sign such as EI90IRTS?",
+   "options": [
+    "Anyone who asks on air",
+    "Special event stations, by ComReg",
+    "Only contest stations",
+    "Only foreign visitors"
+   ],
+   "answer": 1,
+   "explanation": "Special event call signs may not follow the normal rules",
+   "page": 337,
+   "figure": null
+  },
+  {
+   "id": "c24q11",
+   "chapter": 24,
+   "topic": "24.4",
+   "num": 11,
+   "section": "B.4",
+   "text": "Which call sign suffixes are allowed by Irish regulations?",
+   "options": [
+    "Any suffix",
+    "/P and /QRP",
+    "/M, /P and /MM",
+    "Only /M and /MM"
+   ],
+   "answer": 3,
+   "explanation": "/P and /QRP are not permitted",
+   "page": 337,
+   "figure": null
+  },
+  {
+   "id": "c24q12",
+   "chapter": 24,
+   "topic": "24.4",
+   "num": 12,
+   "section": "B.4",
+   "text": "How is the suffix /M pronounced according to ComReg guidelines?",
+   "options": [
+    "Slash mobile",
+    "Portable",
+    "Mike",
+    "Maritime"
+   ],
+   "answer": 0,
+   "explanation": "ComReg specifies \"slash\"; the IARU guide recommends \"stroke\"",
+   "page": 337,
+   "figure": null
+  },
+  {
+   "id": "c24q13",
+   "chapter": 24,
+   "topic": "24.4",
+   "num": 13,
+   "section": "B.4",
+   "text": "When operating /M, the call sign and location must be sent at the start and end of each contact, or every:",
+   "options": [
+    "60 minutes",
+    "5 minutes",
+    "30 minutes, whichever is more frequent",
+    "10 minutes"
+   ],
+   "answer": 2,
+   "explanation": "The same rule applies to /MM",
+   "page": 337,
+   "figure": null
+  },
+  {
+   "id": "c25q01",
+   "chapter": 25,
+   "topic": "25.1",
+   "num": 1,
+   "section": "B.5",
+   "text": "Which document details the frequencies and power levels allocated to amateurs in Ireland?",
+   "options": [
+    "The IARU R1 band plan",
+    "ComReg 09/45 Amateur Station Licence Guidelines",
+    "The ITU Constitution",
+    "CEPT T/R 61-02"
+   ],
+   "answer": 1,
+   "explanation": "ComReg 09/45 sets frequencies, power limits and some emission types",
+   "page": 338,
+   "figure": null
+  },
+  {
+   "id": "c25q02",
+   "chapter": 25,
+   "topic": "25.1",
+   "num": 2,
+   "section": "B.5",
+   "text": "If the ComReg guidelines and the IARU R1 band plan conflict:",
+   "options": [
+    "You may choose either",
+    "The IARU band plan takes precedence",
+    "The ComReg document always takes precedence",
+    "Neither applies"
+   ],
+   "answer": 2,
+   "explanation": "ComReg guidelines have priority",
+   "page": 338,
+   "figure": null
+  },
+  {
+   "id": "c25q03",
+   "chapter": 25,
+   "topic": "25.1",
+   "num": 3,
+   "section": "B.5",
+   "text": "By encouraging amateurs to follow the IARU band plans, ComReg recognises the principle of:",
+   "options": [
+    "Self-regulation",
+    "Free market",
+    "Primary allocation",
+    "Licence exemption"
+   ],
+   "answer": 0,
+   "explanation": "Self-regulation ensures equitable use and reduces interference",
+   "page": 338,
+   "figure": null
+  },
+  {
+   "id": "c25q04",
+   "chapter": 25,
+   "topic": "25.2",
+   "num": 4,
+   "section": "B.5",
+   "text": "IARU band plans are:",
+   "options": [
+    "Only for VHF",
+    "Laws enforced by the ITU",
+    "Only for contests",
+    "Voluntary plans allocating band segments by mode and bandwidth"
+   ],
+   "answer": 3,
+   "explanation": "Regional voluntary band plans; refer to them before you transmit",
+   "page": 339,
+   "figure": null
+  },
+  {
+   "id": "c25q05",
+   "chapter": 25,
+   "topic": "25.2",
+   "num": 5,
+   "section": "B.5",
+   "text": "In a band plan, \"3,5 MHz\" means:",
+   "options": [
+    "3 or 5 MHz",
+    "3.5 MHz, using the European decimal comma",
+    "35 MHz",
+    "3500 MHz"
+   ],
+   "answer": 1,
+   "explanation": "The comma is a decimal point: 3.5 MHz = 3500 kHz",
+   "page": 339,
+   "figure": null
+  },
+  {
+   "id": "c25q06",
+   "chapter": 25,
+   "topic": "25.2",
+   "num": 6,
+   "section": "B.5",
+   "text": "A \"centre of activity\" in a band plan is:",
+   "options": [
+    "A beacon frequency",
+    "A frequency reserved for one station",
+    "The middle of the band",
+    "A frequency on or near which the preferred usage should take place"
+   ],
+   "answer": 3,
+   "explanation": "For example, 3555 kHz for slow CW (QRS)",
+   "page": 340,
+   "figure": null
+  },
+  {
+   "id": "c25q07",
+   "chapter": 25,
+   "topic": "25.2",
+   "num": 7,
+   "section": "B.5",
+   "text": "In general, the low-frequency end of each HF band is used for:",
+   "options": [
+    "CW",
+    "SSB",
+    "FM",
+    "Beacons only"
+   ],
+   "answer": 0,
+   "explanation": "CW at the bottom, data in the middle, wideband modes (SSB, FM) at the top",
+   "page": 340,
+   "figure": null
+  },
+  {
+   "id": "c25q08",
+   "chapter": 25,
+   "topic": "25.3",
+   "num": 8,
+   "section": "B.5",
+   "text": "Which mode is NOT allowed on the 30 m band?",
+   "options": [
+    "Narrow-band data",
+    "CW",
+    "SSB voice",
+    "FT8"
+   ],
+   "answer": 2,
+   "explanation": "The 30 m band permits only narrow-band modes",
+   "page": 341,
+   "figure": null
+  },
+  {
+   "id": "c25q09",
+   "chapter": 25,
+   "topic": "25.3",
+   "num": 9,
+   "section": "B.5",
+   "text": "Which sideband is normally used for SSB voice on 40 m and 80 m?",
+   "options": [
+    "LSB",
+    "USB",
+    "DSB",
+    "Either, at random"
+   ],
+   "answer": 0,
+   "explanation": "LSB below 10 MHz, except on 60 m",
+   "page": 341,
+   "figure": null
+  },
+  {
+   "id": "c25q10",
+   "chapter": 25,
+   "topic": "25.3",
+   "num": 10,
+   "section": "B.5",
+   "text": "Which sideband is normally used for SSB voice on 20 m and on 60 m?",
+   "options": [
+    "DSB",
+    "LSB",
+    "USB",
+    "ISB"
+   ],
+   "answer": 2,
+   "explanation": "USB above 10 MHz and on 60 m",
+   "page": 341,
+   "figure": null
+  },
+  {
+   "id": "c25q11",
+   "chapter": 25,
+   "topic": "25.3.1",
+   "num": 11,
+   "section": "B.5",
+   "text": "In the 80 m band plan, the segment 3500–3510 kHz is for:",
+   "options": [
+    "SSB contest",
+    "CW, priority for intercontinental operation",
+    "Digimodes",
+    "All modes"
+   ],
+   "answer": 1,
+   "explanation": "3500–3510 kHz: CW, priority for intercontinental operation",
+   "page": 342,
+   "figure": null
+  },
+  {
+   "id": "c25q12",
+   "chapter": 25,
+   "topic": "25.3.1",
+   "num": 12,
+   "section": "B.5",
+   "text": "In the simplified 80 m band plan, 3570–3600 kHz is used for:",
+   "options": [
+    "Beacons",
+    "CW contests only",
+    "SSB",
+    "Narrow band modes / digimodes"
+   ],
+   "answer": 3,
+   "explanation": "The narrow-band/digimodes segment",
+   "page": 342,
+   "figure": null
+  },
+  {
+   "id": "c25q13",
+   "chapter": 25,
+   "topic": "25.3.1",
+   "num": 13,
+   "section": "B.5",
+   "text": "The lowest dial setting for LSB voice on 80 m is:",
+   "options": [
+    "3500 kHz",
+    "3600 kHz",
+    "3603 kHz",
+    "3650 kHz"
+   ],
+   "answer": 2,
+   "explanation": "LSB occupies up to 3 kHz below the dial frequency, so 3603 keeps it above 3600 kHz",
+   "page": 342,
+   "figure": null
+  },
+  {
+   "id": "c25q14",
+   "chapter": 25,
+   "topic": "25.3.1",
+   "num": 14,
+   "section": "B.5",
+   "text": "Which 80 m segment is preferred for intercontinental SSB?",
+   "options": [
+    "3500–3510 kHz",
+    "3775–3800 kHz",
+    "3570–3600 kHz",
+    "3650–3700 kHz"
+   ],
+   "answer": 1,
+   "explanation": "The top of 80 m has priority for intercontinental voice",
+   "page": 340,
+   "figure": null
+  },
+  {
+   "id": "c25q15",
+   "chapter": 25,
+   "topic": "25.3.1",
+   "num": 15,
+   "section": "B.5",
+   "text": "Is CW permitted in the \"All modes\" segments of a band plan?",
+   "options": [
+    "Yes; CW is permitted on all frequencies where you may transmit",
+    "No, only in the CW segment",
+    "Only at night",
+    "Only in contests"
+   ],
+   "answer": 0,
+   "explanation": "\"All modes\" includes CW, digital and voice",
+   "page": 341,
+   "figure": null
+  },
+  {
+   "id": "c25q16",
+   "chapter": 25,
+   "topic": "25.3.1",
+   "num": 16,
+   "section": "B.5",
+   "text": "Can digital modes be used in the lowest, CW-only portion of a band?",
+   "options": [
+    "Only at weekends",
+    "Yes",
+    "Only FT8",
+    "No"
+   ],
+   "answer": 3,
+   "explanation": "Digital modes may be used in the middle and upper parts, but not in the CW portion",
+   "page": 341,
+   "figure": null
+  },
+  {
+   "id": "c25q17",
+   "chapter": 25,
+   "topic": "25.3.2",
+   "num": 17,
+   "section": "B.5",
+   "text": "What power is permitted on the 60 m spot frequencies listed in ComReg 09/45?",
+   "options": [
+    "200 W PEP",
+    "15 W EIRP",
+    "400 W PEP",
+    "10 W"
+   ],
+   "answer": 0,
+   "explanation": "The contiguous IARU 60 m range is limited to 15 W EIRP",
+   "page": 342,
+   "figure": null
+  },
+  {
+   "id": "c25q18",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 18,
+   "section": "B.5",
+   "text": "The band edges of the Irish 80 m allocation are:",
+   "options": [
+    "3.600–3.800 MHz",
+    "3.500–4.000 MHz",
+    "3.500–3.800 MHz",
+    "3.500–3.700 MHz"
+   ],
+   "answer": 2,
+   "explanation": "Irish 80 m: 3.500–3.800 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q19",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 19,
+   "section": "B.5",
+   "text": "The band edges of the Irish 40 m allocation are:",
+   "options": [
+    "7.000–7.300 MHz",
+    "7.000–7.200 MHz",
+    "7.100–7.200 MHz",
+    "7.000–7.100 MHz"
+   ],
+   "answer": 1,
+   "explanation": "Irish 40 m: 7.000–7.200 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q20",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 20,
+   "section": "B.5",
+   "text": "The band edges of the 20 m band are:",
+   "options": [
+    "14.000–14.300 MHz",
+    "14.000–14.500 MHz",
+    "14.100–14.350 MHz",
+    "14.000–14.350 MHz"
+   ],
+   "answer": 3,
+   "explanation": "20 m: 14.000–14.350 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q21",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 21,
+   "section": "B.5",
+   "text": "The band edges of the 30 m band are:",
+   "options": [
+    "10.100–10.150 MHz",
+    "10.000–10.150 MHz",
+    "10.100–10.200 MHz",
+    "10.150–10.250 MHz"
+   ],
+   "answer": 0,
+   "explanation": "30 m: 10.100–10.150 MHz (secondary)",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q22",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 22,
+   "section": "B.5",
+   "text": "The band edges of the 17 m band are:",
+   "options": [
+    "17.068–17.168 MHz",
+    "18.000–18.200 MHz",
+    "18.068–18.268 MHz",
+    "18.068–18.168 MHz"
+   ],
+   "answer": 3,
+   "explanation": "17 m: 18.068–18.168 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q23",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 23,
+   "section": "B.5",
+   "text": "The band edges of the 15 m band are:",
+   "options": [
+    "21.000–21.450 MHz",
+    "21.000–21.350 MHz",
+    "21.000–21.500 MHz",
+    "21.100–21.450 MHz"
+   ],
+   "answer": 0,
+   "explanation": "15 m: 21.000–21.450 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q24",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 24,
+   "section": "B.5",
+   "text": "The band edges of the 12 m band are:",
+   "options": [
+    "24.890–25.000 MHz",
+    "24.000–24.990 MHz",
+    "24.890–24.990 MHz",
+    "24.800–24.900 MHz"
+   ],
+   "answer": 2,
+   "explanation": "12 m: 24.890–24.990 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q25",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 25,
+   "section": "B.5",
+   "text": "The band edges of the 10 m band are:",
+   "options": [
+    "27.000–29.700 MHz",
+    "28.000–29.000 MHz",
+    "28.000–30.000 MHz",
+    "28.000–29.700 MHz"
+   ],
+   "answer": 3,
+   "explanation": "10 m: 28.000–29.700 MHz",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q26",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 26,
+   "section": "B.5",
+   "text": "The Irish 2 m band covers:",
+   "options": [
+    "144.000–148.000 MHz",
+    "144.000–146.000 MHz",
+    "145.000–146.000 MHz",
+    "144.000–145.000 MHz"
+   ],
+   "answer": 1,
+   "explanation": "2 m: 144–146 MHz in Region 1",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q27",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 27,
+   "section": "B.5",
+   "text": "The Irish 4 m band covers:",
+   "options": [
+    "70.000–71.000 MHz",
+    "69.900–70.500 MHz",
+    "70.000–70.500 MHz",
+    "69.000–70.000 MHz"
+   ],
+   "answer": 1,
+   "explanation": "4 m: 69.900–70.500 MHz (secondary, 50 W)",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q28",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 28,
+   "section": "B.5",
+   "text": "The Irish 160 m allocation covers:",
+   "options": [
+    "1.810–1.850 MHz only",
+    "1.800–2.000 MHz",
+    "1.810–2.000 MHz",
+    "1.850–2.000 MHz only"
+   ],
+   "answer": 2,
+   "explanation": "1.810–1.850 at 400 W and 1.850–2.000 at 10 W",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q29",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 29,
+   "section": "B.5",
+   "text": "The maximum power on most Irish HF bands (e.g. 20 m) is:",
+   "options": [
+    "100 W PEP",
+    "400 W PEP (26 dBW)",
+    "1 kW PEP",
+    "50 W PEP"
+   ],
+   "answer": 1,
+   "explanation": "400 W PEP, measured at the transmitter or amplifier output",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q30",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 30,
+   "section": "B.5",
+   "text": "The power limit on 160 m between 1.850 and 2.000 MHz is:",
+   "options": [
+    "50 W",
+    "400 W",
+    "100 W",
+    "10 W (10 dBW)"
+   ],
+   "answer": 3,
+   "explanation": "1.850–2.000 MHz is limited to 10 W PEP",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q31",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 31,
+   "section": "B.5",
+   "text": "The power limit on the 6 m band is:",
+   "options": [
+    "100 W PEP (20 dBW)",
+    "400 W PEP",
+    "50 W PEP",
+    "10 W PEP"
+   ],
+   "answer": 0,
+   "explanation": "6 m (50–52 MHz): 100 W, secondary",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q32",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 32,
+   "section": "B.5",
+   "text": "The power limit on 430–432 MHz is:",
+   "options": [
+    "100 W PEP",
+    "400 W PEP",
+    "50 W PEP (17 dBW)",
+    "10 W PEP"
+   ],
+   "answer": 2,
+   "explanation": "430–432 MHz: 50 W; 432–440 MHz: 400 W",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q33",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 33,
+   "section": "B.5",
+   "text": "The power limit on the contiguous 60 m segment (5.3515–5.3665 MHz) is:",
+   "options": [
+    "400 W PEP",
+    "15 W EIRP",
+    "200 W PEP",
+    "100 W PEP"
+   ],
+   "answer": 1,
+   "explanation": "15 W EIRP applies to the contiguous 60 m range",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q34",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 34,
+   "section": "B.5",
+   "text": "On which of these bands are contests NOT permitted?",
+   "options": [
+    "40 m",
+    "20 m",
+    "17 m",
+    "2 m"
+   ],
+   "answer": 2,
+   "explanation": "No contests on 60 m or the WARC bands (30, 17 and 12 m)",
+   "page": 342,
+   "figure": null
+  },
+  {
+   "id": "c25q35",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 35,
+   "section": "B.5",
+   "text": "The 30, 17 and 12 m bands are known as the:",
+   "options": [
+    "Beacon bands",
+    "VHF bands",
+    "Primary bands",
+    "WARC bands"
+   ],
+   "answer": 3,
+   "explanation": "Allocated by the World Administrative Radio Conference in 1979",
+   "page": 342,
+   "figure": null
+  },
+  {
+   "id": "c25q36",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 36,
+   "section": "B.5",
+   "text": "PEP power limits are measured:",
+   "options": [
+    "At the output of the transmitter or amplifier",
+    "At the antenna as EIRP",
+    "At the mains socket",
+    "At the receiver"
+   ],
+   "answer": 0,
+   "explanation": "Except on 60 m, where EIRP is used",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q37",
+   "chapter": 25,
+   "topic": "25.3.3",
+   "num": 37,
+   "section": "B.5",
+   "text": "The land mobile power limit on the 4 m band is:",
+   "options": [
+    "50 W PEP",
+    "25 W PEP",
+    "10 W PEP",
+    "400 W PEP"
+   ],
+   "answer": 1,
+   "explanation": "Land mobile is 50 W, except 25 W on 4 m",
+   "page": 343,
+   "figure": null
+  },
+  {
+   "id": "c25q38",
+   "chapter": 25,
+   "topic": "25.3.4",
+   "num": 38,
+   "section": "B.5",
+   "text": "Without special authorisation, may you transmit on the 14.099–14.101 MHz beacon frequencies?",
+   "options": [
+    "No",
+    "Yes, at low power",
+    "Yes, in contests",
+    "Only with CW"
+   ],
+   "answer": 0,
+   "explanation": "Beacon-exclusive frequencies are reserved",
+   "page": 344,
+   "figure": null
+  },
+  {
+   "id": "c25q39",
+   "chapter": 25,
+   "topic": "25.3.4",
+   "num": 39,
+   "section": "B.5",
+   "text": "Which of these is a beacon-exclusive segment?",
+   "options": [
+    "7.050–7.060 MHz",
+    "28.400–28.500 MHz",
+    "14.200–14.250 MHz",
+    "28.190–28.225 MHz"
+   ],
+   "answer": 3,
+   "explanation": "Beacons: 14.100, 18.110, 21.150, 24.930, 28.190–28.225 and 144.400–144.490 MHz",
+   "page": 344,
+   "figure": null
+  },
+  {
+   "id": "c25q40",
+   "chapter": 25,
+   "topic": "25.3.4",
+   "num": 40,
+   "section": "B.5",
+   "text": "The 2 m beacon-exclusive range is:",
+   "options": [
+    "144.800–144.850 MHz",
+    "145.500–145.600 MHz",
+    "144.400–144.490 MHz",
+    "146.000–146.100 MHz"
+   ],
+   "answer": 2,
+   "explanation": "144.400–144.490 MHz",
+   "page": 344,
+   "figure": null
+  },
+  {
+   "id": "c25q41",
+   "chapter": 25,
+   "topic": "25.3.5",
+   "num": 41,
+   "section": "B.5",
+   "text": "Emergency communications may be found within what range of an emergency centre of activity?",
+   "options": [
+    "Exactly on the frequency",
+    "±1 kHz",
+    "±100 kHz",
+    "±20 kHz"
+   ],
+   "answer": 3,
+   "explanation": "They are centres of activity, not absolute frequencies",
+   "page": 344,
+   "figure": null
+  },
+  {
+   "id": "c25q42",
+   "chapter": 25,
+   "topic": "25.3.5",
+   "num": 42,
+   "section": "B.5",
+   "text": "The emergency centre of activity used in Ireland on 80 m is:",
+   "options": [
+    "3.760 MHz",
+    "3.660 MHz",
+    "3.555 MHz",
+    "3.700 MHz"
+   ],
+   "answer": 1,
+   "explanation": "Ireland uses 3.660 (differs from the IARU R1 3.760)",
+   "page": 345,
+   "figure": null
+  },
+  {
+   "id": "c25q43",
+   "chapter": 25,
+   "topic": "25.3.5",
+   "num": 43,
+   "section": "B.5",
+   "text": "The emergency centre of activity used in Ireland on 40 m is:",
+   "options": [
+    "7.115 MHz",
+    "7.110 MHz",
+    "7.050 MHz",
+    "7.200 MHz"
+   ],
+   "answer": 0,
+   "explanation": "Ireland uses 7.115 MHz",
+   "page": 345,
+   "figure": null
+  },
+  {
+   "id": "c25q44",
+   "chapter": 25,
+   "topic": "25.3.5",
+   "num": 44,
+   "section": "B.5",
+   "text": "The emergency centre of activity on 20 m is:",
+   "options": [
+    "14.100 MHz",
+    "14.200 MHz",
+    "14.300 MHz",
+    "14.350 MHz"
+   ],
+   "answer": 2,
+   "explanation": "14.300 MHz (IARU R1)",
+   "page": 345,
+   "figure": null
+  },
+  {
+   "id": "c25q45",
+   "chapter": 25,
+   "topic": "25.3.5",
+   "num": 45,
+   "section": "B.5",
+   "text": "May you use an emergency centre of activity frequency for normal contacts?",
+   "options": [
+    "Never",
+    "Yes, if it is not in use and no emergency is in progress, after listening carefully",
+    "Only in contests",
+    "Only with ComReg permission"
+   ],
+   "answer": 1,
+   "explanation": "They are not reserved, but must not be used during emergencies",
+   "page": 344,
+   "figure": null
+  },
+  {
+   "id": "c26q01",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 1,
+   "section": "B.2",
+   "text": "Q-codes are:",
+   "options": [
+    "Standard three-letter codes beginning with Q",
+    "Call sign prefixes",
+    "ITU emission designators",
+    "Morse prosigns only"
+   ],
+   "answer": 0,
+   "explanation": "Developed for commercial Morse, they act as an international language",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q02",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 2,
+   "section": "B.2",
+   "text": "QRG? means:",
+   "options": [
+    "Should I stop?",
+    "Are you busy?",
+    "What is your location?",
+    "What is the (exact) frequency?"
+   ],
+   "answer": 3,
+   "explanation": "QRG: frequency",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q03",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 3,
+   "section": "B.2",
+   "text": "QRK? means:",
+   "options": [
+    "Is my signal fading?",
+    "Are you ready?",
+    "What is the readability of my signals?",
+    "Who is calling me?"
+   ],
+   "answer": 2,
+   "explanation": "QRK: readability",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q04",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 4,
+   "section": "B.2",
+   "text": "QRL? means:",
+   "options": [
+    "Should I increase power?",
+    "Is the frequency busy?",
+    "Can you confirm reception?",
+    "What is your location?"
+   ],
+   "answer": 1,
+   "explanation": "QRL: are you busy / is the frequency in use",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q05",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 5,
+   "section": "B.2",
+   "text": "QRM means:",
+   "options": [
+    "I am bothered by atmospherics",
+    "I am being interfered with",
+    "Your signal is fading",
+    "Increase your power"
+   ],
+   "answer": 1,
+   "explanation": "QRM: man-made interference; QRN: atmospherics",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q06",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 6,
+   "section": "B.2",
+   "text": "QRN means:",
+   "options": [
+    "I am ready",
+    "I am being interfered with by another station",
+    "I am bothered by atmospherics (natural noise)",
+    "I have nothing for you"
+   ],
+   "answer": 2,
+   "explanation": "QRN: static and other natural noise",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q07",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 7,
+   "section": "B.2",
+   "text": "QRO means:",
+   "options": [
+    "Send slower",
+    "Decrease your power",
+    "Stop transmitting",
+    "Increase your power"
+   ],
+   "answer": 3,
+   "explanation": "QRO: increase power; QRP: decrease power",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q08",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 8,
+   "section": "B.2",
+   "text": "QRP means:",
+   "options": [
+    "Decrease your power",
+    "Increase your power",
+    "I am ready",
+    "Change frequency"
+   ],
+   "answer": 0,
+   "explanation": "QRP: reduce power; also used for low-power operation",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q09",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 9,
+   "section": "B.2",
+   "text": "QRS means:",
+   "options": [
+    "Repeat your call sign",
+    "Stop your transmission",
+    "Increase your speed",
+    "Decrease your sending speed"
+   ],
+   "answer": 3,
+   "explanation": "QRS: send more slowly, e.g. QRS 10 for 10 WPM",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q10",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 10,
+   "section": "B.2",
+   "text": "QRT means:",
+   "options": [
+    "Wait",
+    "Decrease your power",
+    "Stop your transmission",
+    "Change frequency"
+   ],
+   "answer": 2,
+   "explanation": "QRT: stop transmitting; \"going QRT\" means closing down",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q11",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 11,
+   "section": "B.2",
+   "text": "QRU means:",
+   "options": [
+    "I have nothing for you",
+    "I am ready",
+    "I will call you back",
+    "You are called by"
+   ],
+   "answer": 0,
+   "explanation": "QRU?: do you have anything for me?",
+   "page": 346,
+   "figure": null
+  },
+  {
+   "id": "c26q12",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 12,
+   "section": "B.2",
+   "text": "QRV means:",
+   "options": [
+    "I am busy",
+    "I am ready",
+    "Wait",
+    "Your signal is fading"
+   ],
+   "answer": 1,
+   "explanation": "QRV: ready",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q13",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 13,
+   "section": "B.2",
+   "text": "QRX means:",
+   "options": [
+    "Who is calling me?",
+    "Stop transmitting",
+    "Increase power",
+    "I will call you back at …; wait, stand by"
+   ],
+   "answer": 3,
+   "explanation": "QRX 3 is usually \"wait three minutes\"",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q14",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 14,
+   "section": "B.2",
+   "text": "QRZ? means:",
+   "options": [
+    "Is the frequency busy?",
+    "What is your location?",
+    "Who is (was) calling me?",
+    "Are you ready?"
+   ],
+   "answer": 2,
+   "explanation": "Used when you did not copy the calling station",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q15",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 15,
+   "section": "B.2",
+   "text": "QSB means:",
+   "options": [
+    "I confirm reception",
+    "Your signal is fading",
+    "Change frequency",
+    "I am being interfered with"
+   ],
+   "answer": 1,
+   "explanation": "QSB: fading",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q16",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 16,
+   "section": "B.2",
+   "text": "QSL means:",
+   "options": [
+    "I confirm reception",
+    "Your signal is fading",
+    "Stop transmitting",
+    "My location is"
+   ],
+   "answer": 0,
+   "explanation": "QSL: confirm receipt; a QSL card confirms a contact",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q17",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 17,
+   "section": "B.2",
+   "text": "QSY means:",
+   "options": [
+    "Listen on …",
+    "Change frequency to …",
+    "Wait",
+    "Decrease power"
+   ],
+   "answer": 1,
+   "explanation": "For example QSY 7055 or QSY UP 1",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q18",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 18,
+   "section": "B.2",
+   "text": "QSX means:",
+   "options": [
+    "Stop",
+    "Transmit on …",
+    "Listen on …",
+    "Confirm"
+   ],
+   "answer": 2,
+   "explanation": "QSX: I am listening on (frequency)",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q19",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 19,
+   "section": "B.2",
+   "text": "QTH means:",
+   "options": [
+    "My location is …",
+    "My name is …",
+    "My power is …",
+    "My frequency is …"
+   ],
+   "answer": 0,
+   "explanation": "QTH: location",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q20",
+   "chapter": 26,
+   "topic": "26.1",
+   "num": 20,
+   "section": "B.2",
+   "text": "If you hear QUF, you should:",
+   "options": [
+    "Increase power",
+    "Reply with your QTH",
+    "Change frequency",
+    "Stop transmitting, listen and follow any instructions; it is an emergency signal"
+   ],
+   "answer": 3,
+   "explanation": "QUF: I have received the distress signal. Pass on the message to 999 or 112",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q21",
+   "chapter": 26,
+   "topic": "26.2",
+   "num": 21,
+   "section": "B.2",
+   "text": "In telegraphy, how is a Q-code made into a question?",
+   "options": [
+    "By adding K",
+    "By sending it twice",
+    "By adding a question mark after the code",
+    "By sending it slowly"
+   ],
+   "answer": 2,
+   "explanation": "QRL? is a question; QRL is a statement or answer",
+   "page": 348,
+   "figure": null
+  },
+  {
+   "id": "c26q22",
+   "chapter": 26,
+   "topic": "26.2",
+   "num": 22,
+   "section": "B.2",
+   "text": "In telephony, a Q-code is made into a question by:",
+   "options": [
+    "Spelling it phonetically",
+    "Speaking it with a questioning tone of voice",
+    "Saying it three times",
+    "Adding \"over\""
+   ],
+   "answer": 1,
+   "explanation": "On phone, use a questioning tone",
+   "page": 348,
+   "figure": null
+  },
+  {
+   "id": "c26q23",
+   "chapter": 26,
+   "topic": "26.2",
+   "num": 23,
+   "section": "B.2",
+   "text": "You send QRL? and receive QRL. This means:",
+   "options": [
+    "Yes, the frequency is in use",
+    "The frequency is free",
+    "Please increase power",
+    "Change frequency"
+   ],
+   "answer": 0,
+   "explanation": "QRL without a question mark is a statement",
+   "page": 348,
+   "figure": null
+  },
+  {
+   "id": "c26q24",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 24,
+   "section": "B.2",
+   "text": "The abbreviation CQ means:",
+   "options": [
+    "End of contact",
+    "A call to a specific station",
+    "Please repeat",
+    "A general call to all stations"
+   ],
+   "answer": 3,
+   "explanation": "CQ invites anyone to answer",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q25",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 25,
+   "section": "B.2",
+   "text": "The abbreviation DE means:",
+   "options": [
+    "Delete",
+    "Distress",
+    "From; separates the called station's call sign from the caller's",
+    "Distance"
+   ],
+   "answer": 2,
+   "explanation": "e.g. W1ZZZ DE EI5ABC",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q26",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 26,
+   "section": "B.2",
+   "text": "The abbreviation DX means:",
+   "options": [
+    "Long distance, usually another continent",
+    "Direct transmission",
+    "Digital exchange",
+    "Duplex"
+   ],
+   "answer": 0,
+   "explanation": "DX: long-distance stations",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q27",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 27,
+   "section": "B.2",
+   "text": "At the end of a Morse transmission, K means:",
+   "options": [
+    "End of contact",
+    "Over: an invitation for the other operator to transmit",
+    "Okay",
+    "Kilowatt"
+   ],
+   "answer": 1,
+   "explanation": "K invites the other station to transmit",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q28",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 28,
+   "section": "B.2",
+   "text": "The abbreviation BK means:",
+   "options": [
+    "Bureau",
+    "Band",
+    "Back soon",
+    "A signal used to interrupt a transmission in progress"
+   ],
+   "answer": 3,
+   "explanation": "BK: break",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q29",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 29,
+   "section": "B.2",
+   "text": "The abbreviation SKED means:",
+   "options": [
+    "Skip distance",
+    "A scheduled call, planned and agreed ahead",
+    "Sky wave",
+    "Speed key"
+   ],
+   "answer": 1,
+   "explanation": "SKED: schedule",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q30",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 30,
+   "section": "B.2",
+   "text": "Which pair of abbreviations means transmitter and receiver?",
+   "options": [
+    "TX and RX",
+    "TR and RE",
+    "TS and RS",
+    "XT and XR"
+   ],
+   "answer": 0,
+   "explanation": "TX = transmitter; RX = receiver",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c26q31",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 31,
+   "section": "B.2",
+   "text": "The abbreviations PSE and UR mean:",
+   "options": [
+    "Pass and ready",
+    "Pause and urgent",
+    "Power supply and unit",
+    "Please and your"
+   ],
+   "answer": 3,
+   "explanation": "PSE = please; UR = your; OP = operator; MSG = message",
+   "page": 347,
+   "figure": null
+  },
+  {
+   "id": "c26q32",
+   "chapter": 26,
+   "topic": "26.3",
+   "num": 32,
+   "section": "B.2",
+   "text": "Used on its own, R means:",
+   "options": [
+    "Radio",
+    "Repeat",
+    "Received; a general yes or confirmed",
+    "Ready"
+   ],
+   "answer": 2,
+   "explanation": "Often spoken as \"Roger\"",
+   "page": 349,
+   "figure": null
+  },
+  {
+   "id": "c27q01",
+   "chapter": 27,
+   "topic": "27.1",
+   "num": 1,
+   "section": "B.3",
+   "text": "Distress signals may only be used when:",
+   "options": [
+    "Propagation is poor",
+    "Your equipment fails",
+    "You need a contact urgently",
+    "There is grave and imminent danger to life"
+   ],
+   "answer": 3,
+   "explanation": "Distress signals call for help in life-threatening situations",
+   "page": 350,
+   "figure": null
+  },
+  {
+   "id": "c27q02",
+   "chapter": 27,
+   "topic": "27.1",
+   "num": 2,
+   "section": "B.3",
+   "text": "The radiotelegraphy (Morse) distress signal is:",
+   "options": [
+    "QUF",
+    "MAYDAY",
+    "SOS",
+    "CQD"
+   ],
+   "answer": 2,
+   "explanation": "Sent as ··· ––– ··· without spaces between the characters",
+   "page": 350,
+   "figure": null
+  },
+  {
+   "id": "c27q03",
+   "chapter": 27,
+   "topic": "27.1",
+   "num": 3,
+   "section": "B.3",
+   "text": "How is SOS sent in Morse?",
+   "options": [
+    "As three separate letters with normal spacing",
+    "··· ––– ··· run together, without the usual spaces between characters",
+    "As –·–· ––·–",
+    "As ·–·–·"
+   ],
+   "answer": 1,
+   "explanation": "dit-dit-dit-dah-dah-dah-dit-dit-dit",
+   "page": 350,
+   "figure": null
+  },
+  {
+   "id": "c27q04",
+   "chapter": 27,
+   "topic": "27.1",
+   "num": 4,
+   "section": "B.3",
+   "text": "The radiotelephony (voice) distress signal is:",
+   "options": [
+    "MAYDAY",
+    "SOS",
+    "HELP",
+    "PAN PAN only"
+   ],
+   "answer": 0,
+   "explanation": "On voice, use MAYDAY, not SOS",
+   "page": 350,
+   "figure": null
+  },
+  {
+   "id": "c27q05",
+   "chapter": 27,
+   "topic": "27.2",
+   "num": 5,
+   "section": "B.3",
+   "text": "Under ITU rules, amateur stations may pass international communications on behalf of third parties:",
+   "options": [
+    "At any time",
+    "Only in case of emergencies or disaster relief",
+    "Only in contests",
+    "Never"
+   ],
+   "answer": 1,
+   "explanation": "National administrations decide how this applies",
+   "page": 350,
+   "figure": null
+  },
+  {
+   "id": "c27q06",
+   "chapter": 27,
+   "topic": "27.2",
+   "num": 6,
+   "section": "B.3",
+   "text": "In Ireland, which public service voluntary radio emergency network is approved by ComReg?",
+   "options": [
+    "IARUMS",
+    "RAYNET",
+    "ARES",
+    "ARen, the Amateur Radio Emergency Network"
+   ],
+   "answer": 3,
+   "explanation": "Join ARen for training in emergency communications",
+   "page": 350,
+   "figure": null
+  },
+  {
+   "id": "c27q07",
+   "chapter": 27,
+   "topic": "27.3",
+   "num": 7,
+   "section": "B.3",
+   "text": "Emergency centres of activity in the band plans are:",
+   "options": [
+    "Only for ARen members",
+    "Reserved for emergencies at all times",
+    "Not reserved, but must not be used for other purposes during an emergency",
+    "Only for satellites"
+   ],
+   "answer": 2,
+   "explanation": "Listen carefully before transmitting",
+   "page": 351,
+   "figure": null
+  },
+  {
+   "id": "c27q08",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 8,
+   "section": "B.3",
+   "text": "A communications emergency exists when:",
+   "options": [
+    "A critical communication system failure puts the public at risk",
+    "Your radio breaks",
+    "A contest is busy",
+    "Propagation fails"
+   ],
+   "answer": 0,
+   "explanation": "Emergency telecommunications are also called EMCOMM",
+   "page": 352,
+   "figure": null
+  },
+  {
+   "id": "c27q09",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 9,
+   "section": "B.3",
+   "text": "A served agency is:",
+   "options": [
+    "An equipment shop",
+    "A radio club",
+    "ComReg",
+    "Any organisation that may request emergency communication assistance from you"
+   ],
+   "answer": 3,
+   "explanation": "e.g. principal emergency services and voluntary emergency services",
+   "page": 352,
+   "figure": null
+  },
+  {
+   "id": "c27q10",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 10,
+   "section": "B.3",
+   "text": "Which are the Principal Emergency Services (PES) in Ireland?",
+   "options": [
+    "An Garda Síochána, the Ambulance Service, the Fire Service and the Irish Coast Guard",
+    "The Red Cross and Civil Defence",
+    "ComReg and the IRTS",
+    "Local Authorities only"
+   ],
+   "answer": 0,
+   "explanation": "The \"blue light\" services, plus the Coast Guard for maritime emergencies",
+   "page": 352,
+   "figure": null
+  },
+  {
+   "id": "c27q11",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 11,
+   "section": "B.3",
+   "text": "Which are the Principal Response Agencies (PRA)?",
+   "options": [
+    "The Fire Service and the Coast Guard only",
+    "An Garda Síochána, the HSE and the Local Authorities",
+    "The IRTS and ARen",
+    "Civil Defence and the Red Cross"
+   ],
+   "answer": 1,
+   "explanation": "Government-designated agencies responding to major emergencies",
+   "page": 352,
+   "figure": null
+  },
+  {
+   "id": "c27q12",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 12,
+   "section": "B.3",
+   "text": "Civil Defence and the Irish Red Cross are examples of:",
+   "options": [
+    "Principal Emergency Services",
+    "Principal Response Agencies",
+    "Voluntary Emergency Services (VES)",
+    "Regulators"
+   ],
+   "answer": 2,
+   "explanation": "Treat them as served agencies",
+   "page": 352,
+   "figure": null
+  },
+  {
+   "id": "c27q13",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 13,
+   "section": "B.3",
+   "text": "In emergency communications, a \"net\" is:",
+   "options": [
+    "A filter",
+    "An antenna",
+    "The Internet",
+    "An emergency radio communications network"
+   ],
+   "answer": 3,
+   "explanation": "Nets are run by net control stations",
+   "page": 352,
+   "figure": null
+  },
+  {
+   "id": "c27q14",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 14,
+   "section": "B.3",
+   "text": "As an emergency communicator without further training, you:",
+   "options": [
+    "Direct the served agency",
+    "Have no authority and are not in charge",
+    "Are a first responder",
+    "Can make decisions for others"
+   ],
+   "answer": 1,
+   "explanation": "Think of yourself as an unpaid employee of the served agency",
+   "page": 353,
+   "figure": null
+  },
+  {
+   "id": "c27q15",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 15,
+   "section": "B.3",
+   "text": "How should you deliver an urgent message for a served agency?",
+   "options": [
+    "By whatever means is best and fastest, not necessarily radio",
+    "Only by amateur radio",
+    "Only by Morse",
+    "Only by email"
+   ],
+   "answer": 0,
+   "explanation": "The job is to get the message through",
+   "page": 354,
+   "figure": null
+  },
+  {
+   "id": "c27q16",
+   "chapter": 27,
+   "topic": "27.4",
+   "num": 16,
+   "section": "B.3",
+   "text": "How does emergency communication differ from contesting?",
+   "options": [
+    "There is no difference",
+    "Emergency operators work as many random stations as possible",
+    "Emergency communicators must contact specific stations quickly; teamwork matters",
+    "Emergency stations must be fixed installations"
+   ],
+   "answer": 2,
+   "explanation": "Teamwork, not competition",
+   "page": 353,
+   "figure": null
+  },
+  {
+   "id": "c27q17",
+   "chapter": 27,
+   "topic": "27.5",
+   "num": 17,
+   "section": "B.3",
+   "text": "If you hear MAYDAY, SOS or QUF, you should first:",
+   "options": [
+    "Stop transmitting and listen",
+    "Call CQ",
+    "Change frequency",
+    "Ask them to QSY"
+   ],
+   "answer": 0,
+   "explanation": "Listen, write down all you can hear, and do not leave the frequency",
+   "page": 354,
+   "figure": null
+  },
+  {
+   "id": "c27q18",
+   "chapter": 27,
+   "topic": "27.5",
+   "num": 18,
+   "section": "B.3",
+   "text": "You receive distress traffic. You should:",
+   "options": [
+    "Leave the frequency",
+    "Ignore it if the signal is weak",
+    "Transmit immediately to ask questions",
+    "Listen carefully and write down all you can hear"
+   ],
+   "answer": 3,
+   "explanation": "Do not transmit before you are sure you can help",
+   "page": 354,
+   "figure": null
+  },
+  {
+   "id": "c27q19",
+   "chapter": 27,
+   "topic": "27.5",
+   "num": 19,
+   "section": "B.3",
+   "text": "You have copied a distress message and are unsure what to do with it. You should:",
+   "options": [
+    "Post it online",
+    "Call 999 or 112 and pass on the message",
+    "Wait for someone else",
+    "Forget about it"
+   ],
+   "answer": 1,
+   "explanation": "Pass the message to the emergency services",
+   "page": 354,
+   "figure": null
+  },
+  {
+   "id": "c27q20",
+   "chapter": 27,
+   "topic": "27.5",
+   "num": 20,
+   "section": "B.3",
+   "text": "When may you leave the frequency after hearing a distress call?",
+   "options": [
+    "After 1 minute",
+    "Immediately",
+    "When you are sure you cannot help or someone else is helping",
+    "Never"
+   ],
+   "answer": 2,
+   "explanation": "Stay until you are sure",
+   "page": 354,
+   "figure": null
+  },
+  {
+   "id": "c28q01",
+   "chapter": 28,
+   "topic": "28.1",
+   "num": 1,
+   "section": "B.6",
+   "text": "Which is one of the basic principles of the amateur radio code of conduct?",
+   "options": [
+    "Ignoring other operators",
+    "Winning every argument on air",
+    "Using strong language to make a point",
+    "Tolerance of people and their differing opinions"
+   ],
+   "answer": 3,
+   "explanation": "Social feeling, tolerance, politeness and comprehension",
+   "page": 356,
+   "figure": null
+  },
+  {
+   "id": "c28q02",
+   "chapter": 28,
+   "topic": "28.1",
+   "num": 2,
+   "section": "B.6",
+   "text": "You hear another amateur say something technically wrong on air. The best response is to:",
+   "options": [
+    "Jam the frequency",
+    "Ridicule them",
+    "Offer polite, constructive explanation",
+    "Report them to ComReg"
+   ],
+   "answer": 2,
+   "explanation": "The principle of comprehension: act positively",
+   "page": 357,
+   "figure": null
+  },
+  {
+   "id": "c28q03",
+   "chapter": 28,
+   "topic": "28.1",
+   "num": 3,
+   "section": "B.6",
+   "text": "Why should you always remain polite and avoid rude language on air?",
+   "options": [
+    "It costs extra",
+    "Everyone can listen, even people not in the conversation",
+    "Rude words reduce signal strength",
+    "Only Morse is monitored"
+   ],
+   "answer": 1,
+   "explanation": "Many people may be listening",
+   "page": 356,
+   "figure": null
+  },
+  {
+   "id": "c28q04",
+   "chapter": 28,
+   "topic": "28.2",
+   "num": 4,
+   "section": "B.6",
+   "text": "A station starts calling CQ on the frequency you have been using for half an hour. The most likely reason is:",
+   "options": [
+    "Changing propagation means they could not hear you before",
+    "They are deliberately interfering",
+    "Your transmitter is faulty",
+    "They have priority"
+   ],
+   "answer": 0,
+   "explanation": "There is usually no malice; conditions change",
+   "page": 357,
+   "figure": null
+  },
+  {
+   "id": "c28q05",
+   "chapter": 28,
+   "topic": "28.4",
+   "num": 5,
+   "section": "B.6",
+   "text": "The amateur radio community relies on which principles for good conduct?",
+   "options": [
+    "Police enforcement",
+    "Self-regulation and self-discipline",
+    "Commercial contracts",
+    "Random monitoring by ComReg only"
+   ],
+   "answer": 1,
+   "explanation": "e.g. the IARU band plans and their broad support",
+   "page": 357,
+   "figure": null
+  },
+  {
+   "id": "c28q06",
+   "chapter": 28,
+   "topic": "28.4",
+   "num": 6,
+   "section": "B.6",
+   "text": "Who can deal with breaches of the law or regulations?",
+   "options": [
+    "The IRTS committee",
+    "Any radio amateur",
+    "Only the authorities",
+    "Radio clubs"
+   ],
+   "answer": 2,
+   "explanation": "The amateur community has no police",
+   "page": 357,
+   "figure": null
+  },
+  {
+   "id": "c28q07",
+   "chapter": 28,
+   "topic": "28.5",
+   "num": 7,
+   "section": "B.6",
+   "text": "In amateur radio, \"73\" means:",
+   "options": [
+    "Best regards",
+    "Love and kisses",
+    "Goodbye forever",
+    "Over"
+   ],
+   "answer": 0,
+   "explanation": "Since 73 already means best regards, \"best 73\" or \"73s\" is unnecessary",
+   "page": 358,
+   "figure": null
+  },
+  {
+   "id": "c28q08",
+   "chapter": 28,
+   "topic": "28.5",
+   "num": 8,
+   "section": "B.6",
+   "text": "To \"work\" a station means to:",
+   "options": [
+    "Monitor it",
+    "Repair it",
+    "Pay its operator",
+    "Make a contact with it"
+   ],
+   "answer": 3,
+   "explanation": "Contacts are commonly called QSOs",
+   "page": 358,
+   "figure": null
+  },
+  {
+   "id": "c28q09",
+   "chapter": 28,
+   "topic": "28.5",
+   "num": 9,
+   "section": "B.6",
+   "text": "A long, relaxed conversation on air is known as a:",
+   "options": [
+    "Pile-up",
+    "Ragchew",
+    "Sked",
+    "Net"
+   ],
+   "answer": 1,
+   "explanation": "Some prefer ragchewing, others short contacts or contesting",
+   "page": 358,
+   "figure": null
+  },
+  {
+   "id": "c28q10",
+   "chapter": 28,
+   "topic": "28.5",
+   "num": 10,
+   "section": "B.6",
+   "text": "When spelling on phone, you should:",
+   "options": [
+    "Mix national and international alphabets",
+    "Invent amusing words",
+    "Use only the standard phonetic alphabet, without mixing spellings",
+    "Avoid spelling call signs"
+   ],
+   "answer": 2,
+   "explanation": "Fantasy phonetics can confuse, especially in poor conditions",
+   "page": 358,
+   "figure": null
+  },
+  {
+   "id": "c28q11",
+   "chapter": 28,
+   "topic": "28.5",
+   "num": 11,
+   "section": "B.6",
+   "text": "Radio amateurs usually address one another by:",
+   "options": [
+    "First name (or nickname) and call sign",
+    "Surname only",
+    "Title and surname",
+    "Licence number"
+   ],
+   "answer": 0,
+   "explanation": "Surnames are rarely used",
+   "page": 358,
+   "figure": null
+  },
+  {
+   "id": "c28q12",
+   "chapter": 28,
+   "topic": "28.5",
+   "num": 12,
+   "section": "B.6",
+   "text": "Why should CB jargon be avoided in amateur radio?",
+   "options": [
+    "It is too short",
+    "It is illegal",
+    "It causes interference",
+    "It may not be understood, as some terms differ in meaning"
+   ],
+   "answer": 3,
+   "explanation": "Learn the Q-codes and operational abbreviations instead",
+   "page": 358,
+   "figure": null
+  },
+  {
+   "id": "c28q13",
+   "chapter": 28,
+   "topic": "28.6",
+   "num": 13,
+   "section": "B.6",
+   "text": "What should you always do before you transmit?",
+   "options": [
+    "Listen",
+    "Increase power",
+    "Call CQ immediately",
+    "Switch on the amplifier"
+   ],
+   "answer": 0,
+   "explanation": "A good radio amateur starts by listening a lot",
+   "page": 359,
+   "figure": null
+  },
+  {
+   "id": "c28q14",
+   "chapter": 28,
+   "topic": "28.7",
+   "num": 14,
+   "section": "B.6",
+   "text": "How should you identify yourself on air?",
+   "options": [
+    "With your first name only",
+    "With your complete call sign, e.g. EI5ABC",
+    "With the suffix only, e.g. 5ABC",
+    "With your town"
+   ],
+   "answer": 1,
+   "explanation": "Using anything other than your exact call sign is illegal in Ireland",
+   "page": 359,
+   "figure": null
+  },
+  {
+   "id": "c28q15",
+   "chapter": 28,
+   "topic": "28.7",
+   "num": 15,
+   "section": "B.6",
+   "text": "May an Irish amateur sign /QRP to indicate low power?",
+   "options": [
+    "Only in contests",
+    "Yes, always",
+    "Only on HF",
+    "No; only /M and /MM are permitted"
+   ],
+   "answer": 3,
+   "explanation": "You may say you are QRP, but not add it as a suffix",
+   "page": 359,
+   "figure": null
+  },
+  {
+   "id": "c29q01",
+   "chapter": 29,
+   "topic": "29.1",
+   "num": 1,
+   "section": "B.7",
+   "text": "EI5ABC wants to address W1ZZZ on phone. The correct order of call signs is:",
+   "options": [
+    "EI5ABC from W1ZZZ",
+    "W1ZZZ from EI5ABC",
+    "EI5ABC W1ZZZ",
+    "Either order"
+   ],
+   "answer": 1,
+   "explanation": "The station called comes first, your own call second",
+   "page": 360,
+   "figure": null
+  },
+  {
+   "id": "c29q02",
+   "chapter": 29,
+   "topic": "29.1",
+   "num": 2,
+   "section": "B.7",
+   "text": "In Morse, EI5ABC calling W1ZZZ sends:",
+   "options": [
+    "W1ZZZ DE EI5ABC",
+    "EI5ABC DE W1ZZZ",
+    "W1ZZZ EI5ABC CQ",
+    "DE W1ZZZ EI5ABC"
+   ],
+   "answer": 0,
+   "explanation": "DE separates the two call signs",
+   "page": 360,
+   "figure": null
+  },
+  {
+   "id": "c29q03",
+   "chapter": 29,
+   "topic": "29.1",
+   "num": 3,
+   "section": "B.7",
+   "text": "A QSO consists of a series of:",
+   "options": [
+    "Beacon signals",
+    "Simultaneous transmissions",
+    "Overs, with one station transmitting at a time",
+    "Broadcasts"
+   ],
+   "answer": 2,
+   "explanation": "One person speaks while the other listens (simplex)",
+   "page": 360,
+   "figure": null
+  },
+  {
+   "id": "c29q04",
+   "chapter": 29,
+   "topic": "29.1",
+   "num": 4,
+   "section": "B.7",
+   "text": "When the other station hands over to you, it is good practice to:",
+   "options": [
+    "Change frequency",
+    "Start immediately",
+    "Call CQ",
+    "Wait a brief second before transmitting"
+   ],
+   "answer": 3,
+   "explanation": "This lets anyone trying to join or use the frequency be heard",
+   "page": 361,
+   "figure": null
+  },
+  {
+   "id": "c29q05",
+   "chapter": 29,
+   "topic": "29.1",
+   "num": 5,
+   "section": "B.7",
+   "text": "Should transmissions in a QSO be short or long?",
+   "options": [
+    "Preferably short",
+    "As long as possible",
+    "Exactly 5 minutes",
+    "It does not matter"
+   ],
+   "answer": 0,
+   "explanation": "Short overs let your correspondent comment",
+   "page": 361,
+   "figure": null
+  },
+  {
+   "id": "c29q06",
+   "chapter": 29,
+   "topic": "29.2",
+   "num": 6,
+   "section": "B.7",
+   "text": "Which subject should be avoided on air according to the IARU guide?",
+   "options": [
+    "Antennas",
+    "Politics",
+    "Propagation",
+    "The weather"
+   ],
+   "answer": 1,
+   "explanation": "Avoid religion, politics, business, derogatory remarks and bathroom humour",
+   "page": 361,
+   "figure": null
+  },
+  {
+   "id": "c29q07",
+   "chapter": 29,
+   "topic": "29.2",
+   "num": 7,
+   "section": "B.7",
+   "text": "May you advertise your business on amateur radio?",
+   "options": [
+    "Only on VHF",
+    "Yes, on weekdays",
+    "No",
+    "Only to friends"
+   ],
+   "answer": 2,
+   "explanation": "You may talk about your profession but not advertise",
+   "page": 361,
+   "figure": null
+  },
+  {
+   "id": "c29q08",
+   "chapter": 29,
+   "topic": "29.2",
+   "num": 8,
+   "section": "B.7",
+   "text": "Broadcasting music to a general audience on amateur bands is:",
+   "options": [
+    "Encouraged",
+    "Permitted at low power",
+    "Permitted at weekends",
+    "Not permitted"
+   ],
+   "answer": 3,
+   "explanation": "Radio amateurs may not broadcast to a potentially unknown audience",
+   "page": 361,
+   "figure": null
+  },
+  {
+   "id": "c29q09",
+   "chapter": 29,
+   "topic": "29.3.1",
+   "num": 9,
+   "section": "B.7",
+   "text": "Before calling CQ on an apparently clear frequency, on phone you should ask:",
+   "options": [
+    "Is this frequency clear?",
+    "Is this frequency in use?",
+    "Can anyone hear me?",
+    "Nothing; just call"
+   ],
+   "answer": 1,
+   "explanation": "\"Clear\" is ambiguous; ask if it is in use, more than once",
+   "page": 362,
+   "figure": null
+  },
+  {
+   "id": "c29q10",
+   "chapter": 29,
+   "topic": "29.3.1",
+   "num": 10,
+   "section": "B.7",
+   "text": "In Morse, to check whether a frequency is in use, send:",
+   "options": [
+    "QTH?",
+    "QRZ?",
+    "QRL?",
+    "QSY?"
+   ],
+   "answer": 2,
+   "explanation": "QRL? DE EI5ABC",
+   "page": 362,
+   "figure": null
+  },
+  {
+   "id": "c29q11",
+   "chapter": 29,
+   "topic": "29.3.1",
+   "num": 11,
+   "section": "B.7",
+   "text": "Why ask if a frequency is in use even if you hear nothing?",
+   "options": [
+    "A station you cannot hear may be receiving a station you cannot hear either",
+    "It is a contest rule",
+    "To test your microphone",
+    "To check SWR"
+   ],
+   "answer": 0,
+   "explanation": "You might cause QRM to a station in your propagation path",
+   "page": 363,
+   "figure": null
+  },
+  {
+   "id": "c29q12",
+   "chapter": 29,
+   "topic": "29.3.1",
+   "num": 12,
+   "section": "B.7",
+   "text": "You are in a QSO and hear QRL? in Morse. You can reply:",
+   "options": [
+    "Nothing",
+    "QRZ?",
+    "CQ",
+    "QRL, R, Y, YES or C"
+   ],
+   "answer": 3,
+   "explanation": "Confirm the frequency is in use",
+   "page": 363,
+   "figure": null
+  },
+  {
+   "id": "c29q13",
+   "chapter": 29,
+   "topic": "29.3.2",
+   "num": 13,
+   "section": "B.7",
+   "text": "The recommended CQ call format in Morse is:",
+   "options": [
+    "EI5ABC CQ CQ CQ",
+    "CQ CQ CQ DE EI5ABC EI5ABC EI5ABC K",
+    "CQ DE EI5ABC KN",
+    "CQ CQ CQ EI5ABC SK"
+   ],
+   "answer": 1,
+   "explanation": "K at the end invites any station to transmit",
+   "page": 363,
+   "figure": null
+  },
+  {
+   "id": "c29q14",
+   "chapter": 29,
+   "topic": "29.3.2",
+   "num": 14,
+   "section": "B.7",
+   "text": "The final K of a CQ call is known as:",
+   "options": [
+    "Kilohertz",
+    "End of contact",
+    "An invitation to transmit",
+    "A distress signal"
+   ],
+   "answer": 2,
+   "explanation": "K invites any station to transmit",
+   "page": 364,
+   "figure": null
+  },
+  {
+   "id": "c29q15",
+   "chapter": 29,
+   "topic": "29.3.2",
+   "num": 15,
+   "section": "B.7",
+   "text": "You only want to work stations in Japan. In Morse, you call:",
+   "options": [
+    "CQ JA CQ JA CQ JA DE EI5ABC …",
+    "CQ DX JAPAN",
+    "JA DE EI5ABC KN",
+    "QRZ JA?"
+   ],
+   "answer": 0,
+   "explanation": "JA is the national prefix for Japan",
+   "page": 364,
+   "figure": null
+  },
+  {
+   "id": "c29q16",
+   "chapter": 29,
+   "topic": "29.3.2",
+   "num": 16,
+   "section": "B.7",
+   "text": "On VHF/UHF, a CQ DX call seeks stations more than about:",
+   "options": [
+    "3 km away",
+    "30 km away",
+    "3000 km away",
+    "300 km away"
+   ],
+   "answer": 3,
+   "explanation": "On HF, DX usually means another continent",
+   "page": 364,
+   "figure": null
+  },
+  {
+   "id": "c29q17",
+   "chapter": 29,
+   "topic": "29.3.2",
+   "num": 17,
+   "section": "B.7",
+   "text": "Should you reply to a CQ DX call from a station on your own continent?",
+   "options": [
+    "Yes, always",
+    "No, unless you are DX to that station",
+    "Only with high power",
+    "Only on CW"
+   ],
+   "answer": 1,
+   "explanation": "Only answer CQ DX if you are DX for the caller",
+   "page": 365,
+   "figure": null
+  },
+  {
+   "id": "c29q18",
+   "chapter": 29,
+   "topic": "29.3.5",
+   "num": 18,
+   "section": "B.7",
+   "text": "Ending a call to a specific station with KN in Morse means:",
+   "options": [
+    "Change frequency",
+    "Any station may reply",
+    "End of contact",
+    "Only the called station should reply"
+   ],
+   "answer": 3,
+   "explanation": "K alone allows others to join",
+   "page": 366,
+   "figure": null
+  },
+  {
+   "id": "c29q19",
+   "chapter": 29,
+   "topic": "29.3.5",
+   "num": 19,
+   "section": "B.7",
+   "text": "A call to a station you have arranged to meet should not use:",
+   "options": [
+    "CQ, since it is not a general call",
+    "Your call sign",
+    "The other station's call sign",
+    "DE"
+   ],
+   "answer": 0,
+   "explanation": "It is a call only to that station, e.g. on a sked",
+   "page": 365,
+   "figure": null
+  },
+  {
+   "id": "c29q20",
+   "chapter": 29,
+   "topic": "29.4",
+   "num": 20,
+   "section": "B.7",
+   "text": "EI6XYZ answers EI5ABC's Morse CQ. A correct reply is:",
+   "options": [
+    "CQ DE EI6XYZ",
+    "EI6XYZ DE EI5ABC K",
+    "EI5ABC DE EI6XYZ KN",
+    "QRZ? DE EI6XYZ"
+   ],
+   "answer": 2,
+   "explanation": "Their call first (optional), then DE and your call",
+   "page": 366,
+   "figure": null
+  },
+  {
+   "id": "c29q21",
+   "chapter": 29,
+   "topic": "29.4",
+   "num": 21,
+   "section": "B.7",
+   "text": "When answering a CQ, what must you always do?",
+   "options": [
+    "Identify yourself",
+    "Send your full address",
+    "Repeat your call sign 10 times",
+    "Give a 599 report"
+   ],
+   "answer": 0,
+   "explanation": "It is not always necessary to send their call, but you must identify",
+   "page": 366,
+   "figure": null
+  },
+  {
+   "id": "c29q22",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 22,
+   "section": "B.7",
+   "text": "In an RST report, R stands for:",
+   "options": [
+    "Resistance",
+    "Range",
+    "Readability",
+    "Reflection"
+   ],
+   "answer": 2,
+   "explanation": "R = readability, S = signal strength, T = tone",
+   "page": 368,
+   "figure": null
+  },
+  {
+   "id": "c29q23",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 23,
+   "section": "B.7",
+   "text": "R5 means:",
+   "options": [
+    "Readable with considerable difficulty",
+    "Unreadable",
+    "Barely readable",
+    "Perfectly readable"
+   ],
+   "answer": 3,
+   "explanation": "R1 unreadable … R5 perfectly readable",
+   "page": 368,
+   "figure": null
+  },
+  {
+   "id": "c29q24",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 24,
+   "section": "B.7",
+   "text": "R3 means:",
+   "options": [
+    "Perfectly readable",
+    "Readable with considerable difficulty",
+    "Unreadable",
+    "Readable with practically no difficulty"
+   ],
+   "answer": 1,
+   "explanation": "R3: readable with considerable difficulty",
+   "page": 368,
+   "figure": null
+  },
+  {
+   "id": "c29q25",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 25,
+   "section": "B.7",
+   "text": "R2 means:",
+   "options": [
+    "Barely readable, occasional words distinguishable",
+    "Unreadable",
+    "Readable with practically no difficulty",
+    "Perfectly readable"
+   ],
+   "answer": 0,
+   "explanation": "R2: barely readable",
+   "page": 368,
+   "figure": null
+  },
+  {
+   "id": "c29q26",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 26,
+   "section": "B.7",
+   "text": "R4 means:",
+   "options": [
+    "Barely readable",
+    "Readable with considerable difficulty",
+    "Perfectly readable",
+    "Readable with practically no difficulty"
+   ],
+   "answer": 3,
+   "explanation": "R4: practically no difficulty",
+   "page": 368,
+   "figure": null
+  },
+  {
+   "id": "c29q27",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 27,
+   "section": "B.7",
+   "text": "The S in an RST report should be taken from:",
+   "options": [
+    "The SWR meter",
+    "The receiver's S meter",
+    "The transmitter power",
+    "A guess"
+   ],
+   "answer": 1,
+   "explanation": "Report the S-meter reading, e.g. 59+10",
+   "page": 369,
+   "figure": null
+  },
+  {
+   "id": "c29q28",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 28,
+   "section": "B.7",
+   "text": "In a CW report, a T value other than 9 indicates:",
+   "options": [
+    "Perfect readability",
+    "A very strong signal",
+    "A problem with the quality of the transmitted tone",
+    "QSB"
+   ],
+   "answer": 2,
+   "explanation": "Modern transmitters should always give T9",
+   "page": 369,
+   "figure": null
+  },
+  {
+   "id": "c29q29",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 29,
+   "section": "B.7",
+   "text": "The T (tone) part of RST is used in:",
+   "options": [
+    "Morse code and digital transmissions only",
+    "SSB only",
+    "FM only",
+    "All voice modes"
+   ],
+   "answer": 0,
+   "explanation": "Voice reports use only R and S, e.g. 59",
+   "page": 369,
+   "figure": null
+  },
+  {
+   "id": "c29q30",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 30,
+   "section": "B.7",
+   "text": "A report of 339 in Morse means:",
+   "options": [
+    "Readable, fair signals, rough tone",
+    "Perfectly readable, strong signals",
+    "Unreadable",
+    "Readable with considerable difficulty, weak signals, perfect tone"
+   ],
+   "answer": 3,
+   "explanation": "R3, S3, T9",
+   "page": 369,
+   "figure": null
+  },
+  {
+   "id": "c29q31",
+   "chapter": 29,
+   "topic": "29.5",
+   "num": 31,
+   "section": "B.7",
+   "text": "A phone report of \"59 plus 10\" means:",
+   "options": [
+    "Weak signal",
+    "Readability 5, strength 9, tone 10",
+    "Perfectly readable, S-meter 10 dB above S9",
+    "Readable with difficulty"
+   ],
+   "answer": 2,
+   "explanation": "Signals above S9 are reported in dB over 9",
+   "page": 369,
+   "figure": null
+  },
+  {
+   "id": "c29q32",
+   "chapter": 29,
+   "topic": "29.6",
+   "num": 32,
+   "section": "B.7",
+   "text": "Who is legally responsible for ensuring your equipment does not cause interference to other spectrum users?",
+   "options": [
+    "The manufacturer",
+    "You, the licensee",
+    "The seller",
+    "ComReg"
+   ],
+   "answer": 1,
+   "explanation": "The licensee, not the manufacturer or seller, is responsible",
+   "page": 370,
+   "figure": null
+  },
+  {
+   "id": "c29q33",
+   "chapter": 29,
+   "topic": "29.6",
+   "num": 33,
+   "section": "B.7",
+   "text": "On a band where amateurs are secondary users, if a primary (non-amateur) user starts transmitting you must:",
+   "options": [
+    "Increase power",
+    "Continue your QSO",
+    "Stop using the frequency",
+    "Ask them to QSY"
+   ],
+   "answer": 2,
+   "explanation": "Secondary users must not interfere with primary users",
+   "page": 370,
+   "figure": null
+  },
+  {
+   "id": "c29q34",
+   "chapter": 29,
+   "topic": "29.6.1",
+   "num": 34,
+   "section": "B.7",
+   "text": "Deliberate interference to the amateur bands should first be reported to:",
+   "options": [
+    "Nobody",
+    "The police",
+    "The interfering station",
+    "The IRTS (national IARU society), for the IARU Monitoring System"
+   ],
+   "answer": 3,
+   "explanation": "IARUMS R1 recommends reporting through the national society first",
+   "page": 371,
+   "figure": null
+  },
+  {
+   "id": "c29q35",
+   "chapter": 29,
+   "topic": "29.6.1",
+   "num": 35,
+   "section": "B.7",
+   "text": "Harmful interference from an individual that cannot be resolved after informing them should be reported to:",
+   "options": [
+    "The ITU",
+    "ComReg",
+    "CEPT",
+    "The local radio club"
+   ],
+   "answer": 1,
+   "explanation": "ComReg is the correct authority; the IRTS can advise",
+   "page": 371,
+   "figure": null
+  }
  ]
 };

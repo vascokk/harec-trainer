@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="140" viewBox="0 0 580 140" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Amplifier with 25 W input and 400 W output</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="30" y="50" width="140" height="60" rx="4" fill="#fff"/><text x="100.0" y="77.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Input</text><text x="100.0" y="93.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">25 W</text><rect x="220" y="50" width="140" height="60" rx="4" fill="#fff"/><text x="290.0" y="85.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Amplifier</text><line x1="170" y1="80.0" x2="220" y2="80.0" marker-end="url(#arr)"/><rect x="410" y="50" width="140" height="60" rx="4" fill="#fff"/><text x="480.0" y="77.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Output</text><text x="480.0" y="93.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">400 W</text><line x1="360" y1="80.0" x2="410" y2="80.0" marker-end="url(#arr)"/>
+</g>
+</svg>

@@ -1,7 +1,10 @@
 """Export the question banks for the HAREC Trainer app (app/).
 
 Writes app/src/data/questions.js (window.HAREC_DATA) with every question,
-its answer, explanation and Study Guide printed page, and copies the SVG
+its answer, explanation and Study Guide printed page, plus the per-chapter
+practice banks (question_bank/chapters, validated as in make_chapters.py) with
+the exam-set figure questions that fall within each chapter's pages,
+and copies the SVG
 figures to app/src/figures/. Page numbers are looked up exactly as in
 make_exams.py, so the app and the Markdown answer keys agree.
 
@@ -14,6 +17,7 @@ import shutil
 import sys
 
 from guide_index import Guide
+from make_chapters import chapter_banks, check
 from make_exams import HERE, SECTIONS, load
 
 APP_SRC = os.path.join(HERE, 'app', 'src')
@@ -39,11 +43,29 @@ def main():
                 'explanation': expl, 'page': page,
                 'figure': f'figures/{fig}.svg' if fig else None,
             })
+    chapters, chapter_questions = [], []
+    for n, mod in chapter_banks():
+        bank = check(n, mod, guide, errors)
+        lo, hi = mod.PAGES
+        # Exam-set figure questions whose Study Guide page lies in this chapter.
+        set_figures = [q['id'] for q in questions if q['figure'] and q['page'] and lo <= q['page'] <= hi]
+        chapters.append({'num': n, 'title': mod.TITLE, 'section': mod.SECTION,
+                         'pages': list(mod.PAGES), 'topics': mod.TOPICS, 'count': len(bank),
+                         'setFigures': set_figures})
+        for num, (topic, text, opts, ans, expl, page, fig) in enumerate(bank, 1):
+            chapter_questions.append({
+                'id': f'c{n:02d}q{num:02d}', 'chapter': n, 'topic': topic, 'num': num,
+                'section': mod.SECTION, 'text': text, 'options': opts,
+                'answer': 'ABCD'.index(ans), 'explanation': expl, 'page': page,
+                'figure': f'figures/{fig}.svg' if fig else None,
+            })
     if errors:
         sys.exit('\n'.join(errors))
     data = {
         'sections': [{'id': s, 'title': t, 'count': c} for s, t, c in SECTIONS],
         'questions': questions,
+        'chapters': chapters,
+        'chapterQuestions': chapter_questions,
     }
     os.makedirs(os.path.join(APP_SRC, 'data'), exist_ok=True)
     with open(os.path.join(APP_SRC, 'data', 'questions.js'), 'w') as f:
@@ -55,7 +77,8 @@ def main():
     for svg in glob.glob(os.path.join(HERE, 'figures', '*.svg')):
         shutil.copy(svg, fig_dir)
     sets = len({q['set'] for q in questions})
-    print(f'{len(questions)} questions from {sets} sets exported')
+    print(f'{len(questions)} questions from {sets} sets and '
+          f'{len(chapter_questions)} from {len(chapters)} chapters exported')
 
 
 if __name__ == '__main__':

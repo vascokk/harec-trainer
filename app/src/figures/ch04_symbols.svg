@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="120" viewBox="0 0 350 120" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Two circuit symbols: (a) a zig-zag line and (b) a rectangle</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<line x1="40" y1="60" x2="70.0" y2="60" /><polyline points="70.0,60.0 76.7,53.0 83.3,67.0 90.0,53.0 96.7,67.0 103.3,53.0 110.0,60.0" /><line x1="110.0" y1="60" x2="140" y2="60" /><text x="90" y="100" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">(a)</text><line x1="200" y1="60" x2="230" y2="60" /><rect x="230" y="50" width="50" height="20" fill="#fff"/><line x1="280" y1="60" x2="310" y2="60" /><text x="255" y="100" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">(b)</text>
+</g>
+</svg>

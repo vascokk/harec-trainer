@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>A 7000 kHz signal and a 7455 kHz local oscillator feed a mixer</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="200" y="60" width="120" height="70" rx="4" fill="#fff"/><text x="260.0" y="100.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">Mixer</text><line x1="60" y1="95" x2="200" y2="95" marker-end="url(#arr)"/><text x="60" y="80" text-anchor="start" fill="#111" stroke="none" font-size="13" font-weight="normal">7000 kHz</text><rect x="200" y="190" width="120" height="50" rx="4" fill="#fff"/><text x="260.0" y="220.0" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">LO 7455 kHz</text><line x1="260" y1="190" x2="260" y2="130" marker-end="url(#arr)"/><line x1="320" y1="95" x2="440" y2="95" marker-end="url(#arr)"/><text x="380" y="80" text-anchor="middle" fill="#111" stroke="none" font-size="13" font-weight="normal">IF = ?</text>
+</g>
+</svg>

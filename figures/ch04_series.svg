@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="370" height="120" viewBox="0 0 370 120" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>10 kilohm and 4.7 kilohm resistors in series between A and B</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="40" cy="60" r="4" fill="#fff"/><line x1="44" y1="60" x2="92.0" y2="60" /><polyline points="92.0,60.0 98.7,53.0 105.3,67.0 112.0,53.0 118.7,67.0 125.3,53.0 132.0,60.0" /><line x1="132.0" y1="60" x2="180" y2="60" /><text x="112" y="40" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">10 kΩ</text><line x1="180" y1="60" x2="228.0" y2="60" /><polyline points="228.0,60.0 234.7,53.0 241.3,67.0 248.0,53.0 254.7,67.0 261.3,53.0 268.0,60.0" /><line x1="268.0" y1="60" x2="316" y2="60" /><text x="248" y="40" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">4.7 kΩ</text><circle cx="320" cy="60" r="4" fill="#fff"/><text x="40" y="95" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">A</text><text x="320" y="95" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="normal">B</text>
+</g>
+</svg>

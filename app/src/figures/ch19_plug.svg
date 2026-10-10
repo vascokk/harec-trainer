@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="320" viewBox="0 0 380 320" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<title>Inside of a three-pin mains plug: terminal X at the top, Y bottom left, Z bottom right next to the fuse</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111" stroke="none"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<g stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="60" y="30" width="260" height="260" rx="30" fill="#fff"/><rect x="175" y="60" width="30" height="60" fill="#ddd"/><text x="190" y="140" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="bold">X</text><rect x="90" y="190" width="60" height="30" fill="#ddd"/><text x="120" y="250" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="bold">Y</text><rect x="230" y="190" width="60" height="30" fill="#ddd"/><text x="260" y="250" text-anchor="middle" fill="#111" stroke="none" font-size="14" font-weight="bold">Z</text><rect x="235" y="140" width="50" height="22" rx="8" fill="#fff"/><text x="260" y="156" text-anchor="middle" fill="#111" stroke="none" font-size="11" font-weight="normal">fuse</text><line x1="260" y1="162" x2="260" y2="190" />
+</g>
+</svg>
